@@ -2,7 +2,7 @@ This repository contains the code base for the website submitted to the Technolo
 
 LINK ADDRESS: Currently unavailable
 
-Members: Eric, Katherine, Mukhil, Jake, Naren
+Members: Eric, Katherine, Mukhil, Jake, Naren, Dylan
 
 The entire website was coded by our development team. We did not use any prebuilt templates. All TSA Rules were followed. 
 
