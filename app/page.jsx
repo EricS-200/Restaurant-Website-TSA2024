@@ -15,7 +15,7 @@ export default function Home() {
       <div className="bg-green-700 flex items-center justify-center pt-20 px-44">
           This is the homepage
           <br/>
-          {generateLoremIpsum(10000)}
+          {generateLoremIpsum(3000)}
       </div>
   );
 }
