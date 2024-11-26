@@ -2,10 +2,9 @@
 import Link from "next/link";
 import {useEffect, useState} from "react";
 
-
 function returnLink(name) {
     return (
-        <Link href={"/"} className={"group mt-1 text-xl"}>
+        <Link href={"/"} className={"group mt-1 text-lg"}>
             {name}
             <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-sky-600"/>
         </Link>
@@ -17,11 +16,10 @@ export default function Navbar() {
     const [lastScrollY, setLastScrollY] = useState(0);
 
     const controlNavbar = () => {
-        if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        if (window.scrollY > lastScrollY)
             setShow(false);
-        } else { // if scroll up show the navbar
+        else
             setShow(true);
-        }
 
         setLastScrollY(window.scrollY);
     };

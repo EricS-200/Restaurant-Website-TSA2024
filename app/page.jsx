@@ -13,8 +13,9 @@ function generateLoremIpsum(wordCount) {
 export default function Home() {
   return (
       <div className="bg-green-700 flex items-center justify-center pt-20 px-44">
-          This is the homepage
-          <p className={"pt-20"}>{generateLoremIpsum(3000)}</p>
+          <p className={"pt-8"}>
+              {generateLoremIpsum(3000)}
+          </p>
       </div>
   );
 }
