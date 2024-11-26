@@ -35,7 +35,7 @@ export default function Navbar() {
     }, [lastScrollY]);
 
     return (
-        <div className={`transform-gpu active ${show ? 'translate-y-0' : '-translate-y-full'} fixed top-0 z-50 w-full flex justify-center items-center transition-transform duration-500`} id={"navbar"}>
+        <div className={`transform-gpu active ${show ? 'translate-y-0' : '-translate-y-full'} fixed top-0 z-50 w-full flex justify-center items-center transition-transform duration-500`}>
             <div className="shadow-lg bg-white/20 backdrop-blur-lg rounded-xl mt-4 container flex h-14 max-w-max items-center justify-center px-10 sticky flex-row gap-16">
                 {returnLink("Menu")}
                 {returnLink("About our food")}
