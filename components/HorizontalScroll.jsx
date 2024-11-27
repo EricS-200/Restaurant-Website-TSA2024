@@ -28,9 +28,7 @@ export default function HorizontalScroll({
   });
 
   useLayoutEffect(() => {
-    if (innerDiv.current) {
-      setWidth(innerDiv.current.scrollWidth); // Measure total width
-    }
+    setWidth(innerDiv.current.scrollWidth); // Measure total width
   }, []);
 
   const translateX = useTransform(
@@ -45,7 +43,7 @@ export default function HorizontalScroll({
       className={cn(`relative bg-neutral-900`, className)}
       style={{ height: `${100 * scrollTime}vh` }}
     >
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden w-fit">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden w-foit">
         <motion.div
           ref={innerDiv}
           style={{ translateX }}
