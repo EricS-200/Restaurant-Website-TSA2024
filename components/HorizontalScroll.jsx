@@ -42,10 +42,8 @@ export default function HorizontalScroll({
   return (
     <section
       ref={component}
-      className={cn(
-        `relative h-[${100 * scrollTime}vh] bg-neutral-900`,
-        className
-      )}
+      className={cn(`relative bg-neutral-900`, className)}
+      style={{ height: `${100 * scrollTime}vh` }}
     >
       <div className="sticky top-0 flex h-screen items-center overflow-hidden w-fit">
         <motion.div
