@@ -25,11 +25,11 @@ export default function HorizontalScroll({
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
+    setWidth(innerDiv.current.scrollWidth); // Measure total width
   });
 
-  useLayoutEffect(() => {
-    setWidth(innerDiv.current.scrollWidth); // Measure total width
-  }, []);
+  //   useLayoutEffect(() => {
+  //   }, []);
 
   const translateX = useTransform(
     scrollYProgress,
@@ -37,13 +37,15 @@ export default function HorizontalScroll({
     ["-0px", `-${width - screenWidth + offset}px`]
   );
 
+  //   const translateX = useTransform(scrollYProgress, [0, 1], ["1%", "-150%"]);
+
   return (
     <section
       ref={component}
-      className={cn(`relative bg-neutral-900`, className)}
+      className={cn(`relative bg-blue-400`, className)}
       style={{ height: `${100 * scrollTime}vh` }}
     >
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden w-foit">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div
           ref={innerDiv}
           style={{ translateX }}
