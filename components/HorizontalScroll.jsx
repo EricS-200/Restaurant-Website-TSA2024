@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef, useState, useLayoutEffect } from "react";
+import { useRef, useState, useLayoutEffect, useEffect } from "react";
 import { cn } from "@/utils/utils";
 
 const test_img_count = 9;
@@ -15,13 +15,17 @@ export default function HorizontalScroll({
 }) {
   const component = useRef(null);
   const innerDiv = useRef(null);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(0);
 
   const [width, setWidth] = useState(0);
   const { scrollYProgress } = useScroll({
     target: component,
   });
   console.log(scrollYProgress.current);
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  });
 
   useLayoutEffect(() => {
     if (innerDiv.current) {
