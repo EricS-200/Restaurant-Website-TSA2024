@@ -1,16 +1,55 @@
-import Image from "next/image";
-import 
+import { motion, useTransform, useScroll } from "framer-motion";
+import { useRef, useState, useLayoutEffect } from "react";
+import { cn } from "@/utils/utils";
 
-const test_img_count = 5
+const test_img_count = 9;
 
-export default function HorizontalScroll() {
+export default function HorizontalScroll({
+  className = "", // className for outer container
+  innerClassName = "", // className for inner motion.div container
+  scrollTime = 3, // defines height and therefore how long it takes to scroll through (how many times 100vh)
+  offset = 50, // pixel value of when horizontal scroll stops from end of carousel
+  children,
+}) {
+  const component = useRef(null);
+  const innerDiv = useRef(null);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const [width, setWidth] = useState(0);
+  const { scrollYProgress } = useScroll({
+    target: component,
+  });
+  console.log(scrollYProgress.current);
+
+  useLayoutEffect(() => {
+    if (innerDiv.current) {
+      setWidth(innerDiv.current.scrollWidth); // Measure total width
+    }
+  }, []);
+
+  const translateX = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["-0px", `-${width - screenWidth + offset}px`]
+  );
+
   return (
-    <div className="bg-blue-300 h-screen sticky top-0 flex items-center overflow-hidden">
-      {() => {for (let i=0; i<test_img_count; i++)
-        {
-        return <Image/>
-        }}
-      }  
-    </div>
+    <section
+      ref={component}
+      className={cn(
+        `relative h-[${100 * scrollTime}vh] bg-neutral-900`,
+        className
+      )}
+    >
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden w-fit">
+        <motion.div
+          ref={innerDiv}
+          style={{ translateX }}
+          className={cn("flex gap-4 ml-4", innerClassName)}
+        >
+          {children}
+        </motion.div>
+      </div>
+    </section>
   );
 }
