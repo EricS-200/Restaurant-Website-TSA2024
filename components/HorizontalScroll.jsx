@@ -16,20 +16,27 @@ export default function HorizontalScroll({
   const component = useRef(null);
   const innerDiv = useRef(null);
   const [screenWidth, setScreenWidth] = useState(0);
-
   const [width, setWidth] = useState(0);
   const { scrollYProgress } = useScroll({
     target: component,
   });
-  console.log(scrollYProgress.current);
 
-  useEffect(() => {
-    setScreenWidth(window.innerWidth);
-    setWidth(innerDiv.current.scrollWidth); // Measure total width
-  });
+  // useEffect(() => {
+  //   setScreenWidth(window.innerWidth);
+  //   setWidth(innerDiv.current.scrollWidth); // Measure total width
+  // });
 
-  //   useLayoutEffect(() => {
-  //   }, []);
+  useLayoutEffect(() => {
+    const updateDimensions = () => {
+      setScreenWidth(window.innerWidth);
+      setWidth(innerDiv.current.scrollWidth);
+    };
+
+    window.addEventListener("resize", updateDimensions);
+    updateDimensions();
+
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
 
   const translateX = useTransform(
     scrollYProgress,
