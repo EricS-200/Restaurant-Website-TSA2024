@@ -9,7 +9,7 @@ export default function LoadItems({items, loading}) {
   
     //declaring factual funs
     const [funFact, setFunFact] = useState("");
-    const funStuff = ["🍇", "🥒", "🍅", "🍔<-veggie", "🍖🍗🥩🥓 are all very bad for you"];
+    const funStuff = ["🍇", "🥒", "🍅", "🍔<-veggie", "🍖🍗🥩🥓 are all very bad for you", "🥭mango🥭mango🥭mango"];
 
     useEffect(() => {
         const funFactInterval = setInterval(() => {
