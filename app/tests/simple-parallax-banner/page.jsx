@@ -10,11 +10,11 @@ export default function Home() {
         className="h-[50vh] xl:h-[65vh]"
         speed={0.5}
       >
-        {/* <Image
+        <Image
           src={banner}
           alt=""
           className="object-center object-cover-z-10"
-        /> */}
+        />
       </SimpleParallaxBanner>
       <div className="w-full h-[1000px] bg-black"></div>
     </main>

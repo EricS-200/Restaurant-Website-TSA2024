@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { cn } from "@/utils/utils";
 
@@ -8,13 +7,6 @@ export default function ParallaxBanner({
   children,
   className = "",
   speed = 0,
-  src,
-  fill = true,
-  height,
-  width,
-  alt = "",
-  priority = false,
-  imgClassName,
   ...props
 }) {
   const [scrollY, setScrollY] = useState();
@@ -36,14 +28,6 @@ export default function ParallaxBanner({
       style={{ transform: `translateY(${scrollY * speed}px)` }}
       {...props}
     >
-      <Image
-        className={cn("object-center object-cover", imgClassName)}
-        fill={fill}
-        src={src}
-        alt={alt}
-        placeholder="blur"
-        priority={priority}
-      />
       {children}
     </div>
   );
