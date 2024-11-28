@@ -9,7 +9,7 @@ export default function LoadItems({items, loading}) {
   
     //declaring factual funs
     const [funFact, setFunFact] = useState("");
-    const funStuff = ["🍇", "🥒", "🍅", "🍔<-veggie"];
+    const funStuff = ["🍇", "🥒", "🍅", "🍔<-veggie", "🍖🍗🥩🥓 are all very bad for you"];
 
     useEffect(() => {
         const funFactInterval = setInterval(() => {
@@ -24,16 +24,17 @@ export default function LoadItems({items, loading}) {
 
     if(loading) {
             return (
+                
                 <section>
-                    <img src="https://media2.giphy.com/media/d9Hhu2N1KTF0uW76WQ/200w.gif?cid=6c09b952hspy3uk7xedypad6jts1cw08mqw5v8jke50m6nm1&ep=v1_gifs_search&rid=200w.gif&ct=g"/>
-                    <p>Fun Fact:  {funFact}</p>
+                    <div className={`w3-container w3-center ${loading ? 'w3-animate-opacity' : ''}`}>
+                        <img src="https://media2.giphy.com/media/d9Hhu2N1KTF0uW76WQ/200w.gif?cid=6c09b952hspy3uk7xedypad6jts1cw08mqw5v8jke50m6nm1&ep=v1_gifs_search&rid=200w.gif&ct=g"/>
+                        <p>Fun Fact:  {funFact}</p>
+                    </div>  
                 </section>
             );
     } 
         return (items);
-    
 
-  
 }
 
 
