@@ -1,4 +1,6 @@
-export default function Home() {
+
+export default function menu()
+{
     function generateLoremIpsum(wordCount) {
         const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
         const words = loremIpsum.split(" ");
@@ -12,9 +14,9 @@ export default function Home() {
     return (
         <div className="bg-green-700 flex items-center justify-center pt-20 px-44">
             <p className={"pt-8"}>
-                <span className={"font-bold"}>Homepage</span>
+                <a className={"font-bold"}>Menu</a>
                 <br/><br/>
-                {generateLoremIpsum(3000)}
+                {generateLoremIpsum(2000)}
             </p>
         </div>
     );
