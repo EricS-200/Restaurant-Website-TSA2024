@@ -5,17 +5,22 @@ import {usePathname} from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
+import Dropdown from "@/components/Dropdown";
 import logoImage from "/public/images/logo.jpg";
 
 export default function Navbar() {
-    const pages = ["Menu", "About our food", "Our Story", "Order Now", "Community"];
+    const pages = ["Our Story", "Menu", "Community", "Order Now"];
+    const dropdownAboutFoodOptions = [
+        {name: "Sustainability", url: "/sustainability"},
+        {name: "Farm to Table", url: "/farmToTable"},
+        {name: "Preparation", url: "/preparation},"}
+    ]
 
     let pageMap = new Map();
-    pageMap.set(pages[0], "/menu");
-    pageMap.set(pages[1], "/aboutFood");
-    pageMap.set(pages[2], "/ourStory");
-    pageMap.set(pages[3], "/orderNow");
-    pageMap.set(pages[4], "/community");
+    pageMap.set(pages[0], "/ourStory")
+    pageMap.set(pages[1], "/menu")
+    pageMap.set(pages[2], "/community")
+    pageMap.set(pages[3], "/order");
 
 
     const currentPage = usePathname();
@@ -66,12 +71,24 @@ export default function Navbar() {
         else
         {
             return (
-                <Link href={link} className={`group text-xl`}>
+                <Link href={link} className={"group"}>
                     <span className={`${isBold ? "font-bold" : "font-normal"}`}> {name} </span>
                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-sky-600"/>
                 </Link>
             );
         }
+    }
+
+    function returnOrderNowLink(isBold)
+    {
+        const name = pages[3];
+        const link = pageMap.get(name);
+
+        return (
+            <Link href={link} className={"group"}>
+                <span className={`${isBold ? "font-bold" : "font-normal"}`}> {name} </span>
+            </Link>
+        );
     }
 
     return (
@@ -93,22 +110,32 @@ export default function Navbar() {
                 <div className={`${isMobileNavOpen ? "block" : "hidden"} fixed inset-0 bg-gray-800 bg-opacity-80 z-30`} onClick={() => setIsMobileNavOpen(false)}/>
 
                 <div className={`fixed top-0 h-full left-0 w-1/2  bg-white shadow-lg transform ${isMobileNavOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 z-50`}>
-                    <div className="flex flex-col items-start p-4">
-                        <button onClick={() => setIsMobileNavOpen(false)} className="self-end p-2">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
-                            </svg>
-                        </button>
+                    <div className="flex flex-col items-start px-4">
 
-                        <Link href={"/"} className={"flex flex-col ml-3"}>
-                            <Image src={logoImage} alt={"logo"} height={50}/>
-                        </Link>
 
-                        {pages.map((page, index) => (
-                            <div key={index} className="mt-4 ml-3">
-                                { returnLink(page, currentPage === pageMap.get(page), true) }
-                            </div>
-                        ))}
+                        <div className={"flex flex-row pt-5 w-full"}>
+                            <Link href={"/"} className={"flex flex-col"}>
+                                <Image src={logoImage} alt={"logo"} height={50}/>
+                            </Link>
+
+                            <button onClick={() => setIsMobileNavOpen(false)} className="ml-auto p-2">
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                            </button>
+                        </div>
+
+
+                        <div className="flex flex-col gap-x-8 gap-y-4 mt-4">
+                            { returnLink(pages[0], currentPage === pageMap.get(pages[0]), true) }
+                            { returnLink(pages[1], currentPage === pageMap.get(pages[1]), true) }
+
+                            **ADD DROPDOWN HERE**
+
+
+                            { returnLink(pages[2], currentPage === pageMap.get(pages[3]), true) }
+                            { returnLink(pages[3], currentPage === pageMap.get(pages[4]), true) }
+                        </div>
 
                     </div>
                 </div>
@@ -124,16 +151,24 @@ export default function Navbar() {
                             <Image src={logoImage} alt={"logo"} height={50}/>
                         </Link>
 
-                        { pages.map((page, index) => (
-                                <div key={index} className="mt-2">
-                                    { returnLink(page, currentPage === pageMap.get(page)) }
-                                </div>
-                        )) }
+                        <div className="flex flex-row gap-x-8 h-full items-center justify-center text-lg gap-y-2">
+
+                            { returnLink(pages[0], currentPage === pageMap.get(pages[0])) }
+                            { returnLink(pages[1], currentPage === pageMap.get(pages[1])) }
+
+                            <Dropdown name={"About Our Food"} options={dropdownAboutFoodOptions} extraStyle={""}/>
+
+                            { returnLink(pages[2], currentPage === pageMap.get(pages[2])) }
+
+                            <div className={"bg-orange-500 rounded-3xl mt-1 px-1 border-2 border-orange-500"}>
+                                { returnOrderNowLink(currentPage === pageMap.get(pages[3])) }
+                            </div>
+
+                        </div>
 
                     </div>
                 </div>
             </div>
-
         </>
     );
 }
