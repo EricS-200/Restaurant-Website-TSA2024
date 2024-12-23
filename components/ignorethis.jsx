@@ -18,7 +18,18 @@ export default function IgnoreThis() {
                         target="_blank"
                         href="https://www.desmos.com/calculator?=nographpaper"
                     >
-                        Grug
+                    Four
+                    </Link>
+                </p>
+                <h2 className="pl-1 text-xl font-bold mt-1">
+                    Filler Text 2
+                </h2>
+                <p className="flex items-center mb-1 text-center">
+                    <Link
+                        target="_blank"
+                        href="https://www.google.com"
+                    >
+                    Five
                     </Link>
                 </p>
             </div>
