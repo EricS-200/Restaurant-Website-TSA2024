@@ -64,7 +64,7 @@ export default function Navbar() {
         {
             return (
                 <Link href={link} className={`group mt-1 text-md`} onClick={() => setIsMobileNavOpen(false)}>
-                    <span className={`${isBold ? "font-bold" : "font-normal"}`}> {name} </span>
+                    <span className={`${isBold ? "" : ""}`}> {name} </span>
                 </Link>
             );
         }
@@ -72,7 +72,7 @@ export default function Navbar() {
         {
             return (
                 <Link href={link} className={"group"}>
-                    <span className={`${isBold ? "font-bold" : "font-normal"}`}> {name} </span>
+                    <span className={`${isBold ? "" : ""}`}> {name} </span>
                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-sky-600"/>
                 </Link>
             );
@@ -145,27 +145,24 @@ export default function Navbar() {
             {/*Desktop Navbar*/}
             <div className={"hidden lg:block"}>
                 <div className={`transform-gpu active ${show ? 'translate-y-0' : '-translate-y-full'} fixed top-0 z-50 w-full flex justify-center items-center transition-transform duration-500`}>
-                    <div className="shadow-lg bg-white/20 backdrop-blur-lg rounded-xl mt-4 container flex h-16 max-w-max items-center justify-center px-10 sticky flex-row gap-16">
+                    <div className="shadow-lg bg-white/20 backdrop-blur-lg rounded-3xl mt-4 container flex h-16 max-w-max items-center justify-center px-10 sticky flex-row gap-16">
 
                         <Link href={"/"} className={"flex flex-col"}>
                             <Image src={logoImage} alt={"logo"} height={50}/>
                         </Link>
 
-                        <div className="flex flex-row gap-x-8 h-full items-center justify-center text-lg gap-y-2">
+                        <div className="flex flex-row gap-x-8 h-full items-center justify-center text-lg gap-y-2 mt-2">
+                                { returnLink(pages[0], currentPage === pageMap.get(pages[0])) }
+                                { returnLink(pages[1], currentPage === pageMap.get(pages[1])) }
 
-                            { returnLink(pages[0], currentPage === pageMap.get(pages[0])) }
-                            { returnLink(pages[1], currentPage === pageMap.get(pages[1])) }
+                                <Dropdown name={"About Our Food"} options={dropdownAboutFoodOptions} extraStyle={""}/>
 
-                            <Dropdown name={"About Our Food"} options={dropdownAboutFoodOptions} extraStyle={""}/>
+                                { returnLink(pages[2], currentPage === pageMap.get(pages[2])) }
 
-                            { returnLink(pages[2], currentPage === pageMap.get(pages[2])) }
-
-                            <div className={"bg-orange-500 rounded-3xl mt-1 px-1 border-2 border-orange-500"}>
-                                { returnOrderNowLink(currentPage === pageMap.get(pages[3])) }
-                            </div>
-
+                                <div className={"bg-orange-500 rounded-3xl px-1 border-2 border-orange-500 mb-2"}>
+                                    { returnOrderNowLink(currentPage === pageMap.get(pages[3])) }
+                                </div>
                         </div>
-
                     </div>
                 </div>
             </div>

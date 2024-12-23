@@ -21,11 +21,11 @@ export default function Dropdown({ name, options, extraStyle }) {
 
     return (
         <div
-            className={`relative ${extraStyle} text-md`}
+            className={`relative ${extraStyle} mb-1`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <button className="flex items-center text-black rounded-md focus:outline-none">
+            <button className="flex items-center rounded-md focus:outline-none">
                 <span>{name}</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
