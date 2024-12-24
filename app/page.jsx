@@ -17,7 +17,7 @@ export default function Home() {
     <main className="">
       <ParallaxBanner
         speed={0.5}
-        className="h-[50vh] lg:h-[75vh] relative"
+        className="h-[50vh] lg:h-[75vh] "
         src={homeBanner}
       >
         <div className="absolute inset-0 w-full h-full bg-black/20">
