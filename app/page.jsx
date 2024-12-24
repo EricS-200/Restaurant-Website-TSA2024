@@ -22,7 +22,9 @@ export default function Home() {
       >
         <div className="absolute inset-0 w-full h-full bg-black/20">
           <div className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200 h-full flex-col items-center justify-center w-full flex">
-            <h1 className="text-8xl text-center font-bold ">CraftRoots</h1>
+            <h1 className="text-6xl md:text-8xl text-center font-bold ">
+              CraftRoots
+            </h1>
             <h2 className="text-center text-4xl font-semibold">
               Vegetarian Asian Cuisine
             </h2>
