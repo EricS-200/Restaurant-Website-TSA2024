@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
 
 export const metadata = {
   title: "",
@@ -14,7 +15,10 @@ const poppins = Poppins({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.className}>
-      <body>{children}</body>
+      <body>
+        <Navbar/>
+        {children}
+      </body>
     </html>
   );
 }
