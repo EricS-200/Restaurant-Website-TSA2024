@@ -8,8 +8,8 @@ known problem: idk what im doing
 */
 export default function IgnoreThis() {
     return(
-        <footer className=" bg-[#104040] w-full text-[ffffff] flex">
-            <div className="flex justify-around justify-items-center">
+        <footer className=" bg-slate-900 w-full text-[ffffff] flex-col">
+            <div className="flex justify-between justify-items-center text-slate-300 px-8">
                 <h2 className="pl-1 text-xl font-bold mt-1">
                     Filler Text
                 </h2>
@@ -21,6 +21,19 @@ export default function IgnoreThis() {
                     Four
                     </Link>
                 </p>
+                <h2 className="pl-1 text-xl font-bold mt-1 text-slate-300">
+                    Filler Text 3
+                </h2>
+                <p className='flex items-center mb-1 text-center text-slate-300'>
+                    <Link
+                        target="_blank"
+                        href="https://www.twitch.tv/filian"
+                    >
+                    Six
+                    </Link>
+                </p>
+            </div>
+            <div className="flex justify-between justify-items-center text-slate-300 px-8">
                 <h2 className="pl-1 text-xl font-bold mt-1">
                     Filler Text 2
                 </h2>
@@ -30,6 +43,17 @@ export default function IgnoreThis() {
                         href="https://www.google.com"
                     >
                     Five
+                    </Link>
+                </p>
+                <h2 className="pl-1 text-xl font-bold mt-1 text-slate-300">
+                    Filler Text 4
+                </h2>
+                <p className='flex items-center mb-1 text-center text-slate-300'>
+                    <Link
+                        target="_blank"
+                        href="https://www.twitch.tv/filian"
+                    >
+                    Seven
                     </Link>
                 </p>
             </div>
