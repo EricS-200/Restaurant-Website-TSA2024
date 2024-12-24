@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Dropdown({ name, options, extraStyle }) {
+export default function Dropdown({ name, options, extraStyle}) {
   const [isOpen, setIsOpen] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState(null);
 
@@ -24,6 +24,7 @@ export default function Dropdown({ name, options, extraStyle }) {
       className={`relative ${extraStyle}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={() => setIsOpen(!isOpen)}
     >
       <button className="flex items-center rounded-md focus:outline-none">
         <span>{name}</span>

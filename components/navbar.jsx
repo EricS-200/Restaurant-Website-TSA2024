@@ -164,7 +164,14 @@ export default function Navbar() {
                 currentPage === pageMap.get(pages[1]),
                 true
               )}
-              **ADD DROPDOWN HERE**
+
+
+              <Dropdown
+                  name={"About Our Food"}
+                  options={dropdownAboutFoodOptions}
+                  extraStyle={""}
+              />
+
               {returnLink(
                 pages[2],
                 currentPage === pageMap.get(pages[3]),
