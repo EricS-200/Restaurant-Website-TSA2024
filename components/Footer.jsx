@@ -23,7 +23,7 @@ export default function IgnoreThis() {
                         <Link
                             target="_blank"
                             href="https://www.google.com"
-                            className="hover:text-slate-400 hover:underline hover:transition-all"
+                            className="hover:text-slate-400 hover:underline transition-all delay-100"
                         >
                         Four
                         </Link>
@@ -32,7 +32,7 @@ export default function IgnoreThis() {
                         <Link
                             target="_blank"
                             href=""
-                            className="hover:text-slate-400 hover:underline hover:transition-all"
+                            className="hover:text-slate-400 hover:underline transition-all delay-100"
                         >
                         Clone this tab
                         </Link>
@@ -51,7 +51,7 @@ export default function IgnoreThis() {
                         <Link
                             target="_blank"
                             href="https://www.google.com"
-                            className="hover:text-slate-400 hover:underline hover:transition-all"
+                            className="hover:text-slate-400 hover:underline transition-all delay-100"
                         >
                         Six
                         </Link>
@@ -60,7 +60,7 @@ export default function IgnoreThis() {
                         <Link
                             target="_blank"
                             href="https://www.twitch.tv/filian"
-                            className="hover:text-slate-400 hover:underline hover:transition-all"
+                            className="hover:text-slate-400 hover:underline transition-all delay-100"
                         >
                         Seven
                         </Link>
