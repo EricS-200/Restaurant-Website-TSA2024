@@ -23,7 +23,7 @@ export default function Home() {
                             First Steps
                         </h2>
                         <p className="text-pretty w-4/5">
-                        Craftroots was founded not long after Mukhil Rajesh Ravichandran, our founder,
+                        Craftroots was founded not long after Mukhil Alhamdulillah Ravichandran, our founder,
                         immigrated illegally to the United States as a non-citizen. He worked odd jobs,
                         saving money until he was finally able to open his first restaurant in 1999.
                         Grand Leader Ravichandran was able to build this restaurant by himself and his
