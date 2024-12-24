@@ -57,12 +57,12 @@ export default function Home() {
           living, we set out to craft delicious vegan recipes and products that
           nourish both body and planet. What started as a small idea has
           blossomed into a thriving community dedicated to celebrating the power
-          of plants, innovation, and compassion. Together, we're rewriting the
-          story of food—one plant-based bite at a time.
+          of plants, innovation, and compassion. Together, we&apos;re rewriting
+          the story of food—one plant-based bite at a time.
         </p>
         <p className="center-text">
           Founded in 1999, we at Craftroots have been trying our absolute
-          hardest to provide the best service possible. From our founders'
+          hardest to provide the best service possible. From our founders&apos;
           humble beginnings of working in South Indian textile factories to
           their immigration to the United States, we now look to serve nothing
           but the best, using nothing but the freshest ingredients and most
