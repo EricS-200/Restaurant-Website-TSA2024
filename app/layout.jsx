@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import IgnoreThis from "@/components/ignorethis";
+import Footer from "@/components/Footer";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <IgnoreThis />
+        <Footer />
       </body>
     </html>
   );

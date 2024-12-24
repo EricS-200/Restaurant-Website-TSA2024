@@ -16,7 +16,7 @@ export default function IgnoreThis() {
                 <p className="flex items-center mb-1 text-center">
                     <Link
                         target="_blank"
-                        href="https://www.desmos.com/calculator?=nographpaper"
+                        href="https://www.google.com"
                     >
                     Four
                     </Link>
@@ -27,7 +27,7 @@ export default function IgnoreThis() {
                 <p className='flex items-center mb-1 text-center text-slate-300'>
                     <Link
                         target="_blank"
-                        href="https://www.twitch.tv/filian"
+                        href="https://www.google.com"
                     >
                     Six
                     </Link>
@@ -40,9 +40,9 @@ export default function IgnoreThis() {
                 <p className="flex items-center mb-1 text-center">
                     <Link
                         target="_blank"
-                        href="https://www.google.com"
+                        href=""
                     >
-                    Five
+                    Clone this tab
                     </Link>
                 </p>
                 <h2 className="pl-1 text-xl font-bold mt-1 text-slate-300">
