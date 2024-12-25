@@ -1,0 +1,12 @@
+ALL MEDIA & CONTENT SOURCES MUST BE CITED.
+
+MEDIA:
+- logo: ?
+- golden-vegetables1: ?
+- golden-vegetables2: ? 
+- golden-leaves1: ?
+- kytsa-logo: https://kentuckytsa.org/
+
+
+CONTENT SOURCES:
+- 

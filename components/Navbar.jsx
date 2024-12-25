@@ -12,12 +12,12 @@ export default function Navbar() {
   const pages = ["Our Story", "Menu", "Community", "Order Now"];
   const dropdownAboutFoodOptions = [
     { name: "Sustainability", url: "/sustainability" },
-    { name: "Farm to Table", url: "/farmToTable" },
+    { name: "Farm to Table", url: "/farm-to-table" },
     { name: "Preparation", url: "/preparation" },
   ];
 
   let pageMap = new Map();
-  pageMap.set(pages[0], "/ourStory");
+  pageMap.set(pages[0], "/our-story");
   pageMap.set(pages[1], "/menu");
   pageMap.set(pages[2], "/community");
   pageMap.set(pages[3], "/order");
@@ -70,7 +70,7 @@ export default function Navbar() {
             {" "}
             {name}{" "}
           </span>
-          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[3px] bg-gray-600 absolute inset-x-0 bottom-[1px]" />
+          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[3px] bg-gray-600  absolute inset-x-0 bottom-[1px]" />
         </Link>
       );
     }
