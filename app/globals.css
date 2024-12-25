@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: rgb(229 231 235); /*tw gray-200*/
+  --foreground: rgb(24 24 27); /*tw zinc-900*/
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -16,15 +16,25 @@
 
 .dark {
   --background: #0a0a0a;
-  --foreground: #ededed;
+  --foreground: rgb(229 231 235);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   display: block;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  @apply text-lg leading-loose;
+}
+
+section {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.center-text {
+  @apply w-[95vw] sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 text-center;
 }
