@@ -19,6 +19,10 @@
   --foreground: rgb(229 231 235);
 }
 
+html {
+    height: 100%;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
