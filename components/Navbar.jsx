@@ -9,7 +9,7 @@ import Dropdown from "@/components/Dropdown";
 import logoImage from "/public/logo.png";
 
 export default function Navbar() {
-  const pages = ["Our Story", "Menu", "Community", "Order Now"];
+  const pages = ["Our Story", "Menu", "Community", "Reserve & Order"];
   const dropdownAboutFoodOptions = [
     { name: "Sustainability", url: "/sustainability" },
     { name: "Farm to Table", url: "/farm-to-table" },
@@ -62,10 +62,10 @@ export default function Navbar() {
       return (
         <Link
           href={link}
-          className={`group mt-1 text-md`}
+          className={`group text-md`}
           onClick={() => setIsMobileNavOpen(false)}
         >
-          <span className={`${isBold ? "" : ""}`}> {name} </span>
+          <span className={` text-black ${isBold ? "" : ""}`}> {name} </span>
         </Link>
       );
     } else {
@@ -87,7 +87,9 @@ export default function Navbar() {
 
     return (
       <Link href={link} className={"group"}>
-        <span className={`${isBold ? "font-bold" : "font-normal"}`}>
+        <span
+          className={`text-black ${isBold ? "font-normal" : "font-normal"}`}
+        >
           {name}
         </span>
       </Link>
@@ -168,18 +170,13 @@ export default function Navbar() {
               </button>
             </div>
 
-            <div className="flex flex-col gap-y-2 ml-6 mt-4">
-              {returnLink(
-                pages[0],
-                currentPage === pageMap.get(pages[0]),
-                true
-              )}
+            <div className="flex flex-col  gap-y-3 ml-6 mt-4">
               {returnLink(
                 pages[1],
                 currentPage === pageMap.get(pages[1]),
                 true
               )}
-
+              <Dropdown name="About Us" options={aboutUsDropdown} />
               <Dropdown
                 name={"About Our Food"}
                 options={dropdownAboutFoodOptions}
