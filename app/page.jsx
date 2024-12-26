@@ -22,7 +22,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 w-full h-full bg-black/20">
           <div className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200 h-full flex-col items-center justify-center w-full flex">
-            <h1 className="text-6xl md:text-8xl text-center font-bold ">
+            <h1 className="text-6xl sm:text-8xl text-center font-bold ">
               CraftRoots
             </h1>
             <h2 className="text-center text-4xl font-semibold">
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </ParallaxBanner>
 
-      <section className="   w-full flex flex-col items-center py-8 space-y-4 relative overflow-hidden">
+      <section className="w-full flex flex-col items-center py-8 space-y-4 relative overflow-hidden">
         {/* Positioning may be broken for extremly large screens; check */}
         <Image
           alt="golden leaves 1"

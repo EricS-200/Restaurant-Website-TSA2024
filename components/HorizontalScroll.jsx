@@ -28,7 +28,9 @@ export default function HorizontalScroll({
     };
 
     window.addEventListener("resize", updateDimensions);
-    updateDimensions();
+    setTimeout(() => {
+      updateDimensions();
+    }, 500);
 
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);

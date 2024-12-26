@@ -1,6 +1,6 @@
 This repository contains the code base for the website submitted to the Technology Student Association Webmaster Competition 2024-2025. Submission from Kentucky (P. L. Dunbar).  
 
-LINK ADDRESS: Currently unavailable
+[LINK ADDRESS](https://restaurant-website-tsa-2024.vercel.app/)
 
 Members: Eric, Katherine, Mukhil, Jake, Naren, Dylan
 
@@ -28,4 +28,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You will be able to make modifications to the website for further testing. Saving files will update the website dynamically. 
 
-Updated 11/13/2024
+Updated 12/25/2024

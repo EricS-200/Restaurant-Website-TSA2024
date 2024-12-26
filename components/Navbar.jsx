@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Dropdown from "@/components/Dropdown";
-import logoImage from "/public/images/logo.jpg";
+import logoImage from "/public/logo.png";
 
 export default function Navbar() {
   const pages = ["Our Story", "Menu", "Community", "Order Now"];
@@ -33,7 +33,7 @@ export default function Navbar() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) setShow(false);
+    if (window.scrollY >= lastScrollY && window.scrollY > 56) setShow(false);
     else setShow(true);
 
     setLastScrollY(window.scrollY);
@@ -97,13 +97,14 @@ export default function Navbar() {
   return (
     <>
       {/*Mobile Navbar*/}
+      <div className="h-[55px] md:hidden"></div>
       <div className={"lg:hidden"}>
         <div
-          className={`fixed top-0 ${
+          className={`fixed inset-0 h-fit w-full z-50 ${
             show ? "translate-y-0" : "-translate-y-full"
           } w-full bg-white transition-transform duration-500`}
         >
-          <button onClick={() => setIsMobileNavOpen(true)} className="p-4">
+          <button onClick={() => setIsMobileNavOpen(true)} className="p-4 ml-2">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -130,14 +131,20 @@ export default function Navbar() {
         />
 
         <div
-          className={`fixed top-0 h-full left-0 w-1/2  bg-white shadow-lg transform ${
+          className={`fixed top-0 h-full left-0 min-w-[250px] w-2/3 bg-white shadow-lg transform ${
             isMobileNavOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 z-50`}
+          } transition-transform duration-500 z-50`}
         >
           <div className="flex flex-col items-start px-4">
             <div className={"flex flex-row pt-5 w-full"}>
-              <Link href={"/"} className={"flex flex-col"}>
-                <Image src={logoImage} alt={"logo"} height={50} />
+              <Link href={"/"}>
+                <button
+                  onClick={() => setIsMobileNavOpen(false)}
+                  className={"flex items-center space-x-2"}
+                >
+                  <Image src={logoImage} alt={"logo"} height={50} />
+                  <h1 className="text-xl font-bold">CraftRoots</h1>
+                </button>
               </Link>
 
               <button
@@ -161,7 +168,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            <div className="flex flex-col gap-x-8 gap-y-4 mt-4">
+            <div className="flex flex-col gap-y-2 ml-6 mt-4">
               {returnLink(
                 pages[0],
                 currentPage === pageMap.get(pages[0]),
