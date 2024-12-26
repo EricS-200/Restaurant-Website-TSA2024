@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Dropdown({ name, options, extraStyle}) {
+export default function Dropdown({ name, options, extraStyle }) {
   const [isOpen, setIsOpen] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState(null);
 
@@ -26,7 +26,7 @@ export default function Dropdown({ name, options, extraStyle}) {
       onMouseLeave={handleMouseLeave}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <button className="flex items-center rounded-md focus:outline-none">
+      <button className="flex items-center rounded-md focus:outline-none text-black">
         <span>{name}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -46,13 +46,13 @@ export default function Dropdown({ name, options, extraStyle}) {
         </svg>
       </button>
       {isOpen && (
-        <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-10">
+        <div className="absolute left-0 mt-2 w-48 lg:bg-white/20 bg-white md:backdrop-blur-lg border lg:border-gray-300/20 lg:shadow-lg border-gray-200 rounded-md shadow-lg z-10">
           <ul className="py-1">
             {options.map((option, index) => (
               <li key={index}>
                 <a
                   href={option.url}
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                  className="block px-4 py-2 text-black hover:bg-gray-100"
                 >
                   {option.name}
                 </a>
