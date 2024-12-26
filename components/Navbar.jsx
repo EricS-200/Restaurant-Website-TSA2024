@@ -16,6 +16,11 @@ export default function Navbar() {
     { name: "Preparation", url: "/preparation" },
   ];
 
+  const aboutUsDropdown = [
+    { name: "Our Story", url: "/our-story" },
+    { name: "Reference", url: "/reference" },
+  ];
+
   let pageMap = new Map();
   pageMap.set(pages[0], "/ourStory");
   pageMap.set(pages[1], "/menu");
@@ -66,11 +71,11 @@ export default function Navbar() {
     } else {
       return (
         <Link href={link} className={"group relative"}>
-          <span className={`${isBold ? "text-black" : "text-gray-600"}`}>
+          <span className={`${isBold ? "text-black" : "text-black"}`}>
             {" "}
             {name}{" "}
           </span>
-          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[3px] bg-gray-600 absolute inset-x-0 bottom-[1px]" />
+          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[3px] bg-black  absolute inset-x-0 bottom-[1px]" />
         </Link>
       );
     }
@@ -203,21 +208,26 @@ export default function Navbar() {
             show ? "translate-y-0" : "-translate-y-full"
           } fixed top-0 z-50 w-full flex justify-center items-center transition-transform duration-500`}
         >
-          <div className="shadow-lg bg-white/20 backdrop-blur-lg rounded-2xl mt-4 container flex h-16 max-w-max items-center justify-center px-10 sticky flex-row gap-16">
-            <Link href={"/"} className={"flex flex-col"}>
+          <div className="shadow-lg bg-white/20 after:absolute after:inset-0 after:w-full after:h-full after:z-[-1] after:rounded-2xl after:block after:backdrop-blur-lg rounded-2xl mt-4 container flex h-16 max-w-max items-center justify-center px-10 sticky flex-row">
+            <Link href={"/"} className={"flex items-center mr-8"}>
               <Image src={logoImage} alt={"logo"} height={50} />
+              <p className="ml-2 font-bold">CraftRoots</p>
             </Link>
 
             <div className="flex flex-row gap-x-8 h-full items-center justify-center text-lg">
-              {returnLink(pages[0], currentPage === pageMap.get(pages[0]))}
+              {/* {returnLink(pages[0], currentPage === pageMap.get(pages[0]))} */}
               {returnLink(pages[1], currentPage === pageMap.get(pages[1]))}
+              <Dropdown
+                name="About Us"
+                options={aboutUsDropdown}
+                // extraStyle={"absolute z-[100]"}
+              />
               <Dropdown
                 name={"About Our Food"}
                 options={dropdownAboutFoodOptions}
-                extraStyle={""}
               />
               {returnLink(pages[2], currentPage === pageMap.get(pages[2]))}
-              <div className={"bg-gray-300/50 rounded-2xl py-1 px-2 flex"}>
+              <div className={"bg-gray-300/50  rounded-2xl py-1 px-2 flex"}>
                 {returnOrderNowLink(currentPage === pageMap.get(pages[3]))}
               </div>
             </div>
