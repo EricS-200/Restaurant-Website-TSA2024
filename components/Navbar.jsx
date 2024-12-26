@@ -210,8 +210,8 @@ export default function Navbar() {
         >
           <div className="shadow-lg bg-white/20 after:absolute after:inset-0 after:w-full after:h-full after:z-[-1] after:rounded-2xl after:block after:backdrop-blur-lg rounded-2xl mt-4 container flex h-16 max-w-max items-center justify-center px-10 sticky flex-row">
             <Link href={"/"} className={"flex items-center mr-8"}>
-              <Image src={logoImage} alt={"logo"} height={50} />
-              <p className="ml-2 font-bold">CraftRoots</p>
+              <Image src={logoImage} alt={"logo"} height={40} />
+              <p className=" font-bold">CraftRoots</p>
             </Link>
 
             <div className="flex flex-row gap-x-8 h-full items-center justify-center text-lg">

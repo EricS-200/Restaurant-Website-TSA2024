@@ -26,7 +26,7 @@ export default function Dropdown({ name, options, extraStyle }) {
       onMouseLeave={handleMouseLeave}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <button className="flex items-center rounded-md focus:outline-none">
+      <button className="flex items-center rounded-md focus:outline-none text-black">
         <span>{name}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ export default function Dropdown({ name, options, extraStyle }) {
               <li key={index}>
                 <a
                   href={option.url}
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                  className="block px-4 py-2 text-black hover:bg-gray-100"
                 >
                   {option.name}
                 </a>
