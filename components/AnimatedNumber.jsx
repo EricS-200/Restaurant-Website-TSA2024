@@ -5,31 +5,61 @@ import React, { useState, useEffect, useRef } from 'react';
  *
  * targetNumber (int): The number you want to hit (final number)
  *
- * targetNumberStringWithCommas (string): The number you want to hit, provided as a string with commas
+ * targetString (string): The number you want to hit, provided as a string, with commas
  *
  * startingFraction (float): The fraction of the target number you want to start the animation from (eg. 0.5 for 50%)
  *
- * durationOfAnimation (int): The duration of the animation in milliseconds
+ * duration (int): The duration of the animation in milliseconds
  */
-export default function AnimatedNumber({targetNumber, targetNumberAsStringWithCommas, startingFraction, durationOfAnimation})
+export default function AnimatedNumber({targetNumber, targetString, startingFraction, duration, extraStyle})
 {
     const numberRef = useRef(null); // Reference to the <h1> element
     const [currentValue, setCurrentValue] = useState(targetNumber * startingFraction); // For the number value
+    const [showThatPieceOfShit, setShowThatPieceOfShit] = useState(false);
 
+    const options = {
+        root: null,
+        rootMargin: "0px 0px 0px 0px",
+        threshold: 1.0
+    }
+
+    //Load the intersection observer after the page has loaded
     useEffect(() => {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.98) {
+                    setShowThatPieceOfShit(true);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        const target = document.getElementById("numberAnimation");
+        observer.observe(target);
+
+        return () => {
+            observer.disconnect();
+        }
+    }, []);
+
+    // Trigger the animation when the element is in view
+    useEffect(() => {
+        if (!showThatPieceOfShit)
+            return;
+
         const targetValue = parseInt(numberRef.current.getAttribute('data-value').replace(/,/g, ''), 10);
         const startingValue = targetNumber * startingFraction;
 
         setCurrentValue(startingValue);
 
         let startTime;
-        const duration = durationOfAnimation;
+        const _duration = duration;
 
         const animate = (timestamp) => {
             if (!startTime)
                 startTime = timestamp;
 
-            const progress = (timestamp - startTime) / duration;
+            const progress = (timestamp - startTime) / _duration;
 
             if (progress < 1) {
                 setCurrentValue(startingValue + (targetValue - startingValue) * progress);
@@ -40,14 +70,14 @@ export default function AnimatedNumber({targetNumber, targetNumberAsStringWithCo
         };
 
         requestAnimationFrame(animate);
-    }, []);
+    }, [showThatPieceOfShit]);
 
     return (
         <h1
             ref={numberRef}
             id="numberAnimation"
-            className="text-5xl p-4 font-semibold"
-            data-value={targetNumberAsStringWithCommas}
+            className={`font-semibold ${extraStyle}`}
+            data-value={targetString}
         >
             {new Intl.NumberFormat().format(Math.round(currentValue))}
         </h1>
