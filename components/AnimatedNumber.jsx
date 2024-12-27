@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
 /**
  * Parameters:
@@ -11,75 +11,85 @@ import React, { useState, useEffect, useRef } from 'react';
  *
  * duration (int): The duration of the animation in milliseconds
  */
-export default function AnimatedNumber({targetNumber, targetString, startingFraction, duration, extraStyle})
-{
-    const numberRef = useRef(null); // Reference to the <h1> element
-    const [currentValue, setCurrentValue] = useState(targetNumber * startingFraction); // For the number value
-    const [showThatPieceOfShit, setShowThatPieceOfShit] = useState(false);
+export default function AnimatedNumber({
+  targetNumber,
+  targetString,
+  startingFraction,
+  duration,
+  extraStyle,
+}) {
+  const numberRef = useRef(null); // Reference to the <h1> element
+  const [currentValue, setCurrentValue] = useState(
+    targetNumber * startingFraction
+  ); // For the number value
+  const [showThatPieceOfShit, setShowThatPieceOfShit] = useState(false);
 
-    const options = {
-        root: null,
-        rootMargin: "0px 0px 0px 0px",
-        threshold: 1.0
-    }
+  const options = {
+    root: null,
+    rootMargin: "0px 0px 0px 0px",
+    threshold: 1.0,
+  };
 
-    //Load the intersection observer after the page has loaded
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && entry.intersectionRatio >= 0.98) {
-                    setShowThatPieceOfShit(true);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, options);
-
-        const target = document.getElementById("numberAnimation");
-        observer.observe(target);
-
-        return () => {
-            observer.disconnect();
+  //Load the intersection observer after the page has loaded
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.98) {
+          setShowThatPieceOfShit(true);
+          observer.unobserve(entry.target);
         }
-    }, []);
+      });
+    }, options);
 
-    // Trigger the animation when the element is in view
-    useEffect(() => {
-        if (!showThatPieceOfShit)
-            return;
+    const target = numberRef.current;
+    observer.observe(target);
 
-        const targetValue = parseInt(numberRef.current.getAttribute('data-value').replace(/,/g, ''), 10);
-        const startingValue = targetNumber * startingFraction;
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
-        setCurrentValue(startingValue);
+  // Trigger the animation when the element is in view
+  useEffect(() => {
+    if (!showThatPieceOfShit) return;
 
-        let startTime;
-        const _duration = duration;
-
-        const animate = (timestamp) => {
-            if (!startTime)
-                startTime = timestamp;
-
-            const progress = (timestamp - startTime) / _duration;
-
-            if (progress < 1) {
-                setCurrentValue(startingValue + (targetValue - startingValue) * progress);
-                requestAnimationFrame(animate);
-            } else {
-                setCurrentValue(targetValue);
-            }
-        };
-
-        requestAnimationFrame(animate);
-    }, [showThatPieceOfShit]);
-
-    return (
-        <h1
-            ref={numberRef}
-            id="numberAnimation"
-            className={`font-semibold ${extraStyle}`}
-            data-value={targetString}
-        >
-            {new Intl.NumberFormat().format(Math.round(currentValue))}
-        </h1>
+    const targetValue = parseInt(
+      numberRef.current.getAttribute("data-value").replace(/,/g, ""),
+      10
     );
-};
+    const startingValue = targetNumber * startingFraction;
+
+    setCurrentValue(startingValue);
+
+    let startTime;
+    const _duration = duration;
+
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+
+      const progress = (timestamp - startTime) / _duration;
+
+      if (progress < 1) {
+        setCurrentValue(
+          startingValue + (targetValue - startingValue) * progress
+        );
+        requestAnimationFrame(animate);
+      } else {
+        setCurrentValue(targetValue);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [showThatPieceOfShit]);
+
+  return (
+    <h1
+      ref={numberRef}
+      id="numberAnimation"
+      className={`font-semibold ${extraStyle}`}
+      data-value={targetString}
+    >
+      {new Intl.NumberFormat().format(Math.round(currentValue))}
+    </h1>
+  );
+}
