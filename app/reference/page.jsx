@@ -137,7 +137,17 @@ export default function Reference() {
           All media sources, including images, audios, and videos, are listed
           below (some designs were created by team members ):
         </p>
-        <p>to be finished</p>
+        <ol type="1" className="list-decimal list-inside">
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="KYTSA"
+              sourceLink="https://kentuckytsa.org/"
+            />
+          </li>
+        </ol>
       </section>
 
       <section className="bg-white mt-6 w-[95vw] sm:w-3/4 md:w-2/3 lg:w-3/5 text-center">
@@ -149,20 +159,11 @@ export default function Reference() {
         <ol type="1" className="list-decimal list-inside">
           <li>
             <Citation
-              author="asdsa"
-              authorLink="hi"
+              author=""
+              authorLink=""
               type="image"
-              source="hi"
-              sourceLink="https://example.com"
-            />
-          </li>
-          <li>
-            <Citation
-              author="adfafd"
-              authorLink="hi"
-              type="image"
-              source="hi"
-              sourceLink="https://example.com"
+              source="a"
+              sourceLink="aaaa"
             />
           </li>
         </ol>
