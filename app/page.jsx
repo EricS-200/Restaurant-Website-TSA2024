@@ -8,9 +8,7 @@ import AnimatedNumber from "@/components/AnimatedNumber";
 import homeBanner from "@/public/placeholders/home-banner.jpg"; //placeholder
 
 import logoImage from "/public/logo.png";
-import goldenLeaves from "@/public/golden-leaves1.png";
-import goldenVegetable1 from "@/public/golden-vegetable1.png";
-import goldenVegetable2 from "@/public/golden-vegetable2.png";
+import GoldenImages from "@/components/GoldenImages";
 
 import menuItem1 from "@/public/placeholders/Vegetarian-Food-Bowl.jpg"; // placeholder
 
@@ -34,23 +32,8 @@ export default function Home() {
         </div>
       </ParallaxBanner>
 
-      <section className="w-full flex flex-col items-center py-8 space-y-4 relative overflow-hidden">
-        {/* Positioning may be broken for extremly large screens; check */}
-        <Image
-          alt="golden leaves 1"
-          src={goldenLeaves}
-          className="hidden lg:block absolute bottom-0 left-0 lg:-translate-y-[150px] xl:translate-y-0 lg:max-w-[23vw] rotate-[330deg] scale-x-[-1] 2xl:translate-y-[50px]"
-        />
-        <Image
-          alt="golden vegetable 1"
-          src={goldenVegetable1}
-          className="hidden lg:block absolute rotate-[150deg] lg:left-5 lg:top-5 lg:translate-y-20 xl:translate-y-0 xl:left-10 xl:top-10 lg:max-w-[250px] xl:max-w-[350px] "
-        />
-        <Image
-          alt="golden vegetable 2"
-          src={goldenVegetable2}
-          className="hidden lg:block absolute rotate-[-80deg] right-0 translate-x-[100px] max-w-[40vw] lg:translate-y-[150px] xl:translate-y-0"
-        />
+      <section className="w-full flex flex-col items-center py-8 pb-12  space-y-4 relative overflow-hidden">
+        <GoldenImages />
 
         <h2 className="text-8xl font-bold uppercase text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-300">
           Our Story
