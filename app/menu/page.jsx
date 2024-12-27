@@ -1,23 +1,20 @@
-export default function menu() {
-  function generateLoremIpsum(wordCount) {
-    const loremIpsum =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-    const words = loremIpsum.split(" ");
-    let result = [];
-    for (let i = 0; i < wordCount; i++) {
-      result.push(words[i % words.length]);
-    }
-    return result.join(" ");
-  }
+import MenuCard from "@/components/MenuCard";
+import appetizer1 from "@/public/menu/appetizer1.png";
 
+export default function menu() {
   return (
-    <div className="bg-green-700 flex items-center justify-center pt-20 px-44">
-      <p className={"pt-8"}>
-        <a className={"font-bold"}>Menu</a>
-        <br />
-        <br />
-        {generateLoremIpsum(2000)}
-      </p>
+    <div className="">
+      <section className="p-64 bg-gray-300">
+        <MenuCard
+          price={5.99}
+          src={appetizer1}
+          name="House Salad with Fresh Cherry Tomatoes"
+          vegan={true}
+          spice={0}
+          type="side"
+          description="A crisp medley of romaine and mixed greens tossed with sweet cherry tomatoes, crunchy cucumber slices, and a sprinkle of shredded carrots. Served with your choice of dressing, this salad is a refreshing start or complement to any meal."
+        />
+      </section>
     </div>
   );
 }
