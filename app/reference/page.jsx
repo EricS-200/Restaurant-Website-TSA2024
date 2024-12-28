@@ -138,6 +138,15 @@ export default function Reference() {
           below (some designs were created by team members ):
         </p>
         <ol type="1" className="list-decimal list-inside">
+        <li>
+            <Citation
+              author="Hannah Loewentheil"
+              authorLink="hi"
+              type="image"
+              source="Tasty"
+              sourceLink="https://tasty.co/article/hannahloewentheil/best-mocktails"
+            />
+          </li>
           <li>
             <Citation
               author=""
@@ -158,12 +167,22 @@ export default function Reference() {
         </p>
         <ol type="1" className="list-decimal list-inside">
           <li>
+            <Citation 
+            author="asdsa"
+            authorLink="https://www.buzzfeed.com/hannahloewentheil"
+            type="image"
+            source="hi"
+            sourceLink="https://example.com"
+            />
+          </li>
+         
+          <li>
             <Citation
-              author=""
-              authorLink=""
+              author="adfafd"
+              authorLink="hi"
               type="image"
-              source="a"
-              sourceLink="aaaa"
+              source="hi"
+              sourceLink="https://example.com"
             />
           </li>
         </ol>
