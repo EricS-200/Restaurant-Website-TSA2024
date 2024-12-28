@@ -27,6 +27,11 @@ export default function Citation({
   sourceLink,
 }) {
   let authorTag = undefined;
+
+  if (author === "") {
+    author = "Unknown Author";
+  }
+
   if (authorLink == "") {
     authorTag = author;
   } else {
