@@ -1,8 +1,3 @@
-export default function order()
-{
-    return  (
-        <div>
-
-        </div>
-    );
+export default function order() {
+  return <main></main>;
 }

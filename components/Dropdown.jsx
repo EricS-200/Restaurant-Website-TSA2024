@@ -52,7 +52,7 @@ export default function Dropdown({ name, options, extraStyle }) {
               <li key={index}>
                 <a
                   href={option.url}
-                  className="block px-4 py-2 text-black hover:bg-gray-100"
+                  className="block px-4 py-2 text-black hover:bg-white/30"
                 >
                   {option.name}
                 </a>
