@@ -98,7 +98,7 @@ export default function Navbar() {
     <>
       {/*Mobile Navbar*/}
       <div className="h-[55px] md:hidden"></div>
-      <div className={"lg:hidden"}>
+      <div className={"lg:hidden z-50"}>
         <div
           className={`fixed inset-0 h-fit w-full z-50 ${
             show ? "translate-y-0" : "-translate-y-full"
@@ -202,7 +202,7 @@ export default function Navbar() {
       </div>
 
       {/*Desktop Navbar*/}
-      <div className={"hidden lg:block"}>
+      <div className={"hidden lg:block z-50"}>
         <div
           className={`transform-gpu active ${
             show ? "translate-y-0" : "-translate-y-full"
