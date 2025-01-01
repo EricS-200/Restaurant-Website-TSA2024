@@ -65,10 +65,10 @@ export default function Home() {
         <p className="center-text">
           Founded in 1999, we at Craftroots have been trying our absolute
           hardest to provide the best service possible. From our founders&apos;
-          humble beginnings of working in South Indian textile factories to
-          their immigration to the United States, we now look to serve nothing
-          but the best, using nothing but the freshest ingredients and most
-          talented chefs.
+          humble beginnings of working in South Indian textiles and
+          Chinese manufacturing industry to their immigration to the United States,
+          we now look to serve nothing but the best, using nothing but the
+          freshest ingredients and most talented chefs.
         </p>
         <Link href="/our-story">
           <Button transparent={false}>Learn More</Button>
