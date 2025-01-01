@@ -175,7 +175,7 @@ export default function Navbar() {
                 currentPage === pageMap.get(pages[1]),
                 true
               )}
-              <Dropdown name="About Us" options={aboutUsDropdown} />
+
               <Dropdown
                   name="Our Story"
                   options={aboutUsDropdown}
