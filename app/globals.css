@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 
 
 :root {
   --background: rgb(229 231 235); /*tw gray-200*/
