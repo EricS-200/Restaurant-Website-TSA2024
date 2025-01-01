@@ -17,7 +17,7 @@ export default function Navbar() {
   ];
 
   const aboutUsDropdown = [
-    { name: "Our Story", url: "/our-story" },
+    { name: "About us", url: "/aboutUs" },
     { name: "Reference", url: "/reference" },
   ];
 
@@ -218,7 +218,7 @@ export default function Navbar() {
               {/* {returnLink(pages[0], currentPage === pageMap.get(pages[0]))} */}
               {returnLink(pages[1], currentPage === pageMap.get(pages[1]))}
               <Dropdown
-                name="About Us"
+                name="Our Story"
                 options={aboutUsDropdown}
                 // extraStyle={"absolute z-[100]"}
               />

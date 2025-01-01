@@ -1,4 +1,4 @@
-export default function ourStory()
+export default function aboutUs()
 {
     return  (
         <div>
