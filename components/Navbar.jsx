@@ -151,7 +151,7 @@ export default function Navbar() {
 
               <button
                 onClick={() => setIsMobileNavOpen(false)}
-                className="ml-auto p-2"
+                className={`${isMobileNavOpen ? "block" : "hidden"} ml-[35%] p-2`}
               >
                 <svg
                   className="w-6 h-6"
