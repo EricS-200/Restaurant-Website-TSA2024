@@ -9,10 +9,10 @@ import Dropdown from "@/components/Dropdown";
 import logoImage from "/public/logo.png";
 
 export default function Navbar() {
-  const pages = ["Our Story", "Menu", "Community", "Order Now"];
+  const pages = ["Our Story", "Menu", "Community", "Reserve & Order"];
   const dropdownAboutFoodOptions = [
     { name: "Sustainability", url: "/sustainability" },
-    { name: "Farm to Table", url: "/farmToTable" },
+    { name: "Farm to Table", url: "/farm-to-table" },
     { name: "Preparation", url: "/preparation" },
   ];
 
@@ -22,7 +22,7 @@ export default function Navbar() {
   ];
 
   let pageMap = new Map();
-  pageMap.set(pages[0], "/ourStory");
+  pageMap.set(pages[0], "/our-story");
   pageMap.set(pages[1], "/menu");
   pageMap.set(pages[2], "/community");
   pageMap.set(pages[3], "/order");
@@ -62,10 +62,10 @@ export default function Navbar() {
       return (
         <Link
           href={link}
-          className={`group mt-1 text-md`}
+          className={`group text-md`}
           onClick={() => setIsMobileNavOpen(false)}
         >
-          <span className={`${isBold ? "" : ""}`}> {name} </span>
+          <span className={` text-black ${isBold ? "" : ""}`}> {name} </span>
         </Link>
       );
     } else {
@@ -87,7 +87,9 @@ export default function Navbar() {
 
     return (
       <Link href={link} className={"group"}>
-        <span className={`${isBold ? "font-bold" : "font-normal"}`}>
+        <span
+          className={`text-black ${isBold ? "font-normal" : "font-normal"}`}
+        >
           {name}
         </span>
       </Link>
@@ -167,14 +169,13 @@ export default function Navbar() {
                 </svg>
               </button>
             </div>
-
-            <div className="flex flex-col gap-y-2 ml-6 mt-4">
+            <div className="flex flex-col  gap-y-3 ml-6 mt-4">
               {returnLink(
-                  pages[1],
-                  currentPage === pageMap.get(pages[1]),
-                  true
+                pages[1],
+                currentPage === pageMap.get(pages[1]),
+                true
               )}
-
+              <Dropdown name="About Us" options={aboutUsDropdown} />
               <Dropdown
                   name="Our Story"
                   options={aboutUsDropdown}
@@ -211,8 +212,8 @@ export default function Navbar() {
         >
           <div className="shadow-lg bg-white/20 after:absolute after:inset-0 after:w-full after:h-full after:z-[-1] after:rounded-2xl after:block after:backdrop-blur-lg rounded-2xl mt-4 container flex h-16 max-w-max items-center justify-center px-10 sticky flex-row">
             <Link href={"/"} className={"flex items-center mr-8"}>
-              <Image src={logoImage} alt={"logo"} height={50} />
-              <p className="ml-2 font-bold">CraftRoots</p>
+              <Image src={logoImage} alt={"logo"} height={40} />
+              <p className=" font-bold">CraftRoots</p>
             </Link>
 
             <div className="flex flex-row gap-x-8 h-full items-center justify-center text-lg">
