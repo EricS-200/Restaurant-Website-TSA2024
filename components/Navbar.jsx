@@ -170,15 +170,15 @@ export default function Navbar() {
 
             <div className="flex flex-col gap-y-2 ml-6 mt-4">
               {returnLink(
-                pages[0],
-                currentPage === pageMap.get(pages[0]),
-                true
+                  pages[1],
+                  currentPage === pageMap.get(pages[1]),
+                  true
               )}
-              {returnLink(
-                pages[1],
-                currentPage === pageMap.get(pages[1]),
-                true
-              )}
+
+              <Dropdown
+                  name="Our Story"
+                  options={aboutUsDropdown}
+              />
 
               <Dropdown
                 name={"About Our Food"}
@@ -191,6 +191,7 @@ export default function Navbar() {
                 currentPage === pageMap.get(pages[3]),
                 true
               )}
+
               {returnLink(
                 pages[3],
                 currentPage === pageMap.get(pages[4]),
@@ -215,18 +216,20 @@ export default function Navbar() {
             </Link>
 
             <div className="flex flex-row gap-x-8 h-full items-center justify-center text-lg">
-              {/* {returnLink(pages[0], currentPage === pageMap.get(pages[0]))} */}
               {returnLink(pages[1], currentPage === pageMap.get(pages[1]))}
+
               <Dropdown
                 name="Our Story"
                 options={aboutUsDropdown}
-                // extraStyle={"absolute z-[100]"}
               />
+
               <Dropdown
                 name={"About Our Food"}
                 options={dropdownAboutFoodOptions}
               />
+
               {returnLink(pages[2], currentPage === pageMap.get(pages[2]))}
+
               <div className={"bg-gray-300/50  rounded-2xl py-1 px-2 flex"}>
                 {returnOrderNowLink(currentPage === pageMap.get(pages[3]))}
               </div>
