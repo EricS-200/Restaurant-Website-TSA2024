@@ -1,6 +1,6 @@
 import Image from "next/image";
 import timeline from "@/public/placeholders/timelinetimelinetimel.png";
-
+import madeuptimeline from "@/public/images/timeline real.png"
 export default function Home() {
     return(
         <><h1 className="text-center pt-32 pb-8 text-9xl font-bold">
@@ -8,7 +8,8 @@ export default function Home() {
         </h1><main className="flex-col pt-32 pb-8 text-slate bg-[#ffffff] pl-10">
                 <div className="flex justify-around">
                     <div className="flex-col items-center justify-between w-1/2">
-                        <h2 className="text-4xl font-bold pb-8 text-balance">
+                    {
+                        /*<h2 className="text-4xl font-bold pb-8 text-balance">
                             Steal this blurb for the about us page
                         </h2>
                         <p className="text-pretty w-4/5">
@@ -18,22 +19,41 @@ export default function Home() {
                         the United States, we now look to serve nothing but the best, using 
                         nothing but the freshest ingredients and most talented chefs.
                         </p>
-
+                        */
+                    }   
                         <h2 className="text-4xl font-bold py-8 pb-8">
-                            First Steps
+                            Our Mission
+                        </h2>
+                        <p className="text-pretty w-4/5 pb-300">
+                        Founded in 1999, Craftroots has maintained one mission: to raise awareness 
+                        about sustainable practices while serving nothing but the best. For patrons, 
+                        Craftroots aims to provide the best service possible while still being 
+                        affordable for anyone. For business partners, Craftroots aims to support the 
+                        growth of other small businesses through cooperation, communication, and 
+                        dedication. Such dedication has been our doctrine for our now twenty-five 
+                        years in operation, and will continue to be for years to come.
+                        </p>
+                        <h2 className="text-4xl font-bold py-80 pb-8">
+                            Our Journey
                         </h2>
                         <p className="text-pretty w-4/5">
-                        Craftroots was founded not long after Mukhil Alhamdulillah Ravichandran, our founder,
-                        immigrated illegally to the United States as a non-citizen. He worked odd jobs,
-                        saving money until he was finally able to open his first restaurant in 1999.
-                        Grand Leader Ravichandran was able to build this restaurant by himself and his
-                        first employee from the ground up, keeping up operations for 3 years before deciding
-                        to expand and take on more employees. Since founding, we've always been dedicated to
-                        the same local farm -- Eric Su's Motor-Oil-Infused Tomato Plantation.
+                        Starting out as a simple food stand among many others, Eric’s Organic Grill 
+                        quickly gained a small but dedicated base of loyal customers. After slowly 
+                        growing and taking on a new employee, Eric’s Organic Grill relocated and 
+                        founded its first official restaurant in 2010. From there, it was a 
+                        tumultuous journey with many hardships. The Organic Grill was forced to 
+                        partner with many different local farms before settling on its current 
+                        partner, Ravichandran Agricultation Facilities. After relatively low success 
+                        for two more years, Eric knew something drastic had to happen -- and so in 2012, 
+                        Eric’s Organic Grill was completely rebranded into the Craftroots that we know and 
+                        love today. Craftroots experienced a huge boom in success, and quickly adapted to 
+                        the rapidly changing circumstances. Nowadays, our dedicated crew of seventeen 
+                        employees and our now-successful farm partner are more than ready to carry out 
+                        our mission and our founding values.
                         </p>
                     </div>
                     <Image
-                    src={timeline}
+                    src={madeuptimeline}
                     alt="ts sucks"
                     ></Image>
                 </div>
