@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import SimpleBanner from "@/components/SimpleParallaxBanner"
+import SimpleBanner from "@/components/ignoreagain.jsx"
 export default function TitleBanner({
     children,
     className = "",

@@ -8,7 +8,7 @@ export default function Home() {
       <SimpleParallaxBanner
         src={banner}
         className="h-[50vh] xl:h-[65vh]"
-        speed={0}
+        speed={1}
         text="Test"
       >
         <Image
