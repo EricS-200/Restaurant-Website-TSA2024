@@ -1,12 +1,22 @@
 import Image from "next/image";
-import timeline from "@/public/placeholders/timelinetimelinetimel.png";
-import madeuptimeline from "@/public/images/timeline real.png"
+import banner from "@/public/placeholders/wavy-banner.jpg";
+import madeuptimeline from "@/public/images/timeline real.png";
+import SimpleParallaxBanner from "@/components/SimpleParallaxBanner";
 export default function Home() {
     return(
-        <><h1 className="text-center pt-32 pb-8 text-9xl font-bold">
+        <>
+        <SimpleParallaxBanner
+            src={banner}
+            className="h-[50vh] xl:h-[65vh]"
+            speed={0}
+            priority="true"
+        />
+        <main className="flex-col pt-32 pb-8 text-slate bg-[#ffffff] pl-10">
+            <h1 className="text-center pt-32 pb-8 text-9xl font-bold">
             Our Story
-        </h1><main className="flex-col pt-32 pb-8 text-slate bg-[#ffffff] pl-10">
+        </h1>
                 <div className="flex justify-around">
+            
                     <div className="flex-col items-center justify-between w-1/2">
                     {
                         /*<h2 className="text-4xl font-bold pb-8 text-balance">
@@ -56,6 +66,12 @@ export default function Home() {
                     src={madeuptimeline}
                     alt="ts sucks"
                     ></Image>
+                </div>
+                <div className="flex justify-around">
+                    {
+                        // decoration image here
+                    }
+
                 </div>
             </main></>
     );
