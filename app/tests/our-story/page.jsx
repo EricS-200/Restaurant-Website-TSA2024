@@ -1,20 +1,19 @@
 import Image from "next/image";
 import banner from "@/public/placeholders/wavy-banner.jpg";
 import madeuptimeline from "@/public/images/timeline real.png";
-import SimpleParallaxBanner from "@/components/SimpleParallaxBanner";
+import SimpleParallaxBanner from "@/components/ParallaxBannerTitle";
 export default function Home() {
     return(
         <>
         <SimpleParallaxBanner
             src={banner}
             className="h-[50vh] xl:h-[65vh]"
-            speed={0}
+            speed={0.5}
             priority="true"
+            text="Our Story"
         />
         <main className="flex-col pt-32 pb-8 text-slate bg-[#ffffff] pl-10">
-            <h1 className="text-center pt-32 pb-8 text-9xl font-bold">
-            Our Story
-        </h1>
+            
                 <div className="flex justify-around">
             
                     <div className="flex-col items-center justify-between w-1/2">
