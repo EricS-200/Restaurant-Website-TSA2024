@@ -9,20 +9,20 @@ import Dropdown from "@/components/Dropdown";
 import logoImage from "/public/logo.png";
 
 export default function Navbar() {
-  const pages = ["Our Story", "Menu", "Community", "Order Now"];
+  const pages = ["Our Story", "Menu", "Community", "Reserve & Order"];
   const dropdownAboutFoodOptions = [
     { name: "Sustainability", url: "/sustainability" },
-    { name: "Farm to Table", url: "/farmToTable" },
+    { name: "Farm to Table", url: "/farm-to-table" },
     { name: "Preparation", url: "/preparation" },
   ];
 
   const aboutUsDropdown = [
-    { name: "Our Story", url: "/our-story" },
+    { name: "About us", url: "/aboutUs" },
     { name: "Reference", url: "/reference" },
   ];
 
   let pageMap = new Map();
-  pageMap.set(pages[0], "/ourStory");
+  pageMap.set(pages[0], "/our-story");
   pageMap.set(pages[1], "/menu");
   pageMap.set(pages[2], "/community");
   pageMap.set(pages[3], "/order");
@@ -62,10 +62,10 @@ export default function Navbar() {
       return (
         <Link
           href={link}
-          className={`group mt-1 text-md`}
+          className={`group text-md`}
           onClick={() => setIsMobileNavOpen(false)}
         >
-          <span className={`${isBold ? "" : ""}`}> {name} </span>
+          <span className={` text-black ${isBold ? "" : ""}`}> {name} </span>
         </Link>
       );
     } else {
@@ -87,7 +87,9 @@ export default function Navbar() {
 
     return (
       <Link href={link} className={"group"}>
-        <span className={`${isBold ? "font-bold" : "font-normal"}`}>
+        <span
+          className={`text-black ${isBold ? "font-normal" : "font-normal"}`}
+        >
           {name}
         </span>
       </Link>
@@ -149,7 +151,7 @@ export default function Navbar() {
 
               <button
                 onClick={() => setIsMobileNavOpen(false)}
-                className="ml-auto p-2"
+                className={`${isMobileNavOpen ? "block" : "hidden"} ml-[35%] p-2`}
               >
                 <svg
                   className="w-6 h-6"
@@ -167,18 +169,17 @@ export default function Navbar() {
                 </svg>
               </button>
             </div>
-
-            <div className="flex flex-col gap-y-2 ml-6 mt-4">
-              {returnLink(
-                pages[0],
-                currentPage === pageMap.get(pages[0]),
-                true
-              )}
+            <div className="flex flex-col  gap-y-3 ml-6 mt-4">
               {returnLink(
                 pages[1],
                 currentPage === pageMap.get(pages[1]),
                 true
               )}
+
+              <Dropdown
+                  name="Our Story"
+                  options={aboutUsDropdown}
+              />
 
               <Dropdown
                 name={"About Our Food"}
@@ -191,6 +192,7 @@ export default function Navbar() {
                 currentPage === pageMap.get(pages[3]),
                 true
               )}
+
               {returnLink(
                 pages[3],
                 currentPage === pageMap.get(pages[4]),
@@ -202,7 +204,7 @@ export default function Navbar() {
       </div>
 
       {/*Desktop Navbar*/}
-      <div className={"hidden lg:block"}>
+      <div className={"hidden lg:block z-50"}>
         <div
           className={`transform-gpu active ${
             show ? "translate-y-0" : "-translate-y-full"
@@ -215,18 +217,20 @@ export default function Navbar() {
             </Link>
 
             <div className="flex flex-row gap-x-8 h-full items-center justify-center text-lg">
-              {/* {returnLink(pages[0], currentPage === pageMap.get(pages[0]))} */}
               {returnLink(pages[1], currentPage === pageMap.get(pages[1]))}
+
               <Dropdown
-                name="About Us"
+                name="Our Story"
                 options={aboutUsDropdown}
-                // extraStyle={"absolute z-[100]"}
               />
+
               <Dropdown
                 name={"About Our Food"}
                 options={dropdownAboutFoodOptions}
               />
+
               {returnLink(pages[2], currentPage === pageMap.get(pages[2]))}
+
               <div className={"bg-gray-300/50  rounded-2xl py-1 px-2 flex"}>
                 {returnOrderNowLink(currentPage === pageMap.get(pages[3]))}
               </div>
