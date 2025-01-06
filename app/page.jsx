@@ -32,6 +32,7 @@ export default function Home() {
         </div>
       </ParallaxBanner>
 
+
       <section className="w-full flex flex-col items-center py-8 pb-12  space-y-4 relative overflow-hidden">
         <GoldenImages />
 

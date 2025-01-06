@@ -99,12 +99,12 @@ export default function Navbar() {
   return (
     <>
       {/*Mobile Navbar*/}
-      <div className="h-[55px] md:hidden"></div>
-      <div className={"lg:hidden z-50"}>
+      {/* <div className="h-[55px] md:hidden"></div> */}
+      <div className={"lg:hidden"}>
         <div
           className={`fixed inset-0 h-fit w-full z-50 ${
             show ? "translate-y-0" : "-translate-y-full"
-          } w-full bg-white transition-transform duration-500`}
+          } w-full bg-white/20 backdrop-blur-sm transition-transform duration-500`}
         >
           <button onClick={() => setIsMobileNavOpen(true)} className="p-4 ml-2">
             <svg
