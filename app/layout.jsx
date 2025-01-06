@@ -15,7 +15,7 @@ const poppins = Poppins({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.className}>
-      <body>
+      <body className={"h-full"}>
         <Navbar />
         {children}
       </body>
