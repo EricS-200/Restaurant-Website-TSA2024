@@ -34,11 +34,42 @@ body {
   @apply text-lg leading-loose;
 }
 
-section {
+section.bg {
   background: var(--background);
   color: var(--foreground);
 }
 
 .center-text {
   @apply w-[95vw] sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 text-center;
+}
+
+main {
+  @apply min-h-[100vh];
+}
+
+.menu-card.group:hover:not(:has(.card-bg-nochange:hover)) {
+  @apply bg-white/85;
+}
+
+.perspective-normal {
+  perspective: 1000px;
+}
+
+/* .menu-card {
+  transition: width 0.5s ease, max-height 0.5s ease;
+} */
+
+.menu-card-open {
+  transform: translateZ(0px);
+}
+
+.menu-description {
+  display: grid;
+  grid-template-rows: 0fr; /* Collapsed state */
+  overflow: hidden;
+  transition: grid-template-rows 0.5s ease-in-out; /* Smooth transition */
+}
+
+.menu-description.open {
+  grid-template-rows: 1fr; /* Expanded state */
 }
