@@ -151,7 +151,9 @@ export default function Navbar() {
 
               <button
                 onClick={() => setIsMobileNavOpen(false)}
-                className={`${isMobileNavOpen ? "block" : "hidden"} ml-[35%] p-2`}
+                className={`${
+                  isMobileNavOpen ? "block" : "hidden"
+                } ml-[35%] p-2 absolute right-4 sm:right-8 top-6`}
               >
                 <svg
                   className="w-6 h-6"
@@ -176,10 +178,7 @@ export default function Navbar() {
                 true
               )}
 
-              <Dropdown
-                  name="Our Story"
-                  options={aboutUsDropdown}
-              />
+              <Dropdown name="Our Story" options={aboutUsDropdown} />
 
               <Dropdown
                 name={"About Our Food"}
@@ -219,10 +218,7 @@ export default function Navbar() {
             <div className="flex flex-row gap-x-8 h-full items-center justify-center text-lg">
               {returnLink(pages[1], currentPage === pageMap.get(pages[1]))}
 
-              <Dropdown
-                name="Our Story"
-                options={aboutUsDropdown}
-              />
+              <Dropdown name="Our Story" options={aboutUsDropdown} />
 
               <Dropdown
                 name={"About Our Food"}
