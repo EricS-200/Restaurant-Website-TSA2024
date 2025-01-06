@@ -44,7 +44,9 @@ export default function MenuCard({
   return (
     <div
       className={`menu-card px-4 pt-4 pb-3 drop-shadow-2xl shadow-2xl rounded-md bg-white flex flex-col items-center 
-    justify-center w-[500px] transition-all duration-500 group cursor-pointer max-h-[80vh] `}
+    justify-center transition-all duration-500 group cursor-pointer max-h-[80vh] ${
+      open ? "w-96" : "w-64"
+    } `}
       onClick={open ? closeCard : openCard}
       style={{ transform }}
       ref={cardRef}
