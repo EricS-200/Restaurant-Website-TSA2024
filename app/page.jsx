@@ -101,7 +101,7 @@ export default function Home() {
 
           <div
             className={
-              "px-[12%] flex flex-col w-2/3 text-4xl justify-center pt-[5%]"
+              "px-[12%] flex flex-col w-2/3 text-md md:text-4xl justify-center md:pt-[5%]"
             }
           >
             <AnimatedNumber
@@ -109,7 +109,7 @@ export default function Home() {
               targetString={"4,000,000,000"}
               startingFraction={0.5}
               duration={1000}
-              extraStyle={"text-7xl"}
+              extraStyle={"text-2xl md:text-7xl"}
             />
             <p className={"pb-[10%]"}>
               What we&#39;re doing to keep abusing children
@@ -120,7 +120,7 @@ export default function Home() {
               targetString={"4,000,000,000"}
               startingFraction={0.5}
               duration={1000}
-              extraStyle={"text-7xl"}
+              extraStyle={"text-2xl md:text-7xl"}
             />
             <p className={"pb-[10%]"}>
               What we&#39;re doing to keep abusing children
@@ -131,7 +131,7 @@ export default function Home() {
               targetString={"4,000,000,000"}
               startingFraction={0.5}
               duration={1000}
-              extraStyle={"text-7xl"}
+              extraStyle={"text-2xl md:text-7xl"}
             />
             <p className={"pb-[10%]"}>
               What we&#39;re doing to keep abusing children
