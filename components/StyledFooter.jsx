@@ -15,21 +15,27 @@ export default function StyledFooter() {
                 {
                     // name and logo div, katherine wants this to scroll left & repeat
                 }
+                <Link
+                target=""
+                href="/"
+                locale=""
+                className="hover:underline flex flex-row transition-all">
                 <Image
                     src={icon}
                     alt="CraftRoots Logo"
                     width={100}
                     height={100}
                 ></Image>
-                <h1 className="text-8xl font-bold">
+                <h1 className="text-8xl font-bold hover:text-slate-800 delay-100 transition-all">
                     CraftRoots
                 </h1>
+                </Link>
             </div>
-            <div className="flex flex-row justify-evenly h-64">
+            <div className="flex flex-row justify-evenly h-56">
                 {
                     // columns div
                 }
-                <div className="flex flex-col content-between">
+                <div className="flex flex-col place-content-between">
                     {
                         // column 1 (our story, community)
                         
@@ -68,7 +74,7 @@ export default function StyledFooter() {
                         <h1 className="text-4xl font-bold">
                             Community
                         </h1>
-                        <div className="flex flex-row justify-evenly">
+                        <div className="flex flex-row justify-evenly pb-2">
                             {
                                 // socials icons
                             }
@@ -132,7 +138,7 @@ export default function StyledFooter() {
                         </Link>
                     </div>
                 </div>
-                <div className="flex flex-col content-between">
+                <div className="flex flex-col place-content-between">
                     {
                         // column 2 (about our food, menu)
                     }
