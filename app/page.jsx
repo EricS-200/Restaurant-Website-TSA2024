@@ -10,7 +10,13 @@ import homeBanner from "@/public/placeholders/home-banner.jpg"; //placeholder
 import logoImage from "/public/logo.png";
 import GoldenImages from "@/components/GoldenImages";
 
-import menuItem1 from "@/public/placeholders/Vegetarian-Food-Bowl.jpg"; // placeholder
+import entree1 from "@/public/menu/entree1.png";
+import entree2 from "@/public/menu/entree2.png";
+import entree3 from "@/public/menu/entree3.png";
+import entree4 from "@/public/menu/entree4.png";
+import special1 from "@/public/menu/special1.png";
+import special2 from "@/public/menu/special2.png";
+import special3 from "@/public/menu/special3.png";
 
 export default function Home() {
   return (
@@ -62,10 +68,11 @@ export default function Home() {
       </section>
 
       <HorizontalScroll
+        scrollTime={5}
         className="bg-white"
         header={
-          <h2 className="text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r bg-amber-500">
-            Our Menu
+          <h2 className="text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r bg-amber-500 text-center">
+            Featured Dishes{" "}
           </h2>
         }
         footer={
@@ -74,15 +81,14 @@ export default function Home() {
           </Link>
         }
       >
-        <Image alt="" placeholder="blur" src={menuItem1} />
-        <Image alt="" placeholder="blur" src={menuItem1} />
-        <Image alt="" placeholder="blur" src={menuItem1} />
-        <Image alt="" placeholder="blur" src={menuItem1} />
-        <Image alt="" placeholder="blur" src={menuItem1} />
-        <Image alt="" placeholder="blur" src={menuItem1} />
-        <Image alt="" placeholder="blur" src={menuItem1} />
-        <Image alt="" placeholder="blur" src={menuItem1} />
-        <Image alt="" placeholder="blur" src={menuItem1} />
+        <Image alt="" placeholder="blur" src={entree1} className="w-[500px]" />
+        <Image alt="" placeholder="blur" src={entree2} className="w-[500px]" />
+        <Image alt="" placeholder="blur" src={entree3} className="w-[500px]" />
+        <Image alt="" placeholder="blur" src={entree4} className="w-[500px]" />
+        <Image alt="" placeholder="blur" src={special1} className="w-[500px]" />
+        <Image alt="" placeholder="blur" src={special1} className="w-[500px]" />
+        <Image alt="" placeholder="blur" src={special2} className="w-[500px]" />
+        <Image alt="" placeholder="blur" src={special3} className="w-[500px]" />
       </HorizontalScroll>
 
       <section
