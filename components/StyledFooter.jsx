@@ -25,11 +25,11 @@ export default function StyledFooter() {
                     CraftRoots
                 </h1>
             </div>
-            <div className="flex flex-row justify-evenly">
+            <div className="flex flex-row justify-evenly h-64">
                 {
-                    // sections n shit div
+                    // columns div
                 }
-                <div className="flex flex-col content-around">
+                <div className="flex flex-col content-between">
                     {
                         // column 1 (our story, community)
                         
@@ -132,16 +132,88 @@ export default function StyledFooter() {
                         </Link>
                     </div>
                 </div>
-                <div className="flex flex-col content-around">
+                <div className="flex flex-col content-between">
                     {
                         // column 2 (about our food, menu)
                     }
+                    <div className="flex flex-col justify-center text-center">
+                        {
+                            // About our Food
+                        }
+                        <h1 className="text-4xl font-bold">
+                            About our Food
+                        </h1>
+                        <p>
+                            <Link
+                                target=""
+                                href="/sustainability"
+                                locale=""
+                                className="hover:underline hover:text-slate-500 transition-all delay-100"
+                            >
+                                Sustainability
+                            </Link>
+                        </p>
+                        <p>
+                            <Link
+                                target=""
+                                href="/farmToTable"
+                                locale=""
+                                className="hover:underline hover:text-slate-500 transition-all delay-100"
+                            >
+                                Farm-to-Table
+                            </Link>
+                        </p>
+                        <p>
+                            <Link
+                                target=""
+                                href="/preparation"
+                                locale=""
+                                className="hover:underline hover:text-slate-500 transition-all delay-100"
+                            >
+                                Preparation
+                            </Link>
+                        </p>
+                    </div>
+                    <div className="flex flex-col justify-items-center text-center">
+                        {
+                            // Menu
+                        }
+                        <Link
+                            target=""
+                            href="/menu"
+                            locale=""
+                            className="hover:underline hover:text-slate-600 transition-all delay-100"
+                        >
+                            <h1 className="text-4xl font-bold">
+                                Menu
+                            </h1>
+                        </Link>
+                        <Link
+                        target=""
+                        href="/order"
+                        locale=""
+                        >
+                            <button
+                                className="w-44 text-3xl bg-orange-500 hover:bg-orange-400 text-amber-100 hover:text-white transition-all delay-100 leading-10 rounded-full justify-self-center">
+                                Order Now
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </div>
-            <div>
+            <div className="w-3/5 justify-evenly flex flex-row place-self-center py-5">
                 {
                     // legal & socials div
                 }
+                <p>
+                    Privacy Policy
+                </p>
+                <p>
+                    Terms & Conditions
+                </p>
+                <p>
+                    USDA Permits
+                </p>
             </div>
         </footer>
     )
