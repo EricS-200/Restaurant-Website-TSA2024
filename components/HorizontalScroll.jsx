@@ -1,5 +1,7 @@
 "use client";
 
+/*NOT REALLY REUSABLE DUE TO OFFSET CONSTANTS!!! */
+
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState, useLayoutEffect, useEffect } from "react";
 import { cn } from "@/utils/utils";
@@ -34,6 +36,13 @@ export default function HorizontalScroll({
 
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
+
+  if (screenWidth > 768) {
+    offset = screenWidth / 2 - 420 / 2 + 16;
+    console.log("hi");
+  } else {
+    offset = 60;
+  }
 
   const translateX = useTransform(
     scrollYProgress,

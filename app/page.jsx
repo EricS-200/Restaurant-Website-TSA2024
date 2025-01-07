@@ -19,6 +19,9 @@ import special2 from "@/public/menu/special2.png";
 import special3 from "@/public/menu/special3.png";
 
 export default function Home() {
+  const horizontalScrollElementClassName =
+    "w-[420px] transition-transform duration-500 hover:scale-125"; // makes it easy to edit
+
   return (
     <main className="">
       <ParallaxBanner
@@ -37,7 +40,6 @@ export default function Home() {
           </div>
         </div>
       </ParallaxBanner>
-
 
       <section className="w-full flex flex-col items-center py-8 pb-12  space-y-4 relative overflow-hidden">
         <GoldenImages />
@@ -58,9 +60,9 @@ export default function Home() {
           Founded in 1999, we at Craftroots have been trying our absolute
           hardest to provide the best service possible. From our founders&apos;
           humble beginnings of working in South Indian textiles and Chinese
-          manufacturing industries to their immigration to the United States,
-          we now look to serve nothing but the best, using nothing but the
-          freshest ingredients and most talented chefs.
+          manufacturing industries to their immigration to the United States, we
+          now look to serve nothing but the best, using nothing but the freshest
+          ingredients and most talented chefs.
         </p>
         <Link href="/our-story">
           <Button transparent={false}>Learn More</Button>
@@ -68,7 +70,7 @@ export default function Home() {
       </section>
 
       <HorizontalScroll
-        scrollTime={5}
+        scrollTime={3.5}
         className="bg-white"
         header={
           <h2 className="text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r bg-amber-500 text-center">
@@ -81,14 +83,50 @@ export default function Home() {
           </Link>
         }
       >
-        <Image alt="" placeholder="blur" src={entree1} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={entree2} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={entree3} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={entree4} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={special1} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={special1} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={special2} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={special3} className="w-[500px]" />
+        <div className="flex pl-4 gap-x-24">
+          <Image
+            alt=""
+            placeholder="blur"
+            src={entree1}
+            className={horizontalScrollElementClassName}
+          />
+          <Image
+            alt=""
+            placeholder="blur"
+            src={entree2}
+            className={horizontalScrollElementClassName}
+          />
+          <Image
+            alt=""
+            placeholder="blur"
+            src={entree3}
+            className={horizontalScrollElementClassName}
+          />
+          <Image
+            alt=""
+            placeholder="blur"
+            src={entree4}
+            className={horizontalScrollElementClassName}
+          />
+          <Image
+            alt=""
+            placeholder="blur"
+            src={special1}
+            className={horizontalScrollElementClassName}
+          />
+          <Image
+            alt=""
+            placeholder="blur"
+            src={special2}
+            className={horizontalScrollElementClassName}
+          />
+          <Image
+            alt=""
+            placeholder="blur"
+            src={special3}
+            className={horizontalScrollElementClassName}
+          />
+        </div>
       </HorizontalScroll>
 
       <section
