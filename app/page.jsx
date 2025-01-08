@@ -2,26 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
 import ParallaxBanner from "@/components/SimpleParallaxBanner";
-import HorizontalScroll from "@/components/HorizontalScroll";
 import AnimatedNumber from "@/components/AnimatedNumber";
+
+import MenuPreview from "@/components/MenuPreview";
 
 import homeBanner from "@/public/placeholders/home-banner.jpg"; //placeholder
 
 import logoImage from "/public/logo.png";
 import GoldenImages from "@/components/GoldenImages";
 
-import entree1 from "@/public/menu/entree1.png";
-import entree2 from "@/public/menu/entree2.png";
-import entree3 from "@/public/menu/entree3.png";
-import entree4 from "@/public/menu/entree4.png";
-import special1 from "@/public/menu/special1.png";
-import special2 from "@/public/menu/special2.png";
-import special3 from "@/public/menu/special3.png";
-
 export default function Home() {
-  const horizontalScrollElementClassName =
-    "w-[420px] transition-transform duration-500 hover:scale-125"; // makes it easy to edit
-
   return (
     <main className="">
       <ParallaxBanner
@@ -69,65 +59,7 @@ export default function Home() {
         </Link>
       </section>
 
-      <HorizontalScroll
-        scrollTime={3.5}
-        className="bg-white"
-        header={
-          <h2 className="text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r bg-amber-500 text-center">
-            Featured Dishes{" "}
-          </h2>
-        }
-        footer={
-          <Link href="/menu">
-            <Button>Our Full Menu</Button>
-          </Link>
-        }
-      >
-        <div className="flex pl-4 gap-x-24">
-          <Image
-            alt=""
-            placeholder="blur"
-            src={entree1}
-            className={horizontalScrollElementClassName}
-          />
-          <Image
-            alt=""
-            placeholder="blur"
-            src={entree2}
-            className={horizontalScrollElementClassName}
-          />
-          <Image
-            alt=""
-            placeholder="blur"
-            src={entree3}
-            className={horizontalScrollElementClassName}
-          />
-          <Image
-            alt=""
-            placeholder="blur"
-            src={entree4}
-            className={horizontalScrollElementClassName}
-          />
-          <Image
-            alt=""
-            placeholder="blur"
-            src={special1}
-            className={horizontalScrollElementClassName}
-          />
-          <Image
-            alt=""
-            placeholder="blur"
-            src={special2}
-            className={horizontalScrollElementClassName}
-          />
-          <Image
-            alt=""
-            placeholder="blur"
-            src={special3}
-            className={horizontalScrollElementClassName}
-          />
-        </div>
-      </HorizontalScroll>
+      <MenuPreview />
 
       <section
         className={"bg-white w-full flex flex-col items-center justify-center"}

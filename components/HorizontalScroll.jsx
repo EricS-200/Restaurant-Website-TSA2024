@@ -1,6 +1,6 @@
 "use client";
 
-/*NOT REALLY REUSABLE DUE TO OFFSET CONSTANTS!!! */
+/*NOT REALLY REUSABLE DUE TO OFFSET CONSTANTS!!!  */
 
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState, useLayoutEffect, useEffect } from "react";
