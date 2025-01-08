@@ -68,7 +68,7 @@ export default function StyledFooter() {
                             </Link>
                         </p>
                     </div>
-                    <div>
+                    <div className="flex flex-col justify-center text-center">
                         {
                             // Community
                         }
@@ -134,7 +134,7 @@ export default function StyledFooter() {
                             target="_blank"
                         >
                             <button
-                                className="px-5 text-3xl bg-lime-800 hover:bg-lime-600 text-green-100 hover:text-white transition-all delay-100 leading-10 rounded-full">
+                                className="px-5 text-3xl bg-lime-800 hover:bg-lime-600 text-green-100 hover:text-white transition-all delay-100 leading-10 rounded-full justify-self-center">
                                 Contact Us
                             </button>
                         </Link>
