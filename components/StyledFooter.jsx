@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import icon from "@/public/images/icons/transparent icon.png";
+import icon from "@/public/images/icons/craftroots-logo-old-1e5541.png";
 import twitter from "@/public/images/icons/twitter-square-color-icon.png";
 import facebook from "@/public/images/icons/facebook-round-color-icon.png";
 import instagram from "@/public/images/icons/ig-instagram-icon.png";
@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function StyledFooter() {
     return (
 
-        <footer className="flex flex-col bg-lime-100 font-Arvo">
+        <footer className="flex flex-col bg-[#d0b577] font-Arvo">
             <div className="w-full flex flex-row justify-start">
                 {
                     // name and logo div, katherine wants this to scroll left & repeat
@@ -27,12 +27,12 @@ export default function StyledFooter() {
                         width={100}
                         height={100}
                     ></Image>
-                    <h1 className="text-8xl font-bold hover:text-slate-800 delay-100 transition-all">
+                    <h1 className="text-8xl font-bold text-[#03402a] hover:text-[#277156] delay-50 transition-all">
                         CraftRoots
                     </h1>
                 </Link>
             </div>
-            <div className="flex flex-row justify-evenly h-56">
+            <div className="flex flex-row justify-evenly h-56 text-[#03402a]">
                 {
                     // columns div
                 }
