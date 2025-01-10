@@ -3,6 +3,8 @@
 import HorizontalScroll from "@/components/HorizontalScroll";
 import SnappingCarousel from "@/components/SnappingCarousel";
 
+import { cn } from "@/utils/utils";
+
 import Link from "next/link";
 import Image from "next/image";
 import Button from "./Button";
@@ -17,7 +19,7 @@ import special3 from "@/public/menu/special3.png";
 
 export default function MenuPreview() {
   const horizontalScrollElementClassName =
-    "w-[470px] transition-transform duration-500 lg:hover:scale-125 lg:pr-0 pr-[50px]"; // makes it easy to edit
+    "lg:w-[470px] transition-transform duration-500 lg:hover:scale-125 w-[95vw] md:w-1/2 px-[25px]"; // makes it easy to edit
   return (
     <>
       <HorizontalScroll
@@ -87,58 +89,66 @@ export default function MenuPreview() {
           />
         </div>
       </HorizontalScroll>
-      <SnappingCarousel>
-        {" "}
-        <Image
-          alt=""
-          placeholder="blur"
-          src={entree1}
-          className={horizontalScrollElementClassName}
-          onDragStart={(e) => e.preventDefault()}
-        />
-        <Image
-          alt=""
-          placeholder="blur"
-          src={entree2}
-          className={horizontalScrollElementClassName}
-          onDragStart={(e) => e.preventDefault()}
-        />
-        <Image
-          alt=""
-          placeholder="blur"
-          src={entree3}
-          className={horizontalScrollElementClassName}
-          onDragStart={(e) => e.preventDefault()}
-        />
-        <Image
-          alt=""
-          placeholder="blur"
-          src={entree4}
-          className={horizontalScrollElementClassName}
-          onDragStart={(e) => e.preventDefault()}
-        />
-        <Image
-          alt=""
-          placeholder="blur"
-          src={special1}
-          className={horizontalScrollElementClassName}
-          onDragStart={(e) => e.preventDefault()}
-        />
-        <Image
-          alt=""
-          placeholder="blur"
-          src={special2}
-          className={horizontalScrollElementClassName}
-          onDragStart={(e) => e.preventDefault()}
-        />
-        <Image
-          alt=""
-          placeholder="blur"
-          src={special3}
-          className={horizontalScrollElementClassName}
-          onDragStart={(e) => e.preventDefault()}
-        />
-      </SnappingCarousel>
+
+      <section className="h-screen bg-white flex flex-col items-center justify-evenly lg:hidden">
+        <h2 className="text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r bg-amber-500 text-center">
+          Featured Dishes{" "}
+        </h2>
+        <SnappingCarousel>
+          <Image
+            alt=""
+            placeholder="blur"
+            src={entree1}
+            className={cn(horizontalScrollElementClassName, "")}
+            onDragStart={(e) => e.preventDefault()}
+          />
+          <Image
+            alt=""
+            placeholder="blur"
+            src={entree2}
+            className={cn(horizontalScrollElementClassName, "")}
+            onDragStart={(e) => e.preventDefault()}
+          />
+          <Image
+            alt=""
+            placeholder="blur"
+            src={entree3}
+            className={cn(horizontalScrollElementClassName, "")}
+            onDragStart={(e) => e.preventDefault()}
+          />
+          <Image
+            alt=""
+            placeholder="blur"
+            src={entree4}
+            className={cn(horizontalScrollElementClassName, "")}
+            onDragStart={(e) => e.preventDefault()}
+          />
+          <Image
+            alt=""
+            placeholder="blur"
+            src={special1}
+            className={cn(horizontalScrollElementClassName, "")}
+            onDragStart={(e) => e.preventDefault()}
+          />
+          <Image
+            alt=""
+            placeholder="blur"
+            src={special2}
+            className={cn(horizontalScrollElementClassName, "")}
+            onDragStart={(e) => e.preventDefault()}
+          />
+          <Image
+            alt=""
+            placeholder="blur"
+            src={special3}
+            className={cn(horizontalScrollElementClassName, "")}
+            onDragStart={(e) => e.preventDefault()}
+          />
+        </SnappingCarousel>
+        <Link href="/menu">
+          <Button>Our Full Menu</Button>
+        </Link>
+      </section>
     </>
   );
 }

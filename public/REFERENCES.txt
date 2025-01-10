@@ -6,6 +6,8 @@ MEDIA:
 - golden-vegetables2: ? 
 - golden-leaves1: ?
 - kytsa-logo: https://kentuckytsa.org/
+- right-arrow: https://www.svgrepo.com/svg/478803/right-arrow
+- left-arrow: https://www.svgrepo.com/svg/478762/left-arrow
 
 
 CONTENT SOURCES:

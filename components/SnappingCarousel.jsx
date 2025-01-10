@@ -1,179 +1,124 @@
 "use client";
 
-import React, {
-  useRef,
-  useLayoutEffect,
-  useState,
-  useEffect,
-  useCallback,
-} from "react";
+import Image from "next/image";
+import React, { useRef, useLayoutEffect, useState } from "react";
 import { motion, useMotionValue, animate } from "framer-motion";
 import { cn } from "@/utils/utils";
+import leftArrow from "@/public/left-arrow.svg";
+import rightArrow from "@/public/right-arrow.svg";
 
 export default function DraggableCarousel({ className, children }) {
   const containerRef = useRef(null);
 
   const [screenWidth, setScreenWidth] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
-
-  // We store both the center of *each item* and the center of *each group*.
-  const [itemCenters, setItemCenters] = useState([]);
-  const [groupCenters, setGroupCenters] = useState([]);
-  const [groupIndex, setGroupIndex] = useState(0);
+  const [childWidth, setChildWidth] = useState(0);
+  const [childCount, setChildCount] = useState(0);
+  const [elementAt, setElementAt] = useState(0);
 
   const x = useMotionValue(0);
 
-  /**
-   * Decide how many items to show per "page" based on screen size.
-   * You can modify these breakpoints to suit your design.
-   */
-  function getItemsPerView(width) {
-    if (width < 640) return 1; // Mobile
-    if (width < 1024) return 2; // Tablet
-    return 3; // Desktop
-  }
-
-  /**
-   * After the DOM is rendered, measure:
-   * - containerWidth  (scrollWidth)
-   * - itemCenters     (each child's horizontal center in page coordinates)
-   * - groupCenters    (center for each group of items)
-   */
-  const measureLayout = useCallback(() => {
-    if (!containerRef.current) return;
-
-    // 1) Measure screen width (for breakpoints) and container width
+  function init() {
     const w = window.innerWidth;
     setScreenWidth(w);
     setContainerWidth(containerRef.current.scrollWidth);
-
-    // 2) Get all child <div> inside the container
+    setChildCount(React.Children.count(children));
     const childNodes = Array.from(containerRef.current.children);
-
-    // 3) Calculate each child's horizontal center
-    //    We'll measure in *page coordinates*, so we add the container's offsetLeft
-    const newCenters = childNodes.map((node) => {
-      const rect = node.getBoundingClientRect();
-      // The container might be translated, but getBoundingClientRect gives
-      // global coords; let's add the current page scroll (window.scrollX).
-      // If the carousel is within a scrolled page, you might need to adjust further.
-      const centerX = rect.left + rect.width / 2 + window.scrollX;
-      return centerX;
-    });
-    setItemCenters(newCenters);
-
-    // 4) Build groupCenters:
-    //    Group items by `itemsPerView`, compute each group's average center.
-    const itemsInView = getItemsPerView(w);
-    const tmpGroupCenters = [];
-
-    for (
-      let startIdx = 0;
-      startIdx < newCenters.length;
-      startIdx += itemsInView
-    ) {
-      const slice = newCenters.slice(startIdx, startIdx + itemsInView);
-      // average center = sum of slice / slice.length
-      const avgCenter = slice.reduce((sum, val) => sum + val, 0) / slice.length;
-      tmpGroupCenters.push(avgCenter);
-    }
-    setGroupCenters(tmpGroupCenters);
-
-    // 5) Reset to the first group
-    setGroupIndex(0);
-    // Snap immediately (no animation)
-    centerGroup(0, false);
-  }, []);
-
-  useLayoutEffect(() => {
-    // Measure on initial mount
-    measureLayout();
-
-    // Measure again on window resize
-    window.addEventListener("resize", measureLayout);
-    return () => {
-      window.removeEventListener("resize", measureLayout);
-    };
-  }, [measureLayout]);
-
-  /**
-   * Scroll or "snap" the carousel so that the group's center
-   * ends up at the viewport's center.
-   */
-  function centerGroup(index, animateSnap = true) {
-    if (!groupCenters.length) return;
-
-    // The horizontal center of the screen
-    const viewportCenter = window.innerWidth / 2;
-
-    // groupCenters[index] is the global center of that group
-    const groupCenterGlobal = groupCenters[index];
-
-    // The current shift of the container
-    const currentX = x.get();
-
-    // We want `groupCenterGlobal + currentX` = `viewportCenter`
-    const shift = viewportCenter - (groupCenterGlobal + currentX);
-    const finalX = currentX + shift;
-
-    if (animateSnap) {
-      animate(x, finalX, { type: "spring", stiffness: 300, damping: 30 });
-    } else {
-      x.set(finalX);
-    }
+    setChildWidth(childNodes[0].getBoundingClientRect().width);
   }
 
-  /**
-   * After user finishes dragging, see which direction they swiped,
-   * increment or decrement `groupIndex`, then snap.
-   */
-  function handleDragEnd() {
-    const velocity = x.getVelocity(); // px / second
-    let newIndex = groupIndex;
+  useLayoutEffect(() => {
+    setTimeout(() => {
+      init();
+    }, 500);
+    window.addEventListener("resize", init);
+    return () => {
+      window.removeEventListener("resize", init);
+    };
+  }, []);
 
-    // Threshold for "swipe" direction
-    if (velocity < -50) {
-      // Swiped left => next group
-      newIndex = groupIndex + 1;
-    } else if (velocity > 50) {
-      // Swiped right => previous group
-      newIndex = groupIndex - 1;
+  function handleNext() {}
+
+  function handlePrevious() {}
+
+  function handleDrag(event, info) {
+    const min = 0; // first element
+    const max = childCount - Math.floor(screenWidth / childWidth);
+
+    const offset = info.offset.x;
+    const velocity = info.velocity.x;
+    let newElementAt = undefined;
+    if (offset > childWidth * 0.25) {
+      newElementAt = elementAt - 1;
+
+      newElementAt = Math.max(newElementAt, min);
+      newElementAt = Math.min(newElementAt, max);
+      setElementAt(newElementAt);
+    } else if (offset < -(childWidth * 0.25)) {
+      newElementAt = elementAt + 1;
+
+      newElementAt = Math.max(newElementAt, min);
+      newElementAt = Math.min(newElementAt, max);
+      setElementAt(newElementAt);
     }
 
-    // Clamp
-    newIndex = Math.max(0, Math.min(newIndex, groupCenters.length - 1));
-    setGroupIndex(newIndex);
-    centerGroup(newIndex, true);
+    let translation;
+    if (newElementAt) {
+      translation = -(newElementAt * childWidth);
+    } else {
+      translation = -(elementAt * childWidth);
+    }
+    animate(x, translation, { type: "spring", stiffness: 300, damping: 30 });
   }
 
   return (
     <div
       className={cn(
-        "overflow-hidden w-full h-screen flex items-center bg-white",
+        "overflow-hidden w-full flex items-center bg-white flex-col relative",
         className
       )}
     >
       <motion.div
         ref={containerRef}
-        // style={{ x }}
         className="cursor-grab active:cursor-grabbing 
-                   w-fit inline-flex flex-nowrap 
-                   gap-x-8 px-2" // gap and padding are optional
+                   flex items-center w-full "
+        style={{ x }}
         drag="x"
-        // Constrain drag to not go too far left or right
         dragConstraints={{
-          left: -(containerWidth - screenWidth + 50),
+          left: -(containerWidth - screenWidth),
           right: 0,
         }}
-        dragElastic={0.05}
-        onDragEnd={handleDragEnd}
+        dragElastic={0.8}
+        onDragEnd={handleDrag}
       >
-        {children.map((child, index) => (
-          <div className="flex-none" key={index}>
-            {child}
-          </div>
-        ))}
+        {children}
       </motion.div>
+      <div className="flex justify-between items-center w-full px-12 pt-4 absolute bottom-0">
+        <button onClick={handlePrevious}>
+          <svg
+            className={`w-[40px] ${
+              elementAt === 0 ? "fill-gray-500" : "fill-black"
+            }`}
+            viewBox="-3 0 32 32"
+            version="1.1"
+          >
+            <g id="icomoon-ignore"></g>
+            <path d="M13.114 2.887c-7.243 0-13.114 5.871-13.114 13.113s5.871 13.113 13.114 13.113c7.242 0 13.112-5.871 13.112-13.113s-5.87-13.113-13.112-13.113zM13.114 28.064c-6.653 0-12.065-5.412-12.065-12.064s5.412-12.063 12.065-12.063c6.652 0 12.063 5.412 12.063 12.063s-5.411 12.064-12.063 12.064z"></path>
+            <path d="M12.318 10.363l-0.742-0.742-6.379 6.379 6.379 6.379 0.742-0.742-5.113-5.113h12.726v-1.049h-12.726z"></path>
+          </svg>
+        </button>
+        <button onClick={handleNext}>
+          <svg
+            className="w-[40px] fill-black"
+            viewBox="-3 0 32 32"
+            version="1.1"
+          >
+            <g id="icomoon-ignore"></g>
+            <path d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z"></path>
+            <path d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z"></path>
+          </svg>
+        </button>
+      </div>
     </div>
   );
 }
