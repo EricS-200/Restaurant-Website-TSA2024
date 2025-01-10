@@ -2,21 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
 import ParallaxBanner from "@/components/SimpleParallaxBanner";
-import HorizontalScroll from "@/components/HorizontalScroll";
 import AnimatedNumber from "@/components/AnimatedNumber";
+
+import MenuPreview from "@/components/MenuPreview";
 
 import homeBanner from "@/public/placeholders/home-banner.jpg"; //placeholder
 
 import logoImage from "/public/logo.png";
 import GoldenImages from "@/components/GoldenImages";
-
-import entree1 from "@/public/menu/entree1.png";
-import entree2 from "@/public/menu/entree2.png";
-import entree3 from "@/public/menu/entree3.png";
-import entree4 from "@/public/menu/entree4.png";
-import special1 from "@/public/menu/special1.png";
-import special2 from "@/public/menu/special2.png";
-import special3 from "@/public/menu/special3.png";
 
 export default function Home() {
   return (
@@ -38,7 +31,6 @@ export default function Home() {
         </div>
       </ParallaxBanner>
 
-
       <section className="w-full flex flex-col items-center py-8 pb-12  space-y-4 relative overflow-hidden">
         <GoldenImages />
 
@@ -58,38 +50,16 @@ export default function Home() {
           Founded in 1999, we at Craftroots have been trying our absolute
           hardest to provide the best service possible. From our founders&apos;
           humble beginnings of working in South Indian textiles and Chinese
-          manufacturing industries to their immigration to the United States,
-          we now look to serve nothing but the best, using nothing but the
-          freshest ingredients and most talented chefs.
+          manufacturing industries to their immigration to the United States, we
+          now look to serve nothing but the best, using nothing but the freshest
+          ingredients and most talented chefs.
         </p>
         <Link href="/our-story">
           <Button transparent={false}>Learn More</Button>
         </Link>
       </section>
 
-      <HorizontalScroll
-        scrollTime={5}
-        className="bg-white"
-        header={
-          <h2 className="text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r bg-amber-500 text-center">
-            Featured Dishes{" "}
-          </h2>
-        }
-        footer={
-          <Link href="/menu">
-            <Button>Our Full Menu</Button>
-          </Link>
-        }
-      >
-        <Image alt="" placeholder="blur" src={entree1} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={entree2} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={entree3} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={entree4} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={special1} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={special1} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={special2} className="w-[500px]" />
-        <Image alt="" placeholder="blur" src={special3} className="w-[500px]" />
-      </HorizontalScroll>
+      <MenuPreview />
 
       <section
         className={"bg-white w-full flex flex-col items-center justify-center"}
