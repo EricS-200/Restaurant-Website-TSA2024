@@ -9,6 +9,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["open-sans", "sans-serif"],
+        mistrully: ["mistrully", "sans-serif"],
+        dmSerif: ["dm-serif-display", "serif"],
+        kenao: ["kenao", "sans-serif"],
+        fspDemo: ["fsp-demo", "serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
