@@ -2,9 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: open-sans, sans-serif;
+    src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: mistrully, sans-serif;
+    src: url("/fonts/Mistrully.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: dm-serif-display, sans-serif;
+    src: url("/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "kenao", sans-serif;
+    src: url("/fonts/kenao.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: fsp-demo, sans-serif;
+    src: url("/fonts/Fontspring-DEMO-theseasons-reg.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
 :root {
   --background: rgb(229 231 235); /*tw gray-200*/
-  --foreground: rgb(24 24 27); /*tw zinc-900*/
+  --foreground: rgb(24 24 27); /*tw   zinc-900*/
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -26,7 +63,7 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Poppins", sans-serif;
+  font-family: "open-sans", sans-serif;
   display: block;
   box-sizing: border-box;
   margin: 0;
