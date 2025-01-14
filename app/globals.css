@@ -25,17 +25,27 @@
   }
 
   @font-face {
-    font-family: "kenao", sans-serif;
-    src: url("/fonts/kenao.otf") format("opentype");
+    font-family: fsp-demo, sans-serif;
+    src: url("/fonts/Fontspring-DEMO-theseasons-reg.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
-    font-family: fsp-demo, sans-serif;
-    src: url("/fonts/Fontspring-DEMO-theseasons-reg.otf") format("opentype");
+    font-family: "kenao";
+    src: url("/fonts/KENAO.woff2") format("woff2"),
+      url("/fonts/KENAO.woff") format("woff");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: the-seasons;
+    src: url("/fonts/theseasons.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
   }
 }
 
@@ -63,7 +73,7 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "open-sans", sans-serif;
+  font-family: open-sans, sans-serif;
   display: block;
   box-sizing: border-box;
   margin: 0;
@@ -74,6 +84,11 @@ body {
 section {
   background: var(--background);
   color: var(--foreground);
+}
+
+section,
+div {
+  z-index: 1;
 }
 
 .center-text {

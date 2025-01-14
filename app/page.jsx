@@ -3,18 +3,73 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import ParallaxBanner from "@/components/SimpleParallaxBanner";
 import AnimatedNumber from "@/components/AnimatedNumber";
+import MouseMoveParallax from "@/components/MouseMoveParallax";
 
 import MenuPreview from "@/components/MenuPreview";
 
-import homeBanner from "@/public/placeholders/home-banner.jpg"; //placeholder
+// import homeBanner from "@/public/placeholders/home-banner.jpg"; //placeholder
 
 import logoImage from "/public/logo.png";
 import GoldenImages from "@/components/GoldenImages";
+import seperator1 from "@/public/home/seperator1.png";
+import droplets1 from "@/public/home/droplets1.png";
+import droplets2 from "@/public/home/droplets2.png";
+import leaves1 from "@/public/home/leaves1.png";
+import leaves2 from "@/public/home/leaves2.png";
+import fog from "@/public/home/fog.png";
 
 export default function Home() {
   return (
     <main className="">
-      <ParallaxBanner
+      <ParallaxBanner className="" speed={0.5}>
+        <div className="h-screen">
+          <video
+            className=" inset-0 w-screen h-[112vh] object-cover object-center -translate-y-[50px]"
+            src="/home/background.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+        </div>
+        {/* <MouseMoveParallax
+          sensitivity={150}
+          className={"bg-black w-64 h-64 absolute inset-0 "}
+        ></MouseMoveParallax> */}
+        <MouseMoveParallax
+          translate={{
+            lg: { x: "-50%", y: "7%" },
+            xl: { x: "-40%", y: "10%" },
+          }} // lg:-translate-x-[50%] xl:-translate-x-[40%] lg:translate-y-[7%] xl:translate-y-[10%]
+          className="lg:block hidden absolute left-0 bottom-0 h-full lg:h-[90%] "
+        >
+          <Image src={droplets2} alt="water droplets (2)" />
+        </MouseMoveParallax>
+
+        <Image src={fog} className="w-screen absolute inset-0" alt="fog" />
+        <div className="w-full h-screen flex flex-col items-center justify-center text-white absolute inset-0 space-y-2">
+          <h1 className="font-seasons text-7xl">Craftroots</h1>
+          <h1 className="font-kenao text-4xl sm:text-7xl md:text-8xl lg:text-9xl sm:-translate-y-[20%] text-center">
+            Feast on Fresh
+          </h1>
+          <Image
+            src={seperator1}
+            alt="decorated seperator"
+            className="w-[700px]"
+          />
+          <h2 className="font-2xl w-[650px] max-w-[95vw] text-center">
+            Healthy, high end vegetarian & vegan dishes sourced from authentic
+            farms all across the world
+          </h2>
+          <Link href={"/order"}>
+            <button className="bg-[#d0b577] py-1 px-8 mt-3 text-black">
+              Reserve & Order
+            </button>
+          </Link>
+        </div>
+      </ParallaxBanner>
+
+      {/* <ParallaxBanner
         speed={0.5}
         className="h-[50vh] lg:h-[75vh] "
         src={homeBanner}
@@ -29,7 +84,7 @@ export default function Home() {
             </h2>
           </div>
         </div>
-      </ParallaxBanner>
+      </ParallaxBanner> */}
 
       <section className="w-full flex flex-col items-center py-8 pb-12  space-y-4 relative overflow-hidden">
         <GoldenImages />
@@ -64,7 +119,11 @@ export default function Home() {
       <section
         className={"bg-white w-full flex flex-col items-center justify-center"}
       >
-        <div className={"flex flex-row w-full justify-between items-center "}>
+        <div
+          className={
+            "flex flex-row w-full justify-between items-center bg-white"
+          }
+        >
           <div
             className={"pl-[12%] h-fit w-1/3 flex items-center justify-center"}
           >

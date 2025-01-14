@@ -12,9 +12,10 @@ module.exports = {
       fontFamily: {
         sans: ["open-sans", "sans-serif"],
         mistrully: ["mistrully", "sans-serif"],
-        dmSerif: ["dm-serif-display", "serif"],
+        dm: ["dm-serif-display", "serif"],
         kenao: ["kenao", "sans-serif"],
         fspDemo: ["fsp-demo", "serif"],
+        seasons: ["the-seasons"],
       },
       colors: {
         background: "var(--background)",
