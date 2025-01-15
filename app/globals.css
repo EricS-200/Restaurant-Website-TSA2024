@@ -40,7 +40,7 @@
 }
 
 :root {
-  --background: rgb(229 231 235); /*tw gray-200*/
+  --background: rgb(229, 215, 179); /*Katherine's beige*/
   --foreground: rgb(24 24 27); /*tw   zinc-900*/
 }
 
@@ -86,6 +86,10 @@ main {
 
 .menu-card.group:hover:not(:has(.card-bg-nochange:hover)) {
   @apply bg-white/85;
+}
+
+.triangle-clip-path {
+   clip-path: polygon(70% 0, 85% 50%, 70% 100%, 0 100%, 0 0);
 }
 
 .perspective-normal {

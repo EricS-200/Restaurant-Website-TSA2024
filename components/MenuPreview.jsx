@@ -24,7 +24,7 @@ export default function MenuPreview() {
     <>
       <HorizontalScroll
         scrollTime={3.5}
-        className="bg-white lg:block hidden"
+        className="lg:block hidden"
         header={
           <h2 className="text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r bg-amber-500 text-center">
             Featured Dishes{" "}

@@ -9,60 +9,61 @@ import MenuPreview from "@/components/MenuPreview";
 import homeBanner from "@/public/placeholders/home-banner.jpg"; //placeholder
 
 import logoImage from "/public/logo.png";
-import GoldenImages from "@/components/GoldenImages";
+
+import ourStoryImage0 from "/public/homepage/ourStoryImage0.png";
+import ourStoryImage1 from "/public/homepage/ourStoryImage1.png";
 
 export default function Home() {
   return (
     <main className="">
-      <ParallaxBanner
-        speed={0.5}
-        className="h-[50vh] lg:h-[75vh] "
-        src={homeBanner}
-      >
-        <div className="absolute inset-0 w-full h-full bg-black/20">
-          <div className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200 h-full flex-col items-center justify-center w-full flex">
-            <h1 className="text-6xl sm:text-8xl text-center font-bold ">
-              CraftRoots
-            </h1>
-            <h2 className="text-center text-4xl font-semibold">
-              Vegetarian Asian Cuisine
-            </h2>
+      {/*Our Story*/}
+      <section className={"mb-[5vw] h-[100vh]"}>
+        <div className={"bg-white w-[90%] h-[75%] ml-[5%] mt-[10%]"}>
+          <div className={"p-[2%] px-[4%] flex flex-row"}>
+
+            <div className={"w-1/2 relative"}>
+              <h1 className={"text-4xl"}>
+                Our Story kys!
+              </h1>
+              <p className={"pt-[5%] pb-[7%] w-[90%]"}>
+                Add a little bit of body text Through this
+                environment, I’ve found my own passion:
+                electrical engineering and neuroscience. To me,
+                they represent a bridge between what I’ve
+                inherited and what I aspire to create. Like my
+                family, I want to explore the unknown, but I also
+                want to shape a world where science works as
+                hard for us as we do for it. Still, I’ve learned
+                something in my small town: the real magic of
+                science lies in the people.
+              </p>
+
+              <Link href={"/our-story"} className={"absolute bottom-0 left-0 w-[20%]"}>
+                <button className="bg-[#d0b577] hover:bg-[#d1c19c] active:bg-[#c6ba9d] py-1 px-8 mt-3 text-black">
+                  Our Story
+                </button>
+              </Link>
+              <Link href={"/reference"} className={"absolute bottom-0 left-[25%] triangle-clip-path katherine-green"}>
+                <button className="bg-[#9da57f] hover:bg-[#9da57f] active:bg-[#9da57f] py-1 px-8 text-black">
+                  References&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </button>
+              </Link>
+
+            </div>
+
+            <div className={"w-1/2 justify-center items-center flex flex-row relative"}>
+                <Image src={ourStoryImage0} alt={"Image"} className={"h-[100%] justify-center items-center"}/>
+                <Image src={ourStoryImage1} alt={"Image"} className={"w-[40%] justify-center items-center absolute bottom-[-30%] right-[10%]"}/>
+            </div>
+
           </div>
         </div>
-      </ParallaxBanner>
-
-      <section className="w-full flex flex-col items-center py-8 pb-12  space-y-4 relative overflow-hidden">
-        <GoldenImages />
-
-        <h2 className="text-8xl font-bold uppercase text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-300">
-          Our Story
-        </h2>
-        <p className="center-text">
-          We began with a simple passion: creating a kinder, healthier, and more
-          sustainable world through food. Inspired by the beauty of plant-based
-          living, we set out to craft delicious vegan recipes and products that
-          nourish both body and planet. What started as a small idea has
-          blossomed into a thriving community dedicated to celebrating the power
-          of plants, innovation, and compassion. Together, we&apos;re rewriting
-          the story of food—one plant-based bite at a time.
-        </p>
-        <p className="center-text">
-          Founded in 1999, we at Craftroots have been trying our absolute
-          hardest to provide the best service possible. From our founders&apos;
-          humble beginnings of working in South Indian textiles and Chinese
-          manufacturing industries to their immigration to the United States, we
-          now look to serve nothing but the best, using nothing but the freshest
-          ingredients and most talented chefs.
-        </p>
-        <Link href="/our-story">
-          <Button transparent={false}>Learn More</Button>
-        </Link>
       </section>
 
       <MenuPreview />
 
       <section
-        className={"bg-white w-full flex flex-col items-center justify-center"}
+        className={"w-full flex flex-col items-center justify-center"}
       >
         <div className={"flex flex-row w-full justify-between items-center "}>
           <div
