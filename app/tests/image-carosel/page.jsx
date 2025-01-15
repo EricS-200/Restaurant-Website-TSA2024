@@ -19,8 +19,11 @@ const ImageTrack = () => {
         "/menu/side1.png",
         "/menu/side2.png"
     ];
+    const [counter, setCounter] = useState(0);
 
     const handleOnDown = (e) => {
+        setCounter(counter + 1);
+        console.log("Down (" + counter + "):", e.clientX, e.clientY);
         setMouseDownAt(e.clientX.toString());
     };
 
@@ -30,14 +33,17 @@ const ImageTrack = () => {
     };
 
     const handleOnMove = (e) => {
-        if (mouseDownAt === "0") return;
+        setCounter(counter + 1);
+        if (mouseDownAt === "0")
+        {
+            console.log("leave")
+            return;
+        }
 
         const mouseDelta = parseFloat(mouseDownAt) - e.clientX;
         const maxDelta = window.innerWidth / 2;
 
-        const nextPercentageUnconstrained = prevPercentage + (mouseDelta / maxDelta) * -100;
-        const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-
+        const nextPercentage = prevPercentage + (mouseDelta / maxDelta) * -100;
         setPercentage(nextPercentage);
 
         if (trackRef.current) {
@@ -52,7 +58,7 @@ const ImageTrack = () => {
             for (const image of imageElements) {
                 image.animate(
                     {
-                        objectPosition: `${100 + nextPercentage}% center`
+                        objectPosition: `${100 + nextPercentage / 2.5}% center`
                     },
                     { duration: 1200, fill: "forwards" }
                 );
@@ -78,10 +84,6 @@ const ImageTrack = () => {
             window.ontouchmove = null;
         };
     }, [mouseDownAt, prevPercentage, percentage]);
-
-    useEffect(() => {
-        document.body.style.overflow = "hidden";
-    }, []);
 
     return (
         <div className="h-screen w-screen bg-black m-0">
