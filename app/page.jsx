@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import ParallaxBanner from "@/components/SimpleParallaxBanner";
 import AnimatedNumber from "@/components/AnimatedNumber";
 import MouseMoveParallax from "@/components/MouseMoveParallax";
+import StyledText from "@/components/StyledText";
 
 import MenuPreview from "@/components/MenuPreview";
 
@@ -21,7 +22,7 @@ import fog from "@/public/home/fog.png";
 export default function Home() {
   return (
     <main className="">
-      <ParallaxBanner className="" speed={0.5}>
+      <ParallaxBanner className="overflow-hidden" speed={0.5}>
         <div className="h-screen">
           <video
             className=" inset-0 w-screen h-[112vh] object-cover object-center -translate-y-[50px]"
@@ -32,26 +33,75 @@ export default function Home() {
             playsInline
           />
         </div>
-        {/* <MouseMoveParallax
-          sensitivity={150}
-          className={"bg-black w-64 h-64 absolute inset-0 "}
-        ></MouseMoveParallax> */}
+
         <MouseMoveParallax
           translate={{
-            lg: { x: "-50%", y: "7%" },
+            default: { hidden: true },
+            lg: { x: "50%", y: "5%", hidden: false },
+            xl: { x: "40%", y: "3%" },
+            xxl: { x: "30%", y: "0%" },
+          }}
+          className="lg:block hidden absolute right-0 bottom-0  h-full"
+        >
+          <Image src={droplets1} alt="water droplets (1)" />
+        </MouseMoveParallax>
+
+        <MouseMoveParallax
+          translate={{
+            default: { hidden: true },
+            lg: { x: "-50%", y: "7%", hidden: false },
             xl: { x: "-40%", y: "10%" },
-          }} // lg:-translate-x-[50%] xl:-translate-x-[40%] lg:translate-y-[7%] xl:translate-y-[10%]
+            xxl: { x: "-30%", y: "0%" },
+          }}
           className="lg:block hidden absolute left-0 bottom-0 h-full lg:h-[90%] "
         >
           <Image src={droplets2} alt="water droplets (2)" />
         </MouseMoveParallax>
 
+        <MouseMoveParallax
+          sensitivity={50}
+          translate={{
+            default: { hidden: true },
+            lg: { x: "-40%", y: "-15%", hidden: false },
+            xl: { x: "-40%", y: "-15%" },
+            xxl: { x: "-30%", y: "-20%" },
+          }}
+          className={
+            "lg:block hidden absolute left-0 top-0 lg:w-[60%] xl:w-[50%] 2xl:w-[40%]"
+          }
+        >
+          <Image src={leaves1} alt="leaves (1)" />
+        </MouseMoveParallax>
+
+        <MouseMoveParallax
+          sensitivity={50}
+          translate={{
+            default: { hidden: true },
+            lg: { x: "25%", y: "15%", hidden: false },
+            xl: { x: "25%", y: "15%" },
+            xxl: { x: "25%", y: "15%" },
+          }}
+          className={
+            "lg:block hidden absolute right-0 bottom-0 lg:w-[60%] xl:w-[50%] 2xl:w-[40%]"
+          }
+        >
+          <Image src={leaves2} alt="leaves (2)" />
+        </MouseMoveParallax>
+
         <Image src={fog} className="w-screen absolute inset-0" alt="fog" />
         <div className="w-full h-screen flex flex-col items-center justify-center text-white absolute inset-0 space-y-2">
-          <h1 className="font-seasons text-7xl">Craftroots</h1>
-          <h1 className="font-kenao text-4xl sm:text-7xl md:text-8xl lg:text-9xl sm:-translate-y-[20%] text-center">
-            Feast on Fresh
+          <h1 className="font-seasons text-7xl text-transparent bg-clip-text bg-white">
+            Craftroots
           </h1>
+          <StyledText
+            className="font-kenao text-4xl sm:text-7xl md:text-8xl lg:text-9xl sm:-translate-y-[20%] text-center"
+            charClassName="transition-all hover:scale-[1.05]"
+          >
+            Feast on Fresh
+          </StyledText>
+          {/* <h1 className="font-kenao text-4xl sm:text-7xl md:text-8xl lg:text-9xl sm:-translate-y-[20%] text-center">
+            Feast on Fresh
+          </h1> */}
           <Image
             src={seperator1}
             alt="decorated seperator"
@@ -62,29 +112,12 @@ export default function Home() {
             farms all across the world
           </h2>
           <Link href={"/order"}>
-            <button className="bg-[#d0b577] py-1 px-8 mt-3 text-black">
+            <button className="bg-[#d0b577] hover:bg-[#d1c19c] active:bg-[#c6ba9d] py-1 px-8 mt-3 text-black">
               Reserve & Order
             </button>
           </Link>
         </div>
       </ParallaxBanner>
-
-      {/* <ParallaxBanner
-        speed={0.5}
-        className="h-[50vh] lg:h-[75vh] "
-        src={homeBanner}
-      >
-        <div className="absolute inset-0 w-full h-full bg-black/20">
-          <div className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200 h-full flex-col items-center justify-center w-full flex">
-            <h1 className="text-6xl sm:text-8xl text-center font-bold ">
-              CraftRoots
-            </h1>
-            <h2 className="text-center text-4xl font-semibold">
-              Vegetarian Asian Cuisine
-            </h2>
-          </div>
-        </div>
-      </ParallaxBanner> */}
 
       <section className="w-full flex flex-col items-center py-8 pb-12  space-y-4 relative overflow-hidden">
         <GoldenImages />

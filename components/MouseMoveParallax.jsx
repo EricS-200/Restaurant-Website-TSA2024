@@ -3,27 +3,49 @@
 import { useEffect, useState, useRef, useLayoutEffect } from "react";
 import { cn } from "@/utils/utils";
 
+/**
+ * This component allows for small movements according to the mouse movements of the user.
+ * Due to the use of translation for the effect, regular tailwind styles like translate-x and translate-y do not work.
+ * (object) For static translations for the purposes of positioning, use the translate attribute
+ * It uses the same breakpoints as tailwind
+ * 2xl is replaced by xxl.
+ * (int) Sensitivity determines how fast the component moves relative to the mouse; smaller is faster.
+ *
+ * Example:
+ *
+ * <MouseMoveParallax
+ * className="..."
+ * translate={{default: {x: "5px", y: "20%"}}, {xxl: {x: "21vw", y: "29%"}}}
+ * sensitivity={100}>
+ * {content}
+ * </MouseMoveParallax>
+ *
+ */
+
 export default function MouseMoveParallax({
   translate = {},
   children,
   className,
   sensitivity = 150,
 }) {
-  const [firstLoad, setFirstLoad] = useState(false);
+  const [show, setShow] = useState(false);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
-  const [offset, setOffset] = useState({});
+  const [properties, setProperties] = useState({});
   const ref = useRef(null);
 
-  const translations = {
-    default: { x: "0px", y: "0px" },
-    sm: { x: "0px", y: "0px" },
-    md: { x: "0px", y: "0px" },
-    lg: { x: "0px", y: "0px" },
-    xl: { x: "0px", y: "0px" },
-    xxl: { x: "0px", y: "0px" },
-    ...translate,
+  const props = {
+    default: { x: "0px", y: "0px", hidden: false },
+    sm: { x: "0px", y: "0px", hidden: false },
+    md: { x: "0px", y: "0px", hidden: false },
+    lg: { x: "0px", y: "0px", hidden: false },
+    xl: { x: "0px", y: "0px", hidden: false },
+    xxl: { x: "0px", y: "0px", hidden: false },
   };
+
+  for (const key in translate) {
+    props[key] = Object.assign({}, props[key], translate[key]);
+  }
 
   function handleMouseMove(event) {
     setX(event.clientX);
@@ -32,24 +54,36 @@ export default function MouseMoveParallax({
 
   function handleResize() {
     const width = window.innerWidth;
-    let offsetValue = { x: "", y: "" };
-    if (width >= 1536 && "xxl" in translate) {
-      offsetValue = translations.xxl;
-    } else if (width >= 1280 && "xl" in translate) {
-      offsetValue = translations.xl;
-    } else if (width >= 1024 && "lg" in translate) {
-      offsetValue = translations.lg;
-    } else if (width >= 768 && "md" in translate) {
-      offsetValue = translations.md;
-    } else if (width >= 640 && "sm" in translate) {
-      offsetValue = translations.sm;
-    } else {
-      offsetValue = translations.default;
+    let offsetValue = props.default;
+
+    if (width >= 640 && "sm" in translate) {
+      offsetValue = props.sm;
     }
-    setOffset(() => {
+
+    if (width >= 768 && "md" in translate) {
+      offsetValue = props.md;
+    }
+
+    if (width >= 1024 && "lg" in translate) {
+      offsetValue = props.lg;
+    }
+
+    if (width >= 1280 && "xl" in translate) {
+      offsetValue = props.xl;
+    }
+
+    if (width >= 1536 && "xxl" in translate) {
+      offsetValue = props.xxl;
+    }
+
+    setProperties(() => {
       return offsetValue;
     });
-    setFirstLoad(true);
+    if (offsetValue.hidden == false) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
   }
 
   useEffect(() => {
@@ -74,9 +108,9 @@ export default function MouseMoveParallax({
       className={cn(``, className)}
       ref={ref}
       style={{
-        display: firstLoad ? "block" : "none",
-        transform: `translate3d(calc(${x / sensitivity}px + ${offset.x}),
-        calc(${y / sensitivity}px + ${offset.y}), 0px)`,
+        display: show ? "block" : "none",
+        transform: `translate3d(calc(${x / sensitivity}px + ${properties.x}),
+        calc(${y / sensitivity}px + ${properties.y}), 0px)`,
       }}
     >
       {children}
