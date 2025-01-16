@@ -78,6 +78,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transform-style: preserve-3d;
   @apply text-lg leading-loose;
 }
 
@@ -125,34 +126,3 @@ main {
 .menu-description.open {
   grid-template-rows: 1fr; 
 } */
-
-@keyframes shine {
-  0% {
-    background-position: -150% center;
-  }
-  100% {
-    background-position: 150% center;
-  }
-}
-
-/* 
-  1) Give the div a mostly white background gradient. 
-  2) By default, it appears solid white because the gradient is subtle. 
-  3) On hover, we animate the background-position to create a shine effect.
-*/
-.shine-bg {
-  background: linear-gradient(
-    120deg,
-    #fff 10%,
-    rgba(255, 255, 255, 0.8) 30%,
-    #fff 50%,
-    #fff 100%
-  );
-  background-size: 200% 100%; /* twice as wide as the div for sliding */
-  background-position: left center; /* start from the left */
-}
-
-/* Trigger the shine animation on hover */
-.shine-bg:hover {
-  animation: shine 0.75s ease forwards;
-}

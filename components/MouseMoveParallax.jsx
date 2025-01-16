@@ -109,8 +109,8 @@ export default function MouseMoveParallax({
       ref={ref}
       style={{
         display: show ? "block" : "none",
-        transform: `translate3d(calc(${x / sensitivity}px + ${properties.x}),
-        calc(${y / sensitivity}px + ${properties.y}), 0px)`,
+        transform: `translate(calc(${x / sensitivity}px + ${properties.x}),
+        calc(${y / sensitivity}px + ${properties.y}))`,
       }}
     >
       {children}
