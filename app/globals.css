@@ -5,28 +5,29 @@
 @layer base {
   @font-face {
     font-family: open-sans, sans-serif;
-    src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
+    src: url("/public/fonts/OpenSans-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: mistrully, sans-serif;
-    src: url("/fonts/Mistrully.ttf") format("truetype");
+    src: url("/public/fonts/Mistrully.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: dm-serif-display, sans-serif;
-    src: url("/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
+    src: url("/public/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: fsp-demo, sans-serif;
-    src: url("/fonts/Fontspring-DEMO-theseasons-reg.otf") format("opentype");
+    src: url("/public/fonts/Fontspring-DEMO-theseasons-reg.otf")
+      format("opentype");
     font-weight: normal;
     font-style: normal;
   }
@@ -42,7 +43,7 @@
 
   @font-face {
     font-family: the-seasons;
-    src: url("/fonts/theseasons.otf") format("opentype");
+    src: url("/public/fonts/theseasons.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -78,7 +79,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transform-style: preserve-3d;
   @apply text-lg leading-loose;
 }
 
@@ -106,6 +106,10 @@ main {
 
 .perspective-normal {
   perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
 }
 
 /* .menu-card {

@@ -10,11 +10,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["open-sans", "sans-serif"],
-        mistrully: ["mistrully", "sans-serif"],
-        dm: ["dm-serif-display", "serif"],
-        kenao: ["kenao", "sans-serif"],
-        fspDemo: ["fsp-demo", "serif"],
+        sans: ["open-sans"],
+        mistrully: ["mistrully"],
+        dm: ["dm-serif-display"],
+        kenao: ["kenao"],
+        fspDemo: ["fsp-demo"],
         seasons: ["the-seasons"],
       },
       colors: {
