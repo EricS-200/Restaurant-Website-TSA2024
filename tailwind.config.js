@@ -10,11 +10,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["open-sans", "sans-serif"],
-        mistrully: ["mistrully", "sans-serif"],
-        dmSerif: ["dm-serif-display", "serif"],
-        kenao: ["kenao", "sans-serif"],
-        fspDemo: ["fsp-demo", "serif"],
+        sans: ["open-sans"],
+        mistrully: ["mistrully"],
+        dm: ["dm-serif-display"],
+        kenao: ["kenao"],
+        fsp: ["fsp-demo"],
+        seasons: ["the-seasons"],
       },
       colors: {
         background: "var(--background)",
@@ -32,5 +33,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-3d")],
 };

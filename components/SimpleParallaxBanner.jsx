@@ -28,17 +28,19 @@ export default function ParallaxBanner({
 
   return (
     <div
-      className={cn("w-full -z-10 sticky inset-0", className)}
-      style={{ transform: `translate3d(0px, -${scrollY * speed}px, 0px)` }}
+      className={cn("w-full sticky inset-0", className)}
+      style={{ transform: `translate(0px, -${scrollY * speed}px)` }}
       {...props}
     >
-      <Image
-        src={src}
-        alt={alt}
-        className={cn("object-center object-cover", innerClassName)}
-        fill={true}
-        placeholder="blur"
-      />
+      {src && (
+        <Image
+          src={src}
+          alt={alt}
+          className={cn("object-center object-cover", innerClassName)}
+          fill={true}
+          placeholder="blur"
+        />
+      )}
       {children}
     </div>
   );

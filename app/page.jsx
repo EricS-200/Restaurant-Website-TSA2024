@@ -1,40 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
-import ParallaxBanner from "@/components/SimpleParallaxBanner";
 import AnimatedNumber from "@/components/AnimatedNumber";
-
+import HomePageBanner from "@/components/HomePageBanner";
 import MenuPreview from "@/components/MenuPreview";
-
-import homeBanner from "@/public/placeholders/home-banner.jpg"; //placeholder
-
 import logoImage from "/public/logo.png";
 import GoldenImages from "@/components/GoldenImages";
 
 export default function Home() {
   return (
     <main className="">
-      <ParallaxBanner
-        speed={0.5}
-        className="h-[50vh] lg:h-[75vh] "
-        src={homeBanner}
-      >
-        <div className="absolute inset-0 w-full h-full bg-black/20">
-          <div className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200 h-full flex-col items-center justify-center w-full flex">
-            <h1 className="text-6xl sm:text-8xl text-center font-bold ">
-              CraftRoots
-            </h1>
-            <h2 className="text-center text-4xl font-semibold">
-              Vegetarian Asian Cuisine
-            </h2>
-          </div>
-        </div>
-      </ParallaxBanner>
-
+      <HomePageBanner />
       <section className="w-full flex flex-col items-center py-8 pb-12  space-y-4 relative overflow-hidden">
         <GoldenImages />
 
-        <h2 className="text-8xl font-bold uppercase text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-300">
+        <h2 className=" text-8xl font-bold uppercase text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-300">
           Our Story
         </h2>
         <p className="center-text">
@@ -64,7 +44,11 @@ export default function Home() {
       <section
         className={"bg-white w-full flex flex-col items-center justify-center"}
       >
-        <div className={"flex flex-row w-full justify-between items-center "}>
+        <div
+          className={
+            "flex flex-row w-full justify-between items-center bg-white"
+          }
+        >
           <div
             className={"pl-[12%] h-fit w-1/3 flex items-center justify-center"}
           >
