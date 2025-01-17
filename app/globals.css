@@ -4,30 +4,29 @@
 
 @layer base {
   @font-face {
-    font-family: open-sans, sans-serif;
-    src: url("/public/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-family: open-sans;
+    src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
-    font-family: mistrully, sans-serif;
-    src: url("/public/fonts/Mistrully.ttf") format("truetype");
+    font-family: mistrully;
+    src: url("/fonts/Mistrully.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
-    font-family: dm-serif-display, sans-serif;
-    src: url("/public/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
+    font-family: dm-serif-display;
+    src: url("/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
-    font-family: fsp-demo, sans-serif;
-    src: url("/public/fonts/Fontspring-DEMO-theseasons-reg.otf")
-      format("opentype");
+    font-family: fsp-demo;
+    src: url("/fonts/Fontspring-DEMO-theseasons-reg.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
   }
@@ -42,8 +41,8 @@
   }
 
   @font-face {
-    font-family: the-seasons;
-    src: url("/public/fonts/theseasons.otf") format("opentype");
+    font-family: "the-seasons";
+    src: url("/fonts/theseasons.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;

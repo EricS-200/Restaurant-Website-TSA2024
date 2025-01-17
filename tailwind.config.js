@@ -14,7 +14,7 @@ module.exports = {
         mistrully: ["mistrully"],
         dm: ["dm-serif-display"],
         kenao: ["kenao"],
-        fspDemo: ["fsp-demo"],
+        fsp: ["fsp-demo"],
         seasons: ["the-seasons"],
       },
       colors: {

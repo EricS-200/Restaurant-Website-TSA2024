@@ -104,7 +104,7 @@ export default function HomePageBanner() {
           }
         />
         <div className="w-full h-screen flex flex-col items-center justify-center text-white absolute inset-0 space-y-2 lg:translate-z-[270px] lg:scale-[0.65] xl:scale-[0.8]">
-          <h1 className="font-mistrully text-7xl text-transparent bg-clip-text bg-white">
+          <h1 className="font-seasons text-7xl text-transparent bg-clip-text bg-white">
             Craftroots
           </h1>
           <StyledText
