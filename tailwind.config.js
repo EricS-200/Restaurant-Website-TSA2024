@@ -14,8 +14,9 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        Arvo: ["Arvo", "sans-serif"],
-      }
+        arvo: ["Arvo", "sans-serif"],
+        dreamavenue: ['Dream Avenue'],
+      },
     },
   },
   plugins: [],

@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function StyledFooter() {
     return (
 
-        <footer className="flex flex-col bg-[#d0b577] font-Arvo">
+        <footer className="flex flex-col bg-[#d0b577] font-dreamavenue">
             <div className="w-full flex flex-row justify-start">
                 {
                     // name and logo div, katherine wants this to scroll left & repeat
