@@ -63,8 +63,8 @@ export default function HomePageBanner() {
           <video
             className="inset-0 w-screen h-[112vh] object-cover object-center scale-[1.08]"
             src="/home/background.mp4"
-            autoPlay
-            loop
+            // autoPlay
+            // loop
             muted
             playsInline
           />
