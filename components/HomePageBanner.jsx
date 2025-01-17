@@ -27,7 +27,7 @@ export default function HomePageBanner() {
     const mouseX = event.clientX;
     const mouseY = event.clientY;
     setRotateX(((mouseX - centerX) / centerX) * maxAngleX);
-    setRotateY(((mouseY - centerY) / centerY) * maxAngleY);
+    setRotateY(((centerY - mouseY) / centerY) * maxAngleY);
   }
 
   function handleMouseLeave() {
@@ -61,11 +61,11 @@ export default function HomePageBanner() {
       <div className="transform-style-3d lg:rotate-x-[var(--rotate-x)] lg:rotate-y-[var(--rotate-y)] transition-transform ease-out duration-1000 will-change-transform transform-3d">
         <div className="h-screen -translate-y-[60px]">
           <video
-            className="inset-0 w-screen h-[112vh] object-cover object-center scale-[1.08]"
+            className="inset-0 w-screen h-[112vh] object-cover object-center scale-[1.08] z-50"
             src="/home/background.mp4"
-            // autoPlay
+            autoPlay
             // loop
-            muted
+            // muted
             playsInline
           />
         </div>
@@ -103,7 +103,7 @@ export default function HomePageBanner() {
             "lg:block hidden absolute right-0 bottom-0 lg:w-[60%] xl:w-[50%] 2xl:w-[40%] translate-z-[360px] scale-[0.6] lg:translate-x-[8%] lg:translate-y-[15%] 2xl:-translate-x-[15%] 2xl:translate-y-[5%]"
           }
         />
-        <div className="w-full h-screen flex flex-col items-center justify-center text-white absolute inset-0 space-y-2 lg:translate-z-[270px] lg:scale-[0.65] xl:scale-[0.8]">
+        <div className="w-full h-screen flex flex-col items-center justify-center text-white absolute inset-0 space-y-2 lg:translate-z-[270px] lg:scale-[0.55] xl:scale-[0.7] 2xl:scale-[0.8] ">
           <h1 className="font-seasons text-7xl text-transparent bg-clip-text bg-white">
             Craftroots
           </h1>
