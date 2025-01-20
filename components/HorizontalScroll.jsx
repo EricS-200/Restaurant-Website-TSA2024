@@ -14,6 +14,7 @@ export default function HorizontalScroll({
   children,
   header = "",
   footer = "",
+  layout = <div className="absolute"></div>,
 }) {
   const component = useRef(null);
   const innerDiv = useRef(null);
@@ -56,12 +57,13 @@ export default function HorizontalScroll({
       className={cn(`relative`, className)}
       style={{ height: `${100 * scrollTime}vh` }}
     >
-      <div className="sticky top-0 flex flex-col h-screen items-center justify-evenly overflow-hidden">
+      <div className="sticky top-0 flex flex-col h-screen justify-evenly overflow-hidden">
+        {layout}
         {header}
         <motion.div
           ref={innerDiv}
           style={{ translateX }}
-          className={cn("flex gap-4 ml-4 items-center", innerClassName)}
+          className={cn("flex gap-4 items-center ", innerClassName)}
         >
           {children}
         </motion.div>

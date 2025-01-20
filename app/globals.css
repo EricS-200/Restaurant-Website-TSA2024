@@ -50,7 +50,7 @@
 }
 
 :root {
-  --background: rgb(229 231 235); /*tw gray-200*/
+  --background: #e5d7b3; /*tw gray-200*/
   --foreground: rgb(24 24 27); /*tw   zinc-900*/
 }
 
@@ -61,10 +61,10 @@
   }
 } */
 
-.dark {
+/* .dark {
   --background: #0a0a0a;
   --foreground: rgb(229 231 235);
-}
+} */
 
 html {
   height: 100%;
