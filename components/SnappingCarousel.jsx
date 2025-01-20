@@ -37,17 +37,34 @@ export default function DraggableCarousel({ className, children }) {
     };
   }, []);
 
-  function handleNext() {}
+  function handleNext() {
+    const min = 0; // first element
+    const max = childCount - Math.floor(screenWidth / childWidth);
+    let newElementAt = elementAt + 1;
+    newElementAt = Math.max(newElementAt, min);
+    newElementAt = Math.min(newElementAt, max);
+    setElementAt(newElementAt);
+    let translation = -(newElementAt * childWidth);
+    animate(x, translation, { type: "spring", stiffness: 300, damping: 30 });
+  }
 
-  function handlePrevious() {}
+  function handlePrevious() {
+    const min = 0; // first element
+    const max = childCount - Math.floor(screenWidth / childWidth);
+    let newElementAt = elementAt - 1;
+    newElementAt = Math.max(newElementAt, min);
+    newElementAt = Math.min(newElementAt, max);
+    setElementAt(newElementAt);
+    let translation = -(newElementAt * childWidth);
+    animate(x, translation, { type: "spring", stiffness: 300, damping: 30 });
+  }
 
   function handleDrag(event, info) {
     const min = 0; // first element
     const max = childCount - Math.floor(screenWidth / childWidth);
-
+    let newElementAt = undefined;
     const offset = info.offset.x;
     const velocity = info.velocity.x;
-    let newElementAt = undefined;
     if (offset > childWidth * 0.25) {
       newElementAt = elementAt - 1;
 
@@ -60,6 +77,8 @@ export default function DraggableCarousel({ className, children }) {
       newElementAt = Math.max(newElementAt, min);
       newElementAt = Math.min(newElementAt, max);
       setElementAt(newElementAt);
+    } else {
+      newElementAt = elementAt;
     }
 
     let translation;
@@ -74,14 +93,14 @@ export default function DraggableCarousel({ className, children }) {
   return (
     <div
       className={cn(
-        "overflow-hidden w-full flex items-center bg-white flex-col relative",
+        "overflow-hidden w-full flex items-center flex-col relative",
         className
       )}
     >
       <motion.div
         ref={containerRef}
         className="cursor-grab active:cursor-grabbing 
-                   flex items-center w-full "
+                   flex items-center w-full"
         style={{ x }}
         drag="x"
         dragConstraints={{
@@ -109,7 +128,11 @@ export default function DraggableCarousel({ className, children }) {
         </button>
         <button onClick={handleNext}>
           <svg
-            className="w-[40px] fill-black"
+            className={`w-[40px] ${
+              elementAt === childCount - Math.floor(screenWidth / childWidth)
+                ? "fill-gray-500"
+                : "fill-black"
+            }`}
             viewBox="-3 0 32 32"
             version="1.1"
           >
