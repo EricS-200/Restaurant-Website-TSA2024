@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { cn } from "@/utils/utils";
 
 /**
  * Parameters:
@@ -18,7 +19,7 @@ export default function AnimatedNumber({
   targetString,
   startingFraction,
   duration,
-  extraStyle,
+  className,
 }) {
   const numberRef = useRef(null); // Reference to the <h1> element
   const [currentValue, setCurrentValue] = useState(
@@ -88,7 +89,7 @@ export default function AnimatedNumber({
     <h1
       ref={numberRef}
       id="numberAnimation"
-      className={`font-semibold ${extraStyle}`}
+      className={cn(`font-semibold `, className)}
       data-value={targetString}
     >
       {new Intl.NumberFormat().format(Math.round(currentValue))}

@@ -4,8 +4,10 @@ import Button from "@/components/Button";
 import AnimatedNumber from "@/components/AnimatedNumber";
 import HomePageBanner from "@/components/HomePageBanner";
 import MenuPreview from "@/components/MenuPreview";
-import logoImage from "/public/logo.png";
 import GoldenImages from "@/components/GoldenImages";
+import leaves3 from "@/public/home/leaves3.png";
+import bowl from "@/public/home/bowl.png";
+import spices from "@/public/home/spices.png";
 
 export default function Home() {
   return (
@@ -41,7 +43,85 @@ export default function Home() {
 
       <MenuPreview />
 
-      <section
+      <section className="flex justify-evenly relative pt-6 overflow-x-clip">
+        <Image
+          src={leaves3}
+          alt="leaves (3)"
+          className="absolute -rotate-[25deg] w-[500px] right-0 top-0 -translate-y-[70%] translate-x-[25%] overflow-hidden"
+        />
+
+        <div className="w-1/2">
+          <div className="w-full h-full relative">
+            <Image
+              src={spices}
+              className="absolute right-0 top-0 translate-x-[50%] rotate-45"
+              alt=""
+            />
+            <Image
+              src={bowl}
+              alt="wooden bowl"
+              className="-translate-x-[5%] max-w-[800px]"
+            />
+          </div>
+        </div>
+        <div className="w-1/2 flex flex-col items-end pr-[140px]">
+          <div className="pointer-events-none select-none relative flex flex-col w-full text-right mb-10">
+            <h3 className="absolute right-0 top-0 font-mistrully text-[#9da57f] text-[12rem] leading-none shrink-0 opacity-25 text-nowrap">
+              Our Impact
+            </h3>
+            <h2 className="text-[#1e5541] font-dm text-[6rem] leading-none z-50 ">
+              Our Impact
+            </h2>
+          </div>
+
+          <div className="flex flex-col items-end w-full">
+            <AnimatedNumber
+              targetNumber={3058134}
+              targetString={"3,058,134"}
+              startingFraction={0.5}
+              duration={1000}
+              className={"text-white text-9xl font-dm"}
+            />
+            <p className="text-right font-seasons text-[#9da57f] xl:max-w-[90%] text-2xl my-4">
+              Math felt dry, physics seemed like endless equations on a
+              chalkboard, and computer science felt like typing gibberish into a
+              black screen.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-end w-full">
+            <AnimatedNumber
+              targetNumber={238134}
+              targetString={"238,134 "}
+              startingFraction={0.5}
+              duration={1000}
+              className={"text-white text-9xl font-dm"}
+            />
+            <p className="text-right font-seasons text-[#d5b928] xl:max-w-[90%] text-2xl my-4">
+              Math felt dry, physics seemed like endless equations on a
+              chalkboard, and computer science felt like typing gibberish into a
+              black screen.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-end w-full">
+            <AnimatedNumber
+              targetNumber={12058134}
+              targetString={"12,058,134"}
+              startingFraction={0.5}
+              duration={1000}
+              className={"text-white text-9xl font-dm"}
+            />
+            <p className="text-right font-seasons text-[#e29953] xl:max-w-[90%] text-2xl my-4">
+              Math felt dry, physics seemed like endless equations on a
+              chalkboard, and computer science felt like typing gibberish into a
+              black screen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* <section
         className={"bg-white w-full flex flex-col items-center justify-center"}
       >
         <div
@@ -67,7 +147,7 @@ export default function Home() {
           >
             <AnimatedNumber
               targetNumber={4_326_994_192}
-              targetString={"4,000,000,000"}
+              targetString={"4,100,000,000"}
               startingFraction={0.5}
               duration={1000}
               extraStyle={"text-2xl md:text-7xl"}
@@ -99,7 +179,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
