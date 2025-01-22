@@ -165,7 +165,7 @@ const DishCard = ({ src, name, price }) => {
         placeholder="blur"
         src={src}
         className={
-          "w-[80%] md:w-full transition-transform duration-500 lg:hover:scale-125"
+          "w-[80%] md:w-full transition-transform duration-500 scale-[0.9] lg:hover:scale-[1.1]"
         }
         onDragStart={(e) => e.preventDefault()}
       />

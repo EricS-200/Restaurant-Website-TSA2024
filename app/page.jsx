@@ -47,7 +47,7 @@ export default function Home() {
         <Image
           src={leaves3}
           alt="leaves (3)"
-          className="absolute -rotate-[25deg] w-[500px] right-0 top-0 -translate-y-[70%] translate-x-[25%] overflow-hidden"
+          className="absolute -rotate-[25deg] w-[500px] right-0 top-0 -translate-y-[70%] translate-x-[25%] overflow-hidden lg:block hidden"
         />
 
         <div className="w-1/2">
@@ -120,66 +120,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* <section
-        className={"bg-white w-full flex flex-col items-center justify-center"}
-      >
-        <div
-          className={
-            "flex flex-row w-full justify-between items-center bg-white"
-          }
-        >
-          <div
-            className={"pl-[12%] h-fit w-1/3 flex items-center justify-center"}
-          >
-            <Image
-              src={logoImage}
-              alt={"logo"}
-              width={300}
-              className={"h-max"}
-            />
-          </div>
-
-          <div
-            className={
-              "px-[12%] flex flex-col w-2/3 text-md md:text-4xl justify-center md:pt-[5%]"
-            }
-          >
-            <AnimatedNumber
-              targetNumber={4_326_994_192}
-              targetString={"4,100,000,000"}
-              startingFraction={0.5}
-              duration={1000}
-              extraStyle={"text-2xl md:text-7xl"}
-            />
-            <p className={"pb-[10%]"}>
-              What we&#39;re doing to keep abusing children
-            </p>
-
-            <AnimatedNumber
-              targetNumber={4_291_496_623}
-              targetString={"4,000,000,000"}
-              startingFraction={0.5}
-              duration={1000}
-              extraStyle={"text-2xl md:text-7xl"}
-            />
-            <p className={"pb-[10%]"}>
-              What we&#39;re doing to keep abusing children
-            </p>
-
-            <AnimatedNumber
-              targetNumber={4_000_000_000}
-              targetString={"4,000,000,000"}
-              startingFraction={0.5}
-              duration={1000}
-              extraStyle={"text-2xl md:text-7xl"}
-            />
-            <p className={"pb-[10%]"}>
-              What we&#39;re doing to keep abusing children
-            </p>
-          </div>
-        </div>
-      </section> */}
     </main>
   );
 }
