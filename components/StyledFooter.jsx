@@ -12,7 +12,7 @@ export default function StyledFooter() {
     return (
 
         <footer className="flex flex-col bg-[#d0b577] font-dreamavenue">
-            <div className="w-full flex flex-row justify-start">
+            <div className="py-2 md:py-4 w-full flex flex-row justify-around md:justify-start lg:justify-start xl:justify-start 2xl:justify-start">
                 {
                     // name and logo div, katherine wants this to scroll left & repeat
                 }
@@ -26,8 +26,9 @@ export default function StyledFooter() {
                         alt="CraftRoots Logo"
                         width={100}
                         height={100}
+                        className="w-9 md:w-16 lg:w-24 xl:w-24"
                     ></Image>
-                    <h1 className="text-8xl font-bold text-[#03402a] hover:text-[#277156] delay-50 transition-all">
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-[#03402a] hover:text-[#277156] delay-50 transition-all">
                         CraftRoots
                     </h1>
                 </Link>
@@ -36,7 +37,7 @@ export default function StyledFooter() {
                 {
                     // columns div
                 }
-                <div className="flex flex-col place-content-between">
+                <div className="flex flex-col place-content-evenly md:place-content-between">
                     {
                         // column 1 (our story, community)
 
@@ -45,7 +46,7 @@ export default function StyledFooter() {
                         {
                             // Our Story
                         }
-                        <h1 className="text-4xl font-bold">
+                        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">
                             About Us
                         </h1>
                         <p>
@@ -72,7 +73,7 @@ export default function StyledFooter() {
                         {
                             // Community
                         }
-                        <h1 className="text-4xl font-bold">
+                        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">
                             Community
                         </h1>
                         <div className="flex flex-row justify-evenly pb-2">
@@ -134,13 +135,13 @@ export default function StyledFooter() {
                             target="_blank"
                         >
                             <button
-                                className="px-5 text-3xl bg-lime-800 hover:bg-lime-600 text-green-100 hover:text-white transition-all delay-100 leading-10 rounded-full justify-self-center">
+                                className="px-5 text-xl md:text-2xl lg:text-3xl bg-lime-800 hover:bg-lime-600 text-green-100 hover:text-white transition-all delay-100 leading-10 rounded-full justify-self-center">
                                 Contact Us
                             </button>
                         </Link>
                     </div>
                 </div>
-                <div className="flex flex-col place-content-between">
+                <div className="flex flex-col place-content-around md:place-content-between">
                     {
                         // column 2 (about our food, menu)
                     }
@@ -148,7 +149,7 @@ export default function StyledFooter() {
                         {
                             // About our Food
                         }
-                        <h1 className="text-4xl font-bold">
+                        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">
                             About our Food
                         </h1>
                         <p>
@@ -192,7 +193,7 @@ export default function StyledFooter() {
                             locale=""
                             className="hover:underline hover:text-slate-600 transition-all delay-100"
                         >
-                            <h1 className="text-4xl font-bold">
+                            <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">
                                 Menu
                             </h1>
                         </Link>
@@ -202,7 +203,7 @@ export default function StyledFooter() {
                             locale=""
                         >
                             <button
-                                className="w-44 text-3xl bg-orange-500 hover:bg-orange-400 text-amber-100 hover:text-white transition-all delay-100 leading-10 rounded-full justify-self-center">
+                                className="w-44 text-xl md:text-2xl lg:text-3xl bg-orange-500 hover:bg-orange-400 text-amber-100 hover:text-white transition-all delay-100 leading-10 rounded-full justify-self-center">
                                 Order Now
                             </button>
                         </Link>
@@ -213,13 +214,13 @@ export default function StyledFooter() {
                 {
                     // legal & socials div
                 }
-                <p>
+                <p className="text-sm md:text-md">
                     Privacy Policy
                 </p>
-                <p>
+                <p className="text-sm md:text-md">
                     Terms & Conditions
                 </p>
-                <p>
+                <p classname="text-sm md:text-md">
                     USDA Permits
                 </p>
             </div>
