@@ -4,35 +4,35 @@
 
 @layer base {
   @font-face {
-    font-family: open-sans, sans-serif;
+    font-family: open-sans;
     src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
-    font-family: mistrully, sans-serif;
-    src: url("/fonts/Mistrully.ttf") format("truetype");
+    font-family: mistrully;
+    src: url('/fonts/Mistrully.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
-    font-family: dm-serif-display, sans-serif;
+    font-family: dm-serif-display;
     src: url("/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "kenao", sans-serif;
+    font-family: kenao;
     src: url("/fonts/kenao.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
-    font-family: fsp-demo, sans-serif;
+    font-family: fsp-demo;
     src: url("/fonts/Fontspring-DEMO-theseasons-reg.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
@@ -90,6 +90,11 @@ main {
 
 .triangle-clip-path {
    clip-path: polygon(70% 0, 85% 50%, 70% 100%, 0 100%, 0 0);
+}
+
+.katherine-weird-border-rounding-web-dev-sucks-im-tilted-as-you-can-tell-screw-this-lmao-verbose-but-not-as-verbose-as-java {
+  /*clip-path: ellipse(64% 65% at 39% 51%);*/
+  border-radius: 0% 32% 32% 0%;
 }
 
 .perspective-normal {

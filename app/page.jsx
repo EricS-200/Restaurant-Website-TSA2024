@@ -12,111 +12,143 @@ import logoImage from "/public/logo.png";
 
 import ourStoryImage0 from "/public/homepage/ourStoryImage0.png";
 import ourStoryImage1 from "/public/homepage/ourStoryImage1.png";
+import katherinesDumbLeafThatSheReallyWantedAndImReallyTiltedRnINeedToHopOffWebDevScrewWebDevCppIsBetter from "/public/homepage/katherinesDumbLeafThatSheReallyWantedAndImReallyTiltedRnINeedToHopOffWebDevScrewWebDevCppIsBetter.png";
+
 
 export default function Home() {
   return (
-    <main className="">
-      {/*Our Story*/}
-      <section className={"mb-[5vw] h-[100vh]"}>
-        <div className={"bg-white w-[90%] h-[75%] ml-[5%] mt-[10%]"}>
-          <div className={"p-[2%] px-[4%] flex flex-row"}>
+      <main className="">
+        {/*Our Story*/}
+        {ourStorySection()}
 
-            <div className={"w-1/2 relative"}>
-              <h1 className={"text-4xl"}>
-                Our Story kys!
-              </h1>
-              <p className={"pt-[5%] pb-[7%] w-[90%]"}>
-                Add a little bit of body text Through this
-                environment, I’ve found my own passion:
-                electrical engineering and neuroscience. To me,
-                they represent a bridge between what I’ve
-                inherited and what I aspire to create. Like my
-                family, I want to explore the unknown, but I also
-                want to shape a world where science works as
-                hard for us as we do for it. Still, I’ve learned
-                something in my small town: the real magic of
-                science lies in the people.
+        {/*Menu preview*/}
+        <MenuPreview/>
+
+        {/*Statistics*/}
+        <section
+            className={"w-full flex flex-col items-center justify-center"}
+        >
+          <div className={"flex flex-row w-full justify-between items-center "}>
+            <div
+                className={"pl-[12%] h-fit w-1/3 flex items-center justify-center"}
+            >
+              <Image
+                  src={logoImage}
+                  alt={"logo"}
+                  width={300}
+                  className={"h-max"}
+              />
+            </div>
+
+            <div
+                className={
+                  "px-[12%] flex flex-col w-2/3 text-md md:text-4xl justify-center md:pt-[5%]"
+                }
+            >
+              <AnimatedNumber
+                  targetNumber={4_326_994_192}
+                  targetString={"4,000,000,000"}
+                  startingFraction={0.5}
+                  duration={1000}
+                  extraStyle={"text-2xl md:text-7xl"}
+              />
+              <p className={"pb-[10%]"}>
+                What we&#39;re doing to keep abusing children
               </p>
 
-              <Link href={"/our-story"} className={"absolute bottom-0 left-0 w-[20%]"}>
-                <button className="bg-[#d0b577] hover:bg-[#d1c19c] active:bg-[#c6ba9d] py-1 px-8 mt-3 text-black">
+              <AnimatedNumber
+                  targetNumber={4_291_496_623}
+                  targetString={"4,000,000,000"}
+                  startingFraction={0.5}
+                  duration={1000}
+                  extraStyle={"text-2xl md:text-7xl"}
+              />
+              <p className={"pb-[10%]"}>
+                What we&#39;re doing to keep abusing children
+              </p>
+
+              <AnimatedNumber
+                  targetNumber={4_000_000_000}
+                  targetString={"4,000,000,000"}
+                  startingFraction={0.5}
+                  duration={1000}
+                  extraStyle={"text-2xl md:text-7xl"}
+              />
+              <p className={"pb-[10%]"}>
+                What we&#39;re doing to keep abusing children
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+  );
+}
+
+function ourStorySection() {
+  return (
+    <section className={"mb-[20vh] lg:h-[100vh] h-max"}>
+      <div className={"bg-white w-[90%] h-max ml-[5%] mt-[10%]"}>
+
+        {/*Desktop Version*/}
+        <div className={"hidden md:block pb-[15vh] relative"}>
+          <div className={"p-[2%] px-[4%] h-max flex flex-row"}>
+
+            <div className={"w-1/2 relative"}>
+              <h1 className={"text-7xl 2xl:text-8xl text-green-900 font-extrabold"}>
+                Our Story
+              </h1>
+              <h1 className={"absolute w-[70vw] top-[-25%] xl:top-[-30%] left-[-25%] xl:left-[-20%] font-mistrully opacity-15 text-[10rem] lg:text-[12rem] 2xl:text-[14rem] select-none text-clip text-green-900"}>
+                Our Story
+              </h1>
+              <p className={"pt-[5%] pb-[15%] w-[90%] leading-8"}>
+                kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys
+                kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys
+                kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys
+                kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys
+                kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys
+                kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys
+                kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys
+                kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys kys
+                kys kys kys
+              </p>
+
+              <Link href={"/our-story"} className={"absolute bottom-0 left-0"}>
+                <button className="bg-[#d0b577] hover:bg-[#d1c19c] active:bg-[#c6ba9d] py-2 px-8 text-black text-md md:text-lg">
                   Our Story
                 </button>
               </Link>
-              <Link href={"/reference"} className={"absolute bottom-0 left-[25%] triangle-clip-path katherine-green"}>
-                <button className="bg-[#9da57f] hover:bg-[#9da57f] active:bg-[#9da57f] py-1 px-8 text-black">
-                  References&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <Link href={"/reference"} className={"absolute bottom-0 left-[max(10vw,35%)] 2xl:left-[min(10vw,20%)] triangle-clip-path"}>
+                <button className="bg-[#9da57f] hover:bg-[#9da57f] active:bg-[#9da57f] py-2 px-8 pr-20 text-black text-md md:text-lg">
+                  References
                 </button>
               </Link>
-
             </div>
 
-            <div className={"w-1/2 justify-center items-center flex flex-row relative"}>
-                <Image src={ourStoryImage0} alt={"Image"} className={"h-[100%] justify-center items-center"}/>
-                <Image src={ourStoryImage1} alt={"Image"} className={"w-[40%] justify-center items-center absolute bottom-[-30%] right-[10%]"}/>
+            <div className={"w-1/2 justify-center items-center relative"}>
+              <div className={"relative w-full h-full flex flex-row justify-center items-center"}>
+                <div className={"flex h-[min(50vh,100%)]"}>
+                  <Image src={ourStoryImage0} alt={"Image"} className={"object-cover object-center katherine-weird-border-rounding-web-dev-sucks-im-tilted-as-you-can-tell-screw-this-lmao-verbose-but-not-as-verbose-as-java"}/>
+                </div>
+                <Image src={ourStoryImage1} alt={"Image"} className={"w-[50%] top-[min(45vh,90%)] xl:top-[min(35vh,70%)] left-[30vh] lg:left-[34vh] xl:left-[37vh] h-auto absolute"}/>
+              </div>
             </div>
 
           </div>
+
+          <Image src={katherinesDumbLeafThatSheReallyWantedAndImReallyTiltedRnINeedToHopOffWebDevScrewWebDevCppIsBetter}
+                 alt={"leafImage"}
+                 className={"absolute bottom-[-25%] left-[-2vw] w-[20%] h-auto rotate-[35deg]"}
+          />
         </div>
-      </section>
 
-      <MenuPreview />
-
-      <section
-        className={"w-full flex flex-col items-center justify-center"}
-      >
-        <div className={"flex flex-row w-full justify-between items-center "}>
-          <div
-            className={"pl-[12%] h-fit w-1/3 flex items-center justify-center"}
-          >
-            <Image
-              src={logoImage}
-              alt={"logo"}
-              width={300}
-              className={"h-max"}
-            />
-          </div>
-
-          <div
-            className={
-              "px-[12%] flex flex-col w-2/3 text-md md:text-4xl justify-center md:pt-[5%]"
-            }
-          >
-            <AnimatedNumber
-              targetNumber={4_326_994_192}
-              targetString={"4,000,000,000"}
-              startingFraction={0.5}
-              duration={1000}
-              extraStyle={"text-2xl md:text-7xl"}
-            />
-            <p className={"pb-[10%]"}>
-              What we&#39;re doing to keep abusing children
-            </p>
-
-            <AnimatedNumber
-              targetNumber={4_291_496_623}
-              targetString={"4,000,000,000"}
-              startingFraction={0.5}
-              duration={1000}
-              extraStyle={"text-2xl md:text-7xl"}
-            />
-            <p className={"pb-[10%]"}>
-              What we&#39;re doing to keep abusing children
-            </p>
-
-            <AnimatedNumber
-              targetNumber={4_000_000_000}
-              targetString={"4,000,000,000"}
-              startingFraction={0.5}
-              duration={1000}
-              extraStyle={"text-2xl md:text-7xl"}
-            />
-            <p className={"pb-[10%]"}>
-              What we&#39;re doing to keep abusing children
-            </p>
-          </div>
+        {/*Mobile Version*/}
+        <div className={"md:hidden p-[2%] px-[4%] mt-[10vh] h-max flex flex-col"}>
+          <p className={"font-mistrully"}>
+            Our Story kys!
+          </p>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }
+
