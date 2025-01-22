@@ -1,14 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/Button";
 import AnimatedNumber from "@/components/AnimatedNumber";
 import HomePageBanner from "@/components/HomePageBanner";
 import MenuPreview from "@/components/MenuPreview";
-import GoldenImages from "@/components/GoldenImages";
 import leaves3 from "@/public/home/leaves3.png";
 import bowl from "@/public/home/bowl.png";
 import spices from "@/public/home/spices.png";
-import logoImage from "/public/logo.png";
 import ourStoryImage0 from "/public/homepage/ourStoryImage0.png";
 import ourStoryImage1 from "/public/homepage/ourStoryImage1.png";
 import katherinesDumbLeafThatSheReallyWantedAndImReallyTiltedRnINeedToHopOffWebDevScrewWebDevCppIsBetter from "/public/homepage/katherinesDumbLeafThatSheReallyWantedAndImReallyTiltedRnINeedToHopOffWebDevScrewWebDevCppIsBetter.png";
@@ -107,7 +104,7 @@ export default function Home() {
 
 function ourStorySection() {
   return (
-    <section className={"mb-[20vh] lg:h-[100vh] xl:h-[70vh] h-max"}>
+    <section className={"relative h-fit pt-[5vh] pb-[15vh]"}>
       <div className={"bg-white w-[96%] md:w-[90%] h-max mx-[2%] md:ml-[5%] mt-[10%]"}>
 
         {/*Desktop Version*/}
@@ -147,7 +144,7 @@ function ourStorySection() {
                 <div className={"flex h-[min(50vh,100%)]"}>
                   <Image src={ourStoryImage0} alt={"Image of table with food"} className={"object-cover object-center katherine-weird-border-rounding-web-dev-sucks-im-tilted-as-you-can-tell-screw-this-lmao-verbose-but-not-as-verbose-as-java"}/>
                 </div>
-                <Image src={ourStoryImage1} alt={"Plate with food"} className={"w-[50%] top-[min(45vh,90%)] xl:top-[min(35vh,70%)] left-[30vh] lg:left-[34vh] xl:left-[37vh] h-auto absolute"}/>
+                <Image src={ourStoryImage1} alt={"Plate with food"} className={"w-[50%] top-[min(45vh,90%)] xl:top-[min(35vh,70%)] left-[30vh] lg:left-[34vh] xl:left-[37vh] h-auto absolute z-10"}/>
               </div>
             </div>
 
