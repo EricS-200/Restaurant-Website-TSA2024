@@ -90,7 +90,7 @@ function ourStorySection() {
       <div className={"bg-white w-[90%] h-max ml-[5%] mt-[10%]"}>
 
         {/*Desktop Version*/}
-        <div className={"hidden md:block pb-[15vh] relative"}>
+        <div className={"hidden lg:block pb-[15vh] relative"}>
           <div className={"p-[2%] px-[4%] h-max flex flex-row"}>
 
             <div className={"w-1/2 relative"}>
@@ -142,7 +142,7 @@ function ourStorySection() {
         </div>
 
         {/*Mobile Version*/}
-        <div className={"md:hidden p-[2%] px-[4%] mt-[10vh] h-max flex flex-col"}>
+        <div className={"lg:hidden p-[2%] px-[4%] mt-[10vh] h-max flex flex-col"}>
           <p className={"font-mistrully"}>
             Our Story kys!
           </p>
