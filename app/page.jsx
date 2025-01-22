@@ -19,7 +19,7 @@ export default function Home() {
     <main className="">
       <HomePageBanner />
 
-      {/* Our Story */}
+      {/* Our Story. Does not work with parallax rn*/}
       {ourStorySection()}
 
       <MenuPreview />
