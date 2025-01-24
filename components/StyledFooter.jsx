@@ -220,7 +220,7 @@ export default function StyledFooter() {
                 <p className="text-sm md:text-md">
                     Terms & Conditions
                 </p>
-                <p classname="text-sm md:text-md">
+                <p className="text-sm md:text-md">
                     USDA Permits
                 </p>
             </div>
