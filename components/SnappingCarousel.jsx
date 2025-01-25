@@ -20,18 +20,20 @@ export default function DraggableCarousel({ className, children }) {
 
   function init() {
     const w = window.innerWidth;
-    setScreenWidth(w);
-    setContainerWidth(containerRef.current.scrollWidth);
-    setChildCount(React.Children.count(children));
+    setScreenWidth(() => w);
+    setContainerWidth(() => containerRef.current.scrollWidth);
+    setChildCount(() => React.Children.count(children));
+    console.log(React.Children.toArray(children));
     const childNodes = Array.from(containerRef.current.children);
-    setChildWidth(childNodes[0].getBoundingClientRect().width);
+    setChildWidth(() => childNodes[0].getBoundingClientRect().width);
+    console.log(containerRef.current.scrollWidth - window.innerWidth);
   }
 
   useLayoutEffect(() => {
+    window.addEventListener("resize", init);
     setTimeout(() => {
       init();
     }, 500);
-    window.addEventListener("resize", init);
     return () => {
       window.removeEventListener("resize", init);
     };
@@ -62,6 +64,8 @@ export default function DraggableCarousel({ className, children }) {
   function handleDrag(event, info) {
     const min = 0; // first element
     const max = childCount - Math.floor(screenWidth / childWidth);
+    console.log(childCount);
+
     let newElementAt = undefined;
     const offset = info.offset.x;
     const velocity = info.velocity.x;
@@ -112,7 +116,7 @@ export default function DraggableCarousel({ className, children }) {
       >
         {children}
       </motion.div>
-      <div className="flex justify-between items-center w-full px-12 pt-4 absolute bottom-0">
+      {/* <div className="flex justify-between items-center w-full px-12 pt-4 absolute bottom-0">
         <button onClick={handlePrevious}>
           <svg
             className={`w-[40px] ${
@@ -141,7 +145,7 @@ export default function DraggableCarousel({ className, children }) {
             <path d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z"></path>
           </svg>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
