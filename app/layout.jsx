@@ -1,7 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import StyledFooter from "@/components/StyledFooter";
 
 export const metadata = {
   title: "",
@@ -19,7 +18,6 @@ export default function RootLayout({ children }) {
       <body className={"h-full font-sans"}>
         <Navbar />
         {children}
-        <StyledFooter/>
       </body>
     </html>
   );
