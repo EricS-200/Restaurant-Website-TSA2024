@@ -21,7 +21,6 @@ import ourStoryImage0 from "/public/homepage/ourStoryImage0.png";
 import ourStoryImage1 from "/public/homepage/ourStoryImage1.png";
 import katherinesDumbLeafThatSheReallyWantedAndImReallyTiltedRnINeedToHopOffWebDevScrewWebDevCppIsBetter from "/public/homepage/katherinesDumbLeafThatSheReallyWantedAndImReallyTiltedRnINeedToHopOffWebDevScrewWebDevCppIsBetter.png";
 
-
 export default function Home() {
   return (
     <main className="">
@@ -254,7 +253,7 @@ function ourStorySection() {
                   Our Story
                 </button>
               </Link>
-              <Link href={"/reference"} className={"absolute bottom-0 left-[max(10vw,35%)] 2xl:left-[min(10vw,20%)] triangle-clip-path"}>
+              <Link href={"/reference"} className={"absolute bottom-0 left-[clamp(10px,max(10vw,35%),250px)] katherine-triangle-clip-path"}>
                 <button className="bg-[#9da57f] hover:bg-[#b0bf75] py-2 px-8 pr-20 text-black text-md md:text-lg">
                   References
                 </button>
@@ -285,9 +284,10 @@ function ourStorySection() {
               <div className={"relative w-full h-full flex flex-row justify-center items-center"}>
                 <div className={"flex h-[min(50vh,100%)]"}>
                   <Image src={ourStoryImage0} alt={"Image of table with food"}
-                           className={"object-cover object-center katherine-weird-border-rounding-web-dev-sucks-im-tilted-as-you-can-tell-screw-this-lmao-verbose-but-not-as-verbose-as-java"}/>
+                         className={"object-cover object-center katherine-weird-border-rounding-web-dev-sucks-im-tilted-as-you-can-tell-screw-this-lmao-verbose-but-not-as-verbose-as-java"}/>
                 </div>
-                <Image src={ourStoryImage1} alt={"Plate with food"} className={"w-[50%] top-[60%] left-[50%] h-auto absolute z-10"}/>
+                <Image src={ourStoryImage1} alt={"Plate with food"}
+                       className={"w-[50%] top-[60%] left-[50%] h-auto absolute z-10"}/>
               </div>
             </div>
 
@@ -316,12 +316,12 @@ function ourStorySection() {
                 />
               </p>
 
-              <Link href={"/our-story"} className={"absolute bottom-[14%] left-0"}>
+              <Link href={"/our-story"} className={"absolute bottom-[12%] left-0"}>
                 <button className="bg-[#d0b577] hover:bg-[#d4b161] py-1 px-4 pr-6 text-black text-md">
                   Our Story
                 </button>
               </Link>
-              <Link href={"/reference"} className={"absolute bottom-[14%] left-[40%] triangle-clip-path"}>
+              <Link href={"/reference"} className={"absolute bottom-[12%] left-[clamp(130px,40%,200px)] katherine-triangle-clip-path"}>
                 <button className="bg-[#9da57f] hover:bg-[#b0bf75] py-1 px-6 pr-14 text-black text-md">
                   References
                 </button>
