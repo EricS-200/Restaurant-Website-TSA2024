@@ -17,7 +17,7 @@ export default function Navbar() {
   ];
 
   const aboutUsDropdown = [
-    { name: "About us", url: "/aboutUs" },
+    { name: "About us", url: "/about-us" },
     { name: "Reference", url: "/reference" },
   ];
 
