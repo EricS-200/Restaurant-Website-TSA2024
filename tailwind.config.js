@@ -32,6 +32,6 @@ module.exports = {
         "spin-scale": "spin-scale 5s linear infinite",
       },
     },
-  },
+  }, 
   plugins: [require("tailwindcss-3d")],
 };
