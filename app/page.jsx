@@ -3,6 +3,7 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import AnimatedNumber from "@/components/AnimatedNumber";
 import HomePageBanner from "@/components/HomePageBanner";
+import DraggableCarousel from "@/components/SnappingCarousel";
 import MenuPreview from "@/components/MenuPreview";
 import GoldenImages from "@/components/GoldenImages";
 import leaves3 from "@/public/home/leaves3.png";
@@ -16,6 +17,7 @@ import lemon from "@/public/home/lemon.png";
 import mushroom from "@/public/home/mushroom.png";
 import mushroom2 from "@/public/home/mushroom-outline.png";
 import parsley from "@/public/home/parsley.png";
+import fiveStars from "@/public/home/five-stars.png";
 
 export default function Home() {
   return (
@@ -157,21 +159,88 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pt-16 relative overflow-visible">
+      <section className="py-16 relative overflow-visible overflow-x-clip">
         <Image
           src={leaves4}
           alt=""
           className="absolute inset-0 rotate-45 w-[300px] lg:block hidden z-50 -translate-x-[5%] xl:translate-y-0 -translate-y-[50%]"
         />
-        <div className="relative flex flex-col w-full text-center bg-[var(--background)]">
-          <h3 className="pointer-events-none select-none absolute right-0 top-0 font-mistrully text-[#9da57f] text-[9rem] lg:text-[11rem] leading-none opacity-25 w-full text-center hidden lg:block">
+        <div className="relative flex flex-col w-full text-center bg-[var(--background)] mb-6">
+          <h3 className="pointer-events-none select-none absolute right-0 top-0 font-mistrully text-[#a38060] text-[9rem] lg:text-[11rem] leading-none opacity-25 w-full text-center hidden lg:block">
             Our Community
           </h3>
-          <h2 className="text-[#1e5541] font-dm text-6xl md:text-[6rem] leading-none">
+          <h2 className="text-[#755d48] font-dm text-6xl md:text-[6rem] leading-none">
             Our Community
           </h2>
         </div>
+        <div className="w-full flex flex-col items-center justify-center">
+          <div className="h-[100px] overflow-hidden flex items-center">
+            <Image src={fiveStars} className="w-[300px]" alt="" />
+          </div>{" "}
+        </div>
+        <DraggableCarousel className={"mt-4 mb-8"}>
+          <Review author={"Jake He, Certified Fattie"}>
+            It&apos;s why we can send emails in milliseconds and why stars
+            appear to twinkle in the night sky. It&apos;s how we turn lines of
+            code into self-driving cars, how we turn questions into answers, and
+            answers into even bigger questions. And that&apos;s the best part:
+            the chase.
+          </Review>
+          <Review author={"Jake He, Certified Fattie"}>
+            It&apos;s why we can send emails in milliseconds and why stars
+            appear to twinkle in the night sky. It&apos;s how we turn lines of
+            code into self-driving cars, how we turn questions into answers, and
+            answers into even bigger questions. And that&apos;s the best part:
+            the chase.
+          </Review>
+          <Review author={"Jake He, Certified Fattie"}>
+            It&apos;s why we can send emails in milliseconds and why stars
+            appear to twinkle in the night sky. It&apos;s how we turn lines of
+            code into self-driving cars, how we turn questions into answers, and
+            answers into even bigger questions. And that&apos;s the best part:
+            the chase.
+          </Review>
+          <Review author={"Jake He, Certified Fattie"}>
+            It&apos;s why we can send emails in milliseconds and why stars
+            appear to twinkle in the night sky. It&apos;s how we turn lines of
+            code into self-driving cars, how we turn questions into answers, and
+            answers into even bigger questions. And that&apos;s the best part:
+            the chase.
+          </Review>
+        </DraggableCarousel>{" "}
+        <div className="w-full flex justify-center items-center flex-col mt-12">
+          <p className="text-center w-[95vw] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-1/2">
+            Beyond providing high quality vegetarian and vegan food, we also
+            love interacting with our community! Our blog contains some more
+            insight about vegetarianism and veganism. We also share some amazing
+            vegan and vegetarian recipes, as well as vegetarian lifestyle
+            information. Consider checking it out!
+          </p>
+          <Link href={"/community"}>
+            <button className="text-white px-16 bg-[#e29953] mt-5 mb-8">
+              Community Engagement
+            </button>
+          </Link>
+        </div>
+        <Image
+          src={leaves5}
+          alt=""
+          className="absolute bottom-0 right-0 w-[400px] translate-x-1/2 lg:block hidden"
+        />
       </section>
     </main>
+  );
+}
+
+function Review({ children, author = "", className }) {
+  return (
+    <div className="w-screen h-fit flex justify-center relative flex-shrink-0 pb-12">
+      <div className="text-center w-[95vw] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-1/2 text-[#03402a]">
+        {children}
+      </div>
+      <p className="text-base text-[#9da57f] absolute bottom-0 left-1/2 -translate-x-1/2">
+        {author}
+      </p>
+    </div>
   );
 }
