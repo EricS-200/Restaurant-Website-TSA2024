@@ -65,7 +65,7 @@ export default function HomePageBanner() {
       className="overflow-hidden perspective-1000"
       speed={0.5}
     >
-      <div className="transform-style-3d lg:rotate-x-[var(--rotate-x)] lg:rotate-y-[var(--rotate-y)] transition-transform ease-out duration-1000 will-change-transform transform-3d relative">
+      <div className="transform-gpu transform-style-3d lg:rotate-x-[var(--rotate-x)] lg:rotate-y-[var(--rotate-y)] transition-transform ease-out duration-1000 will-change-transform transform-3d relative">
         <div className="w-screen h-screen scale-[1.2] relative -translate-z-[50px]">
           <Image
             src={bg}

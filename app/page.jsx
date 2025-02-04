@@ -20,13 +20,14 @@ import fiveStars from "@/public/home/five-stars.png";
 import ourStoryImage0 from "/public/homepage/ourStoryImage0.png";
 import ourStoryImage1 from "/public/homepage/ourStoryImage1.png";
 import katherinesDumbLeafThatSheReallyWantedAndImReallyTiltedRnINeedToHopOffWebDevScrewWebDevCppIsBetter from "/public/homepage/katherinesDumbLeafThatSheReallyWantedAndImReallyTiltedRnINeedToHopOffWebDevScrewWebDevCppIsBetter.png";
+import tajMahal from "/public/homepage/tajmahal.png";
 
 export default function Home() {
   return (
     <main className="">
       <HomePageBanner />
 
-      {/* Our Story. Does not work with parallax rn*/}
+      {/* Our Story*/}
       {ourStorySection()}
 
       <MenuPreview />
@@ -225,8 +226,15 @@ function Review({ children, author = "", className }) {
 
 function ourStorySection() {
   return (
-    <section className={"relative h-fit pt-[5vh] pb-[15vh]"}>
-      <div className={"bg-white w-[96%] md:w-[90%] h-max mx-[2%] md:ml-[5%] mt-[10%]"}>
+    <section className={"relative h-max pt-[1px] pb-[10vh]"}>
+
+      <div className={"absolute w-screen h-[10%]"}>
+        <div className={"relative w-screen h-[100%] flex justify-center items-center"}>
+          <Image src={tajMahal} alt={"fancy line to indicate next section"} className={"h-auto w-[60%] md:w-[25%] absolute top-[-6.5vh] md:top-[-10vh] xl:top-[-9vh]"}/>
+        </div>
+      </div>
+
+      <div className={"bg-white w-[96%] md:w-[90%] h-max mx-[2%] md:ml-[5%] mt-[7%]"}>
 
         {/*Desktop Version*/}
         <div className={"hidden lg:block pb-[15vh] relative"}>
