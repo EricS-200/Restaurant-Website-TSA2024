@@ -230,7 +230,7 @@ function ourStorySection() {
 
       <div className={"absolute w-screen h-[10%]"}>
         <div className={"relative w-screen h-[100%] flex justify-center items-center"}>
-          <Image src={tajMahal} alt={"fancy line to indicate next section"} className={"h-auto w-[60%] md:w-[25%] absolute top-[-6.5vh] md:top-[-10vh] xl:top-[-9vh]"}/>
+          <Image src={tajMahal} alt={"fancy line to indicate next section"} className={"h-auto w-[60%] md:w-[25%] absolute top-[-6.5vh] md:top-[-6vh] xl:top[-10vh] xl:top-[-9vh]"}/>
         </div>
       </div>
 
