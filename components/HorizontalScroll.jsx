@@ -40,7 +40,6 @@ export default function HorizontalScroll({
 
   if (screenWidth > 768) {
     offset = screenWidth / 2 - 420 / 2 + 16;
-    console.log("hi");
   } else {
     offset = 60;
   }

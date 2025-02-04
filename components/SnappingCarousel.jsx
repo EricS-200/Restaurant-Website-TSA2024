@@ -23,10 +23,10 @@ export default function DraggableCarousel({ className, children }) {
     setScreenWidth(() => w);
     setContainerWidth(() => containerRef.current.scrollWidth);
     setChildCount(() => React.Children.count(children));
-    console.log(React.Children.toArray(children));
+    // console.log(React.Children.toArray(children));
     const childNodes = Array.from(containerRef.current.children);
     setChildWidth(() => childNodes[0].getBoundingClientRect().width);
-    console.log(containerRef.current.scrollWidth - window.innerWidth);
+    // console.log(containerRef.current.scrollWidth - window.innerWidth);
   }
 
   useLayoutEffect(() => {
@@ -64,7 +64,7 @@ export default function DraggableCarousel({ className, children }) {
   function handleDrag(event, info) {
     const min = 0; // first element
     const max = childCount - Math.floor(screenWidth / childWidth);
-    console.log(childCount);
+    // console.log(childCount);
 
     let newElementAt = undefined;
     const offset = info.offset.x;
