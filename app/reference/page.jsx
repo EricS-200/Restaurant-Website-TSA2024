@@ -156,6 +156,114 @@ export default function Reference() {
               sourceLink="https://kentuckytsa.org/"
             />
           </li>
+          <li>
+            <Citation
+              author="Ashleigh Shanti"
+              authorLink="https://www.bonappetit.com/contributor/ashleigh-shanti"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/collard-greens-salad-with-fried-plantain-and-sumac"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Chrissy Tracey"
+              authorLink="https://www.bonappetit.com/contributor/chrissy-tracey"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/sun-gold-balsamic-pasta"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Chris Morocco"
+              authorLink="https://www.eatingwell.com/author/carolyn-casner/"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/coconut-braised-mushrooms-with-ginger-and-scallions"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Carolyn Casner"
+              authorLink="https://www.eatingwell.com/author/carolyn-casner/"
+              type="image"
+              source="eatingwell.com"
+              sourceLink="https://www.eatingwell.com/recipe/278134/tofu-tacos/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="An Uong"
+              authorLink="https://www.bonappetit.com/contributor/an-uong"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/vegan-pho"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Chris Morocco"
+              authorLink="https://www.bonappetit.com/contributor/chris-morocco"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/story/miso-polenta"
+            />
+          </li>
+          <li>
+            <Citation
+              author="'The Foodie Girl'"
+              authorLink="https://peri-winklewellness.com/author/foodiegirl/"
+              type="image"
+              source="peri-winkle-wellness"
+              sourceLink="https://peri-winklewellness.com/2023/02/21/hearty-tomato-soup/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Hetty McKinnon"
+              authorLink="https://www.bonappetit.com/contributor/hetty-mckinnon"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/broccoli-and-cashew-cream-soup"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Serena Dai"
+              authorLink="https://www.bonappetit.com/contributor/serena-dai"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/miracle-cabbage-stir-fry"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Chris Morrocco"
+              authorLink="https://www.bonappetit.com/contributor/chris-morocco"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/charred-kale-with-citrus"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Kendra Vaculin"
+              authorLink="https://www.bonappetit.com/contributor/kendra-vaculin"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/hummus-bowls-with-merguez-spiced-tempeh"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Ali Slagle"
+              authorLink="https://www.bonappetit.com/contributor/ali-slagle"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/pan-roasted-sweet-potatoes-and-tempeh"
+            />
+          </li>
         </ol>
       </section>
 
@@ -175,6 +283,7 @@ export default function Reference() {
             sourceLink="https://example.com"
             />
           </li>
+          
          
           <li>
             <Citation
