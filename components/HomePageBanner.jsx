@@ -3,9 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import ParallaxBanner from "@/components/SimpleParallaxBanner";
-import MouseMoveParallax from "@/components/MouseMoveParallax";
 import StyledText from "@/components/StyledText";
-import { useEffect, useState, useRef, useLayoutEffect } from "react";
+import { useEffect, useState, useRef} from "react";
 
 import seperator1 from "@/public/home/seperator1.png";
 import droplets1 from "@/public/home/droplets1.png";
@@ -21,7 +20,6 @@ import bg2 from "@/public/home/bg-layer2.png";
 export default function HomePageBanner() {
   const [rotateX, setRotateX] = useState(0);
   const ref = useRef(null);
-  const [show, setShow] = useState(true);
   const [rotateY, setRotateY] = useState(0);
 
   function handleMouseMove(event) {
@@ -46,12 +44,14 @@ export default function HomePageBanner() {
   }
 
   useEffect(() => {
+    const {removeEventListener} = ref.current;
+
     ref.current.addEventListener("mousemove", handleMouseMove);
     ref.current.addEventListener("mouseout", handleMouseLeave);
 
     return () => {
-      ref.current.removeEventListener("mousemove", handleMouseMove);
-      ref.current.removeEventListener("mouseout", handleMouseLeave);
+      removeEventListener("mousemove", handleMouseMove);
+      removeEventListener("mouseout", handleMouseLeave);
     };
   }, []);
 
