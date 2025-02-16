@@ -10,7 +10,8 @@ import { cn } from "@/utils/utils";
  *
  * targetString (string): The number you want to hit, provided as a string, with commas
  *
- * startingFraction (float): The fraction of the target number you want to start the animation from (eg. 0.5 for 50%)
+ * startingFraction (float): The fraction of the target number you want to start the animation from
+ * (eg. 0.5 for 50% of original number)
  *
  * duration (int): The duration of the animation in milliseconds
  */

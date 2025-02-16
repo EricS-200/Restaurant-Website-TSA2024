@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import StyledFooter from "@/components/StyledFooter";
 export const metadata = {
-  title: "",
+  title: "Craftroots",
   description: "",
 };
 

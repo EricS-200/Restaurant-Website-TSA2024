@@ -20,6 +20,8 @@ import bg2 from "@/public/home/bg-layer2.png";
 
 export default function HomePageBanner() {
   const [rotateX, setRotateX] = useState(0);
+  const ref = useRef(null);
+  const [show, setShow] = useState(true);
   const [rotateY, setRotateY] = useState(0);
 
   function handleMouseMove(event) {
@@ -44,17 +46,18 @@ export default function HomePageBanner() {
   }
 
   useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseout", handleMouseLeave);
+    ref.current.addEventListener("mousemove", handleMouseMove);
+    ref.current.addEventListener("mouseout", handleMouseLeave);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseout", handleMouseLeave);
+      ref.current.removeEventListener("mousemove", handleMouseMove);
+      ref.current.removeEventListener("mouseout", handleMouseLeave);
     };
   }, []);
 
   return (
     <ParallaxBanner
+      ref={ref}
       style={{
         "--rotate-x": `${rotateY}deg`,
         "--rotate-y": `${rotateX}deg`,
@@ -62,70 +65,60 @@ export default function HomePageBanner() {
       className="overflow-hidden perspective-1000"
       speed={0.5}
     >
-      <div className="transform-style-3d lg:rotate-x-[var(--rotate-x)] lg:rotate-y-[var(--rotate-y)] transition-transform ease-out duration-1000 will-change-transform transform-3d relative">
-        {/* <div className="h-screen -translate-y-[60px]">
-          <video
-            className="inset-0 w-screen h-[112vh] object-cover object-center scale-[1.08] z-50"
-            src="/home/background.mp4"
-            autoPlay
-            // loop
-            // muted
-            playsInline
-          />
-        </div> */}
+      <div className="transform-gpu transform-style-3d lg:rotate-x-[var(--rotate-x)] lg:rotate-y-[var(--rotate-y)] transition-transform ease-out duration-1000 will-change-transform transform-3d relative">
         <div className="w-screen h-screen scale-[1.2] relative -translate-z-[50px]">
           <Image
             src={bg}
-            className="object-cover object-center"
+            className="object-cover object-center pointer-events-none"
             placeholder="blur"
             alt=""
             fill={true}
             priority
           />
-        </div>
-        <div className="absolute inset-0 lg:translate-z-[40px]">
-          <Image
-            src={bg1}
-            className="object-cover object-center"
-            alt="veggie plate"
-            fill
-          />
-        </div>
-        <div className="absolute inset-0 lg:translate-z-[40px]">
-          <Image
-            src={bg2}
-            className="object-cover object-center"
-            alt="veggie plate"
-            fill
-          />
-        </div>
+        </div>{" "}
+        <Image
+          src={bg1}
+          placeholder="blur"
+          className="object-cover object-center pointer-events-none absolute inset-0 lg:translate-z-[110px] "
+          alt="veggie plate"
+          fill
+          priority
+        />
+        <Image
+          src={bg2}
+          placeholder="blur"
+          className="object-cover object-center pointer-events-none absolute inset-0 lg:translate-z-[130px] "
+          alt="veggie plate"
+          fill
+          priority
+        />
         <Image
           src={fog}
-          className="w-screen absolute inset-0 translate-z-[120px]"
+          className="pointer-events-none w-screen absolute inset-0 translate-z-[200px]"
           alt="fog"
         />
         <Image
           src={droplets1}
           alt="water droplets (1)"
-          className="lg:block hidden absolute right-0 bottom-0  h-full translate-z-[200px] scale-[0.9] lg:translate-x-[50%] lg:translate-y-[5%] xl:translate-x-[40%] xl:translate-y-[3%] 2xl:translate-x-[30%]"
+          className="pointer-events-none lg:block hidden absolute right-0 bottom-0  h-full translate-z-[270px] scale-[0.85] lg:translate-x-[50%] lg:translate-y-[5%] xl:translate-x-[40%] xl:translate-y-[3%] 2xl:translate-x-[30%]"
         />
         <Image
           src={droplets2}
           alt="water droplets (2)"
-          className=" lg:block hidden absolute left-0 bottom-0 h-full lg:h-[90%] translate-z-[200px] scale-[0.9] lg:-translate-x-1/2 lg:translate-y-[7%] xl:-translate-x-[40%] xl:translate-y-[10%] 2xl:-translate-x-[30%]"
+          className="pointer-events-none lg:block hidden absolute left-0 bottom-0 h-full lg:h-[90%] translate-z-[270px] scale-[0.85] lg:-translate-x-1/2 lg:translate-y-[7%] xl:-translate-x-[40%] xl:translate-y-[10%] 2xl:-translate-x-[30%]"
         />
         <Image
           src={leaves1}
           alt="leaves (1)"
           className={
-            "lg:block hidden absolute left-0 top-0 lg:w-[55%] xl:w-[45%] 2xl:w-[40%] translate-z-[380px] xl:scale-[0.8] lg:-translate-x-[15%] xl:-translate-y-[5%] xl:translate-x-0"
+            "pointer-events-none lg:block hidden absolute left-0 top-0 lg:w-[55%] xl:w-[45%] 2xl:w-[40%] translate-z-[400px] xl:scale-[0.8] lg:-translate-x-[15%] xl:-translate-y-[5%] xl:translate-x-0"
           }
         />
         <Image
           src={leaves2}
           alt="leaves (2)"
           className={
-            "lg:block hidden absolute right-0 bottom-0 lg:w-[60%] xl:w-[50%] 2xl:w-[40%] translate-z-[380px] scale-[0.6] lg:translate-x-[8%] lg:translate-y-[15%] 2xl:-translate-x-[15%] 2xl:translate-y-[5%]"
+            "pointer-events-none lg:block hidden absolute right-0 bottom-0 lg:w-[60%] xl:w-[50%] 2xl:w-[40%] translate-z-[400px] scale-[0.6] lg:translate-x-[8%] lg:translate-y-[15%] 2xl:-translate-x-[15%] 2xl:translate-y-[5%]"
           }
         />
         <div className="w-full h-screen flex flex-col items-center justify-center text-white absolute inset-0 space-y-2 lg:translate-z-[270px] lg:scale-[0.55] xl:scale-[0.7] 2xl:scale-[0.8]">
@@ -142,7 +135,7 @@ export default function HomePageBanner() {
           <Image
             src={seperator1}
             alt="decorated seperator"
-            className="w-[700px]"
+            className="w-[700px]  pointer-events-none select-none"
           />
           <h2 className="font-2xl w-[650px] max-w-[95vw] text-center">
             Healthy, high end vegetarian & vegan dishes sourced from authentic
@@ -157,67 +150,4 @@ export default function HomePageBanner() {
       </div>
     </ParallaxBanner>
   );
-}
-
-{
-  /* 
-      <MouseMoveParallax
-        translate={{
-          default: { hidden: true },
-          lg: { x: "50%", y: "5%", hidden: false },
-          xl: { x: "40%", y: "3%" },
-          xxl: { x: "30%", y: "0%" },
-        }}
-        className="lg:block hidden absolute right-0 bottom-0  h-full translate-z-[180px]"
-      >
-        
-      </MouseMoveParallax> */
-}
-
-{
-  /* <MouseMoveParallax
-          translate={{
-            default: { hidden: true },
-            lg: { x: "-50%", y: "7%", hidden: false },
-            xl: { x: "-40%", y: "10%" },
-            xxl: { x: "-30%", y: "0%" },
-          }}
-          className="lg:block hidden absolute left-0 bottom-0 h-full lg:h-[90%] translate-z-[180px]"
-        >
-          <Image src={droplets2} alt="water droplets (2)" className=""/>
-        </MouseMoveParallax> */
-}
-{
-  /* 
-        <MouseMoveParallax
-          sensitivity={50}
-          translate={{
-            default: { hidden: true },
-            lg: { x: "-40%", y: "-15%", hidden: false },
-            xl: { x: "-40%", y: "-15%" },
-            xxl: { x: "-30%", y: "-20%" },
-          }}
-          className={
-            "lg:block hidden absolute left-0 top-0 lg:w-[60%] xl:w-[50%] 2xl:w-[40%] translate-z-[250px]"
-          }
-        >
-          <Image src={leaves1} alt="leaves (1)" />
-        </MouseMoveParallax> */
-}
-
-{
-  /* <MouseMoveParallax
-          sensitivity={50}
-          translate={{
-            default: { hidden: true },
-            lg: { x: "25%", y: "15%", hidden: false },
-            xl: { x: "25%", y: "15%" },
-            xxl: { x: "25%", y: "15%" },
-          }}
-          className={
-            "lg:block hidden absolute right-0 bottom-0 lg:w-[60%] xl:w-[50%] 2xl:w-[40%] translate-z-[250px]"
-          }
-        >
-          <Image src={leaves2} alt="leaves (2)" />
-        </MouseMoveParallax> */
 }
