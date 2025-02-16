@@ -129,7 +129,7 @@ function MenuSection({dishArray, title, index})
       <>
         <FoodSectionFancyTitle title={title} />
 
-        <div className={"relative flex flex-row flex-wrap justify-center gap-x-[4%] gap-y-[5vh]"}>
+        <div className={"relative flex flex-row flex-wrap justify-center gap-x-[6vw] gap-y-[8vw]"}>
 
           {extraShit}
 
