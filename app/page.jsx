@@ -25,9 +25,10 @@ import tajMahal from "/public/homepage/tajmahal.png";
 export default function Home() {
   return (
     <main className="">
+
       <HomePageBanner />
 
-      {ourStorySection()}
+      <OurStorySection/>
 
       <MenuPreview />
 
@@ -223,7 +224,7 @@ function Review({ children, author = "", className }) {
   );
 }
 
-function ourStorySection() {
+function OurStorySection({}) {
   return (
     <section className={"relative h-max pt-[1px] pb-[10vh] overflow-x-clip"}>
       <div className={"absolute w-screen h-[10%]"}>

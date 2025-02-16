@@ -1,7 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import MenuCard from "@/components/MenuCard";
 import { GetSideDishes, GetAppetizers, GetEntrees, GetDesserts, GetDrinks, GetSpecials } from "@/app/menu/FoodTypes";
+
+import lettuce from "@/public/home/lettuce.png";
 
 export default function menu() {
 
@@ -73,6 +76,7 @@ export default function menu() {
                       key={index}
                       dishArray={dishArray}
                       title={foodSectionTitles[index]}
+                      index={index}
                   />
                 </div>
               );
@@ -107,15 +111,29 @@ function FoodSectionFancyTitle({title})
   );
 }
 
-function MenuSection({dishArray, title})
+function MenuSection({dishArray, title, index})
 {
+  let extraShit = (<></>);
+
+  if (index === 0)
+  {
+    extraShit = (
+      <>
+        <Image src={lettuce} alt={"fancy onions"} className={"absolute top-0 right-[25vw] w-[25%] h-auto"}/>
+      </>
+    );
+  }
+
+
   return (
       <>
         <FoodSectionFancyTitle title={title} />
-        <div className={"flex flex-row flex-wrap gap-x-[4%] gap-y-[7vh]"}>
-          {
-            dishArray.map((dish, index) =>
-            {
+
+        <div className={"relative flex flex-row flex-wrap justify-center gap-x-[4%] gap-y-[5vh]"}>
+
+          {extraShit}
+
+          {dishArray.map((dish, index) => {
               return (
                 <MenuCard
                     key={index}
