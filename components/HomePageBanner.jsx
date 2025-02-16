@@ -45,19 +45,11 @@ export default function HomePageBanner() {
     });
   }
 
-  useEffect(() => {
-    ref.current.addEventListener("mousemove", handleMouseMove);
-    ref.current.addEventListener("mouseout", handleMouseLeave);
-
-    return () => {
-      ref.current.removeEventListener("mousemove", handleMouseMove);
-      ref.current.removeEventListener("mouseout", handleMouseLeave);
-    };
-  }, []);
-
   return (
     <ParallaxBanner
       ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseOut={handleMouseLeave}
       style={{
         "--rotate-x": `${rotateY}deg`,
         "--rotate-y": `${rotateX}deg`,
