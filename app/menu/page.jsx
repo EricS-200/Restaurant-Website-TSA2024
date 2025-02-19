@@ -174,15 +174,6 @@ export default function menu() {
   );
 }
 
-function FoodTypeBoxes({ name, colorStyle }) {
-  return (
-    <div
-      className={`min-w-fit w-[12%] h-[10%] ${colorStyle} text-center mr-[2%]`}
-    >
-      {name}
-    </div>
-  );
-}
 
 function FoodSectionFancyTitle({ title, different }) {
   if (different)
@@ -234,7 +225,7 @@ function MenuSection({ dishArray, title, index }) {
     );
   }
 
-  let element = null;
+  let element = <></>;
 
   if (index % 2 === 0)
     element = <FoodSectionFancyTitle title={title} different={false} />
@@ -259,6 +250,7 @@ function MenuSection({ dishArray, title, index }) {
               vegan={dish.vegan}
               type={dish.type}
               spice={dish.spice}
+              shortDescription={dish.shortDescription}
               description={dish.description}
               src={dish.src}
               price={dish.price}
