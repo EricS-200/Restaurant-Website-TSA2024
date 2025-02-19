@@ -20,6 +20,7 @@ import apples from "@/public/menu/page/apples.png";
 import potato from "@/public/menu/page/potato.png";
 import wood from "@/public/menu/page/wood.png";
 import seperator from "@/public/menu/page/seperator.png";
+import searchIcon from "@/public/menu/page/search-icon.svg";
 
 export default function menu() {
   let sideDishes = GetSideDishes();
@@ -118,7 +119,12 @@ export default function menu() {
 
         <div className="w-full flex flex-col items-center justify-center absolute lg:translate-y-0 -translate-y-[50%]">
           <div className="relative w-full flex justify-center items-center flex-col">
-            <div className="absolute bg-black w-[50px] h-[50px] left-0 translate-x-[20px] sm:translate-x-[40px] lg:left-[10%] lg:translate-x-[15px]"></div>
+            <Image
+              src={searchIcon}
+              alt=""
+              className="absolute w-[50px] h-[50px] left-0 translate-x-[20px] sm:translate-x-[40px] lg:left-[10%] lg:translate-x-[15px]"
+            />
+
             <input
               type="text"
               className="w-[95%] lg:w-[80%] pl-[80px] pr-4 py-4 text-2xl font-seasons"
