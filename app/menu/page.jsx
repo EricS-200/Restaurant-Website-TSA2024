@@ -213,7 +213,6 @@ function MenuSection({ dishArray, title, index }) {
   return (
     <>
       <FoodSectionFancyTitle title={title} />
-
       <div
         className={
           "relative flex flex-row flex-wrap justify-center gap-x-[4%] gap-y-[5vh]"
