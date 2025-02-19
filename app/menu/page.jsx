@@ -12,6 +12,15 @@ import {
 } from "@/app/menu/FoodTypes";
 
 import lettuce from "@/public/home/lettuce.png";
+import appetizer2 from "@/public/menu/appetizer2.png";
+import leaves1 from "@/public/menu/page/leaves1.png";
+import beans from "@/public/menu/page/beans.png";
+import tomato from "@/public/menu/page/tomato.png";
+import apples from "@/public/menu/page/apples.png";
+import potato from "@/public/menu/page/potato.png";
+import wood from "@/public/menu/page/wood.png";
+import seperator from "@/public/menu/page/seperator.png";
+import searchIcon from "@/public/menu/page/search-icon.svg";
 
 export default function menu() {
   let sideDishes = GetSideDishes();
@@ -39,50 +48,113 @@ export default function menu() {
   ];
 
   return (
-    <main className="bg-gradient-to-b from-[#4c5a2b] to-[#64642b] relative w-full h-full">
-      <section className="p-[5%]">
-        {/*Search box and filtering boxes*/}
-        <div className={"flex justify-center items-center"}>
-          <div className={"mb-[5%] w-[100%] lg:w-[80%] h-[30%]"}>
-            <div className={"w-[100%] h-[5vh] flex items-center bg-white "}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.0"
-                viewBox="-0.0 -0.0 134.0 134.1"
-                className="fill-[rgb(157,165,127)] w-fit h-[80%] z-10 mx-[1%]"
-              >
-                <g>
-                  <path
-                    d="M86.143,98.06l32.845,32.834c3.252,3.251 8.533,3.25 11.785,-0.002c3.251,-3.253 3.25,-8.534 -0.002,-11.786l-32.823,-32.811c6.603,-8.981 10.506,-20.072 10.506,-32.068c0,-29.929 -24.298,-54.227 -54.227,-54.227c-29.929,-0 -54.227,24.298 -54.227,54.227c-0,29.929 24.298,54.227 54.227,54.227c11.927,0 22.959,-3.858 31.916,-10.394Zm-31.916,-81.393c20.73,-0 37.561,16.83 37.561,37.56c-0,20.73 -16.831,37.561 -37.561,37.561c-20.73,-0 -37.56,-16.831 -37.56,-37.561c-0,-20.73 16.83,-37.56 37.56,-37.56Z"
-                    className={"fill-inherit"}
-                  />
-                </g>
-              </svg>
-
-              <input
-                className={"w-[90%]"}
-                placeholder={"Search for a dish"}
-              ></input>
+    <main className="bg-gradient-to-b from-[#4c5a2b] to-[#64642b] relative ">
+      <section className="">
+        <div className="relative w-full h-[100vh] flex justify-end overflow-x-clip">
+          <div className="absolute inset-0 w-[100vw] z-0">
+            <Image
+              src={wood}
+              className="object-center object-cover"
+              fill
+              alt=""
+              unoptimized
+            />
+          </div>
+          <div className="w-screen h-screen bg-gradient-to-b from-transparent to-[#e5d7b3] absolute inset-0 z-0"></div>
+          <Image
+            src={apples}
+            alt=""
+            className="absolute bottom-0 right-0 w-[900px] translate-x-1/3 translate-y-1/2 hidden xl:block"
+          />
+          <Image
+            src={potato}
+            alt=""
+            className="absolute bottom-0 left-0 w-[900px] translate-y-1/4 md:translate-y-1/2 -translate-x-[10%]"
+          />
+          <Image
+            src={appetizer2}
+            alt=""
+            className="w-[350px] md:w-[50vw] -translate-x-[20%] -translate-y-[20%] absolute inset-0"
+            placeholder="blur"
+          />
+          <Image
+            src={leaves1}
+            alt=""
+            className="absolute inset-0 w-1/2 -translate-x-[20%] -translate-y-[50%]"
+          />
+          <Image
+            src={tomato}
+            alt=""
+            className="absolute top-0 right-[20%] -translate-y-1/4 w-[600px] hidden xl:block"
+          />
+          <Image
+            src={beans}
+            alt=""
+            className="absolute top-0 right-0 w-[300px] md:w-[550px]"
+          />
+          <div
+            className="w-full xl:w-1/2 h-full flex flex-col items-center justify-center text-white xl:pr-[10%]
+        "
+          >
+            <div className="relative w-fit h-fit">
+              <h2 className="font-mistrully text-center absolute text-[10rem] sm:text-[12rem] lg:text-[18rem] text-black opacity-25 leading-none sm:block hidden text-nowrap left-1/2 -translate-x-1/2">
+                Our Menu
+              </h2>
+              <h1 className="font-kenao text-white text-[5rem] sm:text-[8rem] lg:text-[11rem] text-center relative md:text-nowrap leading-none">
+                Our Menu
+              </h1>
             </div>
-
-            <div
-              className={
-                "flex flex-row py-[2%] w-[100%] justify-center items-center"
-              }
-            >
-              <FoodTypeBoxes name="Side Dishes" colorStyle="bg-red-500" />
-              <FoodTypeBoxes
-                name="Appetizers"
-                colorStyle="bg-[color:#e29953]"
-              />
-              <FoodTypeBoxes name="Entrees" colorStyle="bg-[color:#d5b928]" />
-              <FoodTypeBoxes name="Specials" colorStyle="bg-[color:#d0b577]" />
-              <FoodTypeBoxes name="Drinks" colorStyle="bg-[color:#9da57f]" />
-              <FoodTypeBoxes name="Desserts" colorStyle="bg-[color:#1e5541]" />
-            </div>
+            <Image
+              src={seperator}
+              alt=""
+              className="-translate-y-1/2 mt-8 md:w-1/2 md:mt-12 xl:w-2/3 xl:mt-10"
+            />
+            <p className="text-center w-[95%] md:w-3/4 xl:w-2/3 md:text-xl leading-normal -translate-y-[20px]">
+              Healthy, modern, high end vegetarian dishes sourced from authentic
+              farms all across the world. Enjoy a wide variety of traditional
+              vegan dishes from all different cultures.
+            </p>
           </div>
         </div>
 
+        <div className="w-full flex flex-col items-center justify-center absolute lg:translate-y-0 -translate-y-[50%]">
+          <div className="relative w-full flex justify-center items-center flex-col">
+            <Image
+              src={searchIcon}
+              alt=""
+              className="absolute w-[50px] h-[50px] left-0 translate-x-[20px] sm:translate-x-[40px] lg:left-[10%] lg:translate-x-[15px]"
+            />
+
+            <input
+              type="text"
+              className="w-[95%] lg:w-[80%] pl-[80px] pr-4 py-4 text-2xl font-seasons"
+              placeholder="Search for a dish!"
+            />
+          </div>
+          <div className="w-[90%] lg:w-[78%] grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6  mt-4 gap-x-8">
+            <button className="bg-[#de7008] py-1 text-center text-white">
+              Side Dishes
+            </button>
+            <button className="bg-[#e29953] py-1 text-center text-white">
+              Appetizers
+            </button>
+            <button className="bg-[#d5b928] py-1 text-center text-white">
+              Entrees
+            </button>
+            <button className="bg-[#d0b577] py-1 text-center text-white">
+              Specials
+            </button>
+            <button className="bg-[#9da57f] py-1 text-center text-white">
+              Drinks
+            </button>
+            <button className="bg-[#1e5541] py-1 text-center text-white">
+              Desserts
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="p-[5%] pt-[10%]">
         <div className={"gap-x-[2%] flex-wrap gap-y-[3vh]"}>
           {allDishes.map((dishArray, index) => {
             return (
