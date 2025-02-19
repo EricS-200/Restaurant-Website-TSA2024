@@ -283,11 +283,9 @@ function OurStorySection({}) {
               </Link>
               <Link
                 href={"/reference"}
-                className={
-                  "absolute bottom-0 left-[clamp(10px,max(10vw,35%),250px)] katherine-triangle-clip-path"
-                }
+                className={"absolute bottom-0 w-[400px] lg:pl-[160px] xl:pl-[160px] 2x:pl-[175px] katherine-triangle-clip-path"}
               >
-                <button className="bg-[#9da57f] hover:bg-[#b0bf75] py-2 px-8 pr-20 text-black text-md md:text-lg">
+                <button className="bg-[#9da57f] hover:bg-[#b0bf75] py-2 px-4 pr-20 text-black text-md md:text-lg">
                   References
                 </button>
               </Link>
@@ -402,7 +400,7 @@ function OurStorySection({}) {
               <Link
                 href={"/reference"}
                 className={
-                  "absolute bottom-[12%] left-[clamp(130px,40%,200px)] katherine-triangle-clip-path"
+                  "absolute bottom-[12%] left-[clamp(130px,40%,140px)] katherine-triangle-clip-path"
                 }
               >
                 <button className="bg-[#9da57f] hover:bg-[#b0bf75] py-1 px-6 pr-14 text-black text-md">

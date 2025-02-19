@@ -112,20 +112,38 @@ function FoodTypeBoxes({ name, colorStyle }) {
   );
 }
 
-function FoodSectionFancyTitle({ title }) {
+function FoodSectionFancyTitle({ title, different }) {
+  if (different)
+  {
+    return (
+        <div className={"relative pb-[5%]"}>
+          <h1 className={"text-7xl 2xl:text-8xl text-green-900 font-extrabold"}>
+            {title}
+          </h1>
+          <h1
+              className={
+                "absolute w-[70vw] bottom-[-65%] xl:bottom-[-50%] right-[20vw] xl:right-[25vw] font-mistrully opacity-15 text-[7rem] lg:text-[9rem] 2xl:text-[11rem] pointer-events-none select-none text-clip text-green-900"
+              }
+          >
+            {title}
+          </h1>
+        </div>
+    );
+  }
+
   return (
-    <div className={"relative pb-[5%]"}>
-      <h1 className={"text-7xl 2xl:text-8xl text-green-900 font-extrabold"}>
-        {title}
-      </h1>
-      <h1
-        className={
-          "absolute w-[70vw] bottom-[-65%] xl:bottom-[-50%] right-[20vw] xl:right-[25vw] font-mistrully opacity-15 text-[7rem] lg:text-[9rem] 2xl:text-[11rem] pointer-events-none select-none text-clip text-green-900"
-        }
-      >
-        {title}
-      </h1>
-    </div>
+      <div className={"relative pb-[5%]"}>
+        <h1 className={"text-7xl 2xl:text-8xl text-green-900 font-extrabold"}>
+          {title}
+        </h1>
+        <h1
+            className={
+              "absolute w-[70vw] bottom-[-65%] xl:bottom-[-50%] right-[20vw] xl:right-[25vw] font-mistrully opacity-15 text-[7rem] lg:text-[9rem] 2xl:text-[11rem] pointer-events-none select-none text-clip text-green-900"
+            }
+        >
+          {title}
+        </h1>
+      </div>
   );
 }
 
@@ -144,9 +162,16 @@ function MenuSection({ dishArray, title, index }) {
     );
   }
 
+  let element = null;
+
+  if (index % 2 === 0)
+    element = <FoodSectionFancyTitle title={title} different={false} />
+  else
+    element = <FoodSectionFancyTitle title={title} different={true} />
+
   return (
     <>
-      <FoodSectionFancyTitle title={title} />
+      {element}
       <div
         className={
           "relative flex flex-row flex-wrap justify-center gap-x-[4%] gap-y-[5vh]"

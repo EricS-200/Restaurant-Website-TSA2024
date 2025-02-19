@@ -14,53 +14,46 @@ export default function MenuCard({
   price,
   extraTopStyle = ""
 }) {
-  const [open, setOpen] = useState(false);
+  const [cardOpen, setCardOpen] = useState(false);
 
   useEffect(() => {
-    if (open) {
+    if (cardOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
-  }, [open]);
+  }, [cardOpen]);
 
-  function closeCard() {
-    setOpen(false);
-  }
-
-  function openCard() {
-    setOpen(true);
+  function MenuCardNew({ name, desc, src }) {
+    return (
+        <>
+          <div className="h-[55vh] w-[20%] bg-white flex flex-col items-center justify-center p-4 group">
+            <Image
+                src={src}
+                placeholder="blur"
+                className="w-[80%] group-hover:scale-[1.1] transition-all duration-500"
+                alt={name}
+            />
+            <p className="font-seasons font-semibold text-xl text-[#03402a] mt-2">
+              {name}
+            </p>
+            <p className="text-base text-[#9da57f] font-seasons">{desc}</p>
+            <button className="mt-auto w-[90%]  bg-[#1e5541] text-white">
+              View More
+            </button>
+          </div>
+          <div
+              className={`fixed inset-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[101] flex items-center justify-center ${
+                  cardOpen ? "block" : "hidden  "
+              }`}
+          >
+            <div className="w-[50vw] h-[50vh] bg-white"></div>
+          </div>
+        </>
+    );
   }
 
   return (
-    <>
-    <div className={`${open ? "fixed inset-0 flex items-center justify-center z-50 bg-transparent" : "hidden"}`}>
-      <div className={"relative flex items-center justify-center z-50 bg-red-50 w-[50vw] h-[75vh]"}>
-        <Button onClick={closeCard} className="absolute top-0 right-0 rounded-[0]">X</Button>
-      </div>
-    </div>
-    <div
-      className={`px-4 pt-4 pb-3 drop-shadow-2xl shadow-2xl rounded-md bg-white flex flex-col items-center justify-center max-h-[85vh] w-[25vw] ${extraTopStyle}`}
-      onClick={openCard}
-    >
-      <Image src={src} alt={"Image of" + name} className="max-h-[35vh] w-auto" />
-      <h4 className="font-bold text-center leading-normal">{name}</h4>
-      <div
-        className={`text-base leading-normal transition-all duration-500 menu-description ${
-          open ? "open" : ""
-        }`}
-      >
-        <p>{description}</p>
-      </div>
-      <p className="mb-1">${price}</p>
-      <Button
-        className={
-          "card-bg-nochange text-base rounded-sm w-full hover:bg-zinc-900"
-        }
-      >
-        More Info
-      </Button>
-    </div>
-    </>
+      <MenuCardNew name={name} src={src} desc={description}/>
   );
 }
