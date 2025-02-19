@@ -16,6 +16,7 @@ import mushroom from "@/public/home/mushroom.png";
 import mushroom2 from "@/public/home/mushroom-outline.png";
 import parsley from "@/public/home/parsley.png";
 import fiveStars from "@/public/home/five-stars.png";
+import pumpkin from "@/public/home/star-pumpkin.png";
 
 import ourStoryImage0 from "/public/homepage/ourStoryImage0.png";
 import ourStoryImage1 from "/public/homepage/ourStoryImage1.png";
@@ -136,6 +137,18 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="relative w-full flex justify-center md:space-x-4 flex-col md:flex-row items-center md:space-y-0 space-y-4">
+        <Link href={"/farm-to-table"}>
+          <button className="bg-[#9da57f] hover:bg-[#b0bf75] active:bg-[#2b6651] px-[50px] py-1 text-white -translate-y-1/2 lg:-translate-y-[150%] ">
+            Our Farm-to-Table Processes
+          </button>
+        </Link>
+        <Link href={"/sustainability"}>
+          <button className="bg-[#1e5541] hover:bg-[#2a7d5f] active:bg-[#2b6651] px-[50px] py-1 text-white -translate-y-1/2 lg:-translate-y-[150%] ">
+            Our Sustainable Processes
+          </button>
+        </Link>
+      </section>
 
       <section className="py-16 relative overflow-visible overflow-x-clip">
         <Image
@@ -204,6 +217,11 @@ export default function Home() {
           src={leaves5}
           alt=""
           className="absolute bottom-0 right-0 w-[400px] translate-x-1/2 lg:block hidden"
+        />
+        <Image
+          src={pumpkin}
+          alt=""
+          className="absolute bottom-[250px] left-0 w-[500px] -translate-x-1/2 xl:-translate-x-[20%] lg:block hidden"
         />
       </section>
     </main>

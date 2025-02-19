@@ -138,7 +138,7 @@ export default function Reference() {
           below (some designs were created by team members ):
         </p>
         <ol type="1" className="list-decimal list-inside">
-        <li>
+          <li>
             <Citation
               author="Hannah Loewentheil"
               authorLink="hi"
@@ -275,16 +275,15 @@ export default function Reference() {
         </p>
         <ol type="1" className="list-decimal list-inside">
           <li>
-            <Citation 
-            author="asdsa"
-            authorLink="https://www.buzzfeed.com/hannahloewentheil"
-            type="image"
-            source="hi"
-            sourceLink="https://example.com"
+            <Citation
+              author="asdsa"
+              authorLink="https://www.buzzfeed.com/hannahloewentheil"
+              type="image"
+              source="hi"
+              sourceLink="https://example.com"
             />
           </li>
-          
-         
+
           <li>
             <Citation
               author="adfafd"
