@@ -137,7 +137,134 @@ export default function Reference() {
           All media sources, including images, audios, and videos, are listed
           below (some designs were created by team members ):
         </p>
-        <p>to be finished</p>
+        <ol type="1" className="list-decimal list-inside">
+        <li>
+            <Citation
+              author="Hannah Loewentheil"
+              authorLink="hi"
+              type="image"
+              source="Tasty"
+              sourceLink="https://tasty.co/article/hannahloewentheil/best-mocktails"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="KYTSA"
+              sourceLink="https://kentuckytsa.org/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Ashleigh Shanti"
+              authorLink="https://www.bonappetit.com/contributor/ashleigh-shanti"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/collard-greens-salad-with-fried-plantain-and-sumac"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Chrissy Tracey"
+              authorLink="https://www.bonappetit.com/contributor/chrissy-tracey"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/sun-gold-balsamic-pasta"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Chris Morocco"
+              authorLink="https://www.eatingwell.com/author/carolyn-casner/"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/coconut-braised-mushrooms-with-ginger-and-scallions"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Carolyn Casner"
+              authorLink="https://www.eatingwell.com/author/carolyn-casner/"
+              type="image"
+              source="eatingwell.com"
+              sourceLink="https://www.eatingwell.com/recipe/278134/tofu-tacos/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="An Uong"
+              authorLink="https://www.bonappetit.com/contributor/an-uong"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/vegan-pho"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Chris Morocco"
+              authorLink="https://www.bonappetit.com/contributor/chris-morocco"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/story/miso-polenta"
+            />
+          </li>
+          <li>
+            <Citation
+              author="'The Foodie Girl'"
+              authorLink="https://peri-winklewellness.com/author/foodiegirl/"
+              type="image"
+              source="peri-winkle-wellness"
+              sourceLink="https://peri-winklewellness.com/2023/02/21/hearty-tomato-soup/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Hetty McKinnon"
+              authorLink="https://www.bonappetit.com/contributor/hetty-mckinnon"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/broccoli-and-cashew-cream-soup"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Serena Dai"
+              authorLink="https://www.bonappetit.com/contributor/serena-dai"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/miracle-cabbage-stir-fry"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Chris Morrocco"
+              authorLink="https://www.bonappetit.com/contributor/chris-morocco"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/charred-kale-with-citrus"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Kendra Vaculin"
+              authorLink="https://www.bonappetit.com/contributor/kendra-vaculin"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/hummus-bowls-with-merguez-spiced-tempeh"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Ali Slagle"
+              authorLink="https://www.bonappetit.com/contributor/ali-slagle"
+              type="image"
+              source="bonappetit.com"
+              sourceLink="https://www.bonappetit.com/recipe/pan-roasted-sweet-potatoes-and-tempeh"
+            />
+          </li>
+        </ol>
       </section>
 
       <section className="bg-white mt-6 w-[95vw] sm:w-3/4 md:w-2/3 lg:w-3/5 text-center">
@@ -148,14 +275,16 @@ export default function Reference() {
         </p>
         <ol type="1" className="list-decimal list-inside">
           <li>
-            <Citation
-              author="asdsa"
-              authorLink="hi"
-              type="image"
-              source="hi"
-              sourceLink="https://example.com"
+            <Citation 
+            author="asdsa"
+            authorLink="https://www.buzzfeed.com/hannahloewentheil"
+            type="image"
+            source="hi"
+            sourceLink="https://example.com"
             />
           </li>
+          
+         
           <li>
             <Citation
               author="adfafd"
