@@ -13,9 +13,9 @@ export default function MenuCard({
   description = "",
   overlaySwitchFunction,
   setOverlayElement,
+  display,
   src,
   price,
-  extraTopStyle = ""
 }) {
   const [cardOpen, setCardOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -51,7 +51,10 @@ export default function MenuCard({
     }
   }, [cardOpen]);
 
-  
+  if (!display)
+  {
+    return <></>;
+  }
 
   return (
     <>
