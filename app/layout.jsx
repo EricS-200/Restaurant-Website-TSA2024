@@ -15,9 +15,21 @@ const poppins = Poppins({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={"w-screen h-full font-sans"}>
+      <body className={"h-full font-sans overflow-x-hidden"}>
         <Navbar />
-        {children}
+        <div className="overflow-x-hidden">
+          <div className="overflow-x-hidden">
+            <div className="overflow-x-hidden">
+              <div className="overflow-x-hidden">
+                <div className="overflow-x-hidden">
+                  <div className="overflow-x-hidden">
+                    {children}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );

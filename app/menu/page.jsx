@@ -232,7 +232,7 @@ export default function Menu() {
   const showTitle = !(isMobile && searchQuery.trim() !== "");
 
   return (
-    <main className="bg-gradient-to-b from-[#4c5a2b] to-[#64642b] relative overflow-x-clip">
+    <main className="bg-gradient-to-b from-[#4c5a2b] to-[#64642b] relative">
       <Overlay
         scrollY={scrollY}
         overlayActive={overlayActive}
