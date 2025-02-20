@@ -17,6 +17,7 @@ import mushroom2 from "@/public/home/mushroom-outline.png";
 import parsley from "@/public/home/parsley.png";
 import fiveStars from "@/public/home/five-stars.png";
 import pumpkin from "@/public/home/star-pumpkin.png";
+import ClickToChange from "@/components/ClickToChange";
 
 import ourStoryImage0 from "/public/homepage/ourStoryImage0.png";
 import ourStoryImage1 from "/public/homepage/ourStoryImage1.png";
@@ -223,6 +224,9 @@ export default function Home() {
           alt=""
           className="absolute bottom-[250px] left-0 w-[500px] -translate-x-1/2 xl:-translate-x-[20%] lg:block hidden"
         />
+      </section>
+      <section className="overflow-hidden">
+        <ClickToChange />
       </section>
     </main>
   );
