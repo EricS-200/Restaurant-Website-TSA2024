@@ -17,19 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={"h-full font-sans overflow-x-hidden"}>
         <Navbar />
-        <div className="overflow-x-hidden">
-          <div className="overflow-x-hidden">
-            <div className="overflow-x-hidden">
-              <div className="overflow-x-hidden">
-                <div className="overflow-x-hidden">
-                  <div className="overflow-x-hidden">
-                    {children}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {children}
       </body>
     </html>
   );
