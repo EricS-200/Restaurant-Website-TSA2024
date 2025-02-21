@@ -29,7 +29,22 @@ export default function MenuCard({
           <div className="md:hidden">
             <div className="w-[90vw] mx-[5%] h-fit py-[5%] translate-x-[12.5%] bg-white flex flex-col place-items-center">
               <div className="">
-                <Button onClick={() => {overlaySwitchFunction(); setCardOpen(false)}} className="absolute top-0 right-0 rounded-[0]">X</Button>
+                <button onClick={() => {overlaySwitchFunction(); setCardOpen(false)}} className="absolute top-0 right-0 w-[2vw] h-[2vw] rounded-none">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
               </div>
 
               <div className="w-[40%] h-fit">
@@ -53,13 +68,28 @@ export default function MenuCard({
 
           {/*Desktop*/}
           <div className="hidden md:block">
-            <div className="w-[75vw] h-[50vh] bg-white flex flex-row place-items-center">
+            <div className="w-[75vw] h-fit bg-white flex flex-row place-items-center">
     
               <div className="">
-                <Button onClick={() => {overlaySwitchFunction(); setCardOpen(false)}} className="absolute top-0 right-0 rounded-[0]">X</Button>
+                <button onClick={() => {overlaySwitchFunction(); setCardOpen(false)}} className="absolute top-0 right-0 w-[2vw] h-[2vw] rounded-none">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
               </div>
 
-              <div className="w-[40%]">
+              <div className="w-[40%] flex flex-col justify-center">
                 <Image
                     src={src}
                     placeholder="blur"
