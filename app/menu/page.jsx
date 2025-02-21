@@ -140,7 +140,7 @@ const Overlay = memo(({ scrollY, overlayActive, overlayElement }) => {
           ? "absolute top-0 left-0 w-screen h-[200vh] bg-black bg-opacity-50 z-[100]"
           : "hidden"
       }`}
-      style={{ top: `${scrollY - window.innerHeight / 2}px` }}
+      style={{ top: `${scrollY - window?.innerHeight / 2}px` }}
     >
       {overlayElement}
     </div>
