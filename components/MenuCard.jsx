@@ -6,7 +6,7 @@ import {useState, useRef, useEffect} from "react";
 
 export default function MenuCard({
   name,
-  vegan = false,
+  vegan,
   type,
   spice = 0,
   shortDescription = "",
@@ -24,22 +24,58 @@ export default function MenuCard({
 
     if (cardOpen) {
       let overlayElement = (
-        <div className={"fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center"}>
-          <div className="w-[50vw] h-[50vh] bg-white flex flex-col place-items-center">
-    
-            <div className="">
-              <Button onClick={() => {overlaySwitchFunction(); setCardOpen(false)}} className="absolute top-0 right-0 rounded-[0]">X</Button>
+        <div className={"fixed top-1/2 right-[-25%] -translate-y-1/2 -translate-x-1/2 flex items-center justify-center"}>
+          
+          <div className="md:hidden">
+            <div className="w-[90vw] mx-[5%] h-fit py-[5%] translate-x-[12.5%] bg-white flex flex-col place-items-center">
+              <div className="">
+                <Button onClick={() => {overlaySwitchFunction(); setCardOpen(false)}} className="absolute top-0 right-0 rounded-[0]">X</Button>
+              </div>
+
+              <div className="w-[40%] h-fit">
+                <Image
+                    src={src}
+                    placeholder="blur"
+                    className="w-full h-auto hover:scale-[1.1] transition-all duration-500"
+                    alt={name}
+                />
+                <p className="text-4xl xl:text-6xl text-[#03402a] text-center my-[5%]">${price}</p>
+              </div>
+
+              <div className="px-[2%]">
+                <p className="font-seasons font-semibold text-4xl xl:text-6xl text-[#03402a] text-center my-[5%]">{name}</p>
+                <p className="text-2xl font-seasons mb-[5%] text-center">{vegan ? "Vegan" : "Vegetarian"}</p>
+                <p className="text-lg text-[#9da57f] font-seasons text-center">{description}</p>
+              </div>
+
             </div>
+          </div>
+
+          {/*Desktop*/}
+          <div className="hidden md:block">
+            <div className="w-[75vw] h-[50vh] bg-white flex flex-row place-items-center">
     
-            <Image
-                src={src}
-                placeholder="blur"
-                className="w-auto h-[50%] group-hover:scale-[1.1] transition-all duration-500"
-                alt={name}
-            />
-    
-            <p className="w-[70%] text-lg text-[#9da57f] font-seasons mb-[5%] text-center">{description}</p>
-    
+              <div className="">
+                <Button onClick={() => {overlaySwitchFunction(); setCardOpen(false)}} className="absolute top-0 right-0 rounded-[0]">X</Button>
+              </div>
+
+              <div className="w-[40%]">
+                <Image
+                    src={src}
+                    placeholder="blur"
+                    className="w-auto h-full hover:scale-[1.1] transition-all duration-500"
+                    alt={name}
+                />
+                <p className="text-4xl xl:text-6xl text-[#03402a] text-center my-[5%]">${price}</p>
+              </div>
+
+              <div className="w-[60%] px-[2%]">
+                <p className="font-seasons font-semibold text-4xl xl:text-6xl text-[#03402a] text-center my-[5%]">{name}</p>
+                <p className="text-2xl font-seasons mb-[5%] text-center">{vegan ? "Vegan" : "Vegetarian"}</p>
+                <p className="text-lg text-[#9da57f] font-seasons mb-[5%] text-center">{description}</p>
+              </div>
+
+            </div>
           </div>
         </div>
       );
