@@ -90,12 +90,16 @@ export default function MenuCard({
               </div>
 
               <div className="w-[40%] flex flex-col justify-center">
-                <Image
+                <div className="relative aspect-[4/4]">
+                  <Image
                     src={src}
                     placeholder="blur"
-                    className="w-auto h-full hover:scale-[1.1] transition-all duration-500"
+                    layout="fill"
+                    objectFit="cover"
                     alt={name}
-                />
+                    className="hover:scale-[1.1] transition-all duration-500"
+                  />
+                </div>
                 <p className="text-4xl xl:text-6xl text-[#03402a] text-center my-[5%]">${price}</p>
               </div>
 
@@ -129,7 +133,7 @@ export default function MenuCard({
       <Image
           src={src}
           placeholder="blur"
-          className="w-[80%] group-hover:scale-[1.1] transition-all duration-500"
+          className="w-[80%] hover:scale-[1.1] transition-all duration-500"
           alt={name}
       />
 

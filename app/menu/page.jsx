@@ -44,11 +44,11 @@ const FoodSectionFancyTitle = memo(({ title, different }) => {
   if (different) {
     return (
       <div className="relative py-[5%]">
-        <h1 className="text-center sm:absolute sm:top-0 sm:left-0 text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-[#755d48] font-extrabold">
+        <h1 className="text-center sm:absolute sm:top-[-10vh] lg:top-[-7vh] sm:left-0 text-5xl sm:text-9xl lg:text-10xl 2xl:text-11xl text-[#755d48] font-extrabold">
           {title}
         </h1>
         <h1
-          className="absolute w-[70vw] bottom-[-9vh] sm:bottom-[-2vh] xl:bottom-[-2vh] right-[17.7vw] sm:left-[0] xl:left-[0] font-mistrully opacity-30 text-[7rem] lg:text-[9rem] 2xl:text-[11rem] pointer-events-none select-none text-clip text-[#755d48]"
+          className="absolute w-[70vw] bottom-[-9vh] sm:bottom-[-2vh] lg:bottom-[-7vh] right-[17.7vw] sm:left-[0] xl:left-[0] font-mistrully opacity-30 text-[7rem] lg:text-[11rem] 2xl:text-[13rem] pointer-events-none select-none text-clip text-[#755d48]"
         >
           {title}
         </h1>
@@ -57,16 +57,16 @@ const FoodSectionFancyTitle = memo(({ title, different }) => {
   }
   return (
     <div className="relative py-[5%]">
-      <h1 className="text-center sm:absolute sm:top-0 sm:right-0 text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-green-900 font-extrabold">
+      <h1 className="text-center sm:absolute sm:top-0 sm:right-0 text-5xl sm:text-9xl lg:text-10xl 2xl:text-11xl text-green-900 font-extrabold">
         {title}
       </h1>
       <h1
-        className="absolute w-[70vw] bottom-[-9vh] sm:bottom-[-7vh] xl:bottom-[-14vh] right-[10vw] sm:right-[-40vw] xl:right-[-50vw] font-mistrully opacity-30 text-[7rem] lg:text-[9rem] 2xl:text-[11rem] pointer-events-none select-none text-clip text-green-900"
+        className="absolute w-[70vw] bottom-[-9vh] sm:bottom-[-7vh] xl:bottom-[-14vh] right-[10vw] sm:right-[-40vw] font-mistrully opacity-30 text-[7rem] lg:text-[11rem] 2xl:text-[13rem] pointer-events-none select-none text-clip text-green-900"
       >
         {title}
       </h1>
     </div>
-  );
+  );  
 });
 
 const MenuSection = memo(
@@ -132,22 +132,28 @@ const MenuSection = memo(
   }
 );
 
-const Overlay = memo(({ scrollY, overlayActive, overlayElement }) => {
-  return (
-    <div
-      className={`${
-        overlayActive
-          ? "absolute top-0 left-0 w-screen h-[200vh] bg-black bg-opacity-50 z-[100]"
-          : "hidden"
-      }`}
-      style={{ top: `${scrollY - window?.innerHeight / 2}px` }}
-    >
-      {overlayElement}
-    </div>
-  );
-});
-
 export default function Menu() {
+
+  let windowRef = null;
+  if (typeof window !== "undefined") {
+    windowRef = window;
+  }
+
+  const Overlay = memo(({ scrollY, overlayActive, overlayElement }) => {
+    return (
+      <div
+        className={`${
+          overlayActive
+            ? "absolute top-0 left-0 w-screen h-[200vh] bg-black bg-opacity-50 z-[100]"
+            : "hidden"
+        }`}
+        style={{ top: `${scrollY - windowRef?.innerHeight / 2}px` }}
+      >
+        {overlayElement}
+      </div>
+    );
+  });
+
   let sideDishes = GetSideDishes();
   let appetizers = GetAppetizers();
   let entrees = GetEntrees();
