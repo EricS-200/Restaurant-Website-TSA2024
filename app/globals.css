@@ -97,10 +97,6 @@ main {
   @apply min-h-[100vh];
 }
 
-.menu-card.group:hover:not(:has(.card-bg-nochange:hover)) {
-  @apply bg-white/85;
-}
-
 .katherine-triangle-clip-path {
    clip-path: polygon(70% 0, 85% 50%, 70% 100%, 0 100%, 0 0);
 }
