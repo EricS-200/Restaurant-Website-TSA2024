@@ -118,6 +118,39 @@ export default function preparation() {
           </div>
         </div>
       </section>
+      <section className="relative flex flex-col items-center justify-center">
+        <Image
+          src={image14}
+          alt=""
+          className="absolute w-full scale-125 top-0 translate-y-[25%]"
+        />
+        <Image src={image6} alt="" className="absolute inset-0" />
+        <Image src={image11} alt="" className="absolute right-0" />
+        <Image src={image12} alt="" className="absolute bottom-0 left-0" />
+        <Image src={image13} alt="" className="absolute bottom-0 right-0" />
+        <Image
+          src={image9}
+          alt=""
+          className="w-full sm:w-[90%] lg:w-2/3 relative"
+        />
+        <Image src={image7} alt="" className="absolute w-[200px] top-[60px]" />
+        <Image
+          src={image10}
+          alt=""
+          className="absolute w-[35%] -translate-y-[25%]"
+        />
+        <div className="w-full flex items-center flex-col space-y-4 -translate-y-[170%]">
+          <h3 className="text-[#1e5541] text-6xl font-seasons text-center w-1/3">
+            Learn More About How We Make Our Food
+          </h3>
+          <p className="text-[#de7008] text-center w-1/3 text-xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            aliquet, justo in efficitur bibendum, ligula felis sollicitudin
+            urna, at tincidunt magna nunc at nulla.
+          </p>
+        </div>
+      </section>
+      <section className="bg-white w-full h-[200vh]"></section>
     </main>
   );
 }
