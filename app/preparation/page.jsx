@@ -107,13 +107,13 @@ export default function preparation() {
               my small town: the real magic of science lies in the people.
             </p>
             <p className="text-xl leading-loose mt-2">
-              Add a little bit of body text Through this environment, I've found
-              my own passion: electrical engineering and neuroscience. To me,
-              they represent a bridge between what I've inherited and what I
-              aspire to create. Like my family, I want to explore the unknown,
-              but I also want to shape a world where science works as hard for
-              us as we do for it. Still, I've learned something in my small
-              town: the real magic of science lies in the people
+              Add a little bit of body text Through this environment, I&apos;ve
+              found my own passion: electrical engineering and neuroscience. To
+              me, they represent a bridge between what I&apos;ve inherited and
+              what I aspire to create. Like my family, I want to explore the
+              unknown, but I also want to shape a world where science works as
+              hard for us as we do for it. Still, I&apos;ve learned something in
+              my small town: the real magic of science lies in the people
             </p>
           </div>
         </div>
