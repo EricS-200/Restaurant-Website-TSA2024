@@ -273,6 +273,15 @@ export default function Reference() {
               sourceLink="https://www.svgrepo.com/svg/532552/search-alt-2"
             />
           </li>
+          <li>
+            <Citation
+              author="Ailsa Burt"
+              authorLink="https://www.bbcgoodfood.com/author/ailsaburt"
+              type="image"
+              source="BBCgoodfood"
+              sourceLink="https://www.bbcgoodfood.com/recipes/ponzu-tofu-poke-bowl"
+            />
+          </li>
         </ol>
       </section>
 
