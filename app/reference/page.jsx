@@ -282,6 +282,78 @@ export default function Reference() {
               sourceLink="https://www.bbcgoodfood.com/recipes/ponzu-tofu-poke-bowl"
             />
           </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Fort Worth"
+              sourceLink="https://www.maharajadfw.com/fort-worth"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Pizzaeria Centro"
+              sourceLink="https://www.pizza-hassloch.com/?product=falafel-teller"
+            />
+          </li>
+          <li>
+            <Citation
+              author="MFNGraphics"
+              authorLink="https://www.etsy.com/shop/MFNGraphics"
+              type="image"
+              source="Etsy"
+              sourceLink="https://www.etsy.com/listing/1506651630/set-of-6-boho-botanical-prints-wall"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Rtteri Store"
+              authorLink="https://www.amazon.com/stores/Rtteri/page/C5B3C00F-940E-4DB4-9450-C02C9E58978F"
+              type="image"
+              source="Amazon"
+              sourceLink="https://www.amazon.com/Cutting-Chopping-Charcuterie-Engraving-Housewarming/dp/B0C3664Z7X"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Nadezda Barkova"
+              authorLink="https://stock.adobe.com/contributor/203816617/nadezdabarkova?load_type=author"
+              type="image"
+              source="Adobe"
+              sourceLink="https://stock.adobe.com/search/images?k=vegetable+line+drawing&asset_id=1001967767"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Freepik"
+              authorLink="https://www.flaticon.com/authors/freepik"
+              type="image"
+              source="FlatIcon"
+              sourceLink="https://www.flaticon.com/free-icon/twitter_124021"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Freepik"
+              sourceLink="https://www.freepik.com/free-vector/instagram-icon_954290.htm"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Wikimedia"
+              sourceLink="https://commons.wikimedia.org/wiki/File:2023_Facebook_icon.svg"
+            />
+          </li>
         </ol>
       </section>
 
