@@ -122,7 +122,7 @@ export default function preparation() {
         <Image
           src={image14}
           alt=""
-          className="absolute w-full scale-125 top-0 translate-y-[25%]"
+          className="absolute w-full scale-125 top-0 translate-y-[15%]"
         />
         <Image src={image6} alt="" className="absolute inset-0" />
         <Image src={image11} alt="" className="absolute right-0" />
@@ -150,7 +150,97 @@ export default function preparation() {
           </p>
         </div>
       </section>
-      <section className="bg-white w-full h-[200vh]"></section>
+      <section className="bg-white w-full">
+        <div className="relative w-full">
+          <div className="w-full flex items-center">
+            <Image
+              src={image16}
+              alt=""
+              className="absolute left-[20%] translate-y-1/3"
+            />
+            <Image src={image15} alt="" className="w-1/2 relative flex-none" />
+            <div className="text-center relative flex-1 flex justify-center">
+              <p className="w-1/2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                aliquet, justo in efficitur bibendum, ligula felis sollicitudin
+                urna, at tincidunt magna nunc at nulla. Suspendisse potenti.
+              </p>
+            </div>
+          </div>
+          <div className="w-full flex justify-between items-center -translate-y-1/4">
+            <div className="text-center relative flex-1 flex justify-center">
+              <p className="w-1/2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                aliquet, justo in efficitur bibendum, ligula felis sollicitudin
+                urna, at tincidunt magna nunc at nulla. Suspendisse potenti.
+              </p>
+            </div>
+            <Image
+              src={image17}
+              alt=""
+              className="w-1/2 relative translate-x-[15%] -translate-y-[10%] flex-0"
+            />
+          </div>
+          <div className="w-full flex items-center -translate-y-1/2">
+            <Image
+              src={image19}
+              alt=""
+              className="absolute left-[15%] w-[700px]"
+            />
+            <Image
+              src={image18}
+              alt=""
+              className="w-[55%] -translate-x-[11%] relative flex-none"
+            />
+            <div className="text-center relative flex-1 flex justify-center">
+              <p className="w-2/3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                aliquet, justo in efficitur bibendum, ligula felis sollicitudin
+                urna, at tincidunt magna nunc at nulla. Suspendisse potenti.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative flex flex-col items-center justify-center">
+        <Image
+          src={image14}
+          alt=""
+          className=" w-full scale-125 -translate-y-[55%]"
+        />
+        <Image
+          src={image24}
+          alt=""
+          className="absolute top-[100px] left-0 w-full "
+        />
+        <Image
+          src={image21}
+          alt=""
+          className="absolute top-0 right-0 w-[1000px] translate-x-[20%]"
+        />
+        <Image
+          src={image23}
+          alt=""
+          className="absolute top-[500px] left-[350px] w-[800px] "
+        />
+        <Image
+          src={image22}
+          alt=""
+          className="absolute top-[400px] left-0 w-[1100px] -translate-x-[25%]"
+        />
+        <Image
+          src={image25}
+          alt=""
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        />
+      </section>
+      <section>
+        <div className="relative">
+          <h3 className="absolute"></h3>
+          <h2 className="relative"></h2>
+        </div>
+      </section>
     </main>
   );
 }
