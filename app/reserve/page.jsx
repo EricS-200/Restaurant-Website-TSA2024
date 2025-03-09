@@ -52,20 +52,26 @@ export default function Reserve() {
           </p>
           <div className="w-[80%] border-t-[1px] my-4 border-gray-400 h-full"></div>
           <div className="flex flex-col items-center">
-            <h2 className="font-bold">Date of Reservation</h2>
-            <input
-              type="date"
-              min={new Date().toISOString().split("T")[0]}
-              className="px-4 rounded border-2 border-black mb-4"
-            />
-            <h2 className="font-bold">Time of Reservation</h2>
-            <input
-              type="time"
-              min="09:00"
-              max="18:00"
-              step="900"
-              className="px-4"
-            />
+            <div className="flex space-x-2">
+              <div className="">
+                <h2 className="font-bold">Date of Reservation</h2>
+                <input
+                  type="date"
+                  min={new Date().toISOString().split("T")[0]}
+                  className="px-4 rounded border-2 border-black mb-4 text-black"
+                />
+              </div>
+              <div>
+                <h2 className="font-bold">Time of Reservation</h2>
+                <input
+                  type="time"
+                  min="09:00"
+                  max="18:00"
+                  step="900"
+                  className="px-4 border-2 border-black text-black rounded"
+                />
+              </div>
+            </div>
 
             <h2 className="text-xl font-semibold text-center mb-1">
               How many in your party?
