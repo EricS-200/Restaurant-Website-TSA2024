@@ -6,13 +6,19 @@ import { GetPage1Content, GetPage2Content, GetPage3Content, GetPage4Content, Get
 export default function ClickToChange() {
   let topStyle = "w-full h-full";
 
+  let RestOfThePage = (
+    <div>
+      
+    </div>
+  );
+
   const [activePage, setActivePage] = useState(0);
   const [pages, setPages] = useState([
-    { bg: "bg-[#38a8cc]", zIndex: 2, clipPath: "", content: <div className={topStyle}><GetPage1Content/></div> },
-    { bg: "bg-[#004444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage2Content/></div> },
-    { bg: "bg-[#884444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage3Content/></div> },
-    { bg: "bg-[#555588]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage4Content/></div> },
-    { bg: "bg-[#a84466]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage5Content/></div> },
+    { bg: "bg-[#38a8cc]", zIndex: 2, clipPath: "", content: <div className={topStyle}><GetPage1Content/>{RestOfThePage}</div> },
+    { bg: "bg-[#004444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage2Content/>{RestOfThePage}</div> },
+    { bg: "bg-[#884444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage3Content/>{RestOfThePage}</div> },
+    { bg: "bg-[#555588]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage4Content/>{RestOfThePage}</div> },
+    { bg: "bg-[#a84466]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage5Content/>{RestOfThePage}</div> },
   ]);
 
   const initialVisible = Array(pages.length).fill(false);

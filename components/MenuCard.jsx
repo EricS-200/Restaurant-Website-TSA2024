@@ -2,7 +2,7 @@
 
 import Button from "./Button";
 import Image from "next/image";
-import {useState, useRef, useEffect} from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function MenuCard({
   name,
@@ -25,11 +25,11 @@ export default function MenuCard({
     if (cardOpen) {
       let overlayElement = (
         <div className={"fixed top-1/2 right-[-25%] -translate-y-1/2 -translate-x-1/2 flex items-center justify-center"}>
-          
+
           <div className="md:hidden">
             <div className="w-[90vw] mx-[5%] h-fit py-[5%] translate-x-[12.5%] bg-white flex flex-col place-items-center">
               <div className="">
-                <button onClick={() => {overlaySwitchFunction(); setCardOpen(false)}} className="absolute top-0 right-0 w-[2vw] h-[2vw] rounded-none">
+                <button onClick={() => { overlaySwitchFunction(); setCardOpen(false) }} className="absolute top-0 right-0 w-[2vw] h-[2vw] rounded-none">
                   <svg
                     className="w-6 h-6"
                     fill="none"
@@ -49,10 +49,10 @@ export default function MenuCard({
 
               <div className="w-[40%] h-fit">
                 <Image
-                    src={src}
-                    placeholder="blur"
-                    className="w-full h-auto hover:scale-[1.1] transition-all duration-500"
-                    alt={name}
+                  src={src}
+                  placeholder="blur"
+                  className="w-full h-auto hover:scale-[1.1] transition-all duration-500"
+                  alt={name}
                 />
                 <p className="text-4xl xl:text-6xl text-[#03402a] text-center my-[5%]">${price}</p>
               </div>
@@ -69,9 +69,9 @@ export default function MenuCard({
           {/*Desktop*/}
           <div className="hidden md:block">
             <div className="w-[75vw] h-fit bg-white flex flex-row place-items-center">
-    
+
               <div className="">
-                <button onClick={() => {overlaySwitchFunction(); setCardOpen(false)}} className="absolute top-0 right-0 w-[2vw] h-[2vw] rounded-none">
+                <button onClick={() => { overlaySwitchFunction(); setCardOpen(false) }} className="absolute top-0 right-0 w-[2vw] h-[2vw] rounded-none">
                   <svg
                     className="w-6 h-6"
                     fill="none"
@@ -121,30 +121,29 @@ export default function MenuCard({
     }
   }, [cardOpen]);
 
-  if (!display)
-  {
+  if (!display) {
     return <></>;
   }
 
   return (
     <>
-    <div className="min-h-[61vh] sm:min-h-[50vh] h-auto w-[275px] sm:w-[275px] md:w-[325px] lg:w-[300px] xl:w-[350px] bg-white flex flex-col flex-wrap items-center justify-center p-4 group">
+      <div className="min-h-[61vh] sm:min-h-[40vh] h-auto w-[275px] sm:w-[275px] md:w-[325px] lg:w-[300px] xl:w-[350px] bg-white flex flex-col flex-wrap items-center justify-center p-4 group">
 
-      <Image
+        <Image
           src={src}
           placeholder="blur"
           className="w-[80%] hover:scale-[1.1] transition-all duration-500"
           alt={name}
-      />
+        />
 
-      <p className="font-seasons font-semibold text-2xl xl:text-3xl text-[#03402a] text-center my-[5%]">{name}</p>
-      <p className="text-lg text-[#9da57f] font-seasons mb-[5%] text-center">{shortDescription}</p>
+        <p className="font-seasons font-semibold text-2xl xl:text-3xl text-[#03402a] text-center my-[5%]">{name}</p>
+        <p className="text-lg text-[#9da57f] font-seasons mb-[5%] text-center">{shortDescription}</p>
 
-      <button className="mt-auto w-[90%]  bg-[#1e5541] text-white" onClick={() => {overlaySwitchFunction(); setCardOpen(true)}}>
-        View More
-      </button>
+        <button className="mt-auto w-[90%]  bg-[#1e5541] text-white" onClick={() => { overlaySwitchFunction(); setCardOpen(true) }}>
+          View More
+        </button>
 
-    </div>
-  </>
+      </div>
+    </>
   );
 }
