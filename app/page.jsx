@@ -17,7 +17,7 @@ import mushroom2 from "@/public/home/mushroom-outline.png";
 import parsley from "@/public/home/parsley.png";
 import fiveStars from "@/public/home/five-stars.png";
 import pumpkin from "@/public/home/star-pumpkin.png";
-import ClickToChange from "@/components/ClickToChange";
+import ClickToChange from "@/app/farm-to-table/ClickToChange";
 
 import ourStoryImage0 from "/public/homepage/ourStoryImage0.png";
 import ourStoryImage1 from "/public/homepage/ourStoryImage1.png";
@@ -30,7 +30,7 @@ export default function Home() {
 
       <HomePageBanner />
 
-      <OurStorySection/>
+      <OurStorySection />
 
       <MenuPreview />
 
@@ -246,7 +246,7 @@ function Review({ children, author = "", className }) {
   );
 }
 
-function OurStorySection({}) {
+function OurStorySection({ }) {
   return (
     <section className={"relative h-max pt-[1px] pb-[10vh] overflow-x-clip"}>
       <div className={"absolute w-screen h-[10%]"}>
@@ -274,18 +274,10 @@ function OurStorySection({}) {
         <div className={"hidden lg:block pb-[15vh] relative"}>
           <div className={"p-[2%] px-[4%] h-max flex flex-row"}>
             <div className={"w-1/2 relative"}>
-              <h1
-                className={
-                  "text-7xl 2xl:text-8xl text-green-900 font-extrabold"
-                }
-              >
+              <h1 className={"text-7xl 2xl:text-8xl text-green-900 font-extrabold"}>
                 Our Story
               </h1>
-              <h1
-                className={
-                  "absolute w-[70vw] top-[-25%] xl:top-[-30%] left-[-25%] xl:left-[-20%] font-mistrully opacity-15 text-[10rem] lg:text-[12rem] 2xl:text-[14rem] pointer-events-none select-none text-clip text-green-900"
-                }
-              >
+              <h1 className={"absolute w-[70vw] top-[-25%] xl:top-[-30%] left-[-25%] xl:left-[-20%] font-mistrully opacity-15 text-[10rem] lg:text-[12rem] 2xl:text-[14rem] pointer-events-none select-none text-clip text-green-900"}>
                 Our Story
               </h1>
               <p className={"pt-[5%] pb-[15%] w-[90%] leading-8"}>

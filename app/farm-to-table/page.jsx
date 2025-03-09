@@ -1,8 +1,7 @@
-export default function farmToTable()
-{
-    return  (
-        <div>
+import ClickToChange from "@/app/farm-to-table/ClickToChange";
 
-        </div>
+export default function farmToTable() {
+    return (
+        <ClickToChange />
     );
 }
