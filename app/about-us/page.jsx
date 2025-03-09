@@ -21,12 +21,12 @@ export default function aboutUs()
                     </p>
                 </div>
             </SimpleParallaxBanner>
-            <div className={"flex-col h-[175vh] w-full flex justify-center items-center"}>
+            <div className={"flex-col h-[400vh] md:h-[200vh] w-full flex justify-center items-center"}>
                 <div className={"flex"}>
                 </div>
                 <div className={"m-5 bg-white w-[90vw] h-[50vh]"}>
-                    <div className={"m-5 h-full flex flex-row"}>
-                        <div className={"relative w-1/2 h-full pr-2"}>
+                    <div className={"m-5 h-full flex flex-col md:flex-row"}>
+                        <div className={"relative w-1/2 h-full flex-row md:flex-col pr-2"}>
                             <h2 className="p-4 font-dm text-4xl md:text-6xl text-[#03402a]">
                                 Who We Are
                             </h2>
@@ -56,14 +56,14 @@ export default function aboutUs()
                     </div>
                 </div>
                 <Image alt="" src={divider} className="mt-4 mb-1 w-3/4" />
-                <div className={"m-5 bg-white w-[90vw] h-[50vh]"}>
-                    <div className={"m-5 h-full flex flex-row"}>
+                <div className={"m-5 bg-white w-[90vw] h-[100vh] md:h-[50vh]"}>
+                    <div className={"m-5 h-full flex flex-col md:flex-row"}>
                         
                         <Image src={banner} objectFit={"fill"} alt="" className="w-1/2 h-full pb-10"/>
                         {
                             // replace this image later.
                         }
-                        <div className={"relative w-1/2 h-full pl-4"}>
+                        <div className={"relative w-full md:w-1/2 h-1/2 md:h-full pl-4"}>
                             <h2 className="p-4 font-dm text-4xl md:text-6xl text-right text-[#03402a]">
                                 What We Do
                             </h2>
@@ -91,7 +91,7 @@ export default function aboutUs()
                 </div>
                 <Image alt="" src={divider} className="mt-4 mb-1 w-3/4" />
                 <div className={"m-5 bg-white w-[90vw] h-[50vh]"}>
-                    <div className={"m-5 h-full flex flex-row"}>
+                    <div className={"m-5 h-full flex flex-col md:flex-row"}>
                         <div className={"relative w-1/2 h-full pr-2"}>
                             <h2 className="p-4 font-dm text-4xl md:text-6xl text-[#03402a]">
                                 Our Mission
