@@ -21,7 +21,7 @@ export default function aboutUs()
                     </p>
                 </div>
             </SimpleParallaxBanner>
-            <div className={"flex-col h-[150vh] w-full flex justify-center items-center"}>
+            <div className={"flex-col h-[175vh] w-full flex justify-center items-center"}>
                 <div className={"flex"}>
                 </div>
                 <div className={"m-5 bg-white w-[90vw] h-[50vh]"}>
