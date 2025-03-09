@@ -68,9 +68,10 @@ export default function preparation() {
             <div className="sm:w-3/4 w-[95%] md:w-1/2 flex flex-col items-center">
               <Image alt="" src={image3} className="mt-4 mb-1 w-3/4" />
               <p className="text-center md:w-[70%]">
-                Here at Craftroots, we aim to cherish our food every step of the way --
-                from the farm to the kitchen to the table. We take pride in our meticulous
-                preparation process, ensuring that every dish is made with love and care.
+                Here at Craftroots, we aim to cherish our food every step of the
+                way -- from the farm to the kitchen to the table. We take pride
+                in our meticulous preparation process, ensuring that every dish
+                is made with love and care.
               </p>
               <div className="flex md:flex-row flex-col md:space-y-0 space-y-4 md:space-x-8 mt-4">
                 <Link href={"/sustainability"}>
@@ -105,19 +106,23 @@ export default function preparation() {
               </h2>
             </div>
             <p className="text-xl leading-loose">
-              Preparation, in the culinary arts, is defined as the process of turning raw ingredients
-              into something more, something unique. It&apos;s indispensable to cooking itself, along with
-              the restaurant industry. Preparation is what defines ingredients as food.
+              Preparation, in the culinary arts, is defined as the process of
+              turning raw ingredients into something more, something unique.
+              It&apos;s indispensable to cooking itself, along with the
+              restaurant industry. Preparation is what defines ingredients as
+              food.
             </p>
             <p className="text-xl leading-loose mt-2">
-              Here at Craftroots, we pride ourselves in our preparation process. Being able to utilize
-              nothing but the best and freshest ingredients, our skilled chefs are able to construct
-              something more than just nourishment for the body -- but for the soul and environment as well.
+              Here at Craftroots, we pride ourselves in our preparation process.
+              Being able to utilize nothing but the best and freshest
+              ingredients, our skilled chefs are able to construct something
+              more than just nourishment for the body -- but for the soul and
+              environment as well.
             </p>
           </div>
         </div>
       </section>
-      <section className="relative flex flex-col items-center justify-center md:mb-[150px] pt-[80px] z-50">
+      <section className="relative flex flex-col items-center justify-center md:mb-[200px] pt-[80px] z-50">
         <Image
           src={image14}
           alt=""
@@ -160,8 +165,8 @@ export default function preparation() {
               Learn More About How We Make Our Food
             </h3>
             <p className="text-[#de7008] text-center leading-normal xl:leading-loose text-base xl:text-xl w-[80%] sm:w-1/2 lg:w-1/3">
-              Ask a server or contact us online for more details
-              about our safety, anti-contamination, and freshness procedures.
+              Ask a server or contact us online for more details about our
+              safety, anti-contamination, and freshness procedures.
             </p>
           </div>
         </div>
@@ -180,30 +185,38 @@ export default function preparation() {
               alt=""
               className="absolute left-[20%] translate-y-1/3 hidden lg:block"
             />
-            <Image
-              src={image15}
-              alt=""
-              className="lg:w-1/2 relative self-start"
-            />
+
+            <div className="lg:w-1/2 relative self-start">
+              <Image
+                src={shadow}
+                alt=""
+                className="absolute inset-0 translate-x-[10%] -translate-y-[5%] w-2/3"
+              />
+              <Image src={image15} alt="" className="w-full relative" />
+            </div>
             <div className="text-center relative flex-1 flex justify-center -translate-y-1/3 md:translate-y-0">
               <p className="lg:w-1/2 w-[95%]">
-                Our menu is fitted to the changing seasons, as we only use the freshest
-                vegetables for any time of year.
+                Our menu is fitted to the changing seasons, as we only use the
+                freshest vegetables for any time of year.
               </p>
             </div>
           </div>
           <div className="w-full flex justify-between items-center lg:-translate-y-1/4 md:flex-row flex-col">
             <div className="text-center relative flex-1 flex justify-center order-2 md:order-1 -translate-y-[20%] md:translate-y-0">
               <p className="lg:w-1/2 w-[95%]">
-                We take utmost care in honoring and spreading our cultural heritage by serving
-                lesser-known vegetarian pan-Asian dishes while still preserving our own unique identity.
+                We take utmost care in honoring and spreading our cultural
+                heritage by serving lesser-known vegetarian pan-Asian dishes
+                while still preserving our own unique identity.
               </p>
             </div>
-            <Image
-              src={image17}
-              alt=""
-              className="md:w-1/2 relative translate-x-[15%] -translate-y-[10%] flex-0 order-1 md:order-2 self-end"
-            />
+            <div className="md:w-1/2 relative translate-x-[15%] -translate-y-[10%] flex-0 order-1 md:order-2 self-end">
+              <Image
+                src={shadow}
+                alt=""
+                className="absolute inset-0 translate-x-[10%] -translate-y-[8%] w-[80%]"
+              />
+              <Image src={image17} alt="" className="relative w-full" />
+            </div>
           </div>
           <div className="w-full flex items-center lg:-translate-y-1/2 md:flex-row flex-col z-50">
             <Image
@@ -211,15 +224,19 @@ export default function preparation() {
               alt=""
               className="absolute left-[15%] w-[700px] hidden lg:block"
             />
-            <Image
-              src={image18}
-              alt=""
-              className="md:w-[55%] -translate-x-[11%] relative flex-none self-start"
-            />
+            <div className="md:w-[55%] -translate-x-[11%] relative flex-none self-start">
+              <Image
+                src={shadow}
+                alt=""
+                className="absolute inset-0 -translate-x-[6%] -translate-y-[20%] w-[80%]"
+              />
+              <Image src={image18} alt="" className="w-full relative" />
+            </div>
             <div className="text-center relative flex-1 flex justify-center -translate-y-1/3 md:translate-y-0">
               <p className="lg:w-1/2 w-[95%]">
-                Nothing goes to waste at Craftroots. Any clippings or &quot;discards&quot; are used
-                as much as possible, whether it be pickling, preserving, composting, or making soup stocks.
+                Nothing goes to waste at Craftroots. Any clippings or
+                &quot;discards&quot; are used as much as possible, whether it be
+                pickling, preserving, composting, or making soup stocks.
               </p>
             </div>
           </div>
@@ -274,11 +291,13 @@ export default function preparation() {
         </div>
         <div className="w-full relative flex justify-center md:justify-normal">
           <p className="text-center w-[95%] md:w-[85%] xl:w-[60%] mt-4 text-xl leading-loose ">
-            We are proud to be loyal partners of multiple local farms and suppliers. We believe in
-            honoring their hard work and dedication by treating their produce with the utmost respect
-            and care. We take extra care in listening to the farmers&apos; opinions and suggestions, as they
-            know their own crops best. As such, we&apos;re able to create a menu and create dishes that maximize
-            the worth of local produce.
+            We are proud to be loyal partners of multiple local farms and
+            suppliers. We believe in honoring their hard work and dedication by
+            treating their produce with the utmost respect and care. We take
+            extra care in listening to the farmers&apos; opinions and
+            suggestions, as they know their own crops best. As such, we&apos;re
+            able to create a menu and create dishes that maximize the worth of
+            local produce.
           </p>
           <Image
             src={image27}
@@ -313,9 +332,10 @@ export default function preparation() {
             </div>
             <div className="w-[95%] sm:w-[80%] md:w-1/2 flex justify-center items-center ">
               <p className="text-center w-full md:w-[70%]">
-                Although our restaurant is rooted in pan-Asian cuisine, we take care to include local
-                elements of cuisine and culture. In this way, we can spread awareness of Asian cultures
-                while staying true to our hometown&apos;s culture all the same.
+                Although our restaurant is rooted in pan-Asian cuisine, we take
+                care to include local elements of cuisine and culture. In this
+                way, we can spread awareness of Asian cultures while staying
+                true to our hometown&apos;s culture all the same.
               </p>
             </div>
           </div>
@@ -327,9 +347,10 @@ export default function preparation() {
             />
             <div className="w-[95%] sm:w-[80%] md:w-1/2 flex justify-center items-center order-2 md:order-1">
               <p className="text-center w-full md:w-[70%]">
-                We frequently receive and consider feedback from all steps along the way -- from the farms,
-                to the trucks, to the kitchen, and to the tables. Feedback and suggestions are always welcome
-                and heavily appreciated. 
+                We frequently receive and consider feedback from all steps along
+                the way -- from the farms, to the trucks, to the kitchen, and to
+                the tables. Feedback and suggestions are always welcome and
+                heavily appreciated.
               </p>
             </div>
             <div className="w-full sm:w-3/4 md:w-1/2 flex justify-center items-center  order-1 md:order-2">
@@ -351,9 +372,9 @@ export default function preparation() {
               <Image src={image34} alt="" className="" />
             </div>
             <div className="w-[95%] sm:w-[80%] md:w-1/2 flex justify-center items-center ">
-            <h3 className="absolute font-mistrully text-[13rem] right-0 top-1/2 -translate-y-1/2 text-[#d95204] opacity-[.25] hidden md:block">
-            CraftRoots
-            </h3>
+              <h3 className="absolute font-mistrully text-[13rem] right-0 top-1/2 -translate-y-1/2 text-[#d95204] opacity-[.25] hidden md:block">
+                CraftRoots
+              </h3>
             </div>
           </div>
         </div>
