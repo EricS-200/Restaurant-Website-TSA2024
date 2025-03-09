@@ -39,10 +39,15 @@ export default function MenuPreview() {
           </div>
         }
         footer={
-          <div className="w-full flex justify-center">
-            <Link href="/menu" className="z-50">
-              <button className="bg-[#1e5541] hover:bg-[#2a7d5f] active:bg-[#2b6651] px-[64px] py-1 text-white">
+          <div className="w-full flex justify-center relative md:space-x-4 flex-col md:flex-row">
+            <Link href="/menu" className="z-50 relative">
+              <button className="bg-[#1e5541] hover:bg-[#2a7d5f] active:bg-[#2b6651] px-[64px] py-1 text-white relative z-50">
                 Explore Our Menu
+              </button>
+            </Link>
+            <Link href="/preparation" className="z-50 relative">
+              <button className="bg-[#1e5541] hover:bg-[#2a7d5f] active:bg-[#2b6651] px-[64px] py-1 text-white relative z-50">
+                How Our Food is Made
               </button>
             </Link>
           </div>
@@ -144,10 +149,15 @@ export default function MenuPreview() {
               price={13.99}
             />
           </SnappingCarousel>
-          <div className="w-full flex justify-center">
+          <div className="w-full flex flex-col items-center space-y-4 justify-center">
             <Link href="/menu" className="z-50">
               <button className="bg-[#1e5541] hover:bg-[#2a7d5f] active:bg-[#2b6651] px-[64px] py-1 text-white">
                 Explore Our Menu
+              </button>
+            </Link>
+            <Link href="/preparation" className="z-50 relative">
+              <button className="bg-[#1e5541] hover:bg-[#2a7d5f] active:bg-[#2b6651] px-[64px] py-1 text-white relative z-50">
+                How Our Food is Made
               </button>
             </Link>
           </div>
