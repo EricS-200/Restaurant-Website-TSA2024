@@ -21,7 +21,7 @@ export default function aboutUs()
                     </p>
                 </div>
             </SimpleParallaxBanner>
-            <div className={"flex-col h-[150vh] w-full flex justify-center items-center"}>
+            <div className={"flex-col h-[175vh] w-full flex justify-center items-center"}>
                 <div className={"flex"}>
                 </div>
                 <div className={"m-5 bg-white w-[90vw] h-[50vh]"}>
@@ -110,7 +110,7 @@ export default function aboutUs()
                             </p>
                             
                             <Link
-                                href="/farm-to-table"
+                                href="/sustainability"
                                 target=""
                                 locale=""
                                 className={"-translate-y-10 text-white absolute left-0 bottom-0 h-[5vh] w-[20vw] content-center text-center bg-[#03402a]"}>
