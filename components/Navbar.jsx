@@ -203,7 +203,7 @@ export default function Navbar() {
       </div>
 
       {/*Desktop Navbar*/}
-      <div className={"hidden lg:block z-50"}>
+      <div className={"hidden lg:block z-50 relative"}>
         <div
           className={`transform-gpu active ${
             show ? "translate-y-0" : "-translate-y-full"
