@@ -13,7 +13,7 @@ import image5 from "@/public/videos/video5Img.jpg";
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   
     return (
-      <div className="relative w-full h-full flex justify-center items-center">
+      <div className="relative w-full h-[100vh] flex justify-center items-center">
         <div className="relative w-full h-full">
             {!isVideoLoaded && (
             <Image
