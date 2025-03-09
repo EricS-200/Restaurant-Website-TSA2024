@@ -4,15 +4,53 @@ import React, { useState, useEffect } from "react";
 import { GetPage1Content, GetPage2Content, GetPage3Content, GetPage4Content, GetPage5Content } from "@/app/farm-to-table/PageContent";
 
 export default function ClickToChange() {
-  let topStyle = "w-full h-full";
+  let topStyle = "h-fit";
+
+  let RestOfThePage = (
+    <div className="bg-green-700">
+      <div className="flex flex-row">
+        <div>
+          <p className="text-[#d5b928]">Our Dedication To You</p>
+          <p>
+          Lorem ipsum dolor sit amet\ia pharetra sit amet ut nunc.
+          Integer nec felis eu nulla bibendum tempus. Curabitur
+          varius, ex eget tempus interdum, elit arcu fermentum odio,
+          in scelerisque nunc erat nec nunc. Vestibulum dignissim
+          justo non lectus tristique, ac luctus odio molestie. Aenean
+          ut erat in turpis malesuada euismod at in tortor.
+          </p>
+        </div>
+
+        <div>
+          {/* <Image src={} alt="Man holding vegetables"/> */}
+        </div>
+      </div>
+
+
+
+      <div>
+        <div>
+          <p>Farm To Table</p>
+          <p>
+          Lorem ipsum dolor sit amet\ia pharetra sit amet ut nunc.
+          Integer nec felis eu nulla bibendum tempus. Curabitur
+          varius, ex eget tempus interdum, elit arcu fermentum odio,
+          in scelerisque nunc erat nec nunc. Vestibulum dignissim
+          justo non lectus tristique, ac luctus odio molestie. Aenean
+          ut erat in turpis malesuada euismod at in tortor.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 
   const [activePage, setActivePage] = useState(0);
   const [pages, setPages] = useState([
-    { bg: "bg-[#38a8cc]", zIndex: 2, clipPath: "", content: <div className={topStyle}><GetPage1Content/></div> },
-    { bg: "bg-[#004444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage2Content/></div> },
-    { bg: "bg-[#884444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage3Content/></div> },
-    { bg: "bg-[#555588]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage4Content/></div> },
-    { bg: "bg-[#a84466]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage5Content/></div> },
+    { bg: "bg-[#38a8cc]", zIndex: 2, clipPath: "", content: <div className={topStyle}><GetPage1Content/>{RestOfThePage}</div> },
+    { bg: "bg-[#004444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage2Content/>{RestOfThePage}</div> },
+    { bg: "bg-[#884444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage3Content/>{RestOfThePage}</div> },
+    { bg: "bg-[#555588]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage4Content/>{RestOfThePage}</div> },
+    { bg: "bg-[#a84466]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage5Content/>{RestOfThePage}</div> },
   ]);
 
   const initialVisible = Array(pages.length).fill(false);
@@ -72,11 +110,11 @@ export default function ClickToChange() {
   };
 
   return (
-    <div className="relative h-screen w-full">
+    <div className="relative w-full">
       {pages.map((page, index) => (
         <div
           key={index}
-          className={`absolute inset-0 flex items-center justify-center ${page.bg} ${!visiblePages[index] ? "hidden" : ""}`}
+          className={`flex items-center justify-center ${page.bg} ${!visiblePages[index] ? "hidden" : ""}`}
           style={{
             zIndex: page.zIndex,
             clipPath: page.clipPath || "none",
