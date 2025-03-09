@@ -52,7 +52,7 @@ export default function StyledFooter() {
                         <p>
                             <Link
                                 target=""
-                                href="/ourStory"
+                                href="/about-us"
                                 locale=""
                                 className="hover:underline hover:text-slate-500 transition-all delay-100"
                             >
@@ -62,7 +62,7 @@ export default function StyledFooter() {
                         <p>
                             <Link
                                 target=""
-                                href="/references"
+                                href="/reference"
                                 className="hover:underline hover:text-slate-500 transition-all delay-100"
                                 locale="">
                                 References
@@ -165,7 +165,7 @@ export default function StyledFooter() {
                         <p>
                             <Link
                                 target=""
-                                href="/farmToTable"
+                                href="/farm-to-table"
                                 locale=""
                                 className="hover:underline hover:text-slate-500 transition-all delay-100"
                             >
