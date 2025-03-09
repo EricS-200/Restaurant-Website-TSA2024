@@ -5,6 +5,7 @@ import React, { useEffect, useState, useRef, memo, useCallback } from "react";
 
 import Image from "next/image";
 import MenuCard from "@/components/MenuCard";
+import Link from "next/link";
 
 import lettuce from "@/public/home/lettuce.png";
 import leaves1 from "@/public/menu/page/leaves1.png";
@@ -316,6 +317,15 @@ export default function Menu() {
               farms all across the world. Enjoy a wide variety of traditional
               vegan dishes from all different cultures.
             </p>
+            <p className="text-center w-[95%] md:w-3/4 xl:w-2/3 md:text-xl leading-normal -translate-y-[20px] mt-2 font-bold">
+              Order takeout by clicking on the menu items below, or make a
+              reservation!
+            </p>
+            <Link href={"/reserve"}>
+              <button className="py-1 px-4 bg-orange-400 hover:bg-orange-500 active:bg-orange-400">
+                Make a Reservation
+              </button>
+            </Link>
           </div>
         </div>
 
