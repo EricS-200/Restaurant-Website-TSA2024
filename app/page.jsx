@@ -17,7 +17,7 @@ import mushroom2 from "@/public/home/mushroom-outline.png";
 import parsley from "@/public/home/parsley.png";
 import fiveStars from "@/public/home/five-stars.png";
 import pumpkin from "@/public/home/star-pumpkin.png";
-import ClickToChange from "@/components/ClickToChange";
+import ClickToChange from "@/app/farm-to-table/ClickToChange";
 
 import ourStoryImage0 from "/public/homepage/ourStoryImage0.png";
 import ourStoryImage1 from "/public/homepage/ourStoryImage1.png";
@@ -30,7 +30,7 @@ export default function Home() {
 
       <HomePageBanner />
 
-      <OurStorySection/>
+      <OurStorySection />
 
       <MenuPreview />
 
@@ -246,7 +246,7 @@ function Review({ children, author = "", className }) {
   );
 }
 
-function OurStorySection({}) {
+function OurStorySection({ }) {
   return (
     <section className={"relative h-max pt-[1px] pb-[10vh] overflow-x-clip"}>
       <div className={"absolute w-screen h-[10%]"}>
