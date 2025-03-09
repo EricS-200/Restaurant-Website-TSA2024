@@ -243,7 +243,7 @@ export default function preparation() {
         </div>
       </section>
 
-      <section className="relative flex flex-col items-center justify-center z-10 my-[100px] xl:my-0">
+      <section className="relative flex flex-col items-center justify-center z-10 my-[200px] xl:my-0">
         <Image
           src={image14}
           alt=""
@@ -280,7 +280,7 @@ export default function preparation() {
           className="absolute bottom-0 left-1/2 -translate-x-[10%] -translate-y-[10%] hidden 2xl:block "
         />
       </section>
-      <section className="md:px-[50px] pb-[50px] w-full -translate-y-[300px] sm:-translate-y-[500px] lg:-translate-y-[700px] 2xl:-translate-y-[200px] -mb-[200px] sm:-mb-[400px] lg:-mb-[600px] 2xl:-mb-[150px] z-10 relative">
+      <section className="md:px-[50px] pb-[50px] w-full -translate-y-[300px] sm:-translate-y-[500px] lg:-translate-y-[700px] 2xl:-translate-y-[160px] -mb-[200px] sm:-mb-[400px] lg:-mb-[600px] 2xl:-mb-[150px] z-10 relative">
         <div className="relative px-4 sm:ml-4">
           <h3 className="absolute font-mistrully text-[13rem] left-0 top-1/2 -translate-y-1/2 text-[#d95204] opacity-[.25] hidden md:block">
             Sourcing
