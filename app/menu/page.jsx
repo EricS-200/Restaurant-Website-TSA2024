@@ -1,13 +1,7 @@
 /* eslint-disable react/display-name */
 "use client";
 
-import React, {
-  useEffect,
-  useState,
-  useRef,
-  memo,
-  useCallback
-} from "react";
+import React, { useEffect, useState, useRef, memo, useCallback } from "react";
 
 import Image from "next/image";
 import MenuCard from "@/components/MenuCard";
@@ -40,6 +34,19 @@ import special1 from "@/public/menu/special1.png";
 import special2 from "@/public/menu/special2.png";
 import special3 from "@/public/menu/special3.png";
 
+import MixedBerryFruitTart from "@/public/menu/desserts/Mixed Berry Fruit Tart.png";
+import OrganicDarkCacaoCakeSlice from "@/public/menu/desserts/Organic Dark Cacao Cake Slice.png";
+import SweetMatchaTofuDelight from "@/public/menu/desserts/Sweet Matcha Tofu Delight.png";
+import TropicalBerryDriedYogurt from "@/public/menu/desserts/Tropical Berry Dried Yogurt.png";
+import ExoticPassionfruitPannacotta from "@/public/menu/desserts/Exotic Passionfruit Pannacotta.png";
+import MangoAndPeachSabo from "@/public/menu/desserts/Mango and Peach Sabo.png";
+import LemonLimeMocktail from "@/public/menu/drinks/Lemon Lime Mocktail.png";
+import OrangeJuice from "@/public/menu/drinks/Orange Juice.png";
+import UrbanGreenMatchaIcedTea from "@/public/menu/drinks/Urban Green Matcha Iced Tea.png";
+import EarthHerbMixedBlendSmoothie from "@/public/menu/drinks/Earth Herb Mixed Blend Smoothie.png";
+import DivineGrapefruit from "@/public/menu/drinks/Divine Grapefruit.png";
+import CocaCola from "@/public/menu/drinks/Coca Cola.png";
+
 const FoodSectionFancyTitle = memo(({ title, different }) => {
   if (different) {
     return (
@@ -47,9 +54,7 @@ const FoodSectionFancyTitle = memo(({ title, different }) => {
         <h1 className="text-center sm:absolute sm:top-[-10vh] lg:top-[-7vh] sm:left-0 text-5xl sm:text-9xl lg:text-10xl 2xl:text-11xl text-[#755d48] font-extrabold">
           {title}
         </h1>
-        <h1
-          className="absolute w-[70vw] bottom-[-9vh] sm:bottom-[-2vh] lg:bottom-[-7vh] right-[17.7vw] sm:left-[0] xl:left-[0] font-mistrully opacity-30 text-[7rem] lg:text-[11rem] 2xl:text-[13rem] pointer-events-none select-none text-clip text-[#755d48]"
-        >
+        <h1 className="absolute w-[70vw] bottom-[-9vh] sm:bottom-[-2vh] lg:bottom-[-7vh] right-[17.7vw] sm:left-[0] xl:left-[0] font-mistrully opacity-30 text-[7rem] lg:text-[11rem] 2xl:text-[13rem] pointer-events-none select-none text-clip text-[#755d48]">
           {title}
         </h1>
       </div>
@@ -60,17 +65,22 @@ const FoodSectionFancyTitle = memo(({ title, different }) => {
       <h1 className="text-center sm:absolute sm:top-0 sm:right-0 text-5xl sm:text-9xl lg:text-10xl 2xl:text-11xl text-green-900 font-extrabold">
         {title}
       </h1>
-      <h1
-        className="absolute w-[70vw] bottom-[-9vh] sm:bottom-[-7vh] xl:bottom-[-14vh] right-[10vw] sm:right-[-40vw] font-mistrully opacity-30 text-[7rem] lg:text-[11rem] 2xl:text-[13rem] pointer-events-none select-none text-clip text-green-900"
-      >
+      <h1 className="absolute w-[70vw] bottom-[-9vh] sm:bottom-[-7vh] xl:bottom-[-14vh] right-[10vw] sm:right-[-40vw] font-mistrully opacity-30 text-[7rem] lg:text-[11rem] 2xl:text-[13rem] pointer-events-none select-none text-clip text-green-900">
         {title}
       </h1>
     </div>
-  );  
+  );
 });
 
 const MenuSection = memo(
-  ({ dishArray, title, index, overlaySwitchFunction, setOverlayElement, showTitle }) => {
+  ({
+    dishArray,
+    title,
+    index,
+    overlaySwitchFunction,
+    setOverlayElement,
+    showTitle,
+  }) => {
     let extraShit = <></>;
 
     if (index === 0) {
@@ -91,9 +101,7 @@ const MenuSection = memo(
             <h1 className="text-center sm:absolute sm:top-0 sm:right-0 text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-green-900 font-extrabold">
               {title}
             </h1>
-            <h1
-              className="absolute w-[70vw] bottom-[-9vh] sm:bottom-[-7vh] xl:bottom-[-14vh] right-[10vw] sm:right-[-40vw] xl:right-[-30vw] font-mistrully opacity-30 text-[7rem] lg:text-[9rem] 2xl:text-[11rem] pointer-events-none select-none text-clip text-green-900"
-            >
+            <h1 className="absolute w-[70vw] bottom-[-9vh] sm:bottom-[-7vh] xl:bottom-[-14vh] right-[10vw] sm:right-[-40vw] xl:right-[-30vw] font-mistrully opacity-30 text-[7rem] lg:text-[9rem] 2xl:text-[11rem] pointer-events-none select-none text-clip text-green-900">
               {title}
             </h1>
           </div>
@@ -133,7 +141,6 @@ const MenuSection = memo(
 );
 
 export default function Menu() {
-
   let windowRef = null;
   if (typeof window !== "undefined") {
     windowRef = window;
@@ -161,7 +168,14 @@ export default function Menu() {
   let drinks = GetDrinks();
   let desserts = GetDesserts();
 
-  const allDishes = [sideDishes, appetizers, entrees, specials, drinks, desserts];
+  const allDishes = [
+    sideDishes,
+    appetizers,
+    entrees,
+    specials,
+    drinks,
+    desserts,
+  ];
 
   const foodSectionTitles = [
     "Side Dishes",
@@ -299,8 +313,8 @@ export default function Menu() {
             />
             <p className="text-center w-[95%] md:w-3/4 xl:w-2/3 md:text-xl leading-normal -translate-y-[20px]">
               Healthy, modern, high end vegetarian dishes sourced from authentic
-              farms all across the world. Enjoy a wide variety of traditional vegan
-              dishes from all different cultures.
+              farms all across the world. Enjoy a wide variety of traditional
+              vegan dishes from all different cultures.
             </p>
           </div>
         </div>
@@ -368,8 +382,6 @@ export default function Menu() {
     </main>
   );
 }
-
-
 
 /*
 {
@@ -571,7 +583,7 @@ function GetSpecials() {
     },
     {
       name: "Pan Roasted Sweet Potatoes with Crunchy Tempeh",
-      price: 48, 
+      price: 48,
       src: special3,
       vegan: true,
       spice: 1,
@@ -586,9 +598,156 @@ function GetSpecials() {
 }
 
 function GetDesserts() {
-  return [];
+  return [
+    {
+      name: "Mixed Berry Fruit Tart",
+      price: 6.5,
+      src: MixedBerryFruitTart,
+      vegan: false,
+      spice: 0,
+      type: "dessert",
+      description:
+        "A classic French-inspired tart featuring a buttery crust layered with pastry cream and topped with fresh berries (strawberries, blueberries, raspberries). Perfect for a light, fruity finish to any meal.",
+      shortDescription: "A buttery tart topped with fresh mixed berries.",
+      display: true,
+    },
+    {
+      name: "Organic Dark Cacao Cake Slice",
+      price: 7.5,
+      src: OrganicDarkCacaoCakeSlice,
+      vegan: false,
+      spice: 0,
+      type: "dessert",
+      description:
+        "Rich, moist dark chocolate cake made from organic cacao beans, layered with a smooth ganache. Inspired by European patisseries for a decadent, guilt-free indulgence.",
+      shortDescription: "A rich slice of organic dark chocolate cake.",
+      display: true,
+    },
+    {
+      name: "Sweet Matcha Tofu Delight",
+      price: 5.99,
+      src: SweetMatchaTofuDelight,
+      vegan: true,
+      spice: 0,
+      type: "dessert",
+      description:
+        "Silken tofu blended with premium matcha, lightly sweetened for a creamy and refreshing treat. A fusion of Japanese tea culture and plant-based dessert innovation.",
+      shortDescription: "A creamy tofu-based dessert infused with matcha.",
+      display: true,
+    },
+    {
+      name: "Tropical Berry Dried Yogurt",
+      price: 6.99,
+      src: TropicalBerryDriedYogurt,
+      vegan: false,
+      spice: 0,
+      type: "dessert",
+      description:
+        "Tangy yogurt base mixed with tropical fruits like kiwi and pineapple, then gently dehydrated to create a chewy, flavor-packed bite. Inspired by Southeast Asian yogurt snacks.",
+      shortDescription:
+        "Tangy dried yogurt blended with tropical fruit flavors.",
+      display: true,
+    },
+    {
+      name: "Exotic Passionfruit Pannacotta",
+      price: 7.99,
+      src: ExoticPassionfruitPannacotta,
+      vegan: false,
+      spice: 0,
+      type: "dessert",
+      description:
+        "An Italian classic pannacotta infused with vibrant passionfruit purée. Smooth and creamy with a tropical twist, it brings together Italian tradition and tropical flair.",
+      shortDescription: "Creamy pannacotta with a burst of passionfruit.",
+      display: true,
+    },
+    {
+      name: "Mango and Peach Sabo",
+      price: 6.0,
+      src: MangoAndPeachSabo,
+      vegan: false,
+      spice: 0,
+      type: "dessert",
+      description:
+        "A refreshing layered dessert of mango purée, peach chunks, and sweet tapioca pearls (sago). Inspired by popular Asian sweet soups, it offers a fruity and chewy delight.",
+      shortDescription: "Layered mango-peach dessert with chewy sago pearls.",
+      display: true,
+    },
+  ];
 }
 
 function GetDrinks() {
-  return [];
+  return [
+    {
+      name: "Lemon Lime Mocktail",
+      price: 4.0,
+      src: LemonLimeMocktail,
+      vegan: true,
+      spice: 0,
+      type: "drink",
+      description:
+        "A zesty and refreshing non-alcoholic blend of fresh lemon and lime juices, lightly sweetened and garnished with mint. Inspired by tropical beach cocktails.",
+      shortDescription: "Zesty citrus mocktail with mint garnish.",
+      display: true,
+    },
+    {
+      name: "Orange Juice",
+      price: 3.5,
+      src: OrangeJuice,
+      vegan: true,
+      spice: 0,
+      type: "drink",
+      description:
+        "Freshly squeezed oranges bursting with natural sweetness and vitamin C. A classic breakfast staple enjoyed worldwide.",
+      shortDescription: "Pure, freshly squeezed orange juice.",
+      display: true,
+    },
+    {
+      name: "Urban Green Matcha Iced Tea",
+      price: 4.5,
+      src: UrbanGreenMatchaIcedTea,
+      vegan: true,
+      spice: 0,
+      type: "drink",
+      description:
+        "A cool, energizing drink made with premium Japanese matcha and chilled water, sweetened lightly. Perfect for matcha lovers seeking a refreshing twist.",
+      shortDescription: "Chilled matcha tea with a hint of sweetness.",
+      display: true,
+    },
+    {
+      name: "Earth Herb Mixed Blend Smoothie",
+      price: 5.0,
+      src: EarthHerbMixedBlendSmoothie,
+      vegan: true,
+      spice: 0,
+      type: "drink",
+      description:
+        "A wholesome smoothie blending spinach, kale, cucumber, and a touch of mint, sweetened naturally with apples. Inspired by healthy green drinks for a daily dose of nutrients.",
+      shortDescription: "A vibrant green smoothie with fresh herbs and fruit.",
+      display: true,
+    },
+    {
+      name: "Divine Grapefruit",
+      price: 4.5,
+      src: DivineGrapefruit,
+      vegan: true,
+      spice: 0,
+      type: "drink",
+      description:
+        "A tangy grapefruit cooler with a hint of sweetener, balanced by a touch of sparkling water. Perfect for a midday citrus boost.",
+      shortDescription: "Lightly sweetened sparkling grapefruit refresher.",
+      display: true,
+    },
+    {
+      name: "Coca Cola",
+      price: 2.5,
+      src: CocaCola,
+      vegan: true,
+      spice: 0,
+      type: "drink",
+      description:
+        "The classic carbonated cola beverage with a secret recipe dating back to the late 19th century. Iconic worldwide for its refreshing taste.",
+      shortDescription: "Classic fizzy cola with a timeless flavor.",
+      display: true,
+    },
+  ];
 }

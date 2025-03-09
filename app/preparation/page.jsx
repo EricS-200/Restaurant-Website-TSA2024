@@ -122,7 +122,7 @@ export default function preparation() {
           </div>
         </div>
       </section>
-      <section className="relative flex flex-col items-center justify-center md:mb-[200px] pt-[80px] z-50">
+      <section className="relative flex flex-col items-center justify-center md:mb-[200px] pt-[80px] z-40">
         <Image
           src={image14}
           alt=""
