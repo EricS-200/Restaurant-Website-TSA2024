@@ -34,6 +34,11 @@ import image5 from "@/public/videos/video5Img.jpg";
           >
             <source src="/videos/video1.mp4" type="video/mp4" />
           </video>
+
+          <p className="absolute top-[20vh] left-[20vw] w-[80vw] lg:top-[45vh] lg:right-[5vw] lg:w-[30vw] z-30 text-white font-medium font-seasons sm:text-xl lg:text-2xl">
+            The essence of farm to table is the use of fresh local produce to serve nothing but the best to our loyal customers. 
+            By supporting local farms, we can help nourish the local community both economically and gastronomically.
+          </p>
         </div>
       </div>
     );

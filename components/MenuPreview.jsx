@@ -178,7 +178,6 @@ const DishCard = ({ src, name, price }) => {
           "w-[80%] md:w-full transition-transform duration-500 scale-[0.9] lg:hover:scale-[1.1]"
         }
         onDragStart={(e) => e.preventDefault()}
-        priority //this has to be priority bc otherwise nextjs waits too long to load them leading to load issues
       />
       <p className="font-seasons text-2xl text-[#03402a] mt-4 text-center max-w-[95%]">
         {name}{" "}

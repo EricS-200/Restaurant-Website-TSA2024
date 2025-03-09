@@ -106,7 +106,7 @@ export default function preparation() {
             </div>
             <p className="text-xl leading-loose">
               Preparation, in the culinary arts, is defined as the process of turning raw ingredients
-              into something more, something unique. It's indispensable to cooking itself, along with
+              into something more, something unique. It&apos;s indispensable to cooking itself, along with
               the restaurant industry. Preparation is what defines ingredients as food.
             </p>
             <p className="text-xl leading-loose mt-2">
@@ -218,7 +218,7 @@ export default function preparation() {
             />
             <div className="text-center relative flex-1 flex justify-center -translate-y-1/3 md:translate-y-0">
               <p className="lg:w-1/2 w-[95%]">
-                Nothing goes to waste at Craftroots. Any clippings or "discards" are used
+                Nothing goes to waste at Craftroots. Any clippings or &quot;discards&quot; are used
                 as much as possible, whether it be pickling, preserving, composting, or making soup stocks.
               </p>
             </div>
@@ -276,8 +276,8 @@ export default function preparation() {
           <p className="text-center w-[95%] md:w-[85%] xl:w-[60%] mt-4 text-xl leading-loose ">
             We are proud to be loyal partners of multiple local farms and suppliers. We believe in
             honoring their hard work and dedication by treating their produce with the utmost respect
-            and care. We take extra care in listening to the farmers' opinions and suggestions, as they
-            know their own crops best. As such, we're able to create a menu and create dishes that maximize
+            and care. We take extra care in listening to the farmers&apos; opinions and suggestions, as they
+            know their own crops best. As such, we&apos;re able to create a menu and create dishes that maximize
             the worth of local produce.
           </p>
           <Image
@@ -315,7 +315,7 @@ export default function preparation() {
               <p className="text-center w-full md:w-[70%]">
                 Although our restaurant is rooted in pan-Asian cuisine, we take care to include local
                 elements of cuisine and culture. In this way, we can spread awareness of Asian cultures
-                while staying true to our hometown's culture all the same.
+                while staying true to our hometown&apos;s culture all the same.
               </p>
             </div>
           </div>
