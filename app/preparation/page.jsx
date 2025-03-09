@@ -130,7 +130,7 @@ export default function preparation() {
         <Image
           src={image14}
           alt=""
-          className="absolute w-full scale-125 bottom-0 translate-y-1/2 "
+          className="absolute w-full scale-125 bottom-0 xl:translate-y-1/2 translate-y-[60%] "
         />
         <Image
           src={image6}
@@ -155,30 +155,28 @@ export default function preparation() {
         <Image
           src={image9}
           alt=""
-          className="w-full scale-[1.4] sm:scale-100 lg:w-2/3 relative"
+          className="w-full scale-[1.4] sm:scale-100 lg:w-full xl:w-[70%]  absolute"
         />
-        <Image
-          src={image7}
-          alt=""
-          className="absolute w-[100px] lg:w-[150px] top-[30px] sm:top-[130px] md:top-[80px] lg:top-[40px] xl:top-[60px]"
-        />
-        <Image
-          src={image10}
-          alt=""
-          className="absolute w-[200px] sm:w-[300px] md:w-[400px] -translate-y-[35%] md:-translate-y-[15%] 2xl:w-[550px] sm:-translate-y-[20%] "
-        />
-        <div className="w-full flex items-center flex-col space-y-4 absolute bottom-[60px] sm:bottom-[150px] md:bottom-[90px] lg:bottom-[80px] xl:bottom-[130px]">
-          <h3 className="text-[#1e5541] text-3xl md:text-4xl 2xl:text-6xl font-seasons text-center w-[80%] sm:w-1/2 lg:w-1/3">
-            Learn More About How We Make Our Food
-          </h3>
-          <p className="text-[#de7008] text-center leading-normal xl:leading-loose text-base xl:text-xl w-[80%] sm:w-1/2 lg:w-1/3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            aliquet, justo in efficitur bibendum, ligula felis sollicitudin
-            urna, at tincidunt magna nunc at nulla.
-          </p>
+        <div className="flex flex-col items-center justify-center">
+          <Image src={image7} alt="" className=" w-[100px] lg:w-[150px]" />
+          <Image
+            src={image10}
+            alt=""
+            className=" w-[200px] sm:w-[300px] md:w-[400px] 2xl:w-[550px] "
+          />
+          <div className="w-full flex items-center flex-col space-y-4">
+            <h3 className="text-[#1e5541] text-3xl md:text-4xl 2xl:text-6xl font-seasons text-center w-[80%] sm:w-1/2 lg:w-1/3">
+              Learn More About How We Make Our Food
+            </h3>
+            <p className="text-[#de7008] text-center leading-normal xl:leading-loose text-base xl:text-xl w-[80%] sm:w-1/2 lg:w-1/3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              aliquet, justo in efficitur bibendum, ligula felis sollicitudin
+              urna, at tincidunt magna nunc at nulla.
+            </p>
+          </div>
         </div>
       </section>
-      <section className="text-white w-full relative">
+      <section className="text-white w-full relative py-[100px]">
         <Image
           src={wood}
           alt=""
@@ -241,16 +239,16 @@ export default function preparation() {
         </div>
       </section>
 
-      <section className="relative flex flex-col items-center justify-center z-10">
+      <section className="relative flex flex-col items-center justify-center z-10 my-[100px] xl:my-0">
         <Image
           src={image14}
           alt=""
-          className=" w-full scale-125 -translate-y-[55%]"
+          className=" w-full scale-125 -translate-y-2/3 sm:-translate-y-[55%]"
         />
         <Image
           src={image24}
           alt=""
-          className="absolute top-[100px] left-0 w-full "
+          className="absolute top-0 lg:top-[100px] left-0 w-full hidden 2xl:block"
         />
         <Image
           src={image20}
@@ -260,33 +258,35 @@ export default function preparation() {
         <Image
           src={image21}
           alt=""
-          className="absolute top-0 right-0 w-[1000px] translate-x-[20%]"
+          className="absolute top-0 right-0 w-[1000px] translate-x-[20%] hidden 2xl:block "
         />
         <Image
           src={image23}
           alt=""
-          className="absolute top-[500px] left-[350px] w-[800px] "
+          className="absolute top-[500px] left-[350px] w-[800px] hidden 2xl:block "
         />
         <Image
           src={image22}
           alt=""
-          className="absolute top-[400px] left-0 w-[1100px] -translate-x-[25%]"
+          className="absolute top-[400px] left-0 w-[1100px] -translate-x-[25%] hidden 2xl:block "
         />
         <Image
           src={image25}
           alt=""
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="absolute bottom-0 left-1/2 -translate-x-[10%] -translate-y-[10%] hidden 2xl:block "
         />
       </section>
-      <section className="pl-[100px] pb-[50px] -translate-y-[300px] -mb-[200px] z-10 relative">
-        <div className="relative">
-          <h3 className="absolute font-mistrully text-[13rem] left-0 top-1/2 -translate-y-1/2 text-[#d95204] opacity-[.25]">
+      <section className="md:px-[50px] pb-[50px] w-full -translate-y-[300px] sm:-translate-y-[500px] lg:-translate-y-[700px] 2xl:-translate-y-[200px] -mb-[200px] sm:-mb-[400px] lg:-mb-[600px] 2xl:-mb-[150px] z-10 relative">
+        <div className="relative px-4 sm:ml-4">
+          <h3 className="absolute font-mistrully text-[13rem] left-0 top-1/2 -translate-y-1/2 text-[#d95204] opacity-[.25] hidden md:block">
             Sourcing
           </h3>
-          <h2 className="relative font-dm text-9xl text-[#de7008]">Sourcing</h2>
+          <h2 className="relative font-dm text-7xl  md:text-9xl text-[#de7008]">
+            Sourcing
+          </h2>
         </div>
-        <div className="w-full relative flex">
-          <p className="text-center w-[60%] mt-4 text-xl leading-loose ">
+        <div className="w-full relative flex justify-center md:justify-normal">
+          <p className="text-center w-[95%] md:w-[85%] xl:w-[60%] mt-4 text-xl leading-loose ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
             aliquet, justo in efficitur bibendum, ligula felis sollicitudin
             urna, at tincidunt magna nunc at nulla. Suspendisse potenti. Lorem
@@ -297,71 +297,75 @@ export default function preparation() {
           <Image
             src={image27}
             alt=""
-            className="absolute right-0 w-[600px] -translate-y-[20%]"
+            className="absolute right-0 w-[600px] -translate-y-[20%] translate-x-[10%] xl:block hidden"
           />
           <Image
             src={image26}
             alt=""
-            className="absolute right-0 translate-x-[39%] w-[700px] top-0 -translate-y-[90%]"
+            className="absolute right-0 translate-x-[39%] w-[500px] 2xl:w-[700px] top-0 -translate-y-[90%] hidden md:block"
           />
         </div>
-        <div className="relative">
+        <div className="relative md:space-y-0 space-y-8">
           <Image
             src={image31}
             alt=""
-            className="absolute left-1/2 -translate-x-1/2 top-[12%] h-1/2"
+            className="absolute left-1/2 -translate-x-1/2 top-[12%] h-1/2 md:block hidden"
           />
-          <div className="flex w-full relative">
+          <div className="flex w-full relative md:flex-row flex-col items-center">
             <Image
               src={image29}
               alt=""
-              className="absolute left-0 bottom-0 w-[450px] translate-y-[15%] -translate-x-[10%]"
+              className="absolute left-0 bottom-0 w-[450px] translate-y-[15%] -translate-x-[10%] hidden lg:block"
             />
             <Image
               src={image30}
               alt=""
-              className="absolute right-0 bottom-0 translate-y-1/2 translate-x-[20%]"
+              className="absolute right-0 top-0 -translate-y-[15%] md:bottom-0 md:translate-y-1/2 translate-x-[30%] sm:block hidden md:hidden lg:block"
             />
-            <div className="w-1/2 flex justify-center items-center">
+            <div className="w-full sm:w-3/4 md:w-1/2 flex justify-center items-center">
               <Image src={image28} alt="" className="" />
             </div>
-            <div className="w-1/2 flex justify-center items-center">
-              <p className="text-center w-[70%]">
+            <div className="w-[95%] sm:w-[80%] md:w-1/2 flex justify-center items-center ">
+              <p className="text-center w-full md:w-[70%]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 aliquet, justo in efficitur bibendum, ligula felis sollicitudin
                 urna, at tincidunt magna nunc at nulla. Suspendisse potenti.
               </p>
             </div>
           </div>
-          <div className="flex w-full relative">
+          <div className="flex w-full relative md:flex-row flex-col items-center">
             <Image
               src={image33}
               alt=""
-              className="absolute right-0 bottom-0 translate-y-1/2 -translate-x-[10%]"
+              className="absolute right-0 bottom-0 translate-y-1/2 -translate-x-[10%] hidden lg:block"
             />
-            <div className="w-1/2 flex justify-center items-center">
-              <p className="text-center w-[70%]">
+            <div className="w-[95%] sm:w-[80%] md:w-1/2 flex justify-center items-center order-2 md:order-1">
+              <p className="text-center w-full md:w-[70%]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 aliquet, justo in efficitur bibendum, ligula felis sollicitudin
                 urna, at tincidunt magna nunc at nulla. Suspendisse potenti.
               </p>
             </div>
-            <div className="w-1/2 flex justify-center items-center">
+            <div className="w-full sm:w-3/4 md:w-1/2 flex justify-center items-center  order-1 md:order-2">
               <Image src={image32} alt="" className="" />
             </div>
           </div>
-          <div className="flex w-full relative">
-            <Image src={image35} alt="" className="absolute left-0 bottom-0" />
+          <div className="flex w-full relative md:flex-row flex-col items-center">
+            <Image
+              src={image35}
+              alt=""
+              className="absolute left-0 bottom-0 md:translate-x-0 -translate-x-[30%] sm:block hidden md:hidden lg:block"
+            />
             <Image
               src={image36}
               alt=""
-              className="absolute right-0 bottom-0 w-[600px] translate-x-[38%] translate-y-[20%]"
+              className="absolute right-0 bottom-0 w-[600px] translate-x-[40%] translate-y-[30%] md:translate-y-[20%] sm:block hidden md:hidden lg:block"
             />
-            <div className="w-1/2 flex justify-center items-center">
+            <div className="w-full sm:w-3/4 md:w-1/2 flex justify-center items-center ">
               <Image src={image34} alt="" className="" />
             </div>
-            <div className="w-1/2 flex justify-center items-center">
-              <p className="text-center w-[70%]">
+            <div className="w-[95%] sm:w-[80%] md:w-1/2 flex justify-center items-center ">
+              <p className="text-center w-full md:w-[70%]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 aliquet, justo in efficitur bibendum, ligula felis sollicitudin
                 urna, at tincidunt magna nunc at nulla. Suspendisse potenti.
