@@ -56,7 +56,7 @@ export default function ClickToChange() {
     let progress = 0;
     const animate = () => {
       progress += animationSpeed;
-      if (progress <= 110) {
+      if (progress <= 150) {
         setPages((prev) => {
           const updated = [...prev];
           updated[nextIndex] = {

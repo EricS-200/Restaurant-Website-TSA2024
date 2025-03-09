@@ -3,11 +3,11 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-import image1 from "@/public/images/bannerimages/communitybanner.png";
-import image2 from "@/public/images/bannerimages/communitybanner.png";
-import image3 from "@/public/images/bannerimages/communitybanner.png";
-import image4 from "@/public/images/bannerimages/communitybanner.png";
-import image5 from "@/public/images/bannerimages/communitybanner.png";
+import image1 from "@/public/videos/video1Img.jpg";
+import image2 from "@/public/videos/video2Img.jpg";
+import image3 from "@/public/videos/video3Img.jpg";
+import image4 from "@/public/videos/video4Img.jpg";
+import image5 from "@/public/videos/video5Img.jpg";
 
   function GetPage1Content() {
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
