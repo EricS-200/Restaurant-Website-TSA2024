@@ -678,21 +678,21 @@ export default function Reference() {
         <ol type="1" className="list-decimal list-inside">
           <li>
             <Citation
-              author="asdsa"
-              authorLink="https://www.buzzfeed.com/hannahloewentheil"
-              type="image"
-              source="hi"
-              sourceLink="https://example.com"
+              author="Food and Agriculture Organization of the United Nations"
+              authorLink="https://www.fao.org/home/en/"
+              type="article"
+              source="United Nations"
+              sourceLink="https://www.fao.org/4/a0701e/a0701e00.htm"
             />
           </li>
 
           <li>
             <Citation
-              author="adfafd"
-              authorLink="hi"
-              type="image"
-              source="hi"
-              sourceLink="https://example.com"
+              author="Environmental Protection Agency"
+              authorLink="https://www.epa.gov/"
+              type="report"
+              source="US EPA"
+              sourceLink="https://www.epa.gov/sustainable-management-food/food-donation-basics"
             />
           </li>
         </ol>
