@@ -262,7 +262,7 @@ export default function preparation() {
           className="absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
         />
       </section>
-      <section className="pl-[100px] pb-[50px]">
+      <section className="pl-[100px] pb-[50px] -translate-y-[300px] -mb-[200px]">
         <div className="relative">
           <h3 className="absolute font-mistrully text-[13rem] left-0 top-1/2 -translate-y-1/2 text-[#d95204] opacity-[.25]">
             Sourcing
@@ -295,7 +295,17 @@ export default function preparation() {
             alt=""
             className="absolute left-1/2 -translate-x-1/2 top-[12%] h-1/2"
           />
-          <div className="flex w-full">
+          <div className="flex w-full relative">
+            <Image
+              src={image29}
+              alt=""
+              className="absolute left-0 bottom-0 w-[450px] translate-y-[15%] -translate-x-[10%]"
+            />
+            <Image
+              src={image30}
+              alt=""
+              className="absolute right-0 bottom-0 translate-y-1/2 translate-x-[20%]"
+            />
             <div className="w-1/2 flex justify-center items-center">
               <Image src={image28} alt="" className="" />
             </div>
@@ -307,7 +317,8 @@ export default function preparation() {
               </p>
             </div>
           </div>
-          <div className="flex w-full">
+          <div className="flex w-full relative">
+            <Image src={image33} alt="" className="absolute right-0 bottom-0" />
             <div className="w-1/2 flex justify-center items-center">
               <p className="text-center w-[70%]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -319,7 +330,9 @@ export default function preparation() {
               <Image src={image32} alt="" className="" />
             </div>
           </div>
-          <div className="flex w-full">
+          <div className="flex w-full relative">
+            <Image src={image35} alt="" className="absolute left-0 bottom-0" />
+            <Image src={image36} alt="" className="absolute right-0 bottom-0" />
             <div className="w-1/2 flex justify-center items-center">
               <Image src={image34} alt="" className="" />
             </div>
