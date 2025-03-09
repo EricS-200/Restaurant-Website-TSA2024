@@ -35,56 +35,61 @@ import image34 from "@/public/preparation/34.png";
 import image35 from "@/public/preparation/35.png";
 import image36 from "@/public/preparation/36.png";
 import image37 from "@/public/preparation/37.png";
+import shadow from "@/public/preparation/shadow.png";
+import wood from "@/public/preparation/wood.jpg";
 
+import ParallaxBanner from "@/components/SimpleParallaxBanner.jsx";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function preparation() {
   return (
     <main className="overflow-x-clip">
-      <section className="relative h-screen overflow-x-clip">
-        <Image
-          src={image2}
-          alt=""
-          className="object-cover object-center"
-          fill
-        />
-        <Image
-          src={image1}
-          alt=""
-          className="absolute inset-0 w-[800px] lg:block hidden -translate-x-[30%] -translate-y-[30%]"
-        />
-        <Image
-          src={image4}
-          alt=""
-          className="absolute bottom-0 right-0 w-[800px] lg:block hidden translate-x-[40%] translate-y-[30%]"
-        />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white flex flex-col items-center justify-center w-full">
-          <h1 className="font-kenao text-7xl lg:text-9xl">Preparation</h1>
-          <div className="sm:w-3/4 w-[95%] md:w-1/2 flex flex-col items-center">
-            <Image alt="" src={image3} className="mt-4 mb-1 w-3/4" />
-            <p className="text-center md:w-[70%]">
-              Curabitur varius, ex eget tempus interdum, elit arcu fermentum
-              odio, in scelerisque nunc erat nec nunc. Vestibulum dignissim
-              justo non lectus tristique, ac luctus odio molestie. Aenean ut
-              erat in turpis
-            </p>
-            <div className="flex md:flex-row flex-col md:space-y-0 space-y-4 md:space-x-8 mt-4">
-              <Link href={"/sustainability"}>
-                <button className="px-8 py-1 border-white border-2 hover:bg-gray-100/20 active:bg-gray-200/20 ">
-                  Sustainability
-                </button>
-              </Link>
-              <Link href={"/farm-to-table"}>
-                <button className="px-8 py-1 bg-[#de7008] hover:bg-[#e1842b] active:bg-[#d17217]">
-                  Farm to Table
-                </button>
-              </Link>
+      <ParallaxBanner speed={0.5}>
+        <section className="relative h-screen overflow-x-clip">
+          <Image
+            src={image2}
+            alt=""
+            className="object-cover object-center"
+            fill
+          />
+          <Image
+            src={image1}
+            alt=""
+            className="absolute inset-0 w-[800px] lg:block hidden -translate-x-[30%] -translate-y-[30%]"
+          />
+          <Image
+            src={image4}
+            alt=""
+            className="absolute bottom-0 right-0 w-[800px] lg:block hidden translate-x-[40%] translate-y-[30%]"
+          />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white flex flex-col items-center justify-center w-full">
+            <h1 className="font-kenao text-7xl lg:text-9xl">Preparation</h1>
+            <div className="sm:w-3/4 w-[95%] md:w-1/2 flex flex-col items-center">
+              <Image alt="" src={image3} className="mt-4 mb-1 w-3/4" />
+              <p className="text-center md:w-[70%]">
+                Curabitur varius, ex eget tempus interdum, elit arcu fermentum
+                odio, in scelerisque nunc erat nec nunc. Vestibulum dignissim
+                justo non lectus tristique, ac luctus odio molestie. Aenean ut
+                erat in turpis
+              </p>
+              <div className="flex md:flex-row flex-col md:space-y-0 space-y-4 md:space-x-8 mt-4">
+                <Link href={"/sustainability"}>
+                  <button className="px-8 py-1 border-white border-2 hover:bg-gray-100/20 active:bg-gray-200/20 ">
+                    Sustainability
+                  </button>
+                </Link>
+                <Link href={"/farm-to-table"}>
+                  <button className="px-8 py-1 bg-[#de7008] hover:bg-[#e1842b] active:bg-[#d17217]">
+                    Farm to Table
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="p-[20px] md:p-[50px] relative">
+        </section>
+      </ParallaxBanner>
+      <section className="p-[20px] md:p-[50px] relative z-10 ">
         <div className="bg-white w-full h-full p-[20px] md:px-[50px] md:py-[60px] relative">
           <Image
             src={image5}
@@ -121,11 +126,11 @@ export default function preparation() {
           </div>
         </div>
       </section>
-      <section className="relative flex flex-col items-center justify-center md:py-0 py-[80px]">
+      <section className="relative flex flex-col items-center justify-center md:mb-[150px] pt-[80px] z-50">
         <Image
           src={image14}
           alt=""
-          className="absolute w-full scale-125 bottom-0 translate-y-1/2"
+          className="absolute w-full scale-125 bottom-0 translate-y-1/2 "
         />
         <Image
           src={image6}
@@ -135,7 +140,7 @@ export default function preparation() {
         <Image
           src={image11}
           alt=""
-          className="absolute right-0 hidden lg:block"
+          className="absolute right-0 hidden lg:block -translate-y-1/2"
         />
         <Image
           src={image12}
@@ -173,7 +178,13 @@ export default function preparation() {
           </p>
         </div>
       </section>
-      <section className="bg-white w-full z-10">
+      <section className="text-white w-full relative">
+        <Image
+          src={wood}
+          alt=""
+          className="absolute inset-0 w-full -z-50"
+          fill
+        />
         <div className="relative w-full">
           <div className="w-full flex md:flex-row flex-col items-center">
             <Image
@@ -230,7 +241,7 @@ export default function preparation() {
         </div>
       </section>
 
-      <section className="relative flex flex-col items-center justify-center z-0 ">
+      <section className="relative flex flex-col items-center justify-center z-10">
         <Image
           src={image14}
           alt=""
@@ -240,6 +251,11 @@ export default function preparation() {
           src={image24}
           alt=""
           className="absolute top-[100px] left-0 w-full "
+        />
+        <Image
+          src={image20}
+          alt=""
+          className="absolute inset-0 w-full scale-[1.2] left-1/2 -translate-x-1/2 -translate-y-1/2"
         />
         <Image
           src={image21}
@@ -262,7 +278,7 @@ export default function preparation() {
           className="absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
         />
       </section>
-      <section className="pl-[100px] pb-[50px] -translate-y-[300px] -mb-[200px]">
+      <section className="pl-[100px] pb-[50px] -translate-y-[300px] -mb-[200px] z-10 relative">
         <div className="relative">
           <h3 className="absolute font-mistrully text-[13rem] left-0 top-1/2 -translate-y-1/2 text-[#d95204] opacity-[.25]">
             Sourcing
@@ -318,7 +334,11 @@ export default function preparation() {
             </div>
           </div>
           <div className="flex w-full relative">
-            <Image src={image33} alt="" className="absolute right-0 bottom-0" />
+            <Image
+              src={image33}
+              alt=""
+              className="absolute right-0 bottom-0 translate-y-1/2 -translate-x-[10%]"
+            />
             <div className="w-1/2 flex justify-center items-center">
               <p className="text-center w-[70%]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -332,7 +352,11 @@ export default function preparation() {
           </div>
           <div className="flex w-full relative">
             <Image src={image35} alt="" className="absolute left-0 bottom-0" />
-            <Image src={image36} alt="" className="absolute right-0 bottom-0" />
+            <Image
+              src={image36}
+              alt=""
+              className="absolute right-0 bottom-0 w-[600px] translate-x-[38%] translate-y-[20%]"
+            />
             <div className="w-1/2 flex justify-center items-center">
               <Image src={image34} alt="" className="" />
             </div>
