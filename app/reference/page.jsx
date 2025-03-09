@@ -11,10 +11,7 @@ export default function Reference() {
         <h1 className="text-6xl lg:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-blue-800 pb-3">
           Reference Page
         </h1>
-        <p className="text-green-600">
-          !!!!!!!!!!!!!!!!!!!! CHECK ALL LINKS, CITATIONS, SOFTWARE LISTED -
-          PAGE NOT COMPLETED.
-        </p>
+
         <Link
           href={"https://kentuckytsa.org/"}
           target="_blank"
@@ -49,17 +46,25 @@ export default function Reference() {
           The entire website, including code and content, was created by our
           team. We did not use any templates or pre-built components
         </p>
-        <p>
-          All TSA documents, including the Student Copyright Checklist and Work
-          Log can be found{" "}
+        <p className="font-bold">
+          TSA Work Log:{" "}
           <Link
-            href="/"
+            href={"/forms/work-log.pdf"}
+            className="text-blue-500 hover:underline"
             target="_blank"
-            className="text-blue-500 hover:underline "
           >
-            here
+            Here
           </Link>
-          .
+        </p>
+        <p className="font-bold">
+          TSA Copyright Checklist:{" "}
+          <Link
+            href={"/forms/copyright.pdf"}
+            className="text-blue-500 hover:underline"
+            target="_blank"
+          >
+            Here
+          </Link>
         </p>
         {/* <p>
           Our GitHub repository can be found{" "}
