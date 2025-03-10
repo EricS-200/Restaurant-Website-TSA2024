@@ -21,7 +21,7 @@ export default function Dropdown({ name, options, extraStyle }) {
 
   return (
     <div
-      className={`relative ${extraStyle}`}
+      className={`relative z-10 ${extraStyle}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={() => setIsOpen(!isOpen)}

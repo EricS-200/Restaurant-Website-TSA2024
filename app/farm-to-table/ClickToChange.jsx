@@ -100,7 +100,7 @@ export default function ClickToChange() {
           {page.content}
         </div>
       ))}
-      <div className="bg-[#36685d] px-[2%] pb-[10%] overflow-x-hidden">
+      <div className="bg-[#36685d] px-[2%] overflow-x-hidden overflow-y-clip">
         <div className="flex flex-col sm:flex-row items-center justify-evenly">
           <div className="sm:w-[50%] justify-center items-center relative">
             <Image src={img4} alt="" className="scale-90"/>
@@ -115,7 +115,7 @@ export default function ClickToChange() {
                 To You
               </h1>
 
-              <p className="text-white mt-[5%] px-[5%] sm:px-[2%]">
+              <p className="text-white mt-[5%] px-[5%] sm:px-[2%] text-center">
                 Craftroots provides a connection between people, not
                 machines, through every step of the way. From vegetables
                 hand-picked and transported by local farmers to the same
@@ -135,7 +135,7 @@ export default function ClickToChange() {
                 Farm to Table
               </h1>
 
-              <p className="text-white mt-[5%]">
+              <p className="text-white mt-[5%] text-center">
                 The current state of the farming industry is no better than
                 many other industries. Preservative chemicals such as
                 sorbates and benzoates, which commonly appear on
@@ -164,7 +164,7 @@ export default function ClickToChange() {
             Cooking is Our Home
           </h1>
 
-          <p className="w-[75%] lg:w-[50%] text-white pt-[5%]">
+          <p className="w-[75%] lg:w-[50%] text-white pt-[5%] text-center">
             We see cooking as a way to connect people in all ways, shapes, and forms.
             Through our cooking, we aim to be able to not only connect our cultural origins
             to our community, but also connect all parts of our community. For this
@@ -175,8 +175,8 @@ export default function ClickToChange() {
           </p>
         </div>
 
-        <div className="relative">
-          
+        <div className="relative flex flex-col justify-center items-center h-[30vh] pt-[30%]">
+          <Image src={img12} alt="" className="w-full h-auto object-cover"/>
         </div>
       </div>
     </div>
