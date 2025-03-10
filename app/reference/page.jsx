@@ -130,7 +130,7 @@ export default function Reference() {
         </li>
         <li>
           <Link href="/order" className="hover:underline">
-            Order Now
+            Reserve & Order
           </Link>
         </li>
       </ul>
