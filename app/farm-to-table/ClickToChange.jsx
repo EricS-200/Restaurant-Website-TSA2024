@@ -108,10 +108,10 @@ export default function ClickToChange() {
           </div>
 
           <div className="relative sm:w-[40%] h-[100%] justify-center items-center flex flex-col">
-              <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold pt-[3%] md:pt-[0%]">
+              <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold pt-[3%] md:pt-[0%] font-dm">
                 Our Dedication
               </h1>
-              <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
+              <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold font-dm">
                 To You
               </h1>
 
@@ -131,7 +131,7 @@ export default function ClickToChange() {
 
         <div className="flex flex-col sm:flex-row items-center justify-evenly">
           <div className="relative sm:w-[40%] h-[100%] justify-center items-center flex flex-col">
-              <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold pt-[3%] md:pt-[0%]">
+              <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold pt-[3%] md:pt-[0%] font-dm">
                 Farm to Table
               </h1>
 
@@ -156,11 +156,11 @@ export default function ClickToChange() {
         </div>
 
         <div className="relative h-[30vh]">
-          <Image src={img7} alt="" className="absolute top-[-30vh] right-0"/>
+          <Image src={img7} alt="" className="absolute top-[-30vh] right-[-10vw]"/>
         </div>
 
         <div className="w-full justify-center items-center flex flex-col">
-          <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
+          <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold font-dm">
             Cooking is Our Home
           </h1>
 
@@ -173,6 +173,10 @@ export default function ClickToChange() {
             both provide a second home for our own culture and benefit our current home
             simultaneously.
           </p>
+        </div>
+
+        <div className="relative">
+          
         </div>
       </div>
     </div>
