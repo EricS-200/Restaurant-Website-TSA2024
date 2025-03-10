@@ -170,7 +170,7 @@ export default function Home() {
           </div>{" "}
         </div>
         <DraggableCarousel className={"mt-4 mb-8"}>
-          <Review author={"Jake He, Certified Fattie"}>
+          <Review author={"Jake He"}>
             “Craftroots always serves nothing but the best. As a devoted vegan,
             it&apos;s hard to find good food that&apos;s not just your average
             salad or fruit cup, but Craftroots has that covered with unique
