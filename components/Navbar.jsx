@@ -9,7 +9,7 @@ import Dropdown from "@/components/Dropdown";
 import logoImage from "/public/logo.png";
 
 export default function Navbar() {
-  const pages = ["Our Story", "Menu", "Community", "Reserve & Order"];
+  const pages = ["Our Story", "Menu", "Community", "Reserve"];
   const dropdownAboutFoodOptions = [
     { name: "Sustainability", url: "/sustainability" },
     { name: "Farm to Table", url: "/farm-to-table" },
@@ -178,7 +178,11 @@ export default function Navbar() {
                 true
               )}
 
-              <Dropdown name="Our Story" options={aboutUsDropdown} />
+              <Dropdown
+                name="Our Story"
+                options={aboutUsDropdown}
+                extraStyle={" relative z-50"}
+              />
 
               <Dropdown
                 name={"About Our Food"}

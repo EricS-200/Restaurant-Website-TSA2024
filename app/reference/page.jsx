@@ -620,7 +620,6 @@ export default function Reference() {
               sourceLink="https://www.drrusselljaffe.com/vitamin-c-powder/"
             />
           </li>
-
           <li>
             <Citation
               author="Jep Gambardella"
@@ -664,6 +663,13 @@ export default function Reference() {
               type="video"
               source="Pexels"
               sourceLink="https://www.pexels.com/video/aerial-footage-of-a-cargo-ship-at-sea-loaded-with-containers-2943126/"
+            />
+          </li>
+          <li>
+            <Citation
+              type="image"
+              source="Unsplash"
+              sourceLink="https://unsplash.com/photos/3d-render-of-luxury-restaurant-interior-V9CVO_cv-78"
             />
           </li>
         </ol>

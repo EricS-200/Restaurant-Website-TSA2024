@@ -94,46 +94,45 @@ export default function Home() {
 
           <div className="flex flex-col items-end w-full">
             <AnimatedNumber
-              targetNumber={3058134}
-              targetString={"3,058,134"}
+              targetNumber={500000}
+              targetString={"500,000"}
               startingFraction={0.5}
               duration={1000}
               className={"text-white text-7xl lg:text-9xl font-dm"}
             />
             <p className="text-right font-seasons text-[#9da57f] xl:max-w-[90%] text-2xl my-4">
-              Math felt dry, physics seemed like endless equations on a
-              chalkboard, and computer science felt like typing gibberish into a
-              black screen.
+              USD in terms of boost to our local economies. We always try to
+              source our food from local farms and production centers as we love
+              to support our local vegan communities in Kentucky!
             </p>
           </div>
 
           <div className="flex flex-col items-end w-full">
             <AnimatedNumber
-              targetNumber={238134}
-              targetString={"238,134 "}
+              targetNumber={100000}
+              targetString={"100,000"}
               startingFraction={0.5}
               duration={1000}
               className={"text-white text-7xl lg:text-9xl font-dm"}
             />
             <p className="text-right font-seasons text-[#d5b928] xl:max-w-[90%] text-2xl my-4">
-              Math felt dry, physics seemed like endless equations on a
-              chalkboard, and computer science felt like typing gibberish into a
-              black screen.
+              pounds of CO2 saved by maintaing a plant-based menu over a meat
+              based menu, and by focusing on sustainability!
             </p>
           </div>
 
           <div className="flex flex-col items-end w-full">
             <AnimatedNumber
-              targetNumber={12058134}
-              targetString={"12,058,134"}
+              targetNumber={800000}
+              targetString={"800000"}
               startingFraction={0.5}
               duration={1000}
               className={"text-white text-7xl lg:text-9xl font-dm"}
             />
             <p className="text-right font-seasons text-[#e29953] xl:max-w-[90%] text-2xl my-4">
-              Math felt dry, physics seemed like endless equations on a
-              chalkboard, and computer science felt like typing gibberish into a
-              black screen.
+              gallons of water saved over non-vegetarian restaurants! Yes, most
+              restaurants can use more than a million gallons of water anually
+              for meat-based dishes, and we reduce that by up to 80%!
             </p>
           </div>
         </div>
@@ -172,6 +171,12 @@ export default function Home() {
         </div>
         <DraggableCarousel className={"mt-4 mb-8"}>
           <Review author={"Jake He, Certified Fattie"}>
+            “Craftroots always serves nothing but the best. As a devoted vegan,
+            it&apos;s hard to find good food that&apos;s not just your average
+            salad or fruit cup, but Craftroots has that covered with unique
+            cultural dishes.”
+          </Review>
+          {/* <Review author={"Jake He, Certified Fattie"}>
             It&apos;s why we can send emails in milliseconds and why stars
             appear to twinkle in the night sky. It&apos;s how we turn lines of
             code into self-driving cars, how we turn questions into answers, and
@@ -191,38 +196,12 @@ export default function Home() {
             code into self-driving cars, how we turn questions into answers, and
             answers into even bigger questions. And that&apos;s the best part:
             the chase.
-          </Review>
-          <Review author={"Jake He, Certified Fattie"}>
-            It&apos;s why we can send emails in milliseconds and why stars
-            appear to twinkle in the night sky. It&apos;s how we turn lines of
-            code into self-driving cars, how we turn questions into answers, and
-            answers into even bigger questions. And that&apos;s the best part:
-            the chase.
-          </Review>
-        </DraggableCarousel>{" "}
-        <div className="w-full flex justify-center items-center flex-col mt-12">
-          <p className="text-center w-[95vw] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-1/2">
-            Beyond providing high quality vegetarian and vegan food, we also
-            love interacting with our community! Our blog contains some more
-            insight about vegetarianism and veganism. We also share some amazing
-            vegan and vegetarian recipes, as well as vegetarian lifestyle
-            information. Consider checking it out!
-          </p>
-          <Link href={"/community"}>
-            <button className="text-white px-16 bg-[#e29953] mt-5 mb-8">
-              Community Engagement
-            </button>
-          </Link>
-        </div>
+          </Review> */}
+        </DraggableCarousel>
         <Image
           src={leaves5}
           alt=""
           className="absolute bottom-0 right-0 w-[400px] translate-x-1/2 lg:block hidden"
-        />
-        <Image
-          src={pumpkin}
-          alt=""
-          className="absolute bottom-[250px] left-0 w-[500px] -translate-x-1/2 xl:-translate-x-[20%] lg:block hidden"
         />
       </section>
     </main>
@@ -294,18 +273,18 @@ function OurStorySection({}) {
                 most talented chefs.
               </p>
 
-              <Link href={"/our-story"} className={"absolute bottom-0 left-0"}>
-                <button className="bg-[#d0b577] hover:bg-[#d4b161] py-2 px-8 text-black text-md md:text-lg">
+              <Link href={"/about-us"} className={"absolute bottom-0 left-0"}>
+                <button className="bg-[#d0b577] hover:bg-[#cfbe97] py-2 px-8 text-black text-md md:text-lg">
                   Our Story
                 </button>
               </Link>
               <Link
                 href={"/reference"}
                 className={
-                  "absolute bottom-0 w-[400px] lg:pl-[160px] xl:pl-[160px] 2x:pl-[175px] katherine-triangle-clip-path"
+                  "absolute bottom-0  lg:ml-[160px] xl:ml-[160px] 2x:ml-[175px] w-fit"
                 }
               >
-                <button className="bg-[#9da57f] hover:bg-[#b0bf75] py-2 px-4 pr-20 text-black text-md md:text-lg">
+                <button className="bg-[#9da57f] hover:bg-[#b0bf75] py-2 px-8 text-black text-md md:text-lg">
                   References
                 </button>
               </Link>
