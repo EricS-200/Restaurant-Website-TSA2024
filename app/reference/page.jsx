@@ -6,7 +6,7 @@ import kytsa from "@/public/kytsa-logo.webp";
 
 export default function Reference() {
   return (
-    <main className="bg-white flex flex-col items-center justify-center">
+    <main className="bg-white flex flex-col items-center justify-center pb-[5%]">
       <section className="flex items-center justify-center md:pt-24 flex-col bg-white">
         <h1 className="text-6xl lg:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-blue-800 pb-3">
           Reference Page
@@ -612,6 +612,241 @@ export default function Reference() {
             />
           </li>
           <li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="University of Kentucky"
+    sourceLink="https://fcs-hes.ca.uky.edu/sites/fcs-hes.ca.uky.edu/files/fn-ssb-053-powerupwithplantprotein-pub.pdf"
+  />
+</li>
+<li>
+  <Citation
+    author="Source Agriculture"
+    authorLink="https://www.instagram.com/sourceagriculture/"
+    type="image"
+    source="Instagram"
+    sourceLink="https://www.instagram.cosm/sourceagriculture/p/C_wGbvVsMHr/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="City of Cullman, Alabama"
+    sourceLink="https://cullmanal.gov/event/native-tree-sale/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Energy Theory"
+    sourceLink="https://energytheory.com/what-is-a-residential-solar-system/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="DepositPhotos"
+    sourceLink="https://depositphotos.com/photo/ecological-concept-of-the-environment-with-the-cultivation-of-trees-planet-earth-physical-globe-of-259607942.html"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Rehab.com"
+    sourceLink="https://www.rehab.com/the-willows-at-red-oak-recovery"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Dreamstime"
+    sourceLink="https://www.dreamstime.com/tomato-fresh-food-hand-drawn-illustration-drawing-engraving-ink-line-art-engra-image106111223"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Shutterstock"
+    sourceLink="https://www.shutterstock.com/image-vector/vector-drawing-illustration-hand-drawn-ink-2446705883"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Linktree - Depretechospecialist"
+    sourceLink="https://linktr.ee/depretechospecialist"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="iStock"
+    sourceLink="https://www.istockphoto.com/vector/pencil-drawing-of-garlic-gm1254551997-366718898"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Dreamstime"
+    sourceLink="https://www.dreamstime.com/hand-drawn-illustration-set-strawberries-hand-drawn-illustration-set-strawberries-izolated-om-fon-hatched-drawing-image180441367"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Facebook - Prescott Online MSFS"
+    sourceLink="https://www.facebook.com/groups/PrescottOnlineMSFS/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="VectorStock"
+    sourceLink="https://www.vectorstock.com/royalty-free-vector/french-lettuce-engraving-fresh-green-salad-sketch-vector-43906360"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="WingsBird"
+    sourceLink="https://wingsbird.in/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="iStock"
+    sourceLink="https://www.istockphoto.com/photo/ivy-plant-gm174836763-22784914"
+  />
+</li>
+<li>
+  <Citation
+    author="Shannon Vann"
+    authorLink="https://www.instagram.com/shannonvannsf/"
+    type="image"
+    source="Instagram"
+    sourceLink="https://www.instagram.com/shannonvannsf/reel/DFI4Gddvwp_/?locale=zh-hans&hl=ar"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Amazon UK"
+    sourceLink="https://www.amazon.co.uk/Botanical-minimalist-Watercolor-Minimalist-botanical/dp/B08NGXDDJ3"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="iStock"
+    sourceLink="https://www.istockphoto.com/photo/female-hands-holding-empty-plate-on-white-background-gm1084491202-290988186"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Online Web Fonts"
+    sourceLink="https://www.onlinewebfonts.com/download/6ab659c1656e922ff4692bcf9c1e1e33"
+  />
+</li>
+<li>
+  <Citation
+    author="Himala Unimal"
+    authorLink="https://www.instagram.com/himala_unimal/"
+    type="image"
+    source="Instagram"
+    sourceLink="https://www.instagram.com/himala_unimal/p/DGpCpnCz8-Z/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Clover Blog"
+    sourceLink="https://blog.clover.com/simple-restaurant-kitchen-layout-ideas/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Green Queen"
+    sourceLink="https://www.greenqueen.com.hk/what-is-sustainability-definition/"
+  />
+</li>
+
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="North Sydney Council"
+    sourceLink="https://www.northsydney.nsw.gov.au/waste-recycling/book-bulky-waste-pick"
+  />
+</li>
+<li>
+  <Citation
+    author="PNGTree"
+    authorLink="https://pngtree.com"
+    type="image"
+    source="PNGTree"
+    sourceLink="https://pngtree.com/freepng/honeycomb-illustration-design-wallpaper-bees-line-vector_10918963.html"
+  />
+</li>
+<li>
+  <Citation
+    author="NALM Clinic"
+    authorLink="https://nalmclinic.com"
+    type="image"
+    source="NALM Clinic"
+    sourceLink="https://nalmclinic.com/blog-1/2022/9/21/do-you-need-to-exclude-gluten-when-you-have-ibd"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Bing Images"
+    sourceLink="https://th.bing.com/th/id/OIP.yGqGywqfp2P_XNSYx5YjbQHaHa?rs=1&pid=ImgDetMain"
+  />
+</li>
+          <li>
             <Citation
               author="DrJ"
               authorLink="https://www.drrusselljaffe.com/author/dr-j/"
@@ -701,6 +936,70 @@ export default function Reference() {
               sourceLink="https://www.epa.gov/sustainable-management-food/food-donation-basics"
             />
           </li>
+          <li>
+            <Citation
+              author="Eastern Oregon University"
+              authorLink="https://online.eou.edu/"
+              type="article"
+              source="EOU Online"
+              sourceLink="https://online.eou.edu/resources/article/veganic-farming-importance-of-sustainable-agriculture/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Vegan Family Kitchen"
+              authorLink="https://veganfamilykitchen.com/"
+              type="article"
+              source="Vegan Family Kitchen"
+              sourceLink="https://veganfamilykitchen.com/vegan-cooking-for-beginners/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Restaurantware"
+              authorLink="https://www.restaurantware.com/"
+              type="blog"
+              source="Restaurantware Blog"
+              sourceLink="https://www.restaurantware.com/blogs/restaurant-management/how-to-run-a-successful-farm-to-table-restaurant?srsltid=AfmBOorD3QhPp1bAHTLYu0nRICPH1Cp9lk9uT1zrn6lO-C5TIQkNP15y"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Physicians Committee for Responsible Medicine"
+              authorLink="https://www.pcrm.org/"
+              type="report"
+              source="PCRM"
+              sourceLink="https://www.pcrm.org/good-nutrition/vegan-diet-environment"
+            />
+          </li>
+          <li>
+            <Citation
+              author="BBC Good Food"
+              authorLink="https://www.bbcgoodfood.com/"
+              type="recipes"
+              source="BBC Good Food"
+              sourceLink="https://www.bbcgoodfood.com/recipes/collection/vegan-recipes"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Clover"
+              authorLink="https://blog.clover.com/"
+              type="blog"
+              source="Clover Blog"
+              sourceLink="https://blog.clover.com/simple-restaurant-kitchen-layout-ideas/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Green Queen"
+              authorLink="https://www.greenqueen.com.hk/"
+              type="article"
+              source="Green Queen"
+              sourceLink="https://www.greenqueen.com.hk/what-is-sustainability-definition/"
+            />
+          </li>
+
         </ol>
       </section>
     </main>
