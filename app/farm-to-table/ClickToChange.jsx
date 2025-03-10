@@ -1,7 +1,21 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { GetPage1Content, GetPage2Content, GetPage3Content, GetPage4Content, GetPage5Content } from "@/app/farm-to-table/PageContent";
+
+import img1 from "@/public/farmtotable/1.png";
+import img2 from "@/public/farmtotable/2.png";
+import img3 from "@/public/farmtotable/3.png";
+import img4 from "@/public/farmtotable/4.png";
+import img5 from "@/public/farmtotable/5.png";
+import img6 from "@/public/farmtotable/6.png";
+import img7 from "@/public/farmtotable/7.png";
+import img8 from "@/public/farmtotable/8.png";
+import img9 from "@/public/farmtotable/9.png";
+import img10 from "@/public/farmtotable/10.png";
+import img11 from "@/public/farmtotable/11.png";
+import img12 from "@/public/farmtotable/12.png";
 
 export default function ClickToChange() {
   let topStyle = "w-full h-fit";
@@ -22,11 +36,11 @@ export default function ClickToChange() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisiblePages((prev) => prev.map((_, i) => i === activePage));
-    }, 300);
+    }, 0);
     return () => clearTimeout(timer);
   }, [activePage]);
 
-  const animationSpeed = 3.5;
+  const animationSpeed = 3;
 
   const handleClick = (index, event) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -48,7 +62,7 @@ export default function ClickToChange() {
       newPages[nextIndex] = {
         ...prevPages[nextIndex],
         zIndex: currentZIndex + 1,
-        clipPath: `circle(0% at ${x}px ${y}px)`,
+        clipPath: `circle(0% at ${x}% ${y}%)`,
       };
       return newPages;
     });
@@ -86,40 +100,60 @@ export default function ClickToChange() {
           {page.content}
         </div>
       ))}
-      <div className="bg-green-700 px-[2%]">
-        <div className="flex flex-col sm:flex-row">
-          <div className="sm:w-[40%]">
-            {/* <Image src={} alt="Man holding vegetables"/> */}
+      <div className="bg-[#36685d] px-[2%]">
+        <div className="flex flex-col sm:flex-row items-center justify-evenly">
+          <div className="sm:w-[50%] justify-center items-center relative">
+            <Image src={img4} alt="Man holding vegetables" className="scale-90"/>
+            <Image src={img3} alt="Tomato Outline" className="hidden sm:block absolute top-[-15vh] left-[-15vw] scale-50"/>
           </div>
 
-          <div className="relative sm:w-[60%] h-fit">
-            <h1 className="text-center text-3xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
-              Our Dedication
-            </h1>
-            <h1 className="text-center text-3xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
-              To You
-            </h1>
-            <h1 className="hidden sm:block absolute w-[70vw] bottom-[-9vh] sm:bottom-[18vh] lg:bottom-[10vh] right-[17.7vw] sm:left-[0] font-mistrully opacity-70 text-[7rem] md:text-[9rem] lg:text-[11rem] pointer-events-none select-none text-clip text-[#61743d]">
-              Dedication
-            </h1>
+          <div className="relative sm:w-[40%] h-[100%] justify-center items-center flex flex-col">
+              <h1 className="text-center text-3xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
+                Our Dedication
+              </h1>
+              <h1 className="text-center text-3xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
+                To You
+              </h1>
 
-            <p>
-              Craftroots provides a connection between people, not
-              machines, through every step of the way. From vegetables
-              hand-picked and transported by local farmers to the same
-              vegetables being stocked & tracked by our pantry chef, to
-              the same vegetables being prepared expertly by our chefs,
-              to the same vegetables being served by our wait staff, to
-              the same vegetables being enjoyed by our customers,
-              human connections can help us benefit the community as
-              a whole.
-            </p>
+              <p className="text-white mt-[5%] px-[5%] sm:px-[2%]">
+                Craftroots provides a connection between people, not
+                machines, through every step of the way. From vegetables
+                hand-picked and transported by local farmers to the same
+                vegetables being stocked & tracked by our pantry chef, to
+                the same vegetables being prepared expertly by our chefs,
+                to the same vegetables being served by our wait staff, to
+                the same vegetables being enjoyed by our customers,
+                human connections can help us benefit the community as
+                a whole.
+              </p>
           </div>
         </div>
 
+        <div className="flex flex-col sm:flex-row items-center justify-evenly">
+          <div className="relative sm:w-[40%] h-[100%] justify-center items-center flex flex-col">
+              <h1 className="text-center text-3xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
+                Farm to Table
+              </h1>
 
+              <p className="text-white mt-[5%]">
+                The current state of the farming industry is no better than
+                many other industries. Preservative chemicals such as
+                sorbates and benzoates, which commonly appear on
+                nutrition labels, are undeniably detrimental to the human
+                body. Large farms also primarily use cheap and dangerous
+                pesticides, while local farms can take more care in anti-
+                pest measures. By partnering with local farms such as Doe
+                Organics and Three Sisters Farms, we can provide delicious
+                greens & vegetables without the risk of unnecessary
+                chemicals.
+              </p>
+          </div>
 
-        
+          <div className="sm:w-[50%] justify-center items-center relative">
+            <Image src={img6} alt="Man holding vegetables" className="scale-90"/>
+            <Image src={img5} alt="Tomato Outline" className="absolute top-[-25vh] right-[-15vw] z-[-10] scale-75"/>
+          </div>
+        </div>
       </div>
     </div>
   );
