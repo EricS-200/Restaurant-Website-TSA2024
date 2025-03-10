@@ -683,6 +683,132 @@ export default function Reference() {
     sourceLink="https://www.shutterstock.com/image-vector/vector-drawing-illustration-hand-drawn-ink-2446705883"
   />
 </li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Linktree - Depretechospecialist"
+    sourceLink="https://linktr.ee/depretechospecialist"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="iStock"
+    sourceLink="https://www.istockphoto.com/vector/pencil-drawing-of-garlic-gm1254551997-366718898"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Dreamstime"
+    sourceLink="https://www.dreamstime.com/hand-drawn-illustration-set-strawberries-hand-drawn-illustration-set-strawberries-izolated-om-fon-hatched-drawing-image180441367"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Facebook - Prescott Online MSFS"
+    sourceLink="https://www.facebook.com/groups/PrescottOnlineMSFS/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="VectorStock"
+    sourceLink="https://www.vectorstock.com/royalty-free-vector/french-lettuce-engraving-fresh-green-salad-sketch-vector-43906360"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="WingsBird"
+    sourceLink="https://wingsbird.in/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="iStock"
+    sourceLink="https://www.istockphoto.com/photo/ivy-plant-gm174836763-22784914"
+  />
+</li>
+<li>
+  <Citation
+    author="Shannon Vann"
+    authorLink="https://www.instagram.com/shannonvannsf/"
+    type="image"
+    source="Instagram"
+    sourceLink="https://www.instagram.com/shannonvannsf/reel/DFI4Gddvwp_/?locale=zh-hans&hl=ar"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Amazon UK"
+    sourceLink="https://www.amazon.co.uk/Botanical-minimalist-Watercolor-Minimalist-botanical/dp/B08NGXDDJ3"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="iStock"
+    sourceLink="https://www.istockphoto.com/photo/female-hands-holding-empty-plate-on-white-background-gm1084491202-290988186"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Online Web Fonts"
+    sourceLink="https://www.onlinewebfonts.com/download/6ab659c1656e922ff4692bcf9c1e1e33"
+  />
+</li>
+<li>
+  <Citation
+    author="Himala Unimal"
+    authorLink="https://www.instagram.com/himala_unimal/"
+    type="image"
+    source="Instagram"
+    sourceLink="https://www.instagram.com/himala_unimal/p/DGpCpnCz8-Z/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Clover Blog"
+    sourceLink="https://blog.clover.com/simple-restaurant-kitchen-layout-ideas/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Green Queen"
+    sourceLink="https://www.greenqueen.com.hk/what-is-sustainability-definition/"
+  />
+</li>
 
 <li>
   <Citation
