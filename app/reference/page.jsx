@@ -6,7 +6,7 @@ import kytsa from "@/public/kytsa-logo.webp";
 
 export default function Reference() {
   return (
-    <main className="bg-white flex flex-col items-center justify-center">
+    <main className="bg-white flex flex-col items-center justify-center pb-[5%]">
       <section className="flex items-center justify-center md:pt-24 flex-col bg-white">
         <h1 className="text-6xl lg:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-blue-800 pb-3">
           Reference Page
@@ -804,6 +804,70 @@ export default function Reference() {
               sourceLink="https://www.epa.gov/sustainable-management-food/food-donation-basics"
             />
           </li>
+          <li>
+            <Citation
+              author="Eastern Oregon University"
+              authorLink="https://online.eou.edu/"
+              type="article"
+              source="EOU Online"
+              sourceLink="https://online.eou.edu/resources/article/veganic-farming-importance-of-sustainable-agriculture/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Vegan Family Kitchen"
+              authorLink="https://veganfamilykitchen.com/"
+              type="article"
+              source="Vegan Family Kitchen"
+              sourceLink="https://veganfamilykitchen.com/vegan-cooking-for-beginners/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Restaurantware"
+              authorLink="https://www.restaurantware.com/"
+              type="blog"
+              source="Restaurantware Blog"
+              sourceLink="https://www.restaurantware.com/blogs/restaurant-management/how-to-run-a-successful-farm-to-table-restaurant?srsltid=AfmBOorD3QhPp1bAHTLYu0nRICPH1Cp9lk9uT1zrn6lO-C5TIQkNP15y"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Physicians Committee for Responsible Medicine"
+              authorLink="https://www.pcrm.org/"
+              type="report"
+              source="PCRM"
+              sourceLink="https://www.pcrm.org/good-nutrition/vegan-diet-environment"
+            />
+          </li>
+          <li>
+            <Citation
+              author="BBC Good Food"
+              authorLink="https://www.bbcgoodfood.com/"
+              type="recipes"
+              source="BBC Good Food"
+              sourceLink="https://www.bbcgoodfood.com/recipes/collection/vegan-recipes"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Clover"
+              authorLink="https://blog.clover.com/"
+              type="blog"
+              source="Clover Blog"
+              sourceLink="https://blog.clover.com/simple-restaurant-kitchen-layout-ideas/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Green Queen"
+              authorLink="https://www.greenqueen.com.hk/"
+              type="article"
+              source="Green Queen"
+              sourceLink="https://www.greenqueen.com.hk/what-is-sustainability-definition/"
+            />
+          </li>
+
         </ol>
       </section>
     </main>
