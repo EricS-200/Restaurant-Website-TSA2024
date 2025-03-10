@@ -9,7 +9,7 @@ import Dropdown from "@/components/Dropdown";
 import logoImage from "/public/logo.png";
 
 export default function Navbar() {
-  const pages = ["Our Story", "Menu", "Community", "Reserve & Order"];
+  const pages = ["Our Story", "Menu", "Reserve & Order"];
   const dropdownAboutFoodOptions = [
     { name: "Sustainability", url: "/sustainability" },
     { name: "Farm to Table", url: "/farm-to-table" },
@@ -24,8 +24,7 @@ export default function Navbar() {
   let pageMap = new Map();
   pageMap.set(pages[0], "/our-story");
   pageMap.set(pages[1], "/menu");
-  pageMap.set(pages[2], "/community");
-  pageMap.set(pages[3], "/reserve");
+  pageMap.set(pages[2], "/reserve");
 
   const currentPage = usePathname();
   const [show, setShow] = useState(true);
@@ -82,7 +81,7 @@ export default function Navbar() {
   }
 
   function returnOrderNowLink(isBold) {
-    const name = pages[3];
+    const name = pages[2];
     const link = pageMap.get(name);
 
     return (
@@ -188,13 +187,7 @@ export default function Navbar() {
 
               {returnLink(
                 pages[2],
-                currentPage === pageMap.get(pages[3]),
-                true
-              )}
-
-              {returnLink(
-                pages[3],
-                currentPage === pageMap.get(pages[4]),
+                currentPage === pageMap.get(pages[2]),
                 true
               )}
             </div>
@@ -225,10 +218,8 @@ export default function Navbar() {
                 options={dropdownAboutFoodOptions}
               />
 
-              {returnLink(pages[2], currentPage === pageMap.get(pages[2]))}
-
               <div className={"bg-gray-300/50  rounded-2xl py-1 px-2 flex"}>
-                {returnOrderNowLink(currentPage === pageMap.get(pages[3]))}
+                {returnOrderNowLink(currentPage === pageMap.get(pages[2]))}
               </div>
             </div>
           </div>

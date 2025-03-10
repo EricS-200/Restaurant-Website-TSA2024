@@ -174,11 +174,12 @@ export default function ClickToChange() {
             simultaneously.
           </p>
         </div>
-
-        <div className="relative">
-          
-        </div>
       </div>
+
+      <div className="relative flex flex-row justify-center items-center">
+          <Image src={img10} alt="" className="absolute bottom-0 scale-50"/>
+          <Image src={img12} alt="" className="absolute bottom-0 scale-50"/>
+        </div>
     </div>
   );
 }
