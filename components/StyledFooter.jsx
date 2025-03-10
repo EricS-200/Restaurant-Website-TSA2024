@@ -192,9 +192,9 @@ export default function StyledFooter() {
                 Menu
               </h1>
             </Link>
-            <Link target="" href="/order" locale="">
+            <Link target="" href="/reserve" locale="">
               <button className="w-44 text-xl md:text-2xl lg:text-3xl bg-orange-500 hover:bg-orange-400 text-amber-100 hover:text-white transition-all delay-100 leading-10 rounded-full justify-self-center">
-                Order Now
+                Make Reservation
               </button>
             </Link>
           </div>
