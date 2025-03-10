@@ -83,57 +83,57 @@ export default function Reference() {
         <h3 className="font-bold text-3xl text-center">Sitemap</h3>
         <p>For ease of access, all pages of this website are listed below:</p>
         <ul className="flex flex-col items-start font-bold">
-          <li>
-            <Link href="/" className=" hover:underline">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/our-story" className=" hover:underline">
-              Our Story
-            </Link>
-          </li>
-          <li>
-            <Link href="/menu" className=" hover:underline">
-              Our Menu
-            </Link>
-          </li>
-          <li className="">
-            <p className="text-left">About Our Food:</p>
-            <ul className="flex flex-col items-start ml-8 font-normal">
-              <li>
-                <Link href="/farm-to-table" className="   hover:underline">
-                  Farm To Table
-                </Link>
-              </li>
-              <li>
-                <Link href="/preparation" className="hover:underline">
-                  Preparation
-                </Link>
-              </li>
-              <li>
-                <Link href="/sustainability" className=" hover:underline">
-                  Sustainability
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Link href="/community" className="hover:underline">
-              Community
-            </Link>
-          </li>
-          <li>
-            <Link href="/order" className=" hover:underline">
-              Order Now
-            </Link>
-          </li>
-          <li>
-            <Link href="/reference" className=" hover:underline">
-              Reference
-            </Link>
-          </li>
-        </ul>
+        <li>
+          <Link href="/" className="hover:underline">
+            Home
+          </Link>
+        </li>
+        <li className="">
+          <p className="text-left">Our Story:</p>
+          <ul className="flex flex-col items-start ml-8 font-normal">
+            <li>
+              <Link href="/about-us" className="hover:underline">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/reference" className="hover:underline">
+                Reference
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link href="/menu" className="hover:underline">
+            Our Menu
+          </Link>
+        </li>
+        <li className="">
+          <p className="text-left">About Our Food:</p>
+          <ul className="flex flex-col items-start ml-8 font-normal">
+            <li>
+              <Link href="/farm-to-table" className="hover:underline">
+                Farm To Table
+              </Link>
+            </li>
+            <li>
+              <Link href="/preparation" className="hover:underline">
+                Preparation
+              </Link>
+            </li>
+            <li>
+              <Link href="/sustainability" className="hover:underline">
+                Sustainability
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link href="/order" className="hover:underline">
+            Order Now
+          </Link>
+        </li>
+      </ul>
       </section>
 
       <section className="bg-white mt-6 w-[95vw] sm:w-3/4 md:w-2/3 lg:w-3/5 text-center">
