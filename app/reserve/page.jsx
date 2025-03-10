@@ -8,7 +8,7 @@ export default function Reserve() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <main className="flex items-center justify-center w-full   text-white pb-[100px]">
+    <main className="flex items-center justify-center w-full   text-white pb-[100px] text-center">
       {submitted && (
         <div className="bg-black p-4 rounded flex flex-col items-center justify-center">
           <h1 className="font-bold text-4xl">

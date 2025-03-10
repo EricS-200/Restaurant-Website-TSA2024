@@ -7,8 +7,8 @@ import kytsa from "@/public/kytsa-logo.webp";
 export default function Reference() {
   return (
     <main className="bg-white flex flex-col items-center justify-center pb-[5%]">
-      <section className="flex items-center justify-center md:pt-24 flex-col bg-white">
-        <h1 className="text-6xl lg:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-blue-800 pb-3">
+      <section className="flex items-center justify-center pt-16 md:pt-24 flex-col bg-white">
+        <h1 className="text-center text-6xl lg:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-blue-800 pb-3">
           Reference Page
         </h1>
 
@@ -83,57 +83,57 @@ export default function Reference() {
         <h3 className="font-bold text-3xl text-center">Sitemap</h3>
         <p>For ease of access, all pages of this website are listed below:</p>
         <ul className="flex flex-col items-start font-bold">
-        <li>
-          <Link href="/" className="hover:underline">
-            Home
-          </Link>
-        </li>
-        <li className="">
-          <p className="text-left">Our Story:</p>
-          <ul className="flex flex-col items-start ml-8 font-normal">
-            <li>
-              <Link href="/about-us" className="hover:underline">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/reference" className="hover:underline">
-                Reference
-              </Link>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <Link href="/menu" className="hover:underline">
-            Our Menu
-          </Link>
-        </li>
-        <li className="">
-          <p className="text-left">About Our Food:</p>
-          <ul className="flex flex-col items-start ml-8 font-normal">
-            <li>
-              <Link href="/farm-to-table" className="hover:underline">
-                Farm To Table
-              </Link>
-            </li>
-            <li>
-              <Link href="/preparation" className="hover:underline">
-                Preparation
-              </Link>
-            </li>
-            <li>
-              <Link href="/sustainability" className="hover:underline">
-                Sustainability
-              </Link>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <Link href="/order" className="hover:underline">
-            Reserve & Order
-          </Link>
-        </li>
-      </ul>
+          <li>
+            <Link href="/" className="hover:underline">
+              Home
+            </Link>
+          </li>
+          <li className="">
+            <p className="text-left">Our Story:</p>
+            <ul className="flex flex-col items-start ml-8 font-normal">
+              <li>
+                <Link href="/about-us" className="hover:underline">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/reference" className="hover:underline">
+                  Reference
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <Link href="/menu" className="hover:underline">
+              Our Menu
+            </Link>
+          </li>
+          <li className="">
+            <p className="text-left">About Our Food:</p>
+            <ul className="flex flex-col items-start ml-8 font-normal">
+              <li>
+                <Link href="/farm-to-table" className="hover:underline">
+                  Farm To Table
+                </Link>
+              </li>
+              <li>
+                <Link href="/preparation" className="hover:underline">
+                  Preparation
+                </Link>
+              </li>
+              <li>
+                <Link href="/sustainability" className="hover:underline">
+                  Sustainability
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <Link href="/reserve" className="hover:underline">
+              Reserve
+            </Link>
+          </li>
+        </ul>
       </section>
 
       <section className="bg-white mt-6 w-[95vw] sm:w-3/4 md:w-2/3 lg:w-3/5 text-center">
@@ -612,240 +612,240 @@ export default function Reference() {
             />
           </li>
           <li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="University of Kentucky"
-    sourceLink="https://fcs-hes.ca.uky.edu/sites/fcs-hes.ca.uky.edu/files/fn-ssb-053-powerupwithplantprotein-pub.pdf"
-  />
-</li>
-<li>
-  <Citation
-    author="Source Agriculture"
-    authorLink="https://www.instagram.com/sourceagriculture/"
-    type="image"
-    source="Instagram"
-    sourceLink="https://www.instagram.cosm/sourceagriculture/p/C_wGbvVsMHr/"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="City of Cullman, Alabama"
-    sourceLink="https://cullmanal.gov/event/native-tree-sale/"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="Energy Theory"
-    sourceLink="https://energytheory.com/what-is-a-residential-solar-system/"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="DepositPhotos"
-    sourceLink="https://depositphotos.com/photo/ecological-concept-of-the-environment-with-the-cultivation-of-trees-planet-earth-physical-globe-of-259607942.html"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="Rehab.com"
-    sourceLink="https://www.rehab.com/the-willows-at-red-oak-recovery"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="Dreamstime"
-    sourceLink="https://www.dreamstime.com/tomato-fresh-food-hand-drawn-illustration-drawing-engraving-ink-line-art-engra-image106111223"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="Shutterstock"
-    sourceLink="https://www.shutterstock.com/image-vector/vector-drawing-illustration-hand-drawn-ink-2446705883"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="Linktree - Depretechospecialist"
-    sourceLink="https://linktr.ee/depretechospecialist"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="iStock"
-    sourceLink="https://www.istockphoto.com/vector/pencil-drawing-of-garlic-gm1254551997-366718898"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="Dreamstime"
-    sourceLink="https://www.dreamstime.com/hand-drawn-illustration-set-strawberries-hand-drawn-illustration-set-strawberries-izolated-om-fon-hatched-drawing-image180441367"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="Facebook - Prescott Online MSFS"
-    sourceLink="https://www.facebook.com/groups/PrescottOnlineMSFS/"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="VectorStock"
-    sourceLink="https://www.vectorstock.com/royalty-free-vector/french-lettuce-engraving-fresh-green-salad-sketch-vector-43906360"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="WingsBird"
-    sourceLink="https://wingsbird.in/"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="iStock"
-    sourceLink="https://www.istockphoto.com/photo/ivy-plant-gm174836763-22784914"
-  />
-</li>
-<li>
-  <Citation
-    author="Shannon Vann"
-    authorLink="https://www.instagram.com/shannonvannsf/"
-    type="image"
-    source="Instagram"
-    sourceLink="https://www.instagram.com/shannonvannsf/reel/DFI4Gddvwp_/?locale=zh-hans&hl=ar"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="Amazon UK"
-    sourceLink="https://www.amazon.co.uk/Botanical-minimalist-Watercolor-Minimalist-botanical/dp/B08NGXDDJ3"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="iStock"
-    sourceLink="https://www.istockphoto.com/photo/female-hands-holding-empty-plate-on-white-background-gm1084491202-290988186"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="Online Web Fonts"
-    sourceLink="https://www.onlinewebfonts.com/download/6ab659c1656e922ff4692bcf9c1e1e33"
-  />
-</li>
-<li>
-  <Citation
-    author="Himala Unimal"
-    authorLink="https://www.instagram.com/himala_unimal/"
-    type="image"
-    source="Instagram"
-    sourceLink="https://www.instagram.com/himala_unimal/p/DGpCpnCz8-Z/"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="Clover Blog"
-    sourceLink="https://blog.clover.com/simple-restaurant-kitchen-layout-ideas/"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="Green Queen"
-    sourceLink="https://www.greenqueen.com.hk/what-is-sustainability-definition/"
-  />
-</li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="University of Kentucky"
+              sourceLink="https://fcs-hes.ca.uky.edu/sites/fcs-hes.ca.uky.edu/files/fn-ssb-053-powerupwithplantprotein-pub.pdf"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Source Agriculture"
+              authorLink="https://www.instagram.com/sourceagriculture/"
+              type="image"
+              source="Instagram"
+              sourceLink="https://www.instagram.cosm/sourceagriculture/p/C_wGbvVsMHr/"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="City of Cullman, Alabama"
+              sourceLink="https://cullmanal.gov/event/native-tree-sale/"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Energy Theory"
+              sourceLink="https://energytheory.com/what-is-a-residential-solar-system/"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="DepositPhotos"
+              sourceLink="https://depositphotos.com/photo/ecological-concept-of-the-environment-with-the-cultivation-of-trees-planet-earth-physical-globe-of-259607942.html"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Rehab.com"
+              sourceLink="https://www.rehab.com/the-willows-at-red-oak-recovery"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Dreamstime"
+              sourceLink="https://www.dreamstime.com/tomato-fresh-food-hand-drawn-illustration-drawing-engraving-ink-line-art-engra-image106111223"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Shutterstock"
+              sourceLink="https://www.shutterstock.com/image-vector/vector-drawing-illustration-hand-drawn-ink-2446705883"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Linktree - Depretechospecialist"
+              sourceLink="https://linktr.ee/depretechospecialist"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="iStock"
+              sourceLink="https://www.istockphoto.com/vector/pencil-drawing-of-garlic-gm1254551997-366718898"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Dreamstime"
+              sourceLink="https://www.dreamstime.com/hand-drawn-illustration-set-strawberries-hand-drawn-illustration-set-strawberries-izolated-om-fon-hatched-drawing-image180441367"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Facebook - Prescott Online MSFS"
+              sourceLink="https://www.facebook.com/groups/PrescottOnlineMSFS/"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="VectorStock"
+              sourceLink="https://www.vectorstock.com/royalty-free-vector/french-lettuce-engraving-fresh-green-salad-sketch-vector-43906360"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="WingsBird"
+              sourceLink="https://wingsbird.in/"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="iStock"
+              sourceLink="https://www.istockphoto.com/photo/ivy-plant-gm174836763-22784914"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Shannon Vann"
+              authorLink="https://www.instagram.com/shannonvannsf/"
+              type="image"
+              source="Instagram"
+              sourceLink="https://www.instagram.com/shannonvannsf/reel/DFI4Gddvwp_/?locale=zh-hans&hl=ar"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Amazon UK"
+              sourceLink="https://www.amazon.co.uk/Botanical-minimalist-Watercolor-Minimalist-botanical/dp/B08NGXDDJ3"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="iStock"
+              sourceLink="https://www.istockphoto.com/photo/female-hands-holding-empty-plate-on-white-background-gm1084491202-290988186"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Online Web Fonts"
+              sourceLink="https://www.onlinewebfonts.com/download/6ab659c1656e922ff4692bcf9c1e1e33"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Himala Unimal"
+              authorLink="https://www.instagram.com/himala_unimal/"
+              type="image"
+              source="Instagram"
+              sourceLink="https://www.instagram.com/himala_unimal/p/DGpCpnCz8-Z/"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Clover Blog"
+              sourceLink="https://blog.clover.com/simple-restaurant-kitchen-layout-ideas/"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Green Queen"
+              sourceLink="https://www.greenqueen.com.hk/what-is-sustainability-definition/"
+            />
+          </li>
 
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="North Sydney Council"
-    sourceLink="https://www.northsydney.nsw.gov.au/waste-recycling/book-bulky-waste-pick"
-  />
-</li>
-<li>
-  <Citation
-    author="PNGTree"
-    authorLink="https://pngtree.com"
-    type="image"
-    source="PNGTree"
-    sourceLink="https://pngtree.com/freepng/honeycomb-illustration-design-wallpaper-bees-line-vector_10918963.html"
-  />
-</li>
-<li>
-  <Citation
-    author="NALM Clinic"
-    authorLink="https://nalmclinic.com"
-    type="image"
-    source="NALM Clinic"
-    sourceLink="https://nalmclinic.com/blog-1/2022/9/21/do-you-need-to-exclude-gluten-when-you-have-ibd"
-  />
-</li>
-<li>
-  <Citation
-    author=""
-    authorLink=""
-    type="image"
-    source="Bing Images"
-    sourceLink="https://th.bing.com/th/id/OIP.yGqGywqfp2P_XNSYx5YjbQHaHa?rs=1&pid=ImgDetMain"
-  />
-</li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="North Sydney Council"
+              sourceLink="https://www.northsydney.nsw.gov.au/waste-recycling/book-bulky-waste-pick"
+            />
+          </li>
+          <li>
+            <Citation
+              author="PNGTree"
+              authorLink="https://pngtree.com"
+              type="image"
+              source="PNGTree"
+              sourceLink="https://pngtree.com/freepng/honeycomb-illustration-design-wallpaper-bees-line-vector_10918963.html"
+            />
+          </li>
+          <li>
+            <Citation
+              author="NALM Clinic"
+              authorLink="https://nalmclinic.com"
+              type="image"
+              source="NALM Clinic"
+              sourceLink="https://nalmclinic.com/blog-1/2022/9/21/do-you-need-to-exclude-gluten-when-you-have-ibd"
+            />
+          </li>
+          <li>
+            <Citation
+              author=""
+              authorLink=""
+              type="image"
+              source="Bing Images"
+              sourceLink="https://th.bing.com/th/id/OIP.yGqGywqfp2P_XNSYx5YjbQHaHa?rs=1&pid=ImgDetMain"
+            />
+          </li>
           <li>
             <Citation
               author="DrJ"
@@ -999,7 +999,6 @@ export default function Reference() {
               sourceLink="https://www.greenqueen.com.hk/what-is-sustainability-definition/"
             />
           </li>
-
         </ol>
       </section>
     </main>
