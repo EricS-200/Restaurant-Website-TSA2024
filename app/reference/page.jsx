@@ -612,6 +612,115 @@ export default function Reference() {
             />
           </li>
           <li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="University of Kentucky"
+    sourceLink="https://fcs-hes.ca.uky.edu/sites/fcs-hes.ca.uky.edu/files/fn-ssb-053-powerupwithplantprotein-pub.pdf"
+  />
+</li>
+<li>
+  <Citation
+    author="Source Agriculture"
+    authorLink="https://www.instagram.com/sourceagriculture/"
+    type="image"
+    source="Instagram"
+    sourceLink="https://www.instagram.cosm/sourceagriculture/p/C_wGbvVsMHr/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="City of Cullman, Alabama"
+    sourceLink="https://cullmanal.gov/event/native-tree-sale/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Energy Theory"
+    sourceLink="https://energytheory.com/what-is-a-residential-solar-system/"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="DepositPhotos"
+    sourceLink="https://depositphotos.com/photo/ecological-concept-of-the-environment-with-the-cultivation-of-trees-planet-earth-physical-globe-of-259607942.html"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Rehab.com"
+    sourceLink="https://www.rehab.com/the-willows-at-red-oak-recovery"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Dreamstime"
+    sourceLink="https://www.dreamstime.com/tomato-fresh-food-hand-drawn-illustration-drawing-engraving-ink-line-art-engra-image106111223"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Shutterstock"
+    sourceLink="https://www.shutterstock.com/image-vector/vector-drawing-illustration-hand-drawn-ink-2446705883"
+  />
+</li>
+
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="North Sydney Council"
+    sourceLink="https://www.northsydney.nsw.gov.au/waste-recycling/book-bulky-waste-pick"
+  />
+</li>
+<li>
+  <Citation
+    author="PNGTree"
+    authorLink="https://pngtree.com"
+    type="image"
+    source="PNGTree"
+    sourceLink="https://pngtree.com/freepng/honeycomb-illustration-design-wallpaper-bees-line-vector_10918963.html"
+  />
+</li>
+<li>
+  <Citation
+    author="NALM Clinic"
+    authorLink="https://nalmclinic.com"
+    type="image"
+    source="NALM Clinic"
+    sourceLink="https://nalmclinic.com/blog-1/2022/9/21/do-you-need-to-exclude-gluten-when-you-have-ibd"
+  />
+</li>
+<li>
+  <Citation
+    author=""
+    authorLink=""
+    type="image"
+    source="Bing Images"
+    sourceLink="https://th.bing.com/th/id/OIP.yGqGywqfp2P_XNSYx5YjbQHaHa?rs=1&pid=ImgDetMain"
+  />
+</li>
+          <li>
             <Citation
               author="DrJ"
               authorLink="https://www.drrusselljaffe.com/author/dr-j/"
