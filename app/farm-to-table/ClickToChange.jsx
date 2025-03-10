@@ -100,18 +100,18 @@ export default function ClickToChange() {
           {page.content}
         </div>
       ))}
-      <div className="bg-[#36685d] px-[2%]">
+      <div className="bg-[#36685d] px-[2%] pb-[10%] overflow-x-hidden">
         <div className="flex flex-col sm:flex-row items-center justify-evenly">
           <div className="sm:w-[50%] justify-center items-center relative">
-            <Image src={img4} alt="Man holding vegetables" className="scale-90"/>
+            <Image src={img4} alt="" className="scale-90"/>
             <Image src={img3} alt="Tomato Outline" className="hidden sm:block absolute top-[-15vh] left-[-15vw] scale-50"/>
           </div>
 
           <div className="relative sm:w-[40%] h-[100%] justify-center items-center flex flex-col">
-              <h1 className="text-center text-3xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
+              <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold pt-[3%] md:pt-[0%]">
                 Our Dedication
               </h1>
-              <h1 className="text-center text-3xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
+              <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
                 To You
               </h1>
 
@@ -131,7 +131,7 @@ export default function ClickToChange() {
 
         <div className="flex flex-col sm:flex-row items-center justify-evenly">
           <div className="relative sm:w-[40%] h-[100%] justify-center items-center flex flex-col">
-              <h1 className="text-center text-3xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
+              <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold pt-[3%] md:pt-[0%]">
                 Farm to Table
               </h1>
 
@@ -150,9 +150,29 @@ export default function ClickToChange() {
           </div>
 
           <div className="sm:w-[50%] justify-center items-center relative">
-            <Image src={img6} alt="Man holding vegetables" className="scale-90"/>
-            <Image src={img5} alt="Tomato Outline" className="absolute top-[-25vh] right-[-15vw] z-[-10] scale-75"/>
+            <Image src={img6} alt="" className="scale-90"/>
+            <Image src={img5} alt="Potted Plant" className="absolute top-[-25vh] right-[-15vw] z-[-10] scale-75"/>
           </div>
+        </div>
+
+        <div className="relative h-[30vh]">
+          <Image src={img7} alt="" className="absolute top-[-30vh] right-0"/>
+        </div>
+
+        <div className="w-full justify-center items-center flex flex-col">
+          <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
+            Cooking is Our Home
+          </h1>
+
+          <p className="w-[75%] lg:w-[50%] text-white pt-[5%]">
+            We see cooking as a way to connect people in all ways, shapes, and forms.
+            Through our cooking, we aim to be able to not only connect our cultural origins
+            to our community, but also connect all parts of our community. For this
+            reason, we partner not only with local farms, but with other local business for
+            all facets of our operations. By doing this, we want to use cooking to be able to
+            both provide a second home for our own culture and benefit our current home
+            simultaneously.
+          </p>
         </div>
       </div>
     </div>
