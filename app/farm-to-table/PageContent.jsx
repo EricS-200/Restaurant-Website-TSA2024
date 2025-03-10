@@ -66,7 +66,7 @@ import image5 from "@/public/videos/video5Img.jpg";
   const GetPage2Content = () => {
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
     return (
-        <div className="relative w-full h-full flex justify-center items-center">
+        <div className="relative w-full h-[100vh] flex justify-center items-center">
         <div className="relative w-full h-full">
             {!isVideoLoaded && (
             <Image
@@ -119,7 +119,7 @@ import image5 from "@/public/videos/video5Img.jpg";
   const GetPage3Content = () => {
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
     return (
-        <div className="relative w-full h-full flex justify-center items-center">
+        <div className="relative w-full h-[100vh] flex justify-center items-center">
         <div className="relative w-full h-full">
             {!isVideoLoaded && (
             <Image
@@ -176,7 +176,7 @@ import image5 from "@/public/videos/video5Img.jpg";
   const GetPage4Content = () => {
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
     return (
-        <div className="relative w-full h-full flex justify-center items-center">
+        <div className="relative w-full h-[100vh] flex justify-center items-center">
         <div className="relative w-full h-full">
             {!isVideoLoaded && (
             <Image
@@ -211,7 +211,7 @@ import image5 from "@/public/videos/video5Img.jpg";
             <p className="absolute top-[30vh] right-[10vw] w-[45vw] z-30 text-white font-medium font-seasons text-2xl xl:text-4xl">
               The current state of the farming industry is no better than many other industries. 
               Preservative chemicals such as sorbates and benzoates, which commonly appear on nutrition labels, are undeniably detrimental to the human body. 
-              Large farms also primarily use cheap and dangerous pesticides, while local farms can take more care in anti-pest measures. 
+              Large farms also primarily use cheap and dangerous pesticides, while local farms can take more care in anti pest measures. 
               By partnering with local farms such as Doe Organics and Three Sisters Farms, we can provide delicious greens and vegetables without the risk of unnecessary chemicals.
             </p>
           </div>
@@ -220,7 +220,7 @@ import image5 from "@/public/videos/video5Img.jpg";
             <p className="absolute top-[35vh] left-[10vw] w-[80vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
               The current state of the farming industry is no better than many other industries. 
               Preservative chemicals such as sorbates and benzoates, which commonly appear on nutrition labels, are undeniably detrimental to the human body. 
-              Large farms also primarily use cheap and dangerous pesticides, while local farms can take more care in anti-pest measures. 
+              Large farms also primarily use cheap and dangerous pesticides, while local farms can take more care in anti pest measures. 
               By partnering with local farms such as Doe Organics and Three Sisters Farms, we can provide delicious greens and vegetables without the risk of unnecessary chemicals.
             </p>
           </div>
@@ -233,7 +233,7 @@ import image5 from "@/public/videos/video5Img.jpg";
   const GetPage5Content = () => {
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
     return (
-        <div className="relative w-full h-full flex justify-center items-center">
+        <div className="relative w-full h-[100vh] flex justify-center items-center">
         <div className="relative w-full h-full">
             {!isVideoLoaded && (
             <Image

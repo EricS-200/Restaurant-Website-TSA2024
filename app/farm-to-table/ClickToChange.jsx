@@ -4,53 +4,15 @@ import React, { useState, useEffect } from "react";
 import { GetPage1Content, GetPage2Content, GetPage3Content, GetPage4Content, GetPage5Content } from "@/app/farm-to-table/PageContent";
 
 export default function ClickToChange() {
-  let topStyle = "h-fit";
-
-  let RestOfThePage = (
-    <div className="bg-green-700">
-      <div className="flex flex-row">
-        <div>
-          <p className="text-[#d5b928]">Our Dedication To You</p>
-          <p>
-          Lorem ipsum dolor sit amet\ia pharetra sit amet ut nunc.
-          Integer nec felis eu nulla bibendum tempus. Curabitur
-          varius, ex eget tempus interdum, elit arcu fermentum odio,
-          in scelerisque nunc erat nec nunc. Vestibulum dignissim
-          justo non lectus tristique, ac luctus odio molestie. Aenean
-          ut erat in turpis malesuada euismod at in tortor.
-          </p>
-        </div>
-
-        <div>
-          {/* <Image src={} alt="Man holding vegetables"/> */}
-        </div>
-      </div>
-
-
-
-      <div>
-        <div>
-          <p>Farm To Table</p>
-          <p>
-          Lorem ipsum dolor sit amet\ia pharetra sit amet ut nunc.
-          Integer nec felis eu nulla bibendum tempus. Curabitur
-          varius, ex eget tempus interdum, elit arcu fermentum odio,
-          in scelerisque nunc erat nec nunc. Vestibulum dignissim
-          justo non lectus tristique, ac luctus odio molestie. Aenean
-          ut erat in turpis malesuada euismod at in tortor.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+  let topStyle = "w-full h-fit";
 
   const [activePage, setActivePage] = useState(0);
   const [pages, setPages] = useState([
-    { bg: "bg-[#38a8cc]", zIndex: 2, clipPath: "", content: <div className={topStyle}><GetPage1Content/>{RestOfThePage}</div> },
-    { bg: "bg-[#004444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage2Content/>{RestOfThePage}</div> },
-    { bg: "bg-[#884444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage3Content/>{RestOfThePage}</div> },
-    { bg: "bg-[#555588]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage4Content/>{RestOfThePage}</div> },
-    { bg: "bg-[#a84466]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage5Content/>{RestOfThePage}</div> },
+    { bg: "bg-[#38a8cc]", zIndex: 2, clipPath: "", content: <div className={topStyle}><GetPage1Content/></div> },
+    { bg: "bg-[#004444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage2Content/></div> },
+    { bg: "bg-[#884444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage3Content/></div> },
+    { bg: "bg-[#555588]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage4Content/></div> },
+    { bg: "bg-[#a84466]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage5Content/></div> },
   ]);
 
   const initialVisible = Array(pages.length).fill(false);
@@ -124,6 +86,41 @@ export default function ClickToChange() {
           {page.content}
         </div>
       ))}
+      <div className="bg-green-700 px-[2%]">
+        <div className="flex flex-col sm:flex-row">
+          <div className="sm:w-[40%]">
+            {/* <Image src={} alt="Man holding vegetables"/> */}
+          </div>
+
+          <div className="relative sm:w-[60%] h-fit">
+            <h1 className="text-center text-3xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
+              Our Dedication
+            </h1>
+            <h1 className="text-center text-3xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold">
+              To You
+            </h1>
+            <h1 className="hidden sm:block absolute w-[70vw] bottom-[-9vh] sm:bottom-[18vh] lg:bottom-[10vh] right-[17.7vw] sm:left-[0] font-mistrully opacity-70 text-[7rem] md:text-[9rem] lg:text-[11rem] pointer-events-none select-none text-clip text-[#61743d]">
+              Dedication
+            </h1>
+
+            <p>
+              Craftroots provides a connection between people, not
+              machines, through every step of the way. From vegetables
+              hand-picked and transported by local farmers to the same
+              vegetables being stocked & tracked by our pantry chef, to
+              the same vegetables being prepared expertly by our chefs,
+              to the same vegetables being served by our wait staff, to
+              the same vegetables being enjoyed by our customers,
+              human connections can help us benefit the community as
+              a whole.
+            </p>
+          </div>
+        </div>
+
+
+
+        
+      </div>
     </div>
   );
 }
