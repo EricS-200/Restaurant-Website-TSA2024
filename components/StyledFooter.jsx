@@ -193,14 +193,14 @@ export default function StyledFooter() {
               </h1>
             </Link>
             <Link target="" href="/reserve" locale="">
-              <button className="w-44 text-xl md:text-2xl lg:text-3xl bg-orange-500 hover:bg-orange-400 text-amber-100 hover:text-white transition-all delay-100 leading-10 rounded-full justify-self-center">
+              <button className="w-[200px] text-xl md:text-2xl lg:text-3xl bg-orange-500 hover:bg-orange-400 text-amber-100 hover:text-white transition-all delay-100 leading-10 rounded-full justify-self-center">
                 Make Reservation
               </button>
             </Link>
           </div>
         </div>
       </div>
-      <div className="w-3/5 justify-evenly flex flex-row place-self-center py-5">
+      <div className="w-3/5 justify-evenly flex flex-row place-self-center py-5 lg:mt-10">
         {
           // legal & socials div
         }
