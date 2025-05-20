@@ -121,10 +121,14 @@ export default function sustainability() {
           />
         </div>
       </section>
-      <section className="flex px-[50px] overflow-x-clip pb-4">
-        <div className="w-1/2 flex flex-col items-center justify-center">
-          <Image src={image25} alt="" className="" />
-          <p className="text-xl leading-loose ">
+      <section className="mt-[px] md:mt-[150px] lg:mt-[0px] flex px-[50px] overflow-x-clip pb-[100px] lg:flex-row flex-col">
+        <div className="w-full lg:w-1/2 flex flex-col items-center justify-center">
+          <Image
+            src={image25}
+            alt=""
+            className="max-w-[500px] hidden lg:block"
+          />
+          <p className="text-xl leading-loose text-center lg:text-left ">
             Sustainability isn&apos;t just a choice, it&apos;s a commitment to
             protecting the earth for future generations. By reducing waste,
             conserving resources, and supporting eco-friendly farming, we help
@@ -134,7 +138,7 @@ export default function sustainability() {
           </p>
         </div>
         <div>
-          <Image src={image26} alt="" className="w-full translate-x-[10%]" />
+          <Image src={image26} alt="" className="w-full lg:translate-x-[10%]" />
         </div>
       </section>
       <section className="-mb-[100px]">
