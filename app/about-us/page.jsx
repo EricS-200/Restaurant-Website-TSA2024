@@ -34,7 +34,17 @@ export default function about() {
           About Us
         </h1>
       </section>
-      <section className="my-8  relative">
+      <section className="my-8 relative">
+        <Image
+          src={image3}
+          alt=""
+          className="absolute left-0 top-[100px] max-w-[300px] md:block hidden"
+        />
+        <Image
+          alt=""
+          className="absolute bottom-0 right-[30%] 2xl:right-[40%] translate-y-[20%] lg:block hidden"
+          src={image5}
+        />
         <div className="text-center relative bg-white py-6">
           <h3 className="text-nowrap hidden md:block text-[#de7008] font-mistrully opacity-30 text-[10rem] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[40%] select-none pointer-events-none">
             Our Story
@@ -45,16 +55,15 @@ export default function about() {
           <div className="flex flex-col lg:flex-row lg:space-x-8 px-8 xl:w-2/3 items-center">
             <Image src={image2} alt="" className="" />
             <p className="w-full sm:w-[80%] text-center lg:text-left text-xl leading-loose">
-              Craftroots provides a connection between people, not machines,
-              through every step of the way. From vegetables hand-picked and
-              transported by local farmers to the same vegetables being stocked
-              & tracked by our pantry chef, to the same vegetables being
-              prepared expertly by our chefs,
+              We take care to celebrate the farmers that work hard to provide
+              the highest quality food to serve our customers. Sourced from
+              natural grown farms all across the world, we ensure our
+              ingredients are not only fresh, but delicious.
             </p>
           </div>
         </div>
       </section>
-      <section className="bg-white mx-4 lg:mx-14 my-4 p-4 lg:p-16">
+      <section className="bg-white mx-4 lg:mx-14 my-4 p-4 lg:p-16 relative">
         <div className="relative">
           <h3 className="inset-0 text-center lg:text-left -translate-y-full -translate-x-[5%] text-nowrap hidden md:block text-[#fddc5c] font-mistrully opacity-50 text-[9rem] absolute select-none pointer-events-none">
             Our Mission
@@ -64,13 +73,24 @@ export default function about() {
           </h2>
         </div>
         <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-4 ">
-          <p className="lg:w-1/2 text-xl mt-4 leading-loose text-center lg:text-left">
-            Craftroots provides a connection between people, not machines,
-            through every step of the way. From vegetables hand-picked and
-            transported by local farmers to the same vegetables being stocked &
-            tracked by our pantry chef, to the same vegetables being prepared
-            expertly by our chefs,
-          </p>
+          <div className="lg:w-1/2 text-xl mt-4 leading-loose text-center lg:text-left">
+            <p className="mb-4">
+              We are a passionate collective of food lovers, chefs, and
+              sustainability advocates brought together by one shared belief:
+              that plant-based food should never be boring. Our restaurant was
+              born from a dream to reinvent traditional Pan-Asian cuisine
+              through a vibrant, vegan lens, where bold flavors, seasonal
+              ingredients, and innovative techniques come together in every
+              bite.
+            </p>
+            <p>
+              Our mission is to bring flavorful, plant-powered Pan-Asian cuisine
+              to the table while supporting local farmers, reducing our
+              environmental impact, and promoting a more compassionate way of
+              eating. We believe in food that nourishes the body, respects the
+              planet, and celebrates culture.
+            </p>
+          </div>
           <div className="lg:w-1/2 h-full flex items-center justify-center">
             <Image src={image15} alt="" className="lg:max-w-[600px]" />
             <Image
@@ -81,7 +101,12 @@ export default function about() {
           </div>
         </div>
       </section>
-      <section className="lg:p-8 2xl:w-[90%] lg:mx-4 space-y-8">
+      <section className="lg:p-8 2xl:w-[90%] lg:mx-4 space-y-8 relative">
+        <Image
+          src={image14}
+          alt=""
+          className="absolute left-0 top-0 max-w-[300px] 2xl:max-w-[400px] 2xl:-translate-x-[70px] -translate-y-[30%] hidden lg:block"
+        />
         <div className="relative my-4 lg:w-2/3 ml-auto">
           <h3 className="text-center inset-0 -translate-y-full text-nowrap hidden md:block text-[#2c8748] font-mistrully opacity-30 text-[9rem] absolute select-none pointer-events-none">
             Our Goals
@@ -92,37 +117,49 @@ export default function about() {
         </div>
 
         <div className="w-full flex flex-col lg:flex-row relative">
+          <Image
+            src={image11}
+            alt=""
+            className="absolute right-0 top-0 translate-x-[60%] 2xl:translate-x-[80px] -translate-y-[30px] hidden lg:block"
+          />
           <div className="basis-1/3 flex items-center justify-center order-2 lg:order-1 my-4 lg:my-0">
             <Image src={image6} className="" alt="" />
           </div>
           <div className="basis-2/3 space-y-5 flex flex-col justify-center items-center order-1 lg:order-2">
             <h4 className="text-center font-kenao text-7xl text-[#2c8748]">
-              Goal I
+              I. Elevate Veganism
             </h4>
             <p className="text-center max-w-[90%]">
-              Craftroots provides a connection between people, not machines,
-              through every step of the way. From vegetables hand-picked and
-              transported by local farmers to the same vegetables being stocked
-              & tracked by our pantry chef, to the same vegetables being
-              prepared expertly by our chefs,
+              We collaborate with chefs and culinary innovators to reinvent
+              traditional Asian recipes using creative plant-based alternatives,
+              offering guests a dining experience that is both nostalgic and
+              new.
             </p>
           </div>
         </div>
 
         <div className="w-full flex flex-col lg:flex-row relative">
+          <Image
+            src={image12}
+            className="absolute bottom-0 translate-y-1/2 -translate-x-1/2 right-0 xl:block hidden"
+            alt=""
+          />
+          <Image
+            alt=""
+            src={image13}
+            className="absolute translate-y-1/2 -translate-x-[10%] bottom-0 left-0 lg:block hidden"
+          />
           <div className="basis-1/3 flex items-center justify-center order-2 lg:order-1 my-4 lg:my-0">
             <Image src={image7} className="" alt="" />
           </div>
           <div className="basis-2/3 space-y-5 flex flex-col justify-center items-center order-1 lg:order-2">
             <h4 className="text-center font-kenao text-7xl text-[#2c8748]">
-              Goal II
+              II. Support Local Farmers
             </h4>
             <p className="text-center max-w-[90%]">
-              Craftroots provides a connection between people, not machines,
-              through every step of the way. From vegetables hand-picked and
-              transported by local farmers to the same vegetables being stocked
-              & tracked by our pantry chef, to the same vegetables being
-              prepared expertly by our chefs,
+              We source the majority of our fresh produce and key ingredients
+              from local farms within a 100-mile radius, fostering strong
+              community partnerships and reducing food miles.
             </p>
           </div>
         </div>
@@ -133,14 +170,13 @@ export default function about() {
           </div>
           <div className="basis-2/3 space-y-5 flex flex-col justify-center items-center order-1 lg:order-2">
             <h4 className="text-center font-kenao text-7xl text-[#2c8748]">
-              Goal III
+              III. Promote Sustainability
             </h4>
             <p className="text-center max-w-[90%]">
-              Craftroots provides a connection between people, not machines,
-              through every step of the way. From vegetables hand-picked and
-              transported by local farmers to the same vegetables being stocked
-              & tracked by our pantry chef, to the same vegetables being
-              prepared expertly by our chefs,
+              From compostable takeout packaging to minimizing food waste in our
+              kitchen, we&apos;ve built sustainability into the core of our
+              operations. We also offer incentives for guests who bring reusable
+              containers.
             </p>
           </div>
         </div>
@@ -151,14 +187,12 @@ export default function about() {
           </div>
           <div className="basis-2/3 space-y-5 flex flex-col justify-center items-center order-1 lg:order-2">
             <h4 className="text-center font-kenao text-7xl text-[#2c8748]">
-              Goal IV
+              IV. Build a Community
             </h4>
             <p className="text-center max-w-[90%]">
-              Craftroots provides a connection between people, not machines,
-              through every step of the way. From vegetables hand-picked and
-              transported by local farmers to the same vegetables being stocked
-              & tracked by our pantry chef, to the same vegetables being
-              prepared expertly by our chefs,
+              Through cooking workshops, community dinners, and educational
+              events, we&apos;re creating a space where everyone can connect,
+              learn, and share their love for plant-based food.
             </p>
           </div>
         </div>
