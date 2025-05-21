@@ -195,15 +195,15 @@ export default function preparation() {
               <Image src={image15} alt="" className="w-full relative" />
             </div>
             <div className="text-center relative flex-1 flex justify-center -translate-y-1/3 md:translate-y-0">
-              <p className="lg:w-1/2 w-[95%]">
+              <p className="lg:w-1/2 w-[95%] lg:text-2xl">
                 Our menu is fitted to the changing seasons, as we only use the
-                freshest vegetables for any time of year.
+                freshest vegetables for any time of year. We ensure only the healthiest foods for our guests.
               </p>
             </div>
           </div>
           <div className="w-full flex justify-between items-center lg:-translate-y-1/4 md:flex-row flex-col">
             <div className="text-center relative flex-1 flex justify-center order-2 md:order-1 -translate-y-[20%] md:translate-y-0">
-              <p className="lg:w-1/2 w-[95%]">
+              <p className="lg:w-1/2 w-[95%] lg:text-2xl">
                 We take utmost care in honoring and spreading our cultural
                 heritage by serving lesser-known vegetarian pan-Asian dishes
                 while still preserving our own unique identity.
@@ -233,10 +233,11 @@ export default function preparation() {
               <Image src={image18} alt="" className="w-full relative" />
             </div>
             <div className="text-center relative flex-1 flex justify-center -translate-y-1/3 md:translate-y-0">
-              <p className="lg:w-1/2 w-[95%]">
+              <p className="lg:w-1/2 w-[95%] lg:text-2xl">
                 Nothing goes to waste at Craftroots. Any clippings or
                 &quot;discards&quot; are used as much as possible, whether it be
                 pickling, preserving, composting, or making soup stocks.
+                We try to make a positive impact on the planet.
               </p>
             </div>
           </div>
