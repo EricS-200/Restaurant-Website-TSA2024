@@ -393,18 +393,6 @@ export default function Menu() {
   );
 }
 
-/*
-{
-  name: "",
-  price: -1,
-  src: ,
-  vegan: ,
-  spice: ,
-  type: "",
-  description: ""
-},
-*/
-
 function GetSideDishes() {
   return [
     {
@@ -617,7 +605,7 @@ function GetDesserts() {
       spice: 0,
       type: "dessert",
       description:
-        "A classic French-inspired tart featuring a buttery crust layered with pastry cream and topped with fresh berries (strawberries, blueberries, raspberries). Perfect for a light, fruity finish to any meal.",
+        "A classic French inspired tart featuring a buttery crust layered with pastry cream and topped with fresh berries (strawberries, blueberries, raspberries). Perfect for a light, fruity finish to any meal.",
       shortDescription: "A buttery tart topped with fresh mixed berries.",
       display: true,
     },
@@ -642,7 +630,7 @@ function GetDesserts() {
       type: "dessert",
       description:
         "Silken tofu blended with premium matcha, lightly sweetened for a creamy and refreshing treat. A fusion of Japanese tea culture and plant-based dessert innovation.",
-      shortDescription: "A creamy tofu-based dessert infused with matcha.",
+      shortDescription: "A creamy tofu based dessert infused with matcha.",
       display: true,
     },
     {
@@ -653,7 +641,7 @@ function GetDesserts() {
       spice: 0,
       type: "dessert",
       description:
-        "Tangy yogurt base mixed with tropical fruits like kiwi and pineapple, then gently dehydrated to create a chewy, flavor-packed bite. Inspired by Southeast Asian yogurt snacks.",
+        "Tangy yogurt base mixed with tropical fruits like kiwi and pineapple, then gently dehydrated to create a chewy, flavor packed bite. Inspired by Southeast Asian yogurt snacks.",
       shortDescription:
         "Tangy dried yogurt blended with tropical fruit flavors.",
       display: true,
@@ -679,7 +667,7 @@ function GetDesserts() {
       type: "dessert",
       description:
         "A refreshing layered dessert of mango purée, peach chunks, and sweet tapioca pearls (sago). Inspired by popular Asian sweet soups, it offers a fruity and chewy delight.",
-      shortDescription: "Layered mango-peach dessert with chewy sago pearls.",
+      shortDescription: "Layered mango peach dessert with chewy sago pearls.",
       display: true,
     },
   ];
@@ -695,7 +683,7 @@ function GetDrinks() {
       spice: 0,
       type: "drink",
       description:
-        "A zesty and refreshing non-alcoholic blend of fresh lemon and lime juices, lightly sweetened and garnished with mint. Inspired by tropical beach cocktails.",
+        "A zesty and refreshing non alcoholic blend of fresh lemon and lime juices, lightly sweetened and garnished with mint. Inspired by tropical beach cocktails.",
       shortDescription: "Zesty citrus mocktail with mint garnish.",
       display: true,
     },
