@@ -22,7 +22,7 @@ export default function ScrollIndicator() {
         <div className="animate-bounce">
           <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-16 w-16 text-white"
+              className="h-16 w-16 text-blue-200"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
