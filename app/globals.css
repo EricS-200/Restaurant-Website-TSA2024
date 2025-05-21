@@ -98,7 +98,7 @@ main {
 }
 
 .katherine-triangle-clip-path {
-   clip-path: polygon(70% 0, 85% 50%, 70% 100%, 0 100%, 0 0);
+  clip-path: polygon(70% 0, 85% 50%, 70% 100%, 0 100%, 0 0);
 }
 
 .katherine-weird-border-rounding-web-dev-sucks-im-tilted-as-you-can-tell-screw-this-lmao-verbose-but-not-as-verbose-as-java {
