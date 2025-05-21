@@ -11,7 +11,7 @@ import image5 from "@/public/videos/video5Img.jpg";
 import AnimatedPing from "@/components/AnimatedPing";
 
   function GetPage1Content() {
-    const [isVideoLoaded, setIsVideoLoaded] = useState([false, false, false, false, false]);
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   
     return (
       <div className="relative w-full h-[100vh] flex justify-center items-center">
@@ -22,17 +22,13 @@ import AnimatedPing from "@/components/AnimatedPing";
             muted
             loop
             playsInline
-            onCanPlayThrough={() => {
-              let temp = Array.from(isVideoLoaded);
-              temp[0] = true;
-              setIsVideoLoaded(temp)
-            }}
+            onCanPlayThrough={() => {setIsVideoLoaded(true)}}
           >
             {!isVideoLoaded && (
                 <Image
                     src={image1}
                     alt="Video placeholder"
-                    className={`absolute inset-0 w-full h-full z-10 object-cover object-center ${isVideoLoaded[0] ? "hidden" : ""}`}
+                    className={`absolute inset-0 w-full h-full z-10 object-cover object-center ${isVideoLoaded ? "hidden" : ""}`}
                     priority={"true"}
                 />
             )}
@@ -84,17 +80,13 @@ import AnimatedPing from "@/components/AnimatedPing";
             muted
             loop
             playsInline
-            onCanPlayThrough={() => {
-              let temp = Array.from(isVideoLoaded);
-              temp[1] = true;
-              setIsVideoLoaded(temp)
-            }}
+            onCanPlayThrough={() => {setIsVideoLoaded(true)}}
           >
             {!isVideoLoaded && (
                 <Image
                     src={image2}
                     alt="Video placeholder"
-                    className={`absolute inset-0 w-full h-full z-10 object-cover object-center ${isVideoLoaded[1] ? "hidden" : ""}`}
+                    className={`absolute inset-0 w-full h-full z-10 object-cover object-center ${isVideoLoaded ? "hidden" : ""}`}
                     priority={"true"}
                 />
             )}
@@ -140,17 +132,13 @@ import AnimatedPing from "@/components/AnimatedPing";
             muted
             loop
             playsInline
-            onCanPlayThrough={() => {
-              let temp = Array.from(isVideoLoaded);
-              temp[2] = true
-              setIsVideoLoaded(temp)
-            }}
+            onCanPlayThrough={() => {setIsVideoLoaded(true)}}
           >
             {!isVideoLoaded && (
                 <Image
                     src={image3}
                     alt="Video placeholder"
-                    className={`absolute inset-0 w-full h-full z-10 object-cover object-center ${isVideoLoaded[2] ? "hidden" : ""}`}
+                    className={`absolute inset-0 w-full h-full z-10 object-cover object-center ${isVideoLoaded ? "hidden" : ""}`}
                     priority={"true"}
                 />
             )}
@@ -200,17 +188,13 @@ import AnimatedPing from "@/components/AnimatedPing";
             muted
             loop
             playsInline
-            onCanPlayThrough={() => {
-              let temp = Array.from(isVideoLoaded);
-              temp[3] = true
-              setIsVideoLoaded(temp)
-            }}
+            onCanPlayThrough={() => {setIsVideoLoaded(true)}}
           >
             {!isVideoLoaded && (
                 <Image
                     src={image4}
                     alt="Video placeholder"
-                    className={`absolute inset-0 w-full h-full z-10 object-cover object-center ${isVideoLoaded[3] ? "hidden" : ""}`}
+                    className={`absolute inset-0 w-full h-full z-10 object-cover object-center ${isVideoLoaded ? "hidden" : ""}`}
                     priority={"true"}
                 />
             )}
@@ -260,17 +244,13 @@ import AnimatedPing from "@/components/AnimatedPing";
             muted
             loop
             playsInline
-            onCanPlayThrough={() => {
-              let temp = Array.from(isVideoLoaded);
-              temp[4] = true
-              setIsVideoLoaded(temp)
-            }}
+            onCanPlayThrough={() => {setIsVideoLoaded(true)}}
           >
             {!isVideoLoaded && (
                 <Image
                     src={image5}
                     alt="Video placeholder"
-                    className={`absolute inset-0 w-full h-full z-10 object-cover object-center ${isVideoLoaded[4] ? "hidden" : ""}`}
+                    className={`absolute inset-0 w-full h-full z-10 object-cover object-center ${isVideoLoaded ? "hidden" : ""}`}
                     priority={"true"}
                 />
             )}
