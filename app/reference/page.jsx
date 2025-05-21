@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import Citation from "@/components/Citation";
+import first from "@/public/first.svg";
 
-import kytsa from "@/public/kytsa-logo.webp";
+import tsa from "@/public/tsa.png";
 
 export default function Reference() {
   return (
@@ -13,12 +14,12 @@ export default function Reference() {
         </h1>
 
         <Link
-          href={"https://kentuckytsa.org/"}
+          href={"https://tsaweb.org/"}
           target="_blank"
           className="w-full flex justify-center"
         >
           <Image
-            src={kytsa}
+            src={tsa}
             alt="KY TSA logo"
             className="w-1/2 lg:w-1/3 xl:w-1/5"
           />
@@ -29,6 +30,10 @@ export default function Reference() {
           All information, links, and documents required by the competition
           guidelines are provided below.
         </h2>
+        <h3 className="flex mt-2 mb-0">
+          <Image src={first} alt="" className="w-[30px]" />
+          <p>Webmaster 1st Place @ TSA State Conference!</p>
+        </h3>
       </section>
 
       <section className="bg-white mt-6 w-[95vw] sm:w-3/4 md:w-2/3 lg:w-3/5 text-center">
@@ -44,7 +49,7 @@ export default function Reference() {
         <p>NextJS, ReactJS, TailwindCSS, Framer Motion</p>
         <p>
           The entire website, including code and content, was created by our
-          team. We did not use any templates or pre-built components
+          team. We did not use any templates or pre-built components.
         </p>
         <p className="font-bold">
           TSA Work Log:{" "}
@@ -157,8 +162,8 @@ export default function Reference() {
               author=""
               authorLink=""
               type="image"
-              source="KYTSA"
-              sourceLink="https://kentuckytsa.org/"
+              source="Wikipedia"
+              sourceLink="https://en.wikipedia.org/wiki/Technology_Student_Association#/media/File:Technology_Student_Association_Emblem.svg"
             />
           </li>
           <li>
@@ -373,8 +378,8 @@ export default function Reference() {
               author="Luka Vadachkoria"
               authorLink=""
               type="image"
-              source="https://1tv.ge/video/shefmzareulis-dafasebis-kvireuli/"
-              sourceLink="GPB"
+              source="GPB"
+              sourceLink="https://1tv.ge/video/shefmzareulis-dafasebis-kvireuli/"
             />
           </li>
           <li>
@@ -809,7 +814,6 @@ export default function Reference() {
               sourceLink="https://www.greenqueen.com.hk/what-is-sustainability-definition/"
             />
           </li>
-
           <li>
             <Citation
               author=""
@@ -905,6 +909,13 @@ export default function Reference() {
               type="image"
               source="Unsplash"
               sourceLink="https://unsplash.com/photos/3d-render-of-luxury-restaurant-interior-V9CVO_cv-78"
+            />
+          </li>
+          <li>
+            <Citation
+              type="image"
+              source="SVG Repo"
+              sourceLink="https://www.svgrepo.com/svg/404692/1st-place-medal"
             />
           </li>
         </ol>
