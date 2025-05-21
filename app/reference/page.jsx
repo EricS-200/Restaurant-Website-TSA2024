@@ -30,9 +30,11 @@ export default function Reference() {
           All information, links, and documents required by the competition
           guidelines are provided below.
         </h2>
-        <h3 className="flex mt-2 mb-0">
+        <h3 className="flex mt-2 mb-0 px-4">
           <Image src={first} alt="" className="w-[30px]" />
-          <p>Webmaster 1st Place @ TSA State Conference!</p>
+          <p className="text-center">
+            Webmaster 1st Place @ TSA State Conference!
+          </p>
         </h3>
       </section>
 
