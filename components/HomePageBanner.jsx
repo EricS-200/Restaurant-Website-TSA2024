@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ParallaxBanner from "@/components/SimpleParallaxBanner";
 import StyledText from "@/components/StyledText";
-import { useEffect, useState, useRef} from "react";
+import { useEffect, useState, useRef } from "react";
 
 import seperator1 from "@/public/home/seperator1.png";
 import droplets1 from "@/public/home/droplets1.png";
@@ -44,7 +44,7 @@ export default function HomePageBanner() {
   }
 
   useEffect(() => {
-    const {removeEventListener} = ref.current;
+    const { removeEventListener } = ref.current;
 
     ref.current.addEventListener("mousemove", handleMouseMove);
     ref.current.addEventListener("mouseout", handleMouseLeave);
@@ -141,9 +141,9 @@ export default function HomePageBanner() {
             Healthy, high end vegetarian & vegan dishes sourced from authentic
             farms all across the world
           </h2>
-          <Link href={"/order"}>
+          <Link href={"/reserve"}>
             <button className="bg-[#d0b577] hover:bg-[#d1c19c] active:bg-[#c6ba9d] py-1 px-8 mt-3 text-black">
-              Reserve & Order
+              Make a Reservation
             </button>
           </Link>
         </div>
