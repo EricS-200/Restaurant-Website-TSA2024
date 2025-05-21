@@ -16,11 +16,18 @@ import img9 from "@/public/farmtotable/9.png";
 import img10 from "@/public/farmtotable/10.png";
 import img11 from "@/public/farmtotable/11.png";
 import img12 from "@/public/farmtotable/12.png";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 export default function ClickToChange() {
   let topStyle = "w-full h-fit";
 
   const [activePage, setActivePage] = useState(0);
+  const [pinger, setPinger] = useState((
+     <div>
+      <ScrollIndicator/>
+     </div>
+  ));
+
   const [pages, setPages] = useState([
     { bg: "bg-[#38a8cc]", zIndex: 2, clipPath: "", content: <div className={topStyle}><GetPage1Content/></div> },
     { bg: "bg-[#004444]", zIndex: 1, clipPath: "", content: <div className={topStyle}><GetPage2Content/></div> },
@@ -53,6 +60,8 @@ export default function ClickToChange() {
       updated[nextIndex] = true;
       return updated;
     });
+
+    setPinger(<div></div>);
     
     setActivePage(nextIndex);
 
@@ -100,6 +109,7 @@ export default function ClickToChange() {
           {page.content}
         </div>
       ))}
+      <ScrollIndicator/>
       <div className="bg-[#36685d] px-[2%] overflow-x-hidden overflow-y-clip">
         <div className="flex flex-col sm:flex-row items-center justify-evenly">
           <div className="sm:w-[50%] justify-center items-center relative">
@@ -155,12 +165,12 @@ export default function ClickToChange() {
           </div>
         </div>
 
-        <div className="relative h-[30vh]">
+        <div className="relative h-[1vh] sm:h-[30vh]">
           <Image src={img7} alt="" className="absolute top-[-30vh] right-[-10vw]"/>
         </div>
 
         <div className="w-full justify-center items-center flex flex-col">
-          <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold font-dm">
+          <h1 className="text-center text-4xl sm:text-6xl lg:text-8xl text-[#d5b928] font-extrabold font-dm z-[1000]">
             Cooking is Our Home
           </h1>
 

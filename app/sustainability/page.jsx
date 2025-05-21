@@ -96,7 +96,7 @@ export default function sustainability() {
             <p className="text-center relative text-[#1e5541] font-bold w-[80%] text-2xl">
               At Craftroots, we believe in reducing pollution and embracing
               solar energy to protect our planet and the plants that sustain us.
-              Po llution harms soil and air quality, but renewable energy helps
+              Pollution harms soil and air quality, but renewable energy helps
               farms grow fresh, vibrant crops with less environmental impact.
             </p>
           </div>

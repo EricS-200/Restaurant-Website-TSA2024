@@ -4,6 +4,8 @@ import AnimatedNumber from "@/components/AnimatedNumber";
 import HomePageBanner from "@/components/HomePageBanner";
 import DraggableCarousel from "@/components/SnappingCarousel";
 import MenuPreview from "@/components/MenuPreview";
+import ScrollIndicator from "@/components/ScrollIndicator";
+
 import leaves3 from "@/public/home/leaves3.png";
 import bowl from "@/public/home/bowl.png";
 import spices from "@/public/home/spices.png";
@@ -28,6 +30,10 @@ export default function Home() {
   return (
     <main className="">
       <HomePageBanner />
+
+      <div className="w-full flex flex-row justify-center">
+        <ScrollIndicator/>
+      </div>
 
       <OurStorySection />
 
@@ -389,7 +395,7 @@ function OurStorySection({}) {
               </p>
 
               <Link
-                href={"/our-story"}
+                href={"/about-us"}
                 className={"absolute bottom-[12%] left-0"}
               >
                 <button className="bg-[#d0b577] hover:bg-[#d4b161] py-1 px-4 pr-6 text-black text-md">
