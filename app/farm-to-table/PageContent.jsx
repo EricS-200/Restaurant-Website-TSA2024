@@ -164,7 +164,7 @@ import AnimatedPing from "@/components/AnimatedPing";
           </div>
 
           <div className="lg:hidden">
-            <p className="absolute top-[35vh] left-[5vw] w-[90vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
+            <p className="absolute top-[45vh] left-[5vw] w-[90vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
               Freshness is invaluable to produce, and at Craftroots, we are committed to preserving it.
               Despite industrial methods like refrigeration and freezing,
               fruits and vegetables quickly lose flavor and nutrients over time.
@@ -214,17 +214,17 @@ import AnimatedPing from "@/components/AnimatedPing";
             <p className="absolute top-[30vh] right-[10vw] w-[45vw] z-30 text-white font-medium font-seasons text-2xl xl:text-4xl">
               The farming industry today fares no better than many others. Harmful preservatives like sorbates and
               benzoates are common on nutrition labels, and large farms often rely on cheap, hazardous pesticides.
-              In contrast, local farms take greater care with pest control. By partnering with farms like Doe Organics
-              and Three Sisters Farms, we can offer fresh, flavorful produce without the burden of unnecessary chemicals.
+              In contrast, local farms take greater care with pest control. By partnering with local farms,
+              we can offer fresh, flavorful produce without the burden of unnecessary chemicals.
             </p>
           </div>
 
           <div className="lg:hidden">
-            <p className="absolute top-[35vh] left-[10vw] w-[80vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
+            <p className="absolute top-[45vh] left-[5vw] w-[80vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
               The farming industry today fares no better than many others. Harmful preservatives like sorbates and
               benzoates are common on nutrition labels, and large farms often rely on cheap, hazardous pesticides.
-              In contrast, local farms take greater care with pest control. By partnering with farms like Doe Organics
-              and Three Sisters Farms, we can offer fresh, flavorful produce without the burden of unnecessary chemicals.
+              In contrast, local farms take greater care with pest control. By partnering with local farms,
+              we can offer fresh, flavorful produce without the burden of unnecessary chemicals.
             </p>
           </div>
 
@@ -278,7 +278,7 @@ import AnimatedPing from "@/components/AnimatedPing";
           </div>
 
           <div className="lg:hidden">
-            <p className="absolute top-[35vh] left-[10vw] w-[80vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
+            <p className="absolute top-[45vh] left-[5vw] w-[80vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
               Craftroots emphasizes human connection at every step, from vegetables handpicked and delivered by local farmers,
               to being stocked by our pantry chef, expertly prepared by our kitchen team, served by our staff, and
               enjoyed by our guests. Through these personal interactions, we help strengthen and support the community.
