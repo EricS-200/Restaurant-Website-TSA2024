@@ -1,8 +1,9 @@
 This repository contains the code base for the website submitted to the Technology Student Association Webmaster Competition 2024-2025. Submission from Kentucky (P. L. Dunbar).  
 
-[LINK ADDRESS](https://restaurant-website-tsa-2024.vercel.app/)
+[LINK ADDRESS](https://craftroots.vercel.app/)
 
-Members: Eric, Katherine, Mukhil, Jake, Naren, Dylan
+State Members: Eric, Katherine, Mukhil, Jake, Naren, Dylan
+National Members: Eric, Katherine, Mukhil, Naren
 
 The entire website was coded by our development team. We did not use any prebuilt templates. All TSA Rules were followed. 
 
