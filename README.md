@@ -8,7 +8,7 @@ National Members: Eric, Katherine, Mukhil, Naren
 
 The entire website was coded by our development team. We did not use any prebuilt templates. All TSA Rules were followed. 
 
-Software used: NextJS, TailwindCSS (+3D), Framer Motion. Hosted on Vercel. 
+Software used: NextJS, TailwindCSS (+3D), Framer Motion, EmailJS. Hosted on Vercel. 
 
 ## Run on your own machine:
 
