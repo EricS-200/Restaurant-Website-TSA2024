@@ -16,10 +16,12 @@ import image28 from "@/public/sustainability/28.png";
 
 import Image from "next/image";
 import Link from "next/link";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 export default function sustainability() {
   return (
     <main className="">
+      <ScrollIndicator/>
       <section className="w-full h-screen flex relative overflow-clip">
         <div className="w-1/2 h-full bg-[#36685d]"></div>
         <div className="w-1/2 h-full bg-[#e29953]"></div>

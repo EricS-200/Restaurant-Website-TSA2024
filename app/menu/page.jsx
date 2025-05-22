@@ -47,6 +47,7 @@ import UrbanGreenMatchaIcedTea from "@/public/menu/drinks/Urban Green Matcha Ice
 import EarthHerbMixedBlendSmoothie from "@/public/menu/drinks/Earth Herb Mixed Blend Smoothie.png";
 import DivineGrapefruit from "@/public/menu/drinks/Divine Grapefruit.png";
 import CocaCola from "@/public/menu/drinks/Coca Cola.png";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 const FoodSectionFancyTitle = memo(({ title, different }) => {
   if (different) {
@@ -250,6 +251,7 @@ export default function Menu() {
 
   return (
     <main className="bg-gradient-to-b from-[#4c5a2b] to-[#64642b] relative overflow-x-hidden">
+      <ScrollIndicator/>
       <Overlay
         scrollY={scrollY}
         overlayActive={overlayActive}
