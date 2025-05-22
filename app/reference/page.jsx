@@ -170,6 +170,159 @@ export default function Reference() {
           </li>
           <li>
             <Citation
+              author="Stefanie Taylor"
+              authorLink="https://zestforever.com/author/stefanie-taylor/"
+              type="image"
+              source="zestforever"
+              sourceLink="https://zestforever.com/plant-based-food-combining/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Bosman Physio Upington"
+              authorLink="https://www.instagram.com/bosman_physio_upington/"
+              type="image"
+              source="Instagram"
+              sourceLink="https://www.instagram.com/p/DJoYyDoo6WS/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Farmhouse Sunflower "
+              authorLink=""
+              type="image"
+              source="Farmhouse Sunflower"
+              sourceLink="https://farmhousesunflower.wordpress.com/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Cassie Smallwood"
+              authorLink="https://www.cassiesmallwood.com/"
+              type="image"
+              source="Cassie Smallwood"
+              sourceLink="https://www.cassiesmallwood.com/fruit-coloring-sheets/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Yehor Vlasenko"
+              authorLink="https://www.dreamstime.com/pandavector_info"
+              type="image"
+              source="Dreamstime"
+              sourceLink="https://www.dreamstime.com/blueberry-berries-sweet-fruit-fruit-single-icon-outline-style-vector-symbol-stock-illustration-blueberry-berries-sweet-fruit-image99713835"
+            />
+          </li>
+          <li>
+            <Citation
+              author="MarcoFood"
+              authorLink="https://stock.adobe.com/contributor/206979041/marcofood?load_type=author&prev_url=detail"
+              type="image"
+              source="Adobe Stock"
+              sourceLink="https://stock.adobe.com/search?k=tomato&asset_id=419231073"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Savany"
+              authorLink="https://www.istockphoto.com/portfolio/Savany?mediatype=photography"
+              type="image"
+              source="iStock Photo"
+              sourceLink="https://www.istockphoto.com/photo/slice-of-orange-gm185311615-19303639"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Belchonock"
+              authorLink="https://depositphotos.com/portfolio-1177973.html?content=photo"
+              type="image"
+              source="Deposit Photos"
+              sourceLink="https://depositphotos.com/serie/185027828.html?qview=87170276"
+            />
+          </li>
+          <li>
+            <Citation
+              author="rraya"
+              authorLink="https://www.istockphoto.com/search/photographer?photographer=rraya&assettype=image&family=creative"
+              type="image"
+              source="iStock Photo"
+              sourceLink="https://www.istockphoto.com/vector/hand-drawn-chili-peppers-on-white-background-gm1221572765-358130307"
+            />
+          </li>
+          <li>
+            <Citation
+              author="A 5"
+              authorLink="https://www.shutterstock.com/g/falisdeka"
+              type="image"
+              source="shutterstock"
+              sourceLink="https://www.shutterstock.com/image-vector/long-beans-line-vector-illustration-isolated-1934352110"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Setory"
+              authorLink="https://www.dreamstime.com/setory_info"
+              type="image"
+              source="dreamstime"
+              sourceLink="https://www.dreamstime.com/stock-illustration-hand-drawn-celery-icon-vector-badge-vegetable-old-ink-style-brochures-banner-restaurant-menu-market-image87656003"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Cotomag"
+              authorLink="https://www.emag.ro/cotomfvg/169176/v?ref=see_vendor_page"
+              type="image"
+              source="emag"
+              sourceLink="https://www.emag.ro/carte-de-colorat-legume-si-verdeturi-sanatoase-coloreaza-scrie-invata-coto17/pd/DBCTMK3BM/"
+            />
+          </li>
+          <li>
+            <Citation
+              author="FonDesign"
+              authorLink="https://www.shutterstock.com/g/kozy_place"
+              type="image"
+              source="shutterstock"
+              sourceLink="https://www.shutterstock.com/image-vector/ginger-root-line-vector-illustration-detailed-2000862851"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Setory"
+              authorLink="https://www.vectorstock.com/royalty-free-vectors/vectors-by_setory"
+              type="image"
+              source="Vectorstock"
+              sourceLink="https://www.vectorstock.com/royalty-free-vector/cauliflower-outline-icon-vector-38167589"
+            />
+          </li>
+          <li>
+            <Citation
+              author="FonDesign"
+              authorLink="https://www.shutterstock.com/g/kozy_place"
+              type="image"
+              source="shutterstock"
+              sourceLink="https://www.shutterstock.com/image-vector/spinach-line-vector-illustration-detailed-food-2000862812"
+            />
+          </li>
+          <li>
+            <Citation
+              author="Setory"
+              authorLink="https://www.vectorstock.com/royalty-free-vectors/vectors-by_setory"
+              type="image"
+              source="vectorstock"
+              sourceLink="https://www.vectorstock.com/royalty-free-vector/green-pea-vegetable-outline-icon-vector-38167600"
+            />
+          </li>
+          <li>
+            <Citation
+              author="ajt"
+              authorLink="https://www.istockphoto.com/portfolio/ajt?mediatype=photography"
+              type="image"
+              source="istockphoto"
+              sourceLink="https://www.istockphoto.com/photo/cucumber-slice-on-white-gm953092192-260193305"
+            />
+          </li>
+          <li>
+            <Citation
               author="Ashleigh Shanti"
               authorLink="https://www.bonappetit.com/contributor/ashleigh-shanti"
               type="image"
