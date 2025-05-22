@@ -1,0 +1,165 @@
+"use client";
+import Link from "next/link";
+import { useState } from "react";
+export default function ReservationForm() {
+  const [party, setParty] = useState(0);
+  const [submitted, setSubmitted] = useState(false);
+
+  return (
+    <div className="lg:w-1/2 flex justify-center flex-col items-center py-[50px]">
+      <div className="flex md:flex-row flex-col items-center justify-center space-y-4 md:space-y-0 md:space-x-8 w-full">
+        <div className="w-[90%] sm:w-1/2">
+          <h3 className="text-[#755d48] text-2xl font-dm">
+            Date of Reservation
+          </h3>
+          <input
+            type="date"
+            min={new Date().toISOString().split("T")[0]}
+            className="font-kenao text-xl px-8 py-4 w-full  "
+          />
+        </div>
+        <div className="w-[90%] sm:w-1/2">
+          <h3 className="text-[#d17217] text-2xl font-dm">
+            Time of Reservation
+          </h3>
+          <input
+            type="time"
+            min="09:00"
+            max="18:00"
+            step="900"
+            className="font-kenao text-xl px-8 py-4 w-full"
+          />
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center justify-center">
+        <h3 className="text-[#1e5541] text-2xl font-dm mt-4 ">
+          Number of People
+        </h3>
+
+        <div className="flex flex-wrap gap-6 justify-center font-kenao text-2xl my-4">
+          <button
+            className={`w-[70px] h-[70px] bg-[#de7008] text-white ${
+              party === 1 ? "" : ""
+            }`}
+            onClick={() => {
+              setParty(1);
+            }}
+          >
+            1
+          </button>
+          <button
+            className={`w-[70px] h-[70px] bg-[#e29953] text-white ${
+              party === 2 ? "" : ""
+            }`}
+            onClick={() => {
+              setParty(2);
+            }}
+          >
+            2
+          </button>
+          <button
+            className={`w-[70px] h-[70px] bg-[#d5b928] text-white ${
+              party === 3 ? "" : ""
+            }`}
+            onClick={() => {
+              setParty(3);
+            }}
+          >
+            3
+          </button>
+          <button
+            className={`w-[70px] h-[70px] bg-[#d0b577] text-white ${
+              party === 4 ? "" : ""
+            }`}
+            onClick={() => {
+              setParty(4);
+            }}
+          >
+            4
+          </button>
+          <button
+            className={`w-[70px] h-[70px] bg-[#9da57f] text-white ${
+              party === 5 ? "" : ""
+            }`}
+            onClick={() => {
+              setParty(5);
+            }}
+          >
+            5
+          </button>
+          <button
+            className={`w-[70px] h-[70px] bg-[#1e5541] text-white ${
+              party === 6 ? "" : ""
+            }`}
+            onClick={() => {
+              setParty(6);
+            }}
+          >
+            6
+          </button>
+        </div>
+
+        <p className="text-[#d95204] text-center text-wrap max-w-[95%]">
+          *For party sizes larger than 6 please call to make a reservation:{" "}
+          <Link
+            href="tel:859-999-999"
+            target="_blank"
+            className="hover:underline"
+          >
+            <strong>(859) 999-999</strong>
+          </Link>
+        </p>
+      </div>
+
+      <div className="flex md:flex-row flex-col space-y-4 md:space-y-0 items-center md:space-x-8 w-full mt-8">
+        <div className="w-[90%] sm:w-1/2">
+          <h3 className="text-[#755d48] text-2xl font-dm">Name </h3>
+          <input
+            type="text"
+            className="font-kenao text-xl px-8 py-4 w-full  "
+            placeholder="Name"
+          />
+        </div>
+        <div className="w-[90%] sm:w-1/2">
+          <h3 className="text-[#077341] text-2xl font-dm ">Phone Number </h3>
+          <input
+            type="text"
+            className="font-kenao text-xl px-8 py-4 w-full"
+            placeholder="1234567890"
+          />
+        </div>
+      </div>
+
+      <div className="md:w-full mt-4 w-[90%] sm:w-1/2">
+        <h3 className="text-[#1e5541] text-2xl  font-dm ">Email </h3>
+        <input
+          type="text"
+          className="font-kenao text-xl px-8 py-4 w-full"
+          placeholder={"example@gmail.com"}
+        />
+      </div>
+
+      <div className="flex md:flex-row flex-col  items-center justify-center md:space-x-8 text-[#024762] font-kenao">
+        <div className="flex items-center justify-center space-x-2 mt-2">
+          <input type="checkbox" className="w-[20px] h-[20px]" />
+          <p>Wheelchair Access Needed</p>
+        </div>
+        <div className="flex items-center justify-center space-x-2 mt-2">
+          <input type="checkbox" className="w-[20px] h-[20px]" />
+          <p>Join Mailing List</p>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center flex-col">
+        <div className="flex md:flex-row flex-col items-center justify-center space-x-2 text-2xl font-dm mt-3 text-center">
+          <p className="text-[#755d48]">Usual Minimum Wait Time:</p>
+          <p className="text-[#d95204]">41 Minutes</p>
+        </div>
+        <button className="text-[#024762] bg-[#78cb43] mt-4 font-seasons w-[85%] sm:w-2/3 md:w-full text-xl py-3">
+          Make Reservation
+        </button>
+      </div>
+    </div>
+  );
+}
