@@ -47,6 +47,7 @@ import UrbanGreenMatchaIcedTea from "@/public/menu/drinks/Urban Green Matcha Ice
 import EarthHerbMixedBlendSmoothie from "@/public/menu/drinks/Earth Herb Mixed Blend Smoothie.png";
 import DivineGrapefruit from "@/public/menu/drinks/Divine Grapefruit.png";
 import CocaCola from "@/public/menu/drinks/Coca Cola.png";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 const FoodSectionFancyTitle = memo(({ title, different }) => {
   if (different) {
@@ -250,6 +251,7 @@ export default function Menu() {
 
   return (
     <main className="bg-gradient-to-b from-[#4c5a2b] to-[#64642b] relative overflow-x-hidden">
+      <ScrollIndicator/>
       <Overlay
         scrollY={scrollY}
         overlayActive={overlayActive}
@@ -318,8 +320,7 @@ export default function Menu() {
               vegan dishes from all different cultures.
             </p>
             <p className="text-center w-[95%] md:w-3/4 xl:w-2/3 md:text-xl leading-normal -translate-y-[20px] mt-2 font-bold">
-              Order takeout by clicking on the menu items below, or make a
-              reservation!
+              Order now by making a reservation!
             </p>
             <Link href={"/reserve"}>
               <button className="py-1 px-4 bg-orange-400 hover:bg-orange-500 active:bg-orange-400">

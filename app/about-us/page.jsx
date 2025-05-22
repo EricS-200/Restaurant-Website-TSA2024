@@ -18,10 +18,12 @@ import image13 from "@/public/about/13.png";
 import image14 from "@/public/about/14.png";
 import image15 from "@/public/about/15.png";
 import image16 from "@/public/about/16.png";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 export default function about() {
   return (
     <main className="relative text-xl leading-loose flex flex-col items-center overflow-x-clip">
+      <ScrollIndicator/>
       <section className="relative w-full h-[100vh]">
         <Image
           src={image1}

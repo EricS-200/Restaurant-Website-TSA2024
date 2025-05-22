@@ -41,10 +41,12 @@ import wood from "@/public/preparation/wood.jpg";
 import ParallaxBanner from "@/components/SimpleParallaxBanner.jsx";
 import Image from "next/image";
 import Link from "next/link";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 export default function preparation() {
   return (
     <main className="overflow-x-clip">
+      <ScrollIndicator/>
       <ParallaxBanner speed={0.5}>
         <section className="relative h-screen overflow-x-clip">
           <Image

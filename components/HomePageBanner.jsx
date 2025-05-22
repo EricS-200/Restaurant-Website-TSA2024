@@ -138,8 +138,8 @@ export default function HomePageBanner() {
             className="w-[700px]  pointer-events-none select-none"
           />
           <h2 className="font-2xl w-[650px] max-w-[95vw] text-center">
-            Healthy, high end vegetarian & vegan dishes sourced from authentic
-            farms all across the world
+            Healthy, high end vegetarian & vegan dishes sourced from authentic, local
+            farms
           </h2>
           <Link href={"/reserve"}>
             <button className="bg-[#d0b577] hover:bg-[#d1c19c] active:bg-[#c6ba9d] py-1 px-8 mt-3 text-black">

@@ -151,10 +151,10 @@ export default function ClickToChange() {
                 sorbates and benzoates, which commonly appear on
                 nutrition labels, are undeniably detrimental to the human
                 body. Large farms also primarily use cheap and dangerous
-                pesticides, while local farms can take more care in anti-
-                pest measures. By partnering with local farms such as Doe
+                pesticides, while local farms can take more care in anti-pest
+                measures. By partnering with local farms such as Doe
                 Organics and Three Sisters Farms, we can provide delicious
-                greens & vegetables without the risk of unnecessary
+                greens and vegetables without the risk of unnecessary
                 chemicals.
               </p>
           </div>

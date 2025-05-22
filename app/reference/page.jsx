@@ -56,7 +56,7 @@ export default function Reference() {
         <p className="font-bold">
           TSA Work Log:{" "}
           <Link
-            href={"/forms/work-log.pdf"}
+            href={"/forms/worklog.pdf"}
             className="text-blue-500 hover:underline"
             target="_blank"
           >
@@ -153,7 +153,7 @@ export default function Reference() {
           <li>
             <Citation
               author="Hannah Loewentheil"
-              authorLink="hi"
+              authorLink="https://www.buzzfeed.com/hannahloewentheil"
               type="image"
               source="Tasty"
               sourceLink="https://tasty.co/article/hannahloewentheil/best-mocktails"
