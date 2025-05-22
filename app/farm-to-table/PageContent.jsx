@@ -43,22 +43,21 @@ import AnimatedPing from "@/components/AnimatedPing";
               Overview
             </p>
             <AnimatedPing extraStyle={"w-fit"}>
-              <p className="text-4xl text-white font-seasons mt-[20%] w-fit">
+              <p className="text-4xl text-white font-seasons mt-[10%] sm:mt-[20%] w-fit">
                 Click Anywhere
               </p>
             </AnimatedPing>
           </div>
 
           <div className="hidden lg:block">
-            <p className="absolute top-[30vh] right-[10vw] w-[45vw] z-30 text-white font-medium font-seasons text-2xl xl:text-4xl">
+            <p className="absolute top-[30vh] right-[10vw] w-[30vw] z-30 text-white font-medium font-seasons text-2xl xl:text-4xl">
               The essence of farm to table is the use of fresh local produce to serve nothing but the best to our loyal
-              customers.
-              By supporting local farms, we can help nourish the local community both economically and gastronomically.
+              customers. By supporting local farms, we can help nourish the local community both economically and gastronomically.
             </p>
           </div>
 
           <div className="lg:hidden">
-            <p className="absolute top-[50vh] left-[5vw] w-[80vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
+            <p className="absolute top-[50vh] left-[5vw] w-[80vw] z-30 text-white font-medium font-seasons text-2xl sm:text-3xl">
               The essence of farm to table is the use of fresh local produce to serve nothing but the best to our loyal customers. 
               By supporting local farms, we can help nourish the local community both economically and gastronomically.
             </p>
@@ -103,14 +102,14 @@ import AnimatedPing from "@/components/AnimatedPing";
           </div>
 
           <div className="hidden lg:block">
-            <p className="absolute top-[30vh] right-[10vw] w-[45vw] z-30 text-white font-medium font-seasons text-2xl xl:text-4xl">
+            <p className="absolute top-[30vh] right-[10vw] w-[30vw] z-30 text-white font-medium font-seasons text-2xl xl:text-4xl">
             Because we can avoid the usage of preservatives in our food, our menu changes with the seasons so that we can provide nothing but the best all year. 
             We at Craftroots hope that our customers can understand this sacrifice of year round menu stability in exchange for optimal produce preparation.
             </p>
           </div>
 
           <div className="lg:hidden">
-            <p className="absolute top-[50vh] left-[5vw] w-[90vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
+            <p className="absolute top-[40vh] left-[5vw] w-[90vw] z-30 text-white font-medium font-seasons text-2xl sm:text-3xl">
             Because we can avoid the usage of preservatives in our food, our menu changes with the seasons so that we can provide nothing but the best all year. 
             We at Craftroots hope that our customers can understand this sacrifice of year round menu stability in exchange for optimal produce preparation.
             </p>
@@ -155,7 +154,7 @@ import AnimatedPing from "@/components/AnimatedPing";
           </div>
 
           <div className="hidden lg:block">
-            <p className="absolute top-[30vh] right-[10vw] w-[45vw] z-30 text-white font-medium font-seasons text-2xl xl:text-4xl">
+            <p className="absolute top-[30vh] right-[10vw] w-[30vw] z-30 text-white font-medium font-seasons text-2xl xl:text-4xl">
               Freshness is invaluable to produce, and at Craftroots, we are committed to preserving it.
               Despite industrial methods like refrigeration and freezing,
               fruits and vegetables quickly lose flavor and nutrients over time.
@@ -164,7 +163,7 @@ import AnimatedPing from "@/components/AnimatedPing";
           </div>
 
           <div className="lg:hidden">
-            <p className="absolute top-[45vh] left-[5vw] w-[90vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
+            <p className="absolute top-[40vh] left-[5vw] w-[90vw] z-30 text-white font-medium font-seasons text-2xl sm:text-3xl">
               Freshness is invaluable to produce, and at Craftroots, we are committed to preserving it.
               Despite industrial methods like refrigeration and freezing,
               fruits and vegetables quickly lose flavor and nutrients over time.
@@ -211,7 +210,7 @@ import AnimatedPing from "@/components/AnimatedPing";
           </div>
 
           <div className="hidden lg:block">
-            <p className="absolute top-[30vh] right-[10vw] w-[45vw] z-30 text-white font-medium font-seasons text-2xl xl:text-4xl">
+            <p className="absolute top-[30vh] right-[10vw] w-[40vw] z-30 text-white font-medium font-seasons text-2xl xl:text-4xl">
               The farming industry today fares no better than many others. Harmful preservatives like sorbates and
               benzoates are common on nutrition labels, and large farms often rely on cheap, hazardous pesticides.
               In contrast, local farms take greater care with pest control. By partnering with local farms,
@@ -220,7 +219,7 @@ import AnimatedPing from "@/components/AnimatedPing";
           </div>
 
           <div className="lg:hidden">
-            <p className="absolute top-[45vh] left-[5vw] w-[80vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
+            <p className="absolute top-[40vh] left-[5vw] w-[80vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
               The farming industry today fares no better than many others. Harmful preservatives like sorbates and
               benzoates are common on nutrition labels, and large farms often rely on cheap, hazardous pesticides.
               In contrast, local farms take greater care with pest control. By partnering with local farms,
@@ -269,7 +268,7 @@ import AnimatedPing from "@/components/AnimatedPing";
 
 
           <div className="hidden lg:block">
-            <p className="absolute top-[30vh] right-[10vw] w-[45vw] z-30 text-white font-medium font-seasons text-2xl xl:text-4xl">
+            <p className="absolute top-[30vh] right-[10vw] w-[40vw] z-30 text-white font-medium font-seasons text-2xl xl:text-4xl">
               Craftroots emphasizes human connection at every step, from vegetables handpicked and delivered by local farmers,
               to being stocked by our pantry chef, expertly prepared by our kitchen team, served by our staff, and
               enjoyed by our guests. Through these personal interactions, we help strengthen and support the community.
@@ -278,7 +277,7 @@ import AnimatedPing from "@/components/AnimatedPing";
           </div>
 
           <div className="lg:hidden">
-            <p className="absolute top-[45vh] left-[5vw] w-[80vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
+            <p className="absolute top-[40vh] left-[5vw] w-[80vw] z-30 text-white font-medium font-seasons text-xl sm:text-3xl">
               Craftroots emphasizes human connection at every step, from vegetables handpicked and delivered by local farmers,
               to being stocked by our pantry chef, expertly prepared by our kitchen team, served by our staff, and
               enjoyed by our guests. Through these personal interactions, we help strengthen and support the community.

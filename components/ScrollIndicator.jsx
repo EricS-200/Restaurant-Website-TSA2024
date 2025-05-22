@@ -15,14 +15,14 @@ export default function ScrollIndicator() {
 
   return (
       <div
-          className={`z-[2000] fixed bottom-10 left-1/2 transform -translate-x-[40%] transition-opacity duration-500 ${
+          className={`z-[2000] fixed bottom-5 sm:bottom-10 left-1/2 transform -translate-x-[40%] transition-opacity duration-500 ${
               visible ? 'opacity-100' : 'opacity-0'
           }`}
       >
         <div className="animate-bounce">
           <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-16 w-16 text-white"
+              className="h-12 w-12 sm:h-16 sm:w-16 text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

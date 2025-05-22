@@ -47,6 +47,7 @@ import UrbanGreenMatchaIcedTea from "@/public/menu/drinks/Urban Green Matcha Ice
 import EarthHerbMixedBlendSmoothie from "@/public/menu/drinks/Earth Herb Mixed Blend Smoothie.png";
 import DivineGrapefruit from "@/public/menu/drinks/Divine Grapefruit.png";
 import CocaCola from "@/public/menu/drinks/Coca Cola.png";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 const FoodSectionFancyTitle = memo(({ title, different }) => {
   if (different) {
@@ -103,7 +104,7 @@ const MenuSection = memo(
               {title}
             </h1>
             <h1 className="absolute w-[70vw] bottom-[-9vh] sm:bottom-[-7vh] xl:bottom-[-14vh] right-[10vw] sm:right-[-40vw] xl:right-[-30vw] font-mistrully opacity-30 text-[7rem] lg:text-[9rem] 2xl:text-[11rem] pointer-events-none select-none text-clip text-green-900">
-              {title}
+              {"Sides"}
             </h1>
           </div>
         );
@@ -250,6 +251,7 @@ export default function Menu() {
 
   return (
     <main className="bg-gradient-to-b from-[#4c5a2b] to-[#64642b] relative overflow-x-hidden">
+      <ScrollIndicator/>
       <Overlay
         scrollY={scrollY}
         overlayActive={overlayActive}
@@ -318,8 +320,7 @@ export default function Menu() {
               vegan dishes from all different cultures.
             </p>
             <p className="text-center w-[95%] md:w-3/4 xl:w-2/3 md:text-xl leading-normal -translate-y-[20px] mt-2 font-bold">
-              Order takeout by clicking on the menu items below, or make a
-              reservation!
+              Order now by making a reservation!
             </p>
             <Link href={"/reserve"}>
               <button className="py-1 px-4 bg-orange-400 hover:bg-orange-500 active:bg-orange-400">
@@ -392,18 +393,6 @@ export default function Menu() {
     </main>
   );
 }
-
-/*
-{
-  name: "",
-  price: -1,
-  src: ,
-  vegan: ,
-  spice: ,
-  type: "",
-  description: ""
-},
-*/
 
 function GetSideDishes() {
   return [
@@ -617,7 +606,7 @@ function GetDesserts() {
       spice: 0,
       type: "dessert",
       description:
-        "A classic French-inspired tart featuring a buttery crust layered with pastry cream and topped with fresh berries (strawberries, blueberries, raspberries). Perfect for a light, fruity finish to any meal.",
+        "A classic French inspired tart featuring a buttery crust layered with pastry cream and topped with fresh berries (strawberries, blueberries, raspberries). Perfect for a light, fruity finish to any meal.",
       shortDescription: "A buttery tart topped with fresh mixed berries.",
       display: true,
     },
@@ -642,7 +631,7 @@ function GetDesserts() {
       type: "dessert",
       description:
         "Silken tofu blended with premium matcha, lightly sweetened for a creamy and refreshing treat. A fusion of Japanese tea culture and plant-based dessert innovation.",
-      shortDescription: "A creamy tofu-based dessert infused with matcha.",
+      shortDescription: "A creamy tofu based dessert infused with matcha.",
       display: true,
     },
     {
@@ -653,7 +642,7 @@ function GetDesserts() {
       spice: 0,
       type: "dessert",
       description:
-        "Tangy yogurt base mixed with tropical fruits like kiwi and pineapple, then gently dehydrated to create a chewy, flavor-packed bite. Inspired by Southeast Asian yogurt snacks.",
+        "Tangy yogurt base mixed with tropical fruits like kiwi and pineapple, then gently dehydrated to create a chewy, flavor packed bite. Inspired by Southeast Asian yogurt snacks.",
       shortDescription:
         "Tangy dried yogurt blended with tropical fruit flavors.",
       display: true,
@@ -679,7 +668,7 @@ function GetDesserts() {
       type: "dessert",
       description:
         "A refreshing layered dessert of mango purée, peach chunks, and sweet tapioca pearls (sago). Inspired by popular Asian sweet soups, it offers a fruity and chewy delight.",
-      shortDescription: "Layered mango-peach dessert with chewy sago pearls.",
+      shortDescription: "Layered mango peach dessert with chewy sago pearls.",
       display: true,
     },
   ];
@@ -695,7 +684,7 @@ function GetDrinks() {
       spice: 0,
       type: "drink",
       description:
-        "A zesty and refreshing non-alcoholic blend of fresh lemon and lime juices, lightly sweetened and garnished with mint. Inspired by tropical beach cocktails.",
+        "A zesty and refreshing non alcoholic blend of fresh lemon and lime juices, lightly sweetened and garnished with mint. Inspired by tropical beach cocktails.",
       shortDescription: "Zesty citrus mocktail with mint garnish.",
       display: true,
     },

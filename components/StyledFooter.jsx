@@ -205,7 +205,7 @@ export default function StyledFooter() {
           // legal & socials div
         }
         <p className="text-sm md:text-md">Privacy Policy</p>
-        <p className="text-sm md:text-md">Terms & Conditions</p>
+        <p className="text-sm md:text-md">Terms and Conditions</p>
         <p className="text-sm md:text-md">USDA Permits</p>
       </div>
     </footer>

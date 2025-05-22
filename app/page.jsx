@@ -39,7 +39,7 @@ export default function Home() {
 
       <MenuPreview />
 
-      <section className="flex justify-evenly relative pt-6 overflow-x-clip h-full pb-12">
+      <section className="flex justify-evenly relative pt-6 overflow-x-clip h-full pb-12 md:pt-[10%]">
         <Image
           src={leaves3}
           alt="leaves (3)"
@@ -109,7 +109,7 @@ export default function Home() {
             <p className="text-right font-seasons text-[#9da57f] xl:max-w-[90%] text-2xl my-4">
               USD in terms of boost to our local economies. We always try to
               source our food from local farms and production centers as we love
-              to support our local vegan communities in Kentucky!
+              to support our local vegan communities in Kentucky.
             </p>
           </div>
 
@@ -122,8 +122,8 @@ export default function Home() {
               className={"text-white text-7xl lg:text-9xl font-dm"}
             />
             <p className="text-right font-seasons text-[#d5b928] xl:max-w-[90%] text-2xl my-4">
-              pounds of CO2 saved by maintaing a plant-based menu over a meat
-              based menu, and by focusing on sustainability!
+              pounds of CO2 saved by maintain a plant based menu over a meat
+              based menu, and by focusing on sustainability.
             </p>
           </div>
 
@@ -136,9 +136,9 @@ export default function Home() {
               className={"text-white text-7xl lg:text-9xl font-dm"}
             />
             <p className="text-right font-seasons text-[#e29953] xl:max-w-[90%] text-2xl my-4">
-              gallons of water saved over non-vegetarian restaurants! Yes, most
-              restaurants can use more than a million gallons of water anually
-              for meat-based dishes, and we reduce that by up to 80%!
+              gallons of water saved over non vegetarian restaurants. Yes, most
+              restaurants can use more than a million gallons of water annually
+              for meat based dishes, and we reduce that by up to 80 percent.
             </p>
           </div>
         </div>
@@ -216,7 +216,7 @@ export default function Home() {
 
 function Review({ children, author = "", className }) {
   return (
-    <div className="w-screen h-fit flex justify-center relative flex-shrink-0 pb-12">
+    <div className="w-full h-fit flex justify-center relative flex-shrink-0 pb-12">
       <div className="text-center w-[95vw] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-1/2 text-[#03402a]">
         {children}
       </div>

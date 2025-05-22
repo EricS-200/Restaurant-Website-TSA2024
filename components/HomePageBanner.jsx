@@ -126,7 +126,7 @@ export default function HomePageBanner() {
             Craftroots
           </h1>
           <StyledText
-            className="font-kenao text-4xl sm:text-7xl md:text-8xl lg:text-9xl sm:-translate-y-[20%] text-center"
+            className="font-kenao text-4xl sm:text-7xl md:text-8xl lg:text-9xl sm:-translate-y-[20%] text-center pt-[1.5vh]"
             charClassName="transition-all hover:scale-[1.05]"
           >
             Feast on Fresh
@@ -138,8 +138,8 @@ export default function HomePageBanner() {
             className="w-[700px]  pointer-events-none select-none"
           />
           <h2 className="font-2xl w-[650px] max-w-[95vw] text-center">
-            Healthy, high end vegetarian & vegan dishes sourced from authentic
-            farms all across the world
+            Healthy, high end vegetarian & vegan dishes sourced from authentic, local
+            farms
           </h2>
           <Link href={"/reserve"}>
             <button className="bg-[#d0b577] hover:bg-[#d1c19c] active:bg-[#c6ba9d] py-1 px-8 mt-3 text-black">
