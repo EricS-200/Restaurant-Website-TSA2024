@@ -96,7 +96,7 @@ export default function MenuPreview() {
           />
           <DishCard
             src={special2}
-            name="Hummus Bowl with Merguez-Spiced Tempeh"
+            name="Hummus Bowl with Merguez Spiced Tempeh"
             price={15.99}
           />
           <DishCard

@@ -126,7 +126,7 @@ export default function sustainability() {
           <Image
             src={image25}
             alt=""
-            className="max-w-[500px] hidden lg:block"
+            className="max-w-[400px] hidden lg:block"
           />
           <p className="text-xl leading-loose text-center lg:text-left ">
             Sustainability isn&apos;t just a choice, it&apos;s a commitment to
@@ -138,7 +138,7 @@ export default function sustainability() {
           </p>
         </div>
         <div>
-          <Image src={image26} alt="" className="w-full lg:translate-x-[10%]" />
+          <Image src={image26} alt="" className="w-full lg:translate-x-[20%]" />
         </div>
       </section>
       <section className="-mb-[100px]">

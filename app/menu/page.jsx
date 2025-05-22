@@ -318,8 +318,7 @@ export default function Menu() {
               vegan dishes from all different cultures.
             </p>
             <p className="text-center w-[95%] md:w-3/4 xl:w-2/3 md:text-xl leading-normal -translate-y-[20px] mt-2 font-bold">
-              Order takeout by clicking on the menu items below, or make a
-              reservation!
+              Order now by making a reservation!
             </p>
             <Link href={"/reserve"}>
               <button className="py-1 px-4 bg-orange-400 hover:bg-orange-500 active:bg-orange-400">
