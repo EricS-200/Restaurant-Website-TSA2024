@@ -372,11 +372,10 @@ export default function preparation() {
             <div className="w-full sm:w-3/4 md:w-1/2 flex justify-center items-center ">
               <Image src={image34} alt="" className="" />
             </div>
-            <div className="w-[95%] sm:w-[80%] md:w-1/2 flex justify-center items-center ">
-              <h3 className="absolute font-mistrully text-[13rem] right-0 top-1/2 -translate-y-1/2 text-[#d95204] opacity-[.25] hidden md:block">
-                CraftRoots
-              </h3>
-            </div>
+            <p className="text-center w-[30%] translate-x-[22%] pt-[5%]">
+              We take care to celebrate the farmers that work hard to provide the highest quality food to serve our customers.
+              Sourced from natural grown farms all across the world, we ensure our ingredients are not only fresh, but delicious.
+            </p>
           </div>
         </div>
       </section>

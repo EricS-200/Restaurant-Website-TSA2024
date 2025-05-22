@@ -126,7 +126,7 @@ export default function HomePageBanner() {
             Craftroots
           </h1>
           <StyledText
-            className="font-kenao text-4xl sm:text-7xl md:text-8xl lg:text-9xl sm:-translate-y-[20%] text-center"
+            className="font-kenao text-4xl sm:text-7xl md:text-8xl lg:text-9xl sm:-translate-y-[20%] text-center pt-[1.5vh]"
             charClassName="transition-all hover:scale-[1.05]"
           >
             Feast on Fresh

@@ -39,7 +39,7 @@ export default function Home() {
 
       <MenuPreview />
 
-      <section className="flex justify-evenly relative pt-6 overflow-x-clip h-full pb-12">
+      <section className="flex justify-evenly relative pt-6 overflow-x-clip h-full pb-12 md:pt-[10%]">
         <Image
           src={leaves3}
           alt="leaves (3)"
@@ -216,7 +216,7 @@ export default function Home() {
 
 function Review({ children, author = "", className }) {
   return (
-    <div className="w-screen h-fit flex justify-center relative flex-shrink-0 pb-12">
+    <div className="w-full h-fit flex justify-center relative flex-shrink-0 pb-12">
       <div className="text-center w-[95vw] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-1/2 text-[#03402a]">
         {children}
       </div>

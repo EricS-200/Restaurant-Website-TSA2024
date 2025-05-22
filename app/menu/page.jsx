@@ -103,7 +103,7 @@ const MenuSection = memo(
               {title}
             </h1>
             <h1 className="absolute w-[70vw] bottom-[-9vh] sm:bottom-[-7vh] xl:bottom-[-14vh] right-[10vw] sm:right-[-40vw] xl:right-[-30vw] font-mistrully opacity-30 text-[7rem] lg:text-[9rem] 2xl:text-[11rem] pointer-events-none select-none text-clip text-green-900">
-              {title}
+              {"Sides"}
             </h1>
           </div>
         );
