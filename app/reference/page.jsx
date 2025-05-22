@@ -48,7 +48,7 @@ export default function Reference() {
           The following frameworks and software technologies were used to create
           this website:
         </p>
-        <p>NextJS, ReactJS, TailwindCSS, Framer Motion</p>
+        <p>NextJS, ReactJS, TailwindCSS, Framer Motion, EmailJS</p>
         <p>
           The entire website, including code and content, was created by our
           team. We did not use any templates or pre-built components.
