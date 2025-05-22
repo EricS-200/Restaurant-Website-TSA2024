@@ -7,7 +7,7 @@ import banner from "@/public/reservation/1.png";
 export default function Reserve() {
   return (
     <main className="overflow-x-clip">
-      <section src={banner} className="h-screen w-full relative z-50">
+      <section src={banner} className="h-screen w-full relative z-[49]">
         <Image
           src={banner}
           alt=""
