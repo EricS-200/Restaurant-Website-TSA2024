@@ -5,6 +5,7 @@ import image2 from "@/public/reservation/2.png";
 import image3 from "@/public/reservation/3.png";
 import image4 from "@/public/reservation/4.png";
 import image5 from "@/public/reservation/5.png";
+import emailjs from "@emailjs/browser";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -19,6 +20,33 @@ export default function ReservationForm() {
   const [mailing, setMailing] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  const serviceID = "service_1l17h0b";
+  const templateID = "template_coirses";
+  const publicKey = "D1IU6lhCQ1LGODkK4";
+  const params = {
+    name: name,
+    phone: phone,
+    email: email,
+    date: date,
+    time: time,
+    party: party,
+    wheelchair: wheelchair,
+  };
+
+  emailjs.init({
+    publicKey: publicKey,
+    blockHeadless: true,
+    blockList: {},
+    limitRate: {
+      id: "app",
+      throttle: 5000,
+    },
+  });
+
+  function handleSubmit() {
+    setSubmitted(true);
+    emailjs.send(serviceID, templateID, params);
+  }
   return (
     <>
       {submitted && (
@@ -271,7 +299,7 @@ export default function ReservationForm() {
             </div>
             <button
               className="text-[#024762] bg-[#78cb43] mt-4 font-seasons w-[85%] sm:w-2/3 md:w-full text-xl py-3"
-              onClick={() => setSubmitted(true)}
+              onClick={handleSubmit}
             >
               Make Reservation
             </button>
