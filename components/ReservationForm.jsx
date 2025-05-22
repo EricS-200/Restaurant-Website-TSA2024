@@ -35,11 +35,11 @@ export default function ReservationForm() {
               please email us at
             </h4>
             <Link
-              href="mailto:support@craftroots.com"
+              href="mailto:tsa.craftroots@gmail.com"
               className="font-bold hover:underline"
               target="_blank"
             >
-              support@craftroots.com
+              tsa.craftroots@gmail.com
             </Link>
           </div>
           <h3 className="mt-8 text-4xl font-seasons">
