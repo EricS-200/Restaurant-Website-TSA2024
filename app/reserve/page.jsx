@@ -3,15 +3,11 @@ import Image from "next/image";
 import ReservationForm from "@/components/ReservationForm";
 import ParallaxBanner from "@/components/SimpleParallaxBanner";
 import banner from "@/public/reservation/1.png";
-import image2 from "@/public/reservation/2.png";
-import image3 from "@/public/reservation/3.png";
-import image4 from "@/public/reservation/4.png";
-import image5 from "@/public/reservation/5.png";
 
 export default function Reserve() {
   return (
-    <main className="">
-      <section src={banner} className="h-screen w-full">
+    <main className="overflow-x-clip">
+      <section src={banner} className="h-screen w-full relative z-50">
         <Image
           src={banner}
           alt=""
